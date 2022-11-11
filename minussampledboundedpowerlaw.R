@@ -60,9 +60,26 @@ dMSBPL <- function(x, b, C, xmin, xmax, w, v){
   xmw <- pi / 4 * v^2 #largest circle we can fit in window
   #dplus <- C / (w * v) * (w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)) #includes factor C / (w * v) that cancels with numerator
   #dminus <- C / (w * v) * (w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)) #includes factor C / (w * v) that cancels with numerator
-  dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
-  dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
-  
+  if(b == -2){#special case for denominator
+    dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / (pi * xmw)
+    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * xmin)
+    print("b = -2")
+  } else if (b == - 1.5){#special case for denominator
+    dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * xmw) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
+    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * xmin) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
+    print("b = -1.5")
+    print(c(dplus, dminus))
+  } else if (b == -1){#special case for denominator
+    dplus <- w * v / xmw - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
+    dminus <- w * v / xmin - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
+    print("b = -1")
+  } else {
+    dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
+    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
+    print("b: general case")
+    print(c(dplus, dminus))
+    
+  }
   denominator <- dplus - dminus
   d2 <- dMSBPLintegral(b = b, C = C, w = w, v = v, xmin = xmin, xmax = xmax, xmaxminus = xmw)
 
@@ -165,10 +182,10 @@ w <- 5
 v <- 2 #ASSUME v <= w
 
 #load data
-oneyeardf <- read.csv("oneyeardf.csv")
-oneyeardf <- oneyeardf[is.na(oneyeardf$ROI.LabelCode), ] # subset by removing corals that are out of frame
-axisscores <- read.csv("axisscores.csv")
-axisscores <- axisscores[order(axisscores$PC1), ] # order by PC1 from low to high
+#oneyeardf <- read.csv("oneyeardf.csv")
+#oneyeardf <- oneyeardf[is.na(oneyeardf$ROI.LabelCode), ] # subset by removing corals that are out of frame
+#axisscores <- read.csv("axisscores.csv")
+#axisscores <- axisscores[order(axisscores$PC1), ] # order by PC1 from low to high
 
 #sample from the sites; loop to repeat for all sites
 #subsample from the minus sampled distribution
@@ -176,10 +193,10 @@ axisscores <- axisscores[order(axisscores$PC1), ] # order by PC1 from low to hig
 
 #parameters of bounded power law 
 # need to make a function that estimates the parameters for each site
-xmin <- 1e-3 #min area
+xmin <- 1e-1 #min area
 xmax <- pi * 3^2 #max area
 xmaxminus <- pi / 4 * v^2 #max area of circle that can fit in window
-b <- -0.9 #power law exponent
+b <- -1.5 #power law exponent
 C <- getC(xmin = xmin, xmax = xmax, b = b) #normalization constant
 n <- 1e5 #number of circles
 nplot <- 100 #number to plot
