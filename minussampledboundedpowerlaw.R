@@ -176,6 +176,7 @@ plotcircle <- function(alpha, beta, r, isinframe){
 w <- 5
 v <- 2 #ASSUME v <= w
 
+#DATA FILES NEED TO BE IN THE PROJECT FOR THIS TO WORK
 #load data
 #oneyeardf <- read.csv("oneyeardf.csv")
 #oneyeardf <- oneyeardf[is.na(oneyeardf$ROI.LabelCode), ] # subset by removing corals that are out of frame
