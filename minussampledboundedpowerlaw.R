@@ -23,7 +23,7 @@ getC <- function(xmin, xmax, b){
 #xmin, xmax: min and max for bounded power law
 #Value: density f(x) at x
 dboundedpowerlaw <- function(x, b, C, xmin, xmax){
-  fx <- C * x^b
+  fx <- C * x ^ b
   fx[x < xmin] <- 0
   fx[x > xmax] <- 0
   return(fx)
@@ -46,7 +46,7 @@ getpir <- function(w, v, r){
 #xmin, xmax: min and max for bounded power law
 #w, v: width and height of sampling window (ASSUMES v <= w)
 #Value: density f(x) at x
-#NOTE: HAVE NOT YET DEALT WITH SPECIAL CASES b = -2, b = -3/2, b = -1
+#NOTE: HAVE NOT YET DEALT WITH SPECIAL CASE b = -1
 #NOTE: NOT SURE ABOUT JACOBIAN YET
 dMSBPL <- function(x, b, C, xmin, xmax, w, v){
   Jacobian <- 1 / (2 * sqrt(pi * x))
@@ -110,13 +110,18 @@ dMSBPLintegral <- function(b, C, w, v, xmin, xmax, xmaxminus){
   return(integrate(f = myfunction, lower = xmin, upper = xmaxminus))
 }
 
-#inverse cdf for bounded power law, b not equal to -1
+#inverse cdf for bounded power law
 #Arguments:
 #u in [0, 1]
 #xmin and xmax: min and max values of x
 #Value: inverse cdf evaluated at u
 FXinv <- function(u, b, xmin, xmax){
-  (u * xmax ^ (b + 1) + (1 - u) * xmin ^ (b + 1)) ^ (1 / (b + 1))  
+  if(b == -1){
+    x <- xmax ^ u * xmin ^ (1 - u)
+  } else {
+    x <- (u * xmax ^ (b + 1) + (1 - u) * xmin ^ (b + 1)) ^ (1 / (b + 1))  
+  }
+  return(x)
 }
 
 #simulate from bounded power law distribution
