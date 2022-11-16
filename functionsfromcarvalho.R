@@ -1218,8 +1218,8 @@ LEIb_plot <- ggplot() +
 bvec = seq(PLB.bMLE.LEI.b - 0.5, PLB.bMLE.LEI.b + 0.5, 0.00001) 
 PLB.LLvals = vector(length=length(bvec))  # negative log-likelihood for bvec
 for(i in 1:length(bvec)){
-  PLB.LLvals[i] = negLL.PLB(bvec[i], x=LL.input$biomass, n=length(LL.input$biomass), xmin=LL.input$min.biomass,
-                            xmax=LL.input$max.biomass, sumlogx=LL.input$sum.log.biomass)   
+  PLB.LLvals[i] = negLL.PLB(bvec[i], x=LL.input$Area, n=length(LL.input$Area), xmin=LL.input$min.Area,
+                            xmax=LL.input$max.Area, sumlogx=LL.input$sum.log.Area)   
 }
 critVal = PLB.minNegLL.LEI.b  + qchisq(0.95,1)/2 # 1 degree of freedom, Hilborn and Mangel (1997) p162.
 bIn95 = bvec[ PLB.LLvals < critVal ]
