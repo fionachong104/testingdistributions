@@ -37,7 +37,7 @@ for(s in sites){
                        limits = range(oneyeardf$Area))+
     geom_line(aes(x = sitex.PLB, y = sitey.PLB), col = 'black', lwd = 1) +
     annotate("text", x = 5, y = 10, label = s) +
-    annotate("text", x = 5, y = 3, label = expression(paste(italic("b = "), bquote.(PLB.bMLE.site.b))) +
+    annotate("text", x = 5, y = 3, label = expression(paste(italic("b = "), bquote.(PLB.bMLE.site.b)))) +
     theme_classic()
 }
 
