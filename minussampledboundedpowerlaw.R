@@ -40,35 +40,70 @@ getpir <- function(w, v, r){
 
 #density for minus-sampled bounded power law (in form we can supply to optimizer)
 #Arguments:
-#x: value at which to get density
 #b: power law coefficient
-#C: normalization constant
+#x: value at which to get density
 #xmin, min for bounded power law
 #w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
 #Value: density f(x) at x
 dMSBPLanalytic <- function(b, x, xmin, w, v){
-  if(x < xmin){
-    fx <- 0 
+  numerator <- 4 / pi * x ^ (b + 1) - 2 * (w + v) / sqrt(pi) * x ^ (b + 0.5) + w * v * x ^ b
+  xmw <- pi / 4 * v ^ 2 #largest circle we can fit in window
+  if(b == -2){#special case for denominator
+    dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / pi * log(xmw)
+    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / pi * log(xmin)
+  } else if (b == - 1.5){#special case for denominator
+    dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / sqrt(pi) * log(xmw) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
+    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / sqrt(pi) * log(xmin) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
+  } else if (b == -1){#special case for denominator
+    dplus <- w * v * log(xmw) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
+    dminus <- w * v * log(xmin) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
   } else {
-    numerator <- 4 / pi * x ^ (b + 1) - 2 * (w + v) / sqrt(pi) * x ^ (b + 0.5) + w * v * x ^ b
-    xmw <- pi / 4 * v ^ 2 #largest circle we can fit in window
-    if(b == -2){#special case for denominator
-      dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / pi * log(xmw)
-      dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / pi * log(xmin)
-    } else if (b == - 1.5){#special case for denominator
-      dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / sqrt(pi) * log(xmw) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
-      dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / sqrt(pi) * log(xmin) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
-    } else if (b == -1){#special case for denominator
-      dplus <- w * v * log(xmw) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
-      dminus <- w * v * log(xmin) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
-    } else {
-      dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
-      dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
-    }
-    denominator <- dplus - dminus
-    fx <- numerator / denominator
+    dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
+    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
   }
+  denominator <- dplus - dminus
+  fx <- numerator / denominator
+  fx[x < xmin] <- 0
+  fx[x > xmw] <- 0
   return(fx)
+}
+
+#negative log likelihood for minus-sampled bounded power law (in form we can supply to optimizer)
+#Arguments:
+#b: power law coefficient
+#x: vector of sizes
+#xmin, min for bounded power law
+#w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
+#Value: negative log likelihood for observations x, with parameter b
+loglikMSBPL <- function(b, x, w, v){
+  xmin <- min(x) #this is maximum likelihood estimate
+  logfx <- sum(log(dMSBPLanalytic(b = b, x = x, xmin = xmin, w = w, v = v)))
+  return(-logfx)
+}
+
+#plot negative log likelihood against b for minus-sampled bounded power law
+#Arguments:
+#x: vector of sizes
+#w: width of window
+#v: height of window
+#Value: plot of negative log likelihood against b
+plotloglik <- function(x, w, v){
+  b <- seq(from = -3, to = -1e-6, length.out = 100)
+  negllvec <- numeric(3)
+  for(i in 1:100){
+    negllvec[i] <- loglikMSBPL(b = b[i], x = x, w = w, v = v)
+  }
+  plot(b, negllvec, type = "l", xlab = expression(italic(b)), ylab = expression(log(italic(f(x)))))  
+}
+
+#maximum likelihood estimate of b for minus-sampled bounded power law
+#Arguments:
+#x: vector of sizes
+#w: width of window
+#v: height of window
+#Value: object returned by optimize(), for which $minimum is the ML estimate and $objective is the negative log likelihood
+estimatebMSBPL <- function(x, w, v){
+  return(optimize(f = loglikMSBPL, interval = c(-3, 0), x = x, w = w, v = v))
 }
 
 #density for minus-sampled bounded power law
@@ -113,7 +148,7 @@ dMSBPL <- function(x, b, C, xmin, xmax, w, v){
   print(head(cbind(fx1, fx2)))
   
   fx2[x < xmin] <- 0
-  fx2[x > xmax] <- 0
+  fx2[x > xmw] <- 0
   return(fx2)
 }
 
@@ -227,7 +262,7 @@ xmax <- pi * 3^2 #max area
 xmaxminus <- pi / 4 * v^2 #max area of circle that can fit in window
 b <- -1.7 #power law exponent
 C <- getC(xmin = xmin, xmax = xmax, b = b) #normalization constant
-n <- 1e5 #number of circles
+n <- 1e3 #number of circles
 nplot <- 100 #number to plot
 x <- simulateboundedpowerlaw(n = n, b = b, xmin = xmin, xmax = xmax) #simulated areas
 
@@ -237,7 +272,7 @@ mycolors <- brewer.pal(3, "Dark2")
 alpha <- runif(n = n, min = 0, max = w) #(alpha, beta) uniform random points in sampling window
 beta <- runif(n = n, min = 0, max = v)
 
-par(mfrow = c(2, 2))
+par(mfrow = c(2, 3))
 plot(c(0, w), c(0, v), type = "n", asp = 1, xlab = "", ylab = "")
 plotframe(w = w, v = v)
 isinframe <- inframe(alpha = alpha, beta = beta, r = r, w = w, v = v)
@@ -260,3 +295,12 @@ legend("topright", bty = "n", lwd = 2, lty = c("dashed"), col = c(mycolors[2]), 
 plot(log(xseq), log(fx), type = "l", lwd = 2, lty = "solid", col = mycolors[1], xlab = expression(log(italic(x))), ylab = "log density")
 lines(log(xseqMS), log(fxMS), col = mycolors[2], lwd = 2, lty = "dashed") #density curve for bounded power law
 legend("topright", bty = "n", lwd = 2, lty = c("solid", "dashed"), col = c(mycolors[1], mycolors[2]), legend = c("bounded power law", "minus-sampled bounded power law"))
+
+plotloglik(x = x[isinframe], w = w, v = v)
+abline(v = b, lty = "solid", col = mycolors[1])
+bML <- estimatebMSBPL(x = x[isinframe], w = w, v = v)
+abline(v = bML$minimum, lty = "dashed", col = mycolors[2])
+legend("topright", lty = c("solid", "dashed"), legend = c("true", "ML"), col = mycolors[1:2], bty = "n")
+
+
+  
