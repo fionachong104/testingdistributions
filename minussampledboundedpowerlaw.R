@@ -38,6 +38,39 @@ getpir <- function(w, v, r){
   return((w - 2 * r) * (v - 2 * r) / (w * v)) #area in which we can minus-sample a circle of radius r / window area
 }
 
+#density for minus-sampled bounded power law (in form we can supply to optimizer)
+#Arguments:
+#x: value at which to get density
+#b: power law coefficient
+#C: normalization constant
+#xmin, min for bounded power law
+#w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
+#Value: density f(x) at x
+dMSBPLanalytic <- function(b, x, xmin, w, v){
+  if(x < xmin){
+    fx <- 0 
+  } else {
+    numerator <- 4 / pi * x ^ (b + 1) - 2 * (w + v) / sqrt(pi) * x ^ (b + 0.5) + w * v * x ^ b
+    xmw <- pi / 4 * v ^ 2 #largest circle we can fit in window
+    if(b == -2){#special case for denominator
+      dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / pi * log(xmw)
+      dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / pi * log(xmin)
+    } else if (b == - 1.5){#special case for denominator
+      dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / sqrt(pi) * log(xmw) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
+      dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / sqrt(pi) * log(xmin) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
+    } else if (b == -1){#special case for denominator
+      dplus <- w * v * log(xmw) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
+      dminus <- w * v * log(xmin) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
+    } else {
+      dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
+      dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
+    }
+    denominator <- dplus - dminus
+    fx <- numerator / denominator
+  }
+  return(fx)
+}
+
 #density for minus-sampled bounded power law
 #Arguments:
 #x: value at which to get density
