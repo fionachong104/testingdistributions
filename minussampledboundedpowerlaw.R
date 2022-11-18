@@ -75,7 +75,7 @@ dMSBPLanalytic <- function(b, x, xmin, w, v){
 #xmin, min for bounded power law
 #w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
 #Value: negative log likelihood for observations x, with parameter b
-loglikMSBPL <- function(b, x, w, v){
+negloglikMSBPL <- function(b, x, w, v){
   xmin <- min(x) #this is maximum likelihood estimate
   logfx <- sum(log(dMSBPLanalytic(b = b, x = x, xmin = xmin, w = w, v = v)))
   return(-logfx)
@@ -87,11 +87,11 @@ loglikMSBPL <- function(b, x, w, v){
 #w: width of window
 #v: height of window
 #Value: plot of negative log likelihood against b
-plotloglik <- function(x, w, v){
+plotnegloglik <- function(x, w, v){
   b <- seq(from = -3, to = -1e-6, length.out = 100)
   negllvec <- numeric(3)
   for(i in 1:100){
-    negllvec[i] <- loglikMSBPL(b = b[i], x = x, w = w, v = v)
+    negllvec[i] <- negloglikMSBPL(b = b[i], x = x, w = w, v = v)
   }
   plot(b, negllvec, type = "l", xlab = expression(italic(b)), ylab = expression(log(italic(f(x)))))  
 }
@@ -103,7 +103,7 @@ plotloglik <- function(x, w, v){
 #v: height of window
 #Value: object returned by optimize(), for which $minimum is the ML estimate and $objective is the negative log likelihood
 estimatebMSBPL <- function(x, w, v){
-  return(optimize(f = loglikMSBPL, interval = c(-3, 0), x = x, w = w, v = v))
+  return(optimize(f = negloglikMSBPL, interval = c(-3, 0), x = x, w = w, v = v))
 }
 
 #density for minus-sampled bounded power law
@@ -296,7 +296,7 @@ plot(log(xseq), log(fx), type = "l", lwd = 2, lty = "solid", col = mycolors[1], 
 lines(log(xseqMS), log(fxMS), col = mycolors[2], lwd = 2, lty = "dashed") #density curve for bounded power law
 legend("topright", bty = "n", lwd = 2, lty = c("solid", "dashed"), col = c(mycolors[1], mycolors[2]), legend = c("bounded power law", "minus-sampled bounded power law"))
 
-plotloglik(x = x[isinframe], w = w, v = v)
+plotnegloglik(x = x[isinframe], w = w, v = v)
 abline(v = b, lty = "solid", col = mycolors[1])
 bML <- estimatebMSBPL(x = x[isinframe], w = w, v = v)
 abline(v = bML$minimum, lty = "dashed", col = mycolors[2])
