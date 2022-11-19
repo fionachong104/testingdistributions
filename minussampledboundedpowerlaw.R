@@ -93,7 +93,7 @@ plotnegloglik <- function(x, w, v){
   for(i in 1:100){
     negllvec[i] <- negloglikMSBPL(b = b[i], x = x, w = w, v = v)
   }
-  plot(b, negllvec, type = "l", xlab = expression(italic(b)), ylab = expression(log(italic(f(x)))))  
+  plot(b, negllvec, type = "l", xlab = expression(italic(b)), ylab = expression(-log(italic(f(x)))))  
 }
 
 #maximum likelihood estimate of b for minus-sampled bounded power law
@@ -262,7 +262,7 @@ xmax <- pi * 3^2 #max area
 xmaxminus <- pi / 4 * v^2 #max area of circle that can fit in window
 b <- -1.7 #power law exponent
 C <- getC(xmin = xmin, xmax = xmax, b = b) #normalization constant
-n <- 1e3 #number of circles
+n <- 1e4 #number of circles
 nplot <- 100 #number to plot
 x <- simulateboundedpowerlaw(n = n, b = b, xmin = xmin, xmax = xmax) #simulated areas
 
