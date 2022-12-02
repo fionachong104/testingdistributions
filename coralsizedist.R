@@ -13,6 +13,8 @@ axisscores <- axisscores[order(axisscores$PC1), ]
 
 sites <- unique(oneyeardf$Site)
 
+x <- numeric()
+
 for(s in sites){
   sitedata <- oneyeardf %>% filter(Site == s)
   siteinput <- set.params(sitedata$Area)
@@ -29,7 +31,7 @@ for(s in sites){
   siteb_plot <- ggplot() +
     geom_point(aes(x = (sort(siteinput$Area, decreasing=TRUE)), y = (1:length(siteinput$Area))),
                color = "cadetblue", size = 2, alpha = 0.3) +
-    xlab(expression(paste("Colony area, ", italic("x"), " (cm^2)"))) +
+    xlab(expression(paste("Colony area, ", italic("x"), ~(cm^2)))) +
     ylab(expression(paste("Number of colonies with sizes", " ">=" ", italic("x"), "    "))) +
     scale_y_continuous(trans = 'log10', breaks = c(1,10,100,500,3000),
                        limits = c(0.25, max(table(oneyeardf$Site)))) +
@@ -37,9 +39,8 @@ for(s in sites){
                        limits = range(oneyeardf$Area))+
     geom_line(aes(x = sitex.PLB, y = sitey.PLB), col = 'black', lwd = 1) +
     annotate("text", x = 5, y = 10, label = s) +
-    annotate("text", x = 5, y = 3, label = expression(paste(italic("b = "), bquote.(PLB.bMLE.site.b)))) +
+    annotate("text", x = 5, y = 3, label = bquote(paste(italic("b = "),.(PLB.bMLE.site.b)))) +
     theme_classic()
 }
 
-# fix the b value
 # work out how to store all the numbers
