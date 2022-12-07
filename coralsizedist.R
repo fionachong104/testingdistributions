@@ -15,17 +15,23 @@ sites <- unique(oneyeardf$Site)
 
 x <- numeric()
 
-for(s in sites){
+nsites <- length(sites)
+
+PLB.bMLE.site.b <- numeric(nsites)
+
+
+for(i in 1:nsites){
+  s <- sites[i]
   sitedata <- oneyeardf %>% filter(Site == s)
   siteinput <- set.params(sitedata$Area)
   PLB.return.site <- mle_b(Site == s, x = siteinput$Area, log_x = sitedata$log.Area, sum_log_x = siteinput$sum.log.Area,
                          x_min = siteinput$min.Area, x_max = siteinput$max.Area)
-  PLB.bMLE.site.b <- PLB.return.site[[1]] 
+  PLB.bMLE.site.b[i] <- PLB.return.site[[1]] 
   PLB.minLL.site.b <- PLB.return.site[[2]]
   PLB.minNegLL.site.b <- PLB.minLL.site.b$minimum
   x <- siteinput$Area
   sitex.PLB = seq(min(siteinput$Area), max(siteinput$Area), length=1000)
-  sitey.PLB = (1 - pPLB(x = sitex.PLB, b = PLB.bMLE.site.b, xmin = min(sitex.PLB),
+  sitey.PLB = (1 - pPLB(x = sitex.PLB, b = PLB.bMLE.site.b[i], xmin = min(sitex.PLB),
                        xmax = max(sitex.PLB))) * length(siteinput$Area)
   #spectra.text <- as.character(round(PLB.bMLE.site.b, 2))
   siteb_plot <- ggplot() +
@@ -39,8 +45,9 @@ for(s in sites){
                        limits = range(oneyeardf$Area))+
     geom_line(aes(x = sitex.PLB, y = sitey.PLB), col = 'black', lwd = 1) +
     annotate("text", x = 5, y = 10, label = s) +
-    annotate("text", x = 5, y = 3, label = bquote(paste(italic("b = "),.(round(PLB.bMLE.site.b,2))))) +
+    annotate("text", x = 5, y = 3, label = bquote(paste(italic("b = "),.(round(PLB.bMLE.site.b[i],2))))) +
     theme_classic()
+    print(siteb_plot)
 }
 
 # work out how to store all the numbers
