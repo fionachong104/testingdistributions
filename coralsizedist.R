@@ -2,6 +2,7 @@ rm(list = ls())
 library(dplyr)
 library(ggplot2)
 library(svglite)
+library(gridExtra)
 
 source("functionsfromcarvalho.R")
 
@@ -20,6 +21,8 @@ nsites <- length(sites)
 PLB.bMLE.site.b <- numeric(nsites)
 
 
+siteb_plot <- list()
+
 for(i in 1:nsites){
   s <- sites[i]
   sitedata <- oneyeardf %>% filter(Site == s)
@@ -33,8 +36,7 @@ for(i in 1:nsites){
   sitex.PLB = seq(min(siteinput$Area), max(siteinput$Area), length=1000)
   sitey.PLB = (1 - pPLB(x = sitex.PLB, b = PLB.bMLE.site.b[i], xmin = min(sitex.PLB),
                        xmax = max(sitex.PLB))) * length(siteinput$Area)
-  #spectra.text <- as.character(round(PLB.bMLE.site.b, 2))
-  siteb_plot <- ggplot() +
+  siteb_plot[[i]] <- ggplot() +
     geom_point(aes(x = (sort(siteinput$Area, decreasing=TRUE)), y = (1:length(siteinput$Area))),
                color = "cadetblue", size = 2, alpha = 0.3) +
     xlab(expression(paste("Colony area, ", italic("x"), ~(cm^2)))) +
@@ -47,7 +49,5 @@ for(i in 1:nsites){
     annotate("text", x = 5, y = 10, label = s) +
     annotate("text", x = 5, y = 3, label = bquote(paste(italic("b = "),.(round(PLB.bMLE.site.b[i],2))))) +
     theme_classic()
-    print(siteb_plot)
 }
-
-# work out how to store all the numbers
+do.call(grid.arrange, siteb_plot)
