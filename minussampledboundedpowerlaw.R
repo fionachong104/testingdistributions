@@ -241,8 +241,13 @@ plotcircle <- function(alpha, beta, r, isinframe){
 }
 
 #dimensions of sampling window
-w <- 5
-v <- 2 #ASSUME v <= w
+# w <- 5
+# v <- 2 #ASSUME v <= w
+
+# images dimensions from CANON camera (w x v = 3648 x 2736)
+# 10 cm = roughly 350 pixels
+w <- 3648/350
+v <- 2736/350
 
 #DATA FILES NEED TO BE IN THE PROJECT FOR THIS TO WORK
 #load data
@@ -253,6 +258,7 @@ v <- 2 #ASSUME v <= w
 
 #sample from the sites; loop to repeat for all sites
 #subsample from the minus sampled distribution
+
 
 
 #parameters of bounded power law 
