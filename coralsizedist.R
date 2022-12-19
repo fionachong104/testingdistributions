@@ -32,7 +32,8 @@ for(i in 1:nsites){
   PLB.bMLE.site.b[i] <- PLB.return.site[[1]] 
   PLB.minLL.site.b <- PLB.return.site[[2]]
   PLB.minNegLL.site.b <- PLB.minLL.site.b$minimum
-  x <- siteinput$Area
+  x <- simulateboundedpowerlaw(n = nsites, b = PLB.bMLE.site.b, xmin = siteinput$min.Area, xmax = siteinput$max.Area)
+  #x <- siteinput$Area
   sitex.PLB = seq(min(siteinput$Area), max(siteinput$Area), length=1000)
   sitey.PLB = (1 - pPLB(x = sitex.PLB, b = PLB.bMLE.site.b[i], xmin = min(sitex.PLB),
                        xmax = max(sitex.PLB))) * length(siteinput$Area)
