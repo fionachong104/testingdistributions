@@ -263,8 +263,8 @@ v <- 2736/35
 
 #parameters of bounded power law
 # need to make a function that estimates the parameters for each site
-xmin <- 0.56 #1e-1 #min area FC: 0.56 from oneyeardf
-xmax <- 4569 #pi * 3^2 #max area FC: 4569 from oneyeardf
+xmin <- 0.56 #1e-1 #min area FC: 0.56 cm^2 from oneyeardf
+xmax <- 4569 #pi * 3^2 #max area FC: 4569 cm^2 from oneyeardf
 xmaxminus <- pi / 4 * v^2 #max area of circle that can fit in window
 b <- -1.7 #power law exponent
 C <- getC(xmin = xmin, xmax = xmax, b = b) #normalization constant
