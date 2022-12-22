@@ -43,7 +43,7 @@ for(i in 1:nsites){
                color = "cadetblue", size = 2, alpha = 0.3) +
     xlab(expression(paste("Colony area, ", italic("x"), ~(cm^2)))) +
     ylab(expression(paste("Number of colonies with sizes", " ">=" ", italic("x"), "    "))) +
-    scale_y_continuous(trans = 'log10', breaks = c(1,10,100),
+    scale_y_continuous(trans = 'log10', breaks = c(1,10,100), # currently capping at 100 because it is plotting Woolgoolga only; annoyingly the y axis doesnt scale but this will not be a problem when we plot the actual data and fit for each site - we will need to re-add 500 and 3000
                        limits = c(0.25, max(table(oneyeardf$Site)))) +
     scale_x_continuous(trans = 'log10', breaks = c(0,1,5,10,100,1000,10000),
                        limits = range(oneyeardf$Area))+
