@@ -12,12 +12,10 @@ axisscores <- read.csv("axisscores.csv", row.names=1)
 axisscores <- axisscores[order(axisscores$PC1), ]
 
 sites <- unique(oneyeardf$Site)
-
-x <- numeric()
-
 nsites <- length(sites)
 
 PLB.bMLE.site.b <- numeric(nsites)
+MSPLB.bMLE.site.b <- numeric(nsites)
 
 siteb_plot <- list()
 
@@ -27,14 +25,15 @@ v <- 2736/35
 for(i in 1:nsites){
   s <- sites[i]
   sitedata <- oneyeardf %>% filter(Site == s)
-  #siteinput <- set.params(sitedata$Area)
-  #PLB.return.site <- mle_b(Site == s, x = siteinput$Area, log_x = sitedata$log.Area, sum_log_x = siteinput$sum.log.Area,
-  #                       x_min = siteinput$min.Area, x_max = siteinput$max.Area)
-  bML <- estimatebMSBPL(x = sitedata$Area, w = w, v = v)
+  siteinput <- set.params(sitedata$Area)
+  bML <- mle_b(Site == s, x = siteinput$Area, log_x = sitedata$log.Area, sum_log_x = siteinput$sum.log.Area,
+                         x_min = siteinput$min.Area, x_max = siteinput$max.Area)
   PLB.bMLE.site.b[i] <- bML[[1]] 
   #PLB.minLL.site.b <- PLB.return.site[[2]]
   #PLB.minNegLL.site.b <- PLB.minLL.site.b$minimum
-  x <- sitedata$Area
+  MSPLB.bMLE.site.b[i] <- estimatebMSBPL(x = sitedata$Area, w = w, v = v)$minimum
+  
+  #x <- sitedata$Area
   sitex.PLB = seq(min(sitedata$Area), max(sitedata$Area), length = 1000)
   sitey.PLB = (1 - pPLB(x = sitex.PLB, b = PLB.bMLE.site.b[i], xmin = min(sitex.PLB),
                        xmax = max(sitex.PLB))) * length(sitedata$Area)
@@ -49,7 +48,8 @@ for(i in 1:nsites){
                        limits = range(oneyeardf$Area))+
     geom_line(aes(x = sitex.PLB, y = sitey.PLB), col = 'black', lwd = 1) +
     annotate("text", x = 5, y = 10, label = s) +
-    annotate("text", x = 5, y = 3, label = bquote(paste(italic("b = "),.(round(PLB.bMLE.site.b[i],2))))) +
+    annotate("text", x = 5, y = 3, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
+    annotate("text", x = 5, y = 1, label = bquote(paste(italic(b)[MSBPL]==.(round(MSPLB.bMLE.site.b[i],2))))) +
     theme_classic()
 }
 do.call(grid.arrange, siteb_plot)

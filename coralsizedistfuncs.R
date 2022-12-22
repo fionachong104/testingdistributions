@@ -1,3 +1,17 @@
+# set.params - create list with parameters for running MLE
+#Code adopted from Edwards et al. (2017).
+set.params = function(Area){
+  # Creates a list of parameters for input into the negll.PLB and pPLB functions
+  Area <- Area
+  log.Area <- log(Area)
+  sum.log.Area <- sum(log.Area)
+  min.Area <- min(Area)
+  max.Area <- max(Area)
+  out.list <- (list(Area, log.Area, sum.log.Area, min.Area, max.Area))
+  names(out.list) <- c("Area", "log.Area", "sum.log.Area", "min.Area", "max.Area")
+  return(out.list)
+}
+
 # Use analytical value of MLE b for PL model (Box 1, Edwards et al. 2017)
 # as a starting point for nlm for MLE of b for PLB model. Code adopted from
 # Edwards et al. (2017).
@@ -13,6 +27,19 @@ mle_b = function(region, x, log_x, sum_log_x, x_min, x_max){
   PLB.return = list(PLB.bMLE, PLB.minLL)
   
   return(PLB.return)
+}
+
+# negLL.PLB - negative log-likelihood function (function by Edwards et al. 2017)
+negLL.PLB = function(b, x, n, xmin, xmax, sumlogx)
+{
+  if(xmin <= 0 | xmin >= xmax) stop("Parameters out of bounds in negLL.PLB")
+  if(b != -1)
+  { neglogLL = -n * log( ( b + 1) / (xmax^(b + 1) - xmin^(b + 1)) ) -
+    b * sumlogx
+  } else
+  { neglogLL = n * log( log(xmax) - log(xmin) ) + sumlogx
+  }
+  return(neglogLL)
 }
 
 # pPLB - bounded power-law distribution function (function by Edwards et al. 2017)
