@@ -1,0 +1,189 @@
+# Use analytical value of MLE b for PL model (Box 1, Edwards et al. 2017)
+# as a starting point for nlm for MLE of b for PLB model. Code adopted from
+# Edwards et al. (2017).
+mle_b = function(region, x, log_x, sum_log_x, x_min, x_max){
+  
+  PL.bMLE = 1/( log(min(x)) - sum_log_x/length(x)) - 1
+  
+  PLB.minLL =  nlm(negLL.PLB, p=PL.bMLE, x=x, n=length(x),
+                   xmin=x_min, xmax=x_max, sumlogx=sum_log_x, hessian = TRUE) #, print.level=2 )
+  
+  PLB.bMLE = PLB.minLL$estimate
+  
+  PLB.return = list(PLB.bMLE, PLB.minLL)
+  
+  return(PLB.return)
+}
+
+# pPLB - bounded power-law distribution function (function by Edwards et al. 2017)
+pPLB = function(x = 10, b = -2, xmin = 1, xmax = 100)    
+{
+  if(xmin <= 0 | xmin >= xmax) stop("Parameters out of bounds in pPLB")
+  y = 0 * x     # so have zeros where x < xmin
+  y[x > xmax] = 1  # 1 for x > xmax
+  if(b != -1)
+  {  xmintobplus1 = xmin^(b+1)
+  denom = xmax^(b+1) - xmintobplus1
+  y[x >= xmin & x <= xmax] =
+    ( x[x >= xmin & x <= xmax]^(b + 1) - xmintobplus1 ) / denom
+  } else
+  {  logxmin = log(xmin)
+  denom = log(xmax) - logxmin
+  y[x >= xmin & x <= xmax] =
+    ( log( x[x >= xmin & x <= xmax] ) - logxmin ) / denom
+  }
+  return(y)                              
+}
+
+#calculate pi(r), the probability we minus-sample a circle of radius r
+#Arguments:
+#w, v: rectangular window dimensions
+#r: circle radius
+#Value: probability a circle of radius r is minus-sampled
+getpir <- function(w, v, r){
+  return((w - 2 * r) * (v - 2 * r) / (w * v)) #area in which we can minus-sample a circle of radius r / window area
+}
+
+#density for minus-sampled bounded power law (in form we can supply to optimizer)
+#Arguments:
+#b: power law coefficient
+#x: value at which to get density
+#xmin, min for bounded power law
+#w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
+#Value: density f(x) at x
+dMSBPLanalytic <- function(b, x, xmin, w, v){
+  numerator <- 4 / pi * x ^ (b + 1) - 2 * (w + v) / sqrt(pi) * x ^ (b + 0.5) + w * v * x ^ b
+  xmw <- pi / 4 * v ^ 2 #largest circle we can fit in window
+  if(b == -2){#special case for denominator
+    dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / pi * log(xmw)
+    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / pi * log(xmin)
+  } else if (b == - 1.5){#special case for denominator
+    dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / sqrt(pi) * log(xmw) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
+    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / sqrt(pi) * log(xmin) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
+  } else if (b == -1){#special case for denominator
+    dplus <- w * v * log(xmw) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
+    dminus <- w * v * log(xmin) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
+  } else {
+    dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
+    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
+  }
+  denominator <- dplus - dminus
+  fx <- numerator / denominator
+  fx[x < xmin] <- 0
+  fx[x > xmw] <- 0
+  return(fx)
+}
+
+#negative log likelihood for minus-sampled bounded power law (in form we can supply to optimizer)
+#Arguments:
+#b: power law coefficient
+#x: vector of sizes
+#xmin, min for bounded power law
+#w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
+#Value: negative log likelihood for observations x, with parameter b
+negloglikMSBPL <- function(b, x, w, v){
+  xmin <- min(x) #this is maximum likelihood estimate
+  logfx <- sum(log(dMSBPLanalytic(b = b, x = x, xmin = xmin, w = w, v = v)))
+  return(-logfx)
+}
+
+#plot negative log likelihood against b for minus-sampled bounded power law
+#Arguments:
+#x: vector of sizes
+#w: width of window
+#v: height of window
+#Value: plot of negative log likelihood against b
+plotnegloglik <- function(x, w, v){
+  b <- seq(from = -3, to = -1e-6, length.out = 100)
+  negllvec <- numeric(3)
+  for(i in 1:100){
+    negllvec[i] <- negloglikMSBPL(b = b[i], x = x, w = w, v = v)
+  }
+  plot(b, negllvec, type = "l", xlab = expression(italic(b)), ylab = expression(-log(italic(f(x)))))  
+}
+
+#maximum likelihood estimate of b for minus-sampled bounded power law
+#Arguments:
+#x: vector of sizes
+#w: width of window
+#v: height of window
+#Value: object returned by optimize(), for which $minimum is the ML estimate and $objective is the negative log likelihood
+estimatebMSBPL <- function(x, w, v){
+  return(optimize(f = negloglikMSBPL, interval = c(-3, 0), x = x, w = w, v = v))
+}
+
+#density for minus-sampled bounded power law
+#Arguments:
+#x: value at which to get density
+#b: power law coefficient
+#C: normalization constant
+#xmin, xmax: min and max for bounded power law
+#w, v: width and height of sampling window (ASSUMES v <= w)
+#Value: density f(x) at x
+#NOTE: NOT SURE ABOUT JACOBIAN YET
+dMSBPL <- function(x, b, C, xmin, xmax, w, v){
+  Jacobian <- 1 / (2 * sqrt(pi * x))
+  #numerator <- C / (w * v) * (4 / pi * x ^ (b + 1) - 2 * (w + v) / sqrt(pi) * x ^ (b + 0.5) + w * v * x ^ b) #includes factor C / (w * v) that cancels with denominator
+  numerator <- 4 / pi * x ^ (b + 1) - 2 * (w + v) / sqrt(pi) * x ^ (b + 0.5) + w * v * x ^ b
+  #numerator <- numerator * Jacobian #change of variables needed?
+  
+  n2 <- dboundedpowerlaw(x = x, b = b, C = C, xmin = xmin, xmax = xmax) * getpir(w = w, v = v, r = sqrt(x / pi))
+  #n2 <- n2 * Jacobian #CHECK: JACOBIAN NEEDED HERE?
+  
+  xmw <- pi / 4 * v ^ 2 #largest circle we can fit in window
+  if(b == -2){#special case for denominator
+    dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / pi * log(xmw)
+    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / pi * log(xmin)
+  } else if (b == - 1.5){#special case for denominator
+    dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / sqrt(pi) * log(xmw) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
+    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / sqrt(pi) * log(xmin) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
+  } else if (b == -1){#special case for denominator
+    dplus <- w * v * log(xmw) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
+    dminus <- w * v * log(xmin) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
+  } else {
+    dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
+    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
+  }
+  denominator <- dplus - dminus
+  d2 <- dMSBPLintegral(b = b, C = C, w = w, v = v, xmin = xmin, xmax = xmax, xmaxminus = xmw)
+  
+  fx1 <- numerator / denominator
+  fx2 <- n2 / d2$value #USING NUMERICAL INTEGRAL FOR NOW: we can always make this form work for other distributions
+  
+  print("overall check:")
+  print(head(cbind(fx1, fx2)))
+  
+  fx2[x < xmin] <- 0
+  fx2[x > xmw] <- 0
+  return(fx2)
+}
+
+#numerical check on denominator for minus-sampled bounded power law
+#Arguments:
+#b: power law coefficient
+#C: normalization constant
+#w, v: width and height of sampling window (ASSUMES v < w)
+#xmin, xmax: min and max for bounded power law
+#xmaxminus: max area we can fit in window
+#Value: numerical integral of what I think is numerator of minus-sampled bounded power law
+dMSBPLintegral <- function(b, C, w, v, xmin, xmax, xmaxminus){
+  myfunction <- function(x){
+    f <- dboundedpowerlaw(x = x, b = b, C = C, xmin = xmin, xmax = xmax) * getpir(w = w, v = v, r = sqrt(x / pi))
+    return(f)
+  }
+  return(integrate(f = myfunction, lower = xmin, upper = xmaxminus))
+}
+
+#inverse cdf for bounded power law
+#Arguments:
+#u in [0, 1]
+#xmin and xmax: min and max values of x
+#Value: inverse cdf evaluated at u
+FXinv <- function(u, b, xmin, xmax){
+  if(b == -1){
+    x <- xmax ^ u * xmin ^ (1 - u)
+  } else {
+    x <- (u * xmax ^ (b + 1) + (1 - u) * xmin ^ (b + 1)) ^ (1 / (b + 1))  
+  }
+  return(x)
+}
