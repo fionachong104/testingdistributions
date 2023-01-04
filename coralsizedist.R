@@ -34,9 +34,11 @@ for(i in 1:nsites){
   MSPLB.bMLE.site.b[i] <- estimatebMSBPL(x = sitedata$Area, w = w, v = v)$minimum
   
   #x <- sitedata$Area
-  sitex.PLB = seq(min(sitedata$Area), max(sitedata$Area), length = 1000)
-  sitey.PLB = (1 - pPLB(x = sitex.PLB, b = PLB.bMLE.site.b[i], xmin = min(sitex.PLB),
-                       xmax = max(sitex.PLB))) * length(sitedata$Area)
+  sitex = seq(min(sitedata$Area), max(sitedata$Area), length = 1000)
+  sitey.PLB = (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
+                       xmax = max(sitex))) * length(sitedata$Area)
+  sitey.MSBPL = (1 - FMSBPL(x = sitex, b = MSPLB.bMLE.site.b[i], xmin = min(sitex),
+                            w = w, v = v)) * length(sitedata$Area)
   siteb_plot[[i]] <- ggplot() +
     geom_point(aes_(x = (sort(sitedata$Area, decreasing=TRUE)), y = (1:length(sitedata$Area))),
                color = "cadetblue", size = 2, alpha = 0.3) +
@@ -46,7 +48,8 @@ for(i in 1:nsites){
                        limits = c(0.25, max(table(oneyeardf$Site)))) +
     scale_x_continuous(trans = 'log10', breaks = c(0,1,5,10,100,1000,10000),
                        limits = range(oneyeardf$Area))+
-    geom_line(aes_(x = sitex.PLB, y = sitey.PLB), col = 'black', lwd = 1) +
+    geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
+    geom_line(aes_(x = sitex, y = sitey.MSBPL), col = 'red', lwd = 1) +
     annotate("text", x = 5, y = 10, label = s) +
     annotate("text", x = 5, y = 3, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
     annotate("text", x = 5, y = 1, label = bquote(paste(italic(b)[MSBPL]==.(round(MSPLB.bMLE.site.b[i],2))))) +
