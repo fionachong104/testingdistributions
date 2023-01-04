@@ -116,6 +116,20 @@ dMSBPLanalytic <- function(b, x, xmin, w, v){
   return(fx)
 }
 
+#CDF for minus sampled bounded power law
+#Arguments:
+#b: power law coefficient
+#x: value at which to get density
+#xmin: min for bounded power law
+#w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
+#Value: cdf for minus sampled bounded power law up to area x
+FMSBPL <- function(b, x, xmin, w, v){
+  xmw <- pi / 4 * v ^ 2 #largest circle we can fit in window
+  denominator <- integrateMSBPL(x = xmw, b = b, xmin = xmin, w = w, v = v)
+  numerator <- integrateMSBPL(x = x, b = b, xmin = xmin, w = w, v = v)
+  return(numerator/denominator)
+  }
+
 #integrate unstandardised minus sampled bounded power law from xmin to x
 #Arguments:
 #x: upper bound for integral
@@ -123,7 +137,6 @@ dMSBPLanalytic <- function(b, x, xmin, w, v){
 #xmin: min for bounded power law
 #w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
 #Value: the integral
-
 integrateMSBPL <- function(x, b, xmin, w, v){
   if(b == -2){#special case for denominator
     dplus <- w * v / (b + 1) * x ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * x ^ (b + 1.5) + 4 / pi * log(x)

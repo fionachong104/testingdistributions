@@ -29,7 +29,7 @@ v <- 2736/35
 xmin <- 0.56 #1e-1 #min area FC: 0.56 cm^2 from oneyeardf
 xmax <- 4569 #pi * 3^2 #max area FC: 4569 cm^2 from oneyeardf
 xmaxminus <- pi / 4 * v^2 #max area of circle that can fit in window
-b <- -1.7 #power law exponent
+b <- -0.9 #power law exponent
 C <- getC(xmin = xmin, xmax = xmax, b = b) #normalization constant
 n <- 1e4 #number of circles
 nplot <- 100 #number to plot
@@ -71,4 +71,10 @@ bML <- estimatebMSBPL(x = x[isinframe], w = w, v = v)
 abline(v = bML$minimum, lty = "dashed", col = mycolors[2])
 legend("topright", lty = c("solid", "dashed"), legend = c("true", "ML"), col = mycolors[1:2], bty = "n")
 
+ninframe <- length(x[isinframe])
+sitex.MSBPL = seq(min(x[isinframe]), max(x[isinframe]), length = 1000)
+sitey.MSBPL = (1 - FMSBPL(x = sitex.MSBPL, b = b, xmin = xmin,
+                      w = w, v = v)) * ninframe
+plot(sort(x[isinframe], decreasing=TRUE),1:ninframe, xlab = expression(italic(x)), ylab = expression(italic(S(x)*n)[inframe]))
+lines(sitex.MSBPL,sitey.MSBPL)
 
