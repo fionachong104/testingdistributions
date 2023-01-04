@@ -62,6 +62,34 @@ pPLB = function(x = 10, b = -2, xmin = 1, xmax = 100)
   return(y)                              
 }
 
+#normalization constant C from Equation 2 in Edwards et al
+#arguments:
+#min mass xmin
+#max mass xmax
+#exponent b of bounded power law distribution
+#Value: normalization constant C as in Equation 2 of Edwards
+getC <- function(xmin, xmax, b){
+  if(b == -1){
+    return(1 / (log(xmax) - log(xmin)))
+  } else {
+    return((b + 1) / (xmax ^ (b + 1) - xmin ^(b + 1)))
+  }
+}
+
+#bounded power law density
+#Arguments:
+#x: value at which to get density
+#b: power law coefficient
+#C: normalization constant
+#xmin, xmax: min and max for bounded power law
+#Value: density f(x) at x
+dboundedpowerlaw <- function(x, b, C, xmin, xmax){
+  fx <- C * x ^ b
+  fx[x < xmin] <- 0
+  fx[x > xmax] <- 0
+  return(fx)
+}
+
 #calculate pi(r), the probability we minus-sample a circle of radius r
 #Arguments:
 #w, v: rectangular window dimensions
@@ -213,4 +241,62 @@ FXinv <- function(u, b, xmin, xmax){
     x <- (u * xmax ^ (b + 1) + (1 - u) * xmin ^ (b + 1)) ^ (1 / (b + 1))  
   }
   return(x)
+}
+
+#simulate from bounded power law distribution
+#Arguments:
+#n: number of values to simulate
+#b: exponent for distribution
+#xmin: min size
+#xmax: max size
+#Value:
+#vector of n observations drawn from the specified bounded power law distribution
+simulateboundedpowerlaw <- function(n, b, xmin, xmax){
+  u <- runif(n = n, min = 0, max = 1)
+  x <- FXinv(u = u, b = b, xmin = xmin, xmax = xmax)
+}
+
+#radius of circle given area
+#Argument: area x FC: should be in cm^2
+#Value: radius r
+radiusfromarea <- function(x){
+  return(sqrt(x / pi))
+}
+
+#does circle of radius r centred at (alpha, beta) fall entirely within a rectangle of side lengths w, v, lower left corner at origin?
+#Arguments:
+#alpha, beta: coordinates of circle centre
+#r: radius of circle
+#w, v: width and height of rectangle
+#Value:
+#logical: circle entirely in rectangle?
+inframe <- function(alpha, beta, r, w, v){
+  return(alpha >= r & alpha <= (w - r) & beta >= r & beta <= (v - r))
+}
+
+#draw sampling window
+#Arguments: w, v width and height of rectangular window
+#Value: rectangle representing the window
+plotframe <- function(w, v){
+  polygon(x = c(0, w, w, 0), y = c(0, 0, v, v))
+}
+
+#draw circle, filled if entirely in window
+#Arguments:
+#alpha, beta: centre of circle
+#r: radius of circle
+#isinframe (logical): is circle entirely in window?
+#Value: draw the circle
+plotcircle <- function(alpha, beta, r, isinframe){
+  theta <- seq(from = 0, to = 2 * pi, length.out = 1e3)
+  xc <- r * cos(theta)
+  yc <- r * sin(theta)
+  if(isinframe){
+    plotcol <- adjustcolor("black", 0.1)
+    edgecol <- plotcol
+  } else {
+    plotcol <- NA
+    edgecol <- adjustcolor("black", 0.1)
+  }
+  polygon(xc + alpha, yc + beta, col = plotcol, border = edgecol)
 }
