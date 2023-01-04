@@ -103,31 +103,43 @@ getpir <- function(w, v, r){
 #Arguments:
 #b: power law coefficient
 #x: value at which to get density
-#xmin, min for bounded power law
+#xmin: min for bounded power law
 #w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
 #Value: density f(x) at x
 dMSBPLanalytic <- function(b, x, xmin, w, v){
   numerator <- 4 / pi * x ^ (b + 1) - 2 * (w + v) / sqrt(pi) * x ^ (b + 0.5) + w * v * x ^ b
   xmw <- pi / 4 * v ^ 2 #largest circle we can fit in window
-  if(b == -2){#special case for denominator
-    dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / pi * log(xmw)
-    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / pi * log(xmin)
-  } else if (b == - 1.5){#special case for denominator
-    dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / sqrt(pi) * log(xmw) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
-    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / sqrt(pi) * log(xmin) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
-  } else if (b == -1){#special case for denominator
-    dplus <- w * v * log(xmw) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
-    dminus <- w * v * log(xmin) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
-  } else {
-    dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmw ^ (b + 2)
-    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
-  }
-  denominator <- dplus - dminus
+  denominator <- integrateMSBPL(x = xmw, b = b, xmin = xmin, w = w, v = v)
   fx <- numerator / denominator
   fx[x < xmin] <- 0
   fx[x > xmw] <- 0
   return(fx)
 }
+
+#integrate unstandardised minus sampled bounded power law from xmin to x
+#Arguments:
+#x: upper bound for integral
+#b: power law coefficient
+#xmin: min for bounded power law
+#w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
+#Value: the integral
+
+integrateMSBPL <- function(x, b, xmin, w, v){
+  if(b == -2){#special case for denominator
+    dplus <- w * v / (b + 1) * x ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * x ^ (b + 1.5) + 4 / pi * log(x)
+    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / pi * log(xmin)
+  } else if (b == - 1.5){#special case for denominator
+    dplus <- w * v / (b + 1) * x ^ (b + 1) - 2 * (w + v) / sqrt(pi) * log(x) + 4 / (pi * (b + 2)) * x ^ (b + 2)
+    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / sqrt(pi) * log(xmin) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
+  } else if (b == -1){#special case for denominator
+    dplus <- w * v * log(x) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * x ^ (b + 1.5) + 4 / (pi * (b + 2)) * x ^ (b + 2)
+    dminus <- w * v * log(xmin) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
+  } else {
+    dplus <- w * v / (b + 1) * x ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * x ^ (b + 1.5) + 4 / (pi * (b + 2)) * x ^ (b + 2)
+    dminus <- w * v / (b + 1) * xmin ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmin ^ (b + 1.5) + 4 / (pi * (b + 2)) * xmin ^ (b + 2)
+  }
+  return(dplus - dminus)
+  }
 
 #negative log likelihood for minus-sampled bounded power law (in form we can supply to optimizer)
 #Arguments:

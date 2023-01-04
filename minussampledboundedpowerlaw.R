@@ -1,7 +1,7 @@
 rm(list = ls())
 library(RColorBrewer)
 
-
+source("coralsizedistfuncs.R")
 
 #dimensions of sampling window
 # w <- 5
