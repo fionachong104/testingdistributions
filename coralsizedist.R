@@ -45,15 +45,16 @@ for(i in 1:nsites){
                        limits = range(oneyeardf$Area))+
     geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.MSBPL), col = 'red', lwd = 1) +
-    annotate("text", x = 5, y = 10, label = s) +
-    annotate("text", x = 5, y = 3, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
-    annotate("text", x = 5, y = 1, label = bquote(paste(italic(b)[MSBPL]==.(round(MSPLB.bMLE.site.b[i],2))))) +
+    annotate("text", x = 10, y = 10, label = s) +
+    annotate("text", x = 10, y = 3, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
+    annotate("text", x = 10, y = 1, label = bquote(paste(italic(b)[MSBPL]==.(round(MSPLB.bMLE.site.b[i],2))))) +
     theme_classic() + 
     theme(axis.title = element_blank())
 }
 
 leftlabel <- grid::textGrob(expression(paste("Number of colonies with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
 bottomlabel <- grid::textGrob(expression(paste("Colony area, ", italic("x"), ~(cm^2))))
+
 grid.arrange(grobs = siteb_plot, ncol = 4, 
              left = leftlabel,
              bottom = bottomlabel)
