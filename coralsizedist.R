@@ -59,4 +59,3 @@ bottomlabel <- grid::textGrob(expression(paste("Colony area, ", italic("x"), ~(c
 grid.arrange(grobs = siteb_plot, ncol = 4, 
              left = leftlabel,
              bottom = bottomlabel)
-
