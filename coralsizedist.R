@@ -64,18 +64,19 @@ grid.arrange(grobs = siteb_plot, ncol = 4,
 
 x <- sitedata$Area
 
+
 #BPL qqplot 
 qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
             xmax = max(sitex)), x , xlab = "theoretical quantiles", ylab = "sample quantiles", main = "power law Q-Q plot")
-
-# #how to draw qqline with BPL distribution??
 qqline(x, distribution = function(p){
   FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
   })
 
 #minus-sampled BPL qqplot
-qqplot(FMSBPL(x = sitex, b = MSPLB.bMLE.site.b[i], xmin = min(sitex),
-              w = w, v = v), x , xlab = "theoretical quantiles", ylab = "sample quantiles", main = " MS power law Q-Q plot")
+qqplot(FMSBPLinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v), x, xlab = "theoretical quantiles", ylab = "sample quantiles", main = "minus-sampled bounded power law Q-Q plot")
+qqline(x, distribution = function(p){
+  FMSBPLinv(p, b =  PLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
+})
 
 
 #lognormal qqplot
