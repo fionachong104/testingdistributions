@@ -41,7 +41,7 @@ mycolors <- brewer.pal(3, "Dark2")
 alpha <- runif(n = n, min = 0, max = w) #(alpha, beta) uniform random points in sampling window
 beta <- runif(n = n, min = 0, max = v)
 
-par(mfrow = c(2, 3))
+par(mfrow = c(3, 3))
 plot(c(0, w), c(0, v), type = "n", asp = 1, xlab = "", ylab = "")
 plotframe(w = w, v = v)
 isinframe <- inframe(alpha = alpha, beta = beta, r = r, w = w, v = v)
@@ -78,3 +78,9 @@ sitey.MSBPL = (1 - FMSBPL(x = sitex.MSBPL, b = b, xmin = xmin,
 plot(sort(x[isinframe], decreasing=TRUE),1:ninframe, xlab = expression(italic(x)), ylab = expression(italic(S(x)*n)[inframe]))
 lines(sitex.MSBPL,sitey.MSBPL)
 
+#minus-sampled BPL qqplot
+qqplot(FMSBPLinv(u = ppoints(ninframe), b = b, xmin = xmin, w = w, v = v), x[isinframe], xlab = "theoretical quantiles", ylab = "sample quantiles", main = "minus-sampled bounded power law Q-Q plot")
+
+qqline(x[isinframe], distribution = function(p){
+  FMSBPLinv(p, b = b, xmin = xmin, w = w, v = v)
+})

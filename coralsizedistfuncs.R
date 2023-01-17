@@ -132,16 +132,21 @@ FMSBPL <- function(b, x, xmin, w, v){
 }
 
 #inverse CDF for minus sampled bounded power law
-#u in [0,1]
+# vector of u in [0,1]
 #b: power law coefficient
 #xmin: min for bounded power law
 #w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
 #Value: inverse CDF evaluated at u
 FMSBPLinv <- function(u, b, xmin, w, v){
+  nu <- length(u)
+  xout <- numeric(nu)
   xmw <- pi / 4 * v ^ 2 
-  uniroot(f = function(x){
-    FMSBPL(b = b, x = x, xmin = xmin, w = w, v = v) - u
-    }, lower = xmin, upper = xmw)$root
+  for(i in 1:nu){
+    xout[i] <- uniroot(f = function(x){
+      FMSBPL(b = b, x = x, xmin = xmin, w = w, v = v) - u[i]
+     }, lower = xmin, upper = xmw)$root
+  }
+  return(xout) #evaluated for each point in u
 }
 
 #integrate unstandardised minus sampled bounded power law from xmin to x
