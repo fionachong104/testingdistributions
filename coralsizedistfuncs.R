@@ -7,8 +7,9 @@ set.params = function(Area){
   sum.log.Area <- sum(log.Area)
   min.Area <- min(Area)
   max.Area <- max(Area)
-  out.list <- (list(Area, log.Area, sum.log.Area, min.Area, max.Area))
-  names(out.list) <- c("Area", "log.Area", "sum.log.Area", "min.Area", "max.Area")
+  n <- length(Area)
+  out.list <- (list(Area, log.Area, sum.log.Area, min.Area, max.Area, n))
+  names(out.list) <- c("Area", "log.Area", "sum.log.Area", "min.Area", "max.Area", "n")
   return(out.list)
 }
 
@@ -128,7 +129,20 @@ FMSBPL <- function(b, x, xmin, w, v){
   denominator <- integrateMSBPL(x = xmw, b = b, xmin = xmin, w = w, v = v)
   numerator <- integrateMSBPL(x = x, b = b, xmin = xmin, w = w, v = v)
   return(numerator/denominator)
-  }
+}
+
+#inverse CDF for minus sampled bounded power law
+#u in [0,1]
+#b: power law coefficient
+#xmin: min for bounded power law
+#w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
+#Value: inverse CDF evaluated at u
+FMSBPLinv <- function(u, b, xmin, w, v){
+  xmw <- pi / 4 * v ^ 2 
+  uniroot(f = function(x){
+    FMSBPL(b = b, x = x, xmin = xmin, w = w, v = v) - u
+    }, lower = xmin, upper = xmw)$root
+}
 
 #integrate unstandardised minus sampled bounded power law from xmin to x
 #Arguments:
