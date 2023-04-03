@@ -30,8 +30,13 @@ for(i in 1:nsites){
                          x_min = siteinput$min.Area, x_max = siteinput$max.Area)
   PLB.bMLE.site.b[i] <- bML[[1]] 
   MSPLB.bMLE.site.b[i] <- estimatebMSBPL(x = sitedata$Area, w = w, v = v)$minimum
-  #x <- sitedata$Area
+  x <- sitedata$Area
   sitex = seq(min(sitedata$Area), max(sitedata$Area), length = 1000)
+  qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
+               xmax = max(sitex)), x , xlab = "theoretical quantiles", ylab = "sample quantiles", main = "power law Q-Q plot")
+  qqline(x, distribution = function(p){
+    FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
+  })
   sitey.PLB = (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
                        xmax = max(sitex))) * length(sitedata$Area)
   sitey.MSBPL = (1 - FMSBPL(x = sitex, b = MSPLB.bMLE.site.b[i], xmin = min(sitex),
@@ -66,11 +71,7 @@ x <- sitedata$Area
 
 
 #BPL qqplot 
-qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
-            xmax = max(sitex)), x , xlab = "theoretical quantiles", ylab = "sample quantiles", main = "power law Q-Q plot")
-qqline(x, distribution = function(p){
-  FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
-  })
+
 
 #minus-sampled BPL qqplot
 qqplot(FMSBPLinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v), x, xlab = "theoretical quantiles", ylab = "sample quantiles", main = "minus-sampled bounded power law Q-Q plot")
