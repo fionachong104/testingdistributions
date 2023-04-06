@@ -18,6 +18,11 @@ PLB.bMLE.site.b <- numeric(nsites)
 MSPLB.bMLE.site.b <- numeric(nsites)
 
 siteb_plot <- list()
+bplqq <- list()
+msbplqq <-list()
+
+lognormalAIC <- list()
+boundedpowerlawAIC <- list()
 
 w <- 3648/35
 v <- 2736/35
@@ -32,11 +37,19 @@ for(i in 1:nsites){
   MSPLB.bMLE.site.b[i] <- estimatebMSBPL(x = sitedata$Area, w = w, v = v)$minimum
   x <- sitedata$Area
   sitex = seq(min(sitedata$Area), max(sitedata$Area), length = 1000)
-  qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
-               xmax = max(sitex)), x , xlab = "theoretical quantiles", ylab = "sample quantiles", main = "power law Q-Q plot")
+  par(mfrow=c(1,2))
+  bplqq[[i]] <- qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
+               xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", main = paste(sites[i], ": Power law Q-Q plot"))
   qqline(x, distribution = function(p){
     FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
   })
+  msbplqq[[i]] <- qqplot(FMSBPLinv(u = ppoints(siteinput$n), b = MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v), x, xlab = "Theoretical quantiles", ylab = "Sample quantiles", main = paste(sites[i], ": Minus-sampled bounded power law Q-Q plot"))
+  qqline(x, distribution = function(p){
+    FMSBPLinv(p, b =  PLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
+  })
+  hist(log(sitedata$Area), main = paste(sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
+  qqnorm(log(sitedata$Area), main = paste(sites[i], ": Log-normal Q-Q plot"))
+  qqline(log(sitedata$Area))
   sitey.PLB = (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
                        xmax = max(sitex))) * length(sitedata$Area)
   sitey.MSBPL = (1 - FMSBPL(x = sitex, b = MSPLB.bMLE.site.b[i], xmin = min(sitex),
@@ -56,31 +69,19 @@ for(i in 1:nsites){
     annotate("text", x = 10, y = 1, label = bquote(paste(italic(b)[MSBPL]==.(round(MSPLB.bMLE.site.b[i],2))))) +
     theme_classic() + 
     theme(axis.title = element_blank())
+  lognormalAIC[[i]] <- normAIC(log(x))
+  boundedpowerlawAIC[[i]] <- BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)
 }
 
 leftlabel <- grid::textGrob(expression(paste("Number of colonies with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
 bottomlabel <- grid::textGrob(expression(paste("Colony area, ", italic("x"), ~(cm^2))))
 
-grid.arrange(grobs = siteb_plot, ncol = 4, 
+siteb_plot <- grid.arrange(grobs = siteb_plot, ncol = 4, 
              left = leftlabel,
              bottom = bottomlabel)
 
+ggsave(file = "siteb_plot.svg", plot = siteb_plot, width = 13, height = 9)
 
-
-x <- sitedata$Area
-
-
-#BPL qqplot 
-
-
-#minus-sampled BPL qqplot
-qqplot(FMSBPLinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v), x, xlab = "theoretical quantiles", ylab = "sample quantiles", main = "minus-sampled bounded power law Q-Q plot")
-qqline(x, distribution = function(p){
-  FMSBPLinv(p, b =  PLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
-})
-
-
-#lognormal qqplot
-hist(log(x))
-qqnorm(log(x))
-qqline(log(x))
+# plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)
+# plots.png.paths <- list.files(plots.dir.path, pattern = ".png", full.names = TRUE)
+# file.copy(from = plots.png.paths, to = "C:/Users/624225/OneDrive - hull.ac.uk/_BoxData/PhD/testingdistributions")
