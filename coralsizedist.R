@@ -87,3 +87,10 @@ ggsave(file = "siteb_plot.svg", plot = siteb_plot, width = 13, height = 9)
 # plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)
 # plots.png.paths <- list.files(plots.dir.path, pattern = ".png", full.names = TRUE)
 # file.copy(from = plots.png.paths, to = "C:/Users/624225/OneDrive - hull.ac.uk/_BoxData/PhD/testingdistributions")
+
+# compare AIC easily 
+boundedpowerlawAIC <- do.call(rbind.data.frame,boundedpowerlawAIC)
+lognormalAIC <- do.call(rbind.data.frame,lognormalAIC)
+AICdf <- cbind(boundedpowerlawAIC, lognormalAIC)
+row.names(AICdf) <- sites
+write.csv(AICdf,'AIC.csv') 
