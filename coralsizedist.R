@@ -12,6 +12,7 @@ axisscores <- read.csv("axisscores.csv", row.names=1)
 axisscores <- axisscores[order(axisscores$PC1), ]
 
 sites <- unique(oneyeardf$Site)
+sites <- sites[match(row.names(axisscores), sites)] #re-ordering based on increasing PC1 scores
 nsites <- length(sites)
 
 PLB.bMLE.site.b <- numeric(nsites)
@@ -37,18 +38,18 @@ for(i in 1:nsites){
   MSPLB.bMLE.site.b[i] <- estimatebMSBPL(x = sitedata$Area, w = w, v = v)$minimum
   x <- sitedata$Area
   sitex = seq(min(sitedata$Area), max(sitedata$Area), length = 1000)
-  par(mfrow=c(1,2))
+  par(mfrow=c(2,2))
   bplqq[[i]] <- qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
-               xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", main = paste(sites[i], ": Power law Q-Q plot"))
+               xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", main = paste("(A)", sites[i], ": Power law Q-Q plot"))
   qqline(x, distribution = function(p){
     FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
   })
-  msbplqq[[i]] <- qqplot(FMSBPLinv(u = ppoints(siteinput$n), b = MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v), x, xlab = "Theoretical quantiles", ylab = "Sample quantiles", main = paste(sites[i], ": Minus-sampled bounded power law Q-Q plot"))
+  msbplqq[[i]] <- qqplot(FMSBPLinv(u = ppoints(siteinput$n), b = MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v), x, xlab = "Theoretical quantiles", ylab = "Sample quantiles", main = paste("(B)", sites[i], ": Minus-sampled bounded power law Q-Q plot"))
   qqline(x, distribution = function(p){
     FMSBPLinv(p, b =  PLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
   })
-  hist(log(sitedata$Area), main = paste(sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
-  qqnorm(log(sitedata$Area), main = paste(sites[i], ": Log-normal Q-Q plot"))
+  hist(log(sitedata$Area), main = paste("(C)", sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
+  qqnorm(log(sitedata$Area), main = paste("(D)", sites[i], ": Log-normal Q-Q plot"))
   qqline(log(sitedata$Area))
   sitey.PLB = (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
                        xmax = max(sitex))) * length(sitedata$Area)
@@ -82,6 +83,7 @@ siteb_plot <- grid.arrange(grobs = siteb_plot, ncol = 4,
 
 ggsave(file = "siteb_plot.svg", plot = siteb_plot, width = 13, height = 9)
 
+# saves the temp images from the plotting envrionment
 # plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)
 # plots.png.paths <- list.files(plots.dir.path, pattern = ".png", full.names = TRUE)
 # file.copy(from = plots.png.paths, to = "C:/Users/624225/OneDrive - hull.ac.uk/_BoxData/PhD/testingdistributions")
