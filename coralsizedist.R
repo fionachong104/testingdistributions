@@ -46,7 +46,7 @@ for(i in 1:nsites){
   })
   msbplqq[[i]] <- qqplot(FMSBPLinv(u = ppoints(siteinput$n), b = MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v), x, xlab = "Theoretical quantiles", ylab = "Sample quantiles", main = paste("(B)", sites[i], ": Minus-sampled bounded power law Q-Q plot"))
   qqline(x, distribution = function(p){
-    FMSBPLinv(p, b =  PLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
+    FMSBPLinv(p, b =  MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
   })
   hist(log(sitedata$Area), main = paste("(C)", sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
   qqnorm(log(sitedata$Area), main = paste("(D)", sites[i], ": Log-normal Q-Q plot"))
