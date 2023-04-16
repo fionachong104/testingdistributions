@@ -219,16 +219,9 @@ estimatebMSBPL <- function(x, w, v){
 #xmin, xmax: min and max for bounded power law
 #w, v: width and height of sampling window (ASSUMES v <= w)
 #Value: density f(x) at x
-#NOTE: NOT SURE ABOUT JACOBIAN YET
 dMSBPL <- function(x, b, C, xmin, xmax, w, v){
-  Jacobian <- 1 / (2 * sqrt(pi * x))
-  #numerator <- C / (w * v) * (4 / pi * x ^ (b + 1) - 2 * (w + v) / sqrt(pi) * x ^ (b + 0.5) + w * v * x ^ b) #includes factor C / (w * v) that cancels with denominator
   numerator <- 4 / pi * x ^ (b + 1) - 2 * (w + v) / sqrt(pi) * x ^ (b + 0.5) + w * v * x ^ b
-  #numerator <- numerator * Jacobian #change of variables needed?
-  
   n2 <- dboundedpowerlaw(x = x, b = b, C = C, xmin = xmin, xmax = xmax) * getpir(w = w, v = v, r = sqrt(x / pi))
-  #n2 <- n2 * Jacobian #CHECK: JACOBIAN NEEDED HERE?
-  
   xmw <- pi / 4 * v ^ 2 #largest circle we can fit in window
   if(b == -2){#special case for denominator
     dplus <- w * v / (b + 1) * xmw ^ (b + 1) - 2 * (w + v) / (sqrt(pi) * (b + 1.5)) * xmw ^ (b + 1.5) + 4 / pi * log(xmw)
