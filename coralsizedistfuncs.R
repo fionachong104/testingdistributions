@@ -100,6 +100,15 @@ getpir <- function(w, v, r){
   return((w - 2 * r) * (v - 2 * r) / (w * v)) #area in which we can minus-sample a circle of radius r / window area
 }
 
+#calculate g(x), the probability we minus-sample a circle of area x
+#Arguments:
+#w, v: rectangular window dimensions
+#x: circle area
+#Value: probability a circle of area x is minus-sampled
+getgx <- function(w, v, x){
+  return(v * w - 2 * (v + w) * sqrt(x / pi) + 4 * x / pi)
+}
+
 #density for minus-sampled bounded power law (in form we can supply to optimizer)
 #Arguments:
 #b: power law coefficient
@@ -362,4 +371,10 @@ BPLAIC <- function(C, b, x){#making the argument be x instead of a may be easier
   llBPL <- n * log(C) + b * sum(x) 
   AIC <- 2*3 - 2*llBPL
   return(list(llBPL = llBPL, AIC = AIC))
+}
+
+dMSlnorm <- function(x, mu, sigma, v, w){
+  xmw <- pi / 4 * v ^ 2 #largest circle we can fit in window
+  
+  
 }
