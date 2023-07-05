@@ -72,9 +72,8 @@ abline(v = bML$minimum, lty = "dashed", col = mycolors[2])
 legend("topright", lty = c("solid", "dashed"), legend = c("true", "ML"), col = mycolors[1:2], bty = "n")
 
 ninframe <- length(x[isinframe])
-sitex.MSBPL = seq(min(x[isinframe]), max(x[isinframe]), length = 1000)
-sitey.MSBPL = (1 - FMSBPL(x = sitex.MSBPL, b = b, xmin = xmin,
-                      w = w, v = v)) * ninframe
+sitex.MSBPL <-seq(min(x[isinframe]), max(x[isinframe]), length = 1000)
+sitey.MSBPL <- (1 - FMSBPL(x = sitex.MSBPL, b = b, xmin = xmin, w = w, v = v)) * ninframe
 plot(sort(x[isinframe], decreasing=TRUE),1:ninframe, xlab = expression(italic(x)), ylab = expression(italic(S(x)*n)[inframe]))
 lines(sitex.MSBPL,sitey.MSBPL)
 

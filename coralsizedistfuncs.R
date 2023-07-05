@@ -433,11 +433,22 @@ FMSlnorminv <- function(u, mu, sigma, w, v){
 
 #negative log likelihood for minus-sampled lognormal (in form we can supply to optimizer)
 #Arguments:
-#mu, sigma: mean and sd of log area
+#theta: parameter vector (mu, sigma): mean and sd of log area
 #x: vector of sizes
 #w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
 #Value: negative log likelihood for observations x, with parameters mu, sigma
-negloglikMSlnorm <- function(mu, sigma, x, w, v){
-  logfx <- sum(log(dMSlnorm(x = x, mu = mu, sigma = sigma, w = w, v = v)))
+negloglikMSlnorm <- function(theta, x, w, v){
+  logfx <- sum(log(dMSlnorm(x = x, mu = theta[1], sigma = theta[2], w = w, v = v)))
   return(-logfx)
+}
+
+#maximum likelihood estimate of parameters for minus-sampled lognormal
+#Arguments:
+#x: vector of sizes
+#w: width of window
+#v: height of window
+#Value: object returned by optim(). Contains par (parameter vector), value (negative log likelihood), convergence (0 indicates success)
+estimateMSlnorm <- function(x, w, v){
+  par <- c(mean(log(x)), sd(log(x))) #plausible initial guesses: sample mean and sd of log sizes
+  return(optim(f = negloglikMSlnorm, par = c(0, 1), method = "BFGS", x = x, w = w, v = v))
 }
