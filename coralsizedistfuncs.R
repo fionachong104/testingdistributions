@@ -445,7 +445,6 @@ FMSlnorminv <- function(u, mu, sigma, w, v){
 #w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
 #Value: negative log likelihood for observations x, with parameters mu, sigma
 negloglikMSlnorm <- function(theta, x, w, v){
-  print(theta)
   logfx <- sum(dMSlnorm(x = x, mu = theta[1], sigma = theta[2], w = w, v = v, log = TRUE))
   return(-logfx)
 }
@@ -476,6 +475,6 @@ estimateMSlnorm <- function(x, w, v){
   #print("Ordinary lognormal:")
   #ordinary <- optim(f = testfun, par = par, method = "Nelder-Mead", x = x) #test: ordinary lognormal
   #print(c(ordinary$par, ordinary$value, ordinary$convergence))
-  mslnorm <- optim(f = negloglikMSlnorm, par = par, method = "Nelder-Mead", x = x, w = w, v = v) #BFGS didn't behave nicely in this case
-  return(mslnorm)
+  thetamslnorm <- optim(f = negloglikMSlnorm, par = par, method = "Nelder-Mead", x = x, w = w, v = v) #BFGS didn't behave nicely in this case
+  return(thetamslnorm)
 }

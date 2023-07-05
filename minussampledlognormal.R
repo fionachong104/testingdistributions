@@ -48,6 +48,8 @@ legend("bottomleft", bty = "n", lwd = 2, lty = c("solid", "dashed"), col = c(myc
 #plotnegloglik(x = x[isinframe], w = w, v = v)
 #abline(v = b, lty = "solid", col = mycolors[1])
 thetaML <- estimateMSlnorm(x = x[isinframe], w = w, v = v)
+print("Parameter estimates:")
+print(thetaML$par)
 #abline(v = bML$minimum, lty = "dashed", col = mycolors[2])
 #legend("topright", lty = c("solid", "dashed"), legend = c("true", "ML"), col = mycolors[1:2], bty = "n")
 
