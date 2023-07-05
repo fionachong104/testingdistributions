@@ -36,7 +36,7 @@ lines(xseq, fx, col = mycolors[1], lwd = 2, lty = "solid") #density curve for lo
 legend("topright", bty = "n", lwd = 2, lty = c("solid"), col = c(mycolors[1]), legend = c("calculated"))
 
 hist(x[isinframe], freq = FALSE, main = "minus-sampled lognormal", breaks = 100, xlab = expression(italic(x)), ylab = "density")
-xseqMS <- seq(from = min(x), to = max(x), length.out = 1e2)
+xseqMS <- seq(from = min(x), to = max(x), length.out = 1e4)
 fxMS <- dMSlnorm(x = xseqMS, mu = mu, sigma = sigma, v = v, w = w)
 lines(xseqMS, fxMS, col = mycolors[2], lwd = 2, lty = "dashed") #density curve for minus-sampled lognormal
 legend("topright", bty = "n", lwd = 2, lty = c("dashed"), col = c(mycolors[2]), legend = c("calculated"))

@@ -376,20 +376,50 @@ BPLAIC <- function(C, b, x){#making the argument be x instead of a may be easier
 dMSlnorm <- function(x, mu, sigma, v, w){
   xmw <- pi / 4 * v ^ 2 #largest circle we can fit in window
   numerator <- dlnorm(x = x, meanlog = mu, sdlog = sigma) * getgx(v = v, w = w, x = x)
-  denominator <- dMSlnormintegral(mu = mu, sigma = sigma, w = w, v = v, xmaxminus = xmw)$value
+  denominator <- dMSlnormintegral(x = xmw, mu = mu, sigma = sigma, w = w, v = v)$value
   return(numerator / denominator)
 }
 
 #Denominator for minus-sampled lognormal by numerical integration
 #Arguments:
+#x: value up to which we want to integrate
 #mu, sigma: mean and sd of log area
 #w, v: width and height of sampling window (ASSUMES v < w)
-#xmaxminus: max area we can fit in window
-#Value: numerical integral of minus-sampled lognormal
-dMSlnormintegral <- function(mu, sigma, w, v, xmaxminus){
+#Value: numerical integral of minus-sampled lognormal density from 0 to x
+dMSlnormintegral <- function(x, mu, sigma, w, v){
   myfunction <- function(x){
     f <- dlnorm(x = x, meanlog = mu, sdlog = sigma) * getgx(w = w, v = v, x = x)
     return(f)
   }
   return(integrate(f = myfunction, lower = 0, upper = xmaxminus))
+}
+
+#cdf for minus sampled lognormal
+#Arguments:
+#x: value at which to get cdf
+#mu, sigma: mean and sd for log area
+#w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
+#Value: cdf for minus sampled lognormal up to area x
+FMSlnorm <- function(x, mu, sigma, w, v){
+  xmw <- pi / 4 * v ^ 2 #largest circle we can fit in window
+  denominator <- dMSlnormintegral(x = xmaxminus, mu = mu, sigma = sigma, w = w, v = v)
+  numerator <- dMSlnormintegral(x = x, b = b, xmin = xmin, w = w, v = v)
+  return(numerator/denominator)
+}
+
+#inverse CDF for minus sampled lognormal
+# vector of u in [0,1]
+#mu, sigma: mean and sd for log area
+#w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
+#Value: inverse CDF evaluated at u
+FMSlnorminv <- function(u, mu, sigma, w, v){
+  nu <- length(u)
+  xout <- numeric(nu)
+  xmw <- pi / 4 * v ^ 2 
+  for(i in 1:nu){
+    xout[i] <- uniroot(f = function(x){
+      FMSBPL(b = b, x = x, xmin = xmin, w = w, v = v) - u[i]
+    }, lower = xmin, upper = xmw)$root
+  }
+  return(xout) #evaluated for each point in u
 }
