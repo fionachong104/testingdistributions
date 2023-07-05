@@ -13,7 +13,7 @@ n <- 1e4 #number of circles
 nplot <- 100 #number to plot
 mu <- 0 #mean log area
 sigma <- 1 #sd log area
-x <- simulatelognormal(n = n, mu = mu, sigma = sigma) #simulated areas
+x <- exp(rlnorm(n = n, meanlog = mu, sdlog = sigma)) #simulated areas from lognormal
 
 r <- radiusfromarea(x) #colony radii (assume circles)
 mycolors <- brewer.pal(3, "Dark2")
