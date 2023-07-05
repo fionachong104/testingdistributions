@@ -449,23 +449,33 @@ negloglikMSlnorm <- function(theta, x, w, v){
   return(-logfx)
 }
 
-plotnegloglikMSlnorm <- function(x, w, v){
-  mu <- seq(from = 2, to = 4, length.out = 5)
-  sigma <- seq(from = 0.5, to = 2.5, length.out = 5)
-  theta <- expand.grid(mu, sigma)
-  ntheta <- dim(theta)[1]
-  nll <- numeric(ntheta)
-  for(i in 1:ntheta){
-    nll[i] <- negloglikMSlnorm(theta = c(theta[i, 1], theta[i, 2]), x = x, w = w, v = v)
+#plot contours of negative log likelihood for minus-sampled lognormal
+#Arguments:
+#x: vector of sizes
+#w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
+#mu, sigma: true mean and sd of log size
+#muhat, thetahat: estimated parameters
+#Value: contours of negative log likelihood, with dot at true parameter vector
+plotnegloglikMSlnorm <- function(x, w, v, mu, sigma, muhat, sigmahat){
+  mycolors <- brewer.pal(3, "Dark2")
+    muv <- seq(from = mu - 2, to = mu + 2, length.out = 40)
+  sigmav <- seq(from = sigma / 2, to = 2 * sigma, length.out = 40)
+  nll <- array(dim = c(length(muv), length(sigmav)))
+  for(i in 1:length(muv)){
+    for(j in 1:length(sigmav))
+      nll[i, j] <- negloglikMSlnorm(theta = c(muv[i], sigmav[j]), x = x, w = w, v = v)
   }
-  return(list(theta = theta, nll = nll))
+   contour(muv, sigmav, nll, xlab = expression(mu), ylab = expression(sigma))
+   points(mu, sigma, pch = 16, col = adjustcolor(mycolors[1], 0.4))
+   points(muhat, sigmahat, pch = 1, col = adjustcolor(mycolors[2], 0.4))
+   legend("topright", pch = c(16, 1), col = mycolors[1:2], legend = c("true", "estimated"), bty = "n")
 }
 
 #maximum likelihood estimate of parameters for minus-sampled lognormal
 #x: vector of sizes
 #w: width of window
 #v: height of window
-#Value: object returned by optim(). Contains par (parameter vector), value (negative log likelihood), convergence (0 indicates success)
+#Value: object returned by optim(). Contains par (parameter vector: mean and sd of log sizes), value (negative log likelihood), convergence (0 indicates success)
 estimateMSlnorm <- function(x, w, v){
   testfun <- function(theta, x){#test: ordinary lognormal
     -sum(dlnorm(meanlog = theta[1], sdlog = theta[2], x = x, log = TRUE))

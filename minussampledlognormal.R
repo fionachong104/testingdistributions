@@ -45,13 +45,10 @@ plot(log(xseq), log(fx), type = "l", lwd = 2, lty = "solid", col = mycolors[1], 
 lines(log(xseqMS), log(fxMS), col = mycolors[2], lwd = 2, lty = "dashed")
 legend("bottomleft", bty = "n", lwd = 2, lty = c("solid", "dashed"), col = c(mycolors[1], mycolors[2]), legend = c("lognormal", "minus-sampled lognormal"))
 
-#plotnegloglik(x = x[isinframe], w = w, v = v)
-#abline(v = b, lty = "solid", col = mycolors[1])
 thetaML <- estimateMSlnorm(x = x[isinframe], w = w, v = v)
+plotnegloglikMSlnorm(x = x[isinframe], w = w, v = v, mu = mu, sigma = sigma, muhat = thetaML$par[1], sigmahat = thetaML$par[2]) #contours of negative log likelihood
 print("Parameter estimates:")
 print(thetaML$par)
-#abline(v = bML$minimum, lty = "dashed", col = mycolors[2])
-#legend("topright", lty = c("solid", "dashed"), legend = c("true", "ML"), col = mycolors[1:2], bty = "n")
 
 ninframe <- length(x[isinframe])
 sitex.MSlnorm <- seq(min(x[isinframe]), max(x[isinframe]), length = 1000)
