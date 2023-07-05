@@ -391,7 +391,7 @@ dMSlnormintegral <- function(x, mu, sigma, w, v){
     f <- dlnorm(x = x, meanlog = mu, sdlog = sigma) * getgx(w = w, v = v, x = x)
     return(f)
   }
-  return(integrate(f = myfunction, lower = 0, upper = xmaxminus))
+  return(integrate(f = myfunction, lower = 0, upper = x))
 }
 
 #cdf for minus sampled lognormal
@@ -402,9 +402,9 @@ dMSlnormintegral <- function(x, mu, sigma, w, v){
 #Value: cdf for minus sampled lognormal up to area x
 FMSlnorm <- function(x, mu, sigma, w, v){
   xmw <- pi / 4 * v ^ 2 #largest circle we can fit in window
-  denominator <- dMSlnormintegral(x = xmaxminus, mu = mu, sigma = sigma, w = w, v = v)
-  numerator <- dMSlnormintegral(x = x, b = b, xmin = xmin, w = w, v = v)
-  return(numerator/denominator)
+  denominator <- dMSlnormintegral(x = xmw, mu = mu, sigma = sigma, w = w, v = v)$value
+  numerator <- dMSlnormintegral(x = x, mu = mu, sigma = sigma, w = w, v = v)$value
+  return(numerator / denominator)
 }
 
 #inverse CDF for minus sampled lognormal
@@ -418,8 +418,8 @@ FMSlnorminv <- function(u, mu, sigma, w, v){
   xmw <- pi / 4 * v ^ 2 
   for(i in 1:nu){
     xout[i] <- uniroot(f = function(x){
-      FMSBPL(b = b, x = x, xmin = xmin, w = w, v = v) - u[i]
-    }, lower = xmin, upper = xmw)$root
+      FMSlnorm(x = x, mu = mu, sigma = sigma, w = w, v = v) - u[i]
+    }, lower = 0, upper = xmw)$root
   }
   return(xout) #evaluated for each point in u
 }

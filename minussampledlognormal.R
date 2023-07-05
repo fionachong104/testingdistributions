@@ -51,16 +51,16 @@ legend("bottomleft", bty = "n", lwd = 2, lty = c("solid", "dashed"), col = c(myc
 #abline(v = bML$minimum, lty = "dashed", col = mycolors[2])
 #legend("topright", lty = c("solid", "dashed"), legend = c("true", "ML"), col = mycolors[1:2], bty = "n")
 
-#ninframe <- length(x[isinframe])
+ninframe <- length(x[isinframe])
 #sitex.MSBPL = seq(min(x[isinframe]), max(x[isinframe]), length = 1000)
 #sitey.MSBPL = (1 - FMSBPL(x = sitex.MSBPL, b = b, xmin = xmin,
 #                      w = w, v = v)) * ninframe
 #plot(sort(x[isinframe], decreasing=TRUE),1:ninframe, xlab = expression(italic(x)), ylab = expression(italic(S(x)*n)[inframe]))
 #lines(sitex.MSBPL,sitey.MSBPL)
 
-#minus-sampled BPL qqplot
-#qqplot(FMSBPLinv(u = ppoints(ninframe), b = b, xmin = xmin, w = w, v = v), x[isinframe], xlab = "theoretical quantiles", ylab = "sample quantiles", main = "minus-sampled bounded power law Q-Q plot")
+#minus-sampled lognormal qqplot
+qqplot(FMSlnorminv(u = ppoints(ninframe), mu = mu, sigma = sigma, w = w, v = v), x[isinframe], xlab = "theoretical quantiles", ylab = "sample quantiles", main = "minus-sampled lognormal Q-Q plot")
 
-#qqline(x[isinframe], distribution = function(p){
-#  FMSBPLinv(p, b = b, xmin = xmin, w = w, v = v)
-#})
+qqline(x[isinframe], distribution = function(p){
+  FMSlnorminv(p, mu = mu, sigma = sigma, w = w, v = v)
+})
