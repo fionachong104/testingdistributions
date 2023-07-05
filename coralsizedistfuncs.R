@@ -373,6 +373,12 @@ BPLAIC <- function(C, b, x){#making the argument be x instead of a may be easier
   return(list(llBPL = llBPL, AIC = AIC))
 }
 
+#density for minus-sampled lognormal
+#Arguments:
+#x: value up to which we want to integrate
+#mu, sigma: mean and sd of log area
+#w, v: width and height of sampling window (ASSUMES v < w)
+#Value: minus-sampled lognormal density
 dMSlnorm <- function(x, mu, sigma, v, w){
   xmw <- pi / 4 * v ^ 2 #largest circle we can fit in window
   numerator <- dlnorm(x = x, meanlog = mu, sdlog = sigma) * getgx(v = v, w = w, x = x)
@@ -408,10 +414,11 @@ FMSlnorm <- function(x, mu, sigma, w, v){
 }
 
 #inverse CDF for minus sampled lognormal
-# vector of u in [0,1]
+#u in [0,1]
 #mu, sigma: mean and sd for log area
 #w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
 #Value: inverse CDF evaluated at u
+#Note: not vectorized. Use sapply() if we have a vector of values of u
 FMSlnorminv <- function(u, mu, sigma, w, v){
   nu <- length(u)
   xout <- numeric(nu)
@@ -421,5 +428,16 @@ FMSlnorminv <- function(u, mu, sigma, w, v){
       FMSlnorm(x = x, mu = mu, sigma = sigma, w = w, v = v) - u[i]
     }, lower = 0, upper = xmw)$root
   }
-  return(xout) #evaluated for each point in u
+  return(xout)
+}
+
+#negative log likelihood for minus-sampled lognormal (in form we can supply to optimizer)
+#Arguments:
+#mu, sigma: mean and sd of log area
+#x: vector of sizes
+#w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
+#Value: negative log likelihood for observations x, with parameters mu, sigma
+negloglikMSlnorm <- function(mu, sigma, x, w, v){
+  logfx <- sum(log(dMSlnorm(x = x, mu = mu, sigma = sigma, w = w, v = v)))
+  return(-logfx)
 }
