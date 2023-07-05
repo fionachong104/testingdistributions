@@ -376,7 +376,7 @@ BPLAIC <- function(C, b, x){#making the argument be x instead of a may be easier
 dMSlnorm <- function(x, mu, sigma, v, w){
   xmw <- pi / 4 * v ^ 2 #largest circle we can fit in window
   numerator <- dlnorm(x = x, meanlog = mu, sdlog = sigma) * getgx(v = v, w = w, x = x)
-  denominator <- dMSlnormintegral(mu = mu, sigma = sigma, w = w, v = v, xmaxminus = xmw)
+  denominator <- dMSlnormintegral(mu = mu, sigma = sigma, w = w, v = v, xmaxminus = xmw)$value
   return(numerator / denominator)
 }
 
