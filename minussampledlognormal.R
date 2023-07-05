@@ -12,7 +12,7 @@ xmaxminus <- pi / 4 * v^2 #max area of circle that can fit in window
 n <- 1e4 #number of circles
 nplot <- 100 #number to plot
 mu <- 5 #mean log area
-sigma <- 0.5 #sd log area
+sigma <- 1 #sd log area
 x <- rlnorm(n = n, meanlog = mu, sdlog = sigma) #simulated areas from lognormal
 
 r <- radiusfromarea(x) #colony radii (assume circles)
@@ -35,7 +35,7 @@ fx <- dlnorm(x = xseq, meanlog = mu, sdlog = sigma)
 lines(xseq, fx, col = mycolors[1], lwd = 2, lty = "solid") #density curve for lognormal
 legend("topright", bty = "n", lwd = 2, lty = c("solid"), col = c(mycolors[1]), legend = c("calculated"))
 
-#hist(x[isinframe], freq = FALSE, main = "minus-sampled bounded power law", breaks = 100, xlab = expression(italic(x)), ylab = "density", ylim = c(0, 0.2)) #changing y-axis limits helps us see tail
+hist(x[isinframe], freq = FALSE, main = "minus-sampled lognormal", breaks = 100, xlab = expression(italic(x)), ylab = "density")
 #xseqMS <- seq(from = xmin, to = xmaxminus, length.out = 1e4)
 #fxMS <- dMSBPL(x = xseqMS, b = b, C = C, xmin = xmin, xmax = xmax, w = w, v = v)
 #lines(xseqMS, fxMS, col = mycolors[2], lwd = 2, lty = "dashed") #density curve for bounded power law
