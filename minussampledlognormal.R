@@ -41,9 +41,9 @@ fxMS <- dMSlnorm(x = xseqMS, mu = mu, sigma = sigma, v = v, w = w)
 lines(xseqMS, fxMS, col = mycolors[2], lwd = 2, lty = "dashed") #density curve for minus-sampled lognormal
 legend("topright", bty = "n", lwd = 2, lty = c("dashed"), col = c(mycolors[2]), legend = c("calculated"))
 
-#plot(log(xseq), log(fx), type = "l", lwd = 2, lty = "solid", col = mycolors[1], xlab = expression(log(italic(x))), ylab = "log density")
-#lines(log(xseqMS), log(fxMS), col = mycolors[2], lwd = 2, lty = "dashed") #density curve for bounded power law
-#legend("topright", bty = "n", lwd = 2, lty = c("solid", "dashed"), col = c(mycolors[1], mycolors[2]), legend = c("bounded power law", "minus-sampled bounded power law"))
+plot(log(xseq), log(fx), type = "l", lwd = 2, lty = "solid", col = mycolors[1], xlab = expression(log(italic(x))), ylab = "log density")
+lines(log(xseqMS), log(fxMS), col = mycolors[2], lwd = 2, lty = "dashed")
+legend("bottomleft", bty = "n", lwd = 2, lty = c("solid", "dashed"), col = c(mycolors[1], mycolors[2]), legend = c("lognormal", "minus-sampled lognormal"))
 
 #plotnegloglik(x = x[isinframe], w = w, v = v)
 #abline(v = b, lty = "solid", col = mycolors[1])
