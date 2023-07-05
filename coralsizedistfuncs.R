@@ -105,7 +105,7 @@ getpir <- function(w, v, r){
 #w, v: rectangular window dimensions
 #x: circle area
 #Value: probability a circle of area x is minus-sampled
-getgx <- function(w, v, x){
+getgx <- function(v, w, x){
   return(v * w - 2 * (v + w) * sqrt(x / pi) + 4 * x / pi)
 }
 
@@ -375,6 +375,21 @@ BPLAIC <- function(C, b, x){#making the argument be x instead of a may be easier
 
 dMSlnorm <- function(x, mu, sigma, v, w){
   xmw <- pi / 4 * v ^ 2 #largest circle we can fit in window
-  
-  
+  numerator <- dlnorm(x = x, meanlog = mu, sdlog = sigma) * getgx(v = v, w = w, x = x)
+  denominator <- dMSlnormintegral(mu = mu, sigma = sigma, w = w, v = v, xmaxminus = xmw)
+  return(numerator / denominator)
+}
+
+#Denominator for minus-sampled lognormal by numerical integration
+#Arguments:
+#mu, sigma: mean and sd of log area
+#w, v: width and height of sampling window (ASSUMES v < w)
+#xmaxminus: max area we can fit in window
+#Value: numerical integral of minus-sampled lognormal
+dMSlnormintegral <- function(mu, sigma, w, v, xmaxminus){
+  myfunction <- function(x){
+    f <- dlnorm(x = x, meanlog = mu, sdlog = sigma) * getgx(w = w, v = v, x = x)
+    return(f)
+  }
+  return(integrate(f = myfunction, lower = 0, upper = xmaxminus))
 }
