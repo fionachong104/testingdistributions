@@ -378,12 +378,19 @@ BPLAIC <- function(C, b, x){#making the argument be x instead of a may be easier
 #x: value up to which we want to integrate
 #mu, sigma: mean and sd of log area
 #w, v: width and height of sampling window (ASSUMES v < w)
+#log (default FALSE): return log density?
 #Value: minus-sampled lognormal density
-dMSlnorm <- function(x, mu, sigma, v, w){
+dMSlnorm <- function(x, mu, sigma, v, w, log = FALSE){
   xmw <- pi / 4 * v ^ 2 #largest circle we can fit in window
-  numerator <- dlnorm(x = x, meanlog = mu, sdlog = sigma) * getgx(v = v, w = w, x = x)
-  denominator <- dMSlnormintegral(x = xmw, mu = mu, sigma = sigma, w = w, v = v)$value
-  return(numerator / denominator)
+  if(log){
+    lnum <- dlnorm(x = x, meanlog = mu, sdlog = sigma, log = TRUE) + log(getgx(v = v, w = w, x = x))
+    ldenom <- log(dMSlnormintegral(x = xmw, mu = mu, sigma = sigma, w = w, v = v)$value)
+    return(lnum - ldenom)
+  } else {
+    numerator <- dlnorm(x = x, meanlog = mu, sdlog = sigma) * getgx(v = v, w = w, x = x)
+    denominator <- dMSlnormintegral(x = xmw, mu = mu, sigma = sigma, w = w, v = v)$value
+    return(numerator / denominator)
+  }
 }
 
 #Denominator for minus-sampled lognormal by numerical integration
@@ -438,17 +445,37 @@ FMSlnorminv <- function(u, mu, sigma, w, v){
 #w, v: width and height of sampling window (ASSUMES v <= w and xmax greater than largest observable object)
 #Value: negative log likelihood for observations x, with parameters mu, sigma
 negloglikMSlnorm <- function(theta, x, w, v){
-  logfx <- sum(log(dMSlnorm(x = x, mu = theta[1], sigma = theta[2], w = w, v = v)))
+  print(theta)
+  logfx <- sum(dMSlnorm(x = x, mu = theta[1], sigma = theta[2], w = w, v = v, log = TRUE))
   return(-logfx)
 }
 
+plotnegloglikMSlnorm <- function(x, w, v){
+  mu <- seq(from = 2, to = 4, length.out = 5)
+  sigma <- seq(from = 0.5, to = 2.5, length.out = 5)
+  theta <- expand.grid(mu, sigma)
+  ntheta <- dim(theta)[1]
+  nll <- numeric(ntheta)
+  for(i in 1:ntheta){
+    nll[i] <- negloglikMSlnorm(theta = c(theta[i, 1], theta[i, 2]), x = x, w = w, v = v)
+  }
+  return(list(theta = theta, nll = nll))
+}
+
 #maximum likelihood estimate of parameters for minus-sampled lognormal
-#Arguments:
 #x: vector of sizes
 #w: width of window
 #v: height of window
 #Value: object returned by optim(). Contains par (parameter vector), value (negative log likelihood), convergence (0 indicates success)
 estimateMSlnorm <- function(x, w, v){
+  testfun <- function(theta, x){#test: ordinary lognormal
+    -sum(dlnorm(meanlog = theta[1], sdlog = theta[2], x = x, log = TRUE))
+  }
+  
   par <- c(mean(log(x)), sd(log(x))) #plausible initial guesses: sample mean and sd of log sizes
-  return(optim(f = negloglikMSlnorm, par = c(0, 1), method = "BFGS", x = x, w = w, v = v))
+  #print("Ordinary lognormal:")
+  #ordinary <- optim(f = testfun, par = par, method = "Nelder-Mead", x = x) #test: ordinary lognormal
+  #print(c(ordinary$par, ordinary$value, ordinary$convergence))
+  mslnorm <- optim(f = negloglikMSlnorm, par = par, method = "Nelder-Mead", x = x, w = w, v = v) #BFGS didn't behave nicely in this case
+  return(mslnorm)
 }
