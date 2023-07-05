@@ -52,11 +52,10 @@ legend("bottomleft", bty = "n", lwd = 2, lty = c("solid", "dashed"), col = c(myc
 #legend("topright", lty = c("solid", "dashed"), legend = c("true", "ML"), col = mycolors[1:2], bty = "n")
 
 ninframe <- length(x[isinframe])
-#sitex.MSBPL = seq(min(x[isinframe]), max(x[isinframe]), length = 1000)
-#sitey.MSBPL = (1 - FMSBPL(x = sitex.MSBPL, b = b, xmin = xmin,
-#                      w = w, v = v)) * ninframe
-#plot(sort(x[isinframe], decreasing=TRUE),1:ninframe, xlab = expression(italic(x)), ylab = expression(italic(S(x)*n)[inframe]))
-#lines(sitex.MSBPL,sitey.MSBPL)
+sitex.MSlnorm <- seq(min(x[isinframe]), max(x[isinframe]), length = 1000)
+sitey.MSlnorm <- (1 - sapply(sitex.MSlnorm, FUN = FMSlnorm, mu = mu, sigma = sigma, w = w, v = v)) * ninframe
+plot(sort(x[isinframe], decreasing=TRUE), 1:ninframe, xlab = expression(italic(x)), ylab = expression(italic(S(x)*n)[inframe]))
+lines(sitex.MSlnorm, sitey.MSlnorm)
 
 #minus-sampled lognormal qqplot
 qqplot(FMSlnorminv(u = ppoints(ninframe), mu = mu, sigma = sigma, w = w, v = v), x[isinframe], xlab = "theoretical quantiles", ylab = "sample quantiles", main = "minus-sampled lognormal Q-Q plot")
