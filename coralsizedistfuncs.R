@@ -347,21 +347,17 @@ plotcircle <- function(alpha, beta, r, isinframe){
   polygon(xc + alpha, yc + beta, col = plotcol, border = edgecol)
 }
 
-#log likelihood and AIC of a normal distribution ----
-
-# AIC = 2K - 2ln(L)
-# K = number of model parameters - we have 2 for normal distribution
-# ln(L) is the log likelihood
-
-normAIC <- function(x){
+#log likelihood and AIC for a lognormal distribution
+#Arguments: x: vector of sizes (not logged)
+#Value: list containing lognormal log likelihood and AIC
+lnormAIC <- function(x){
   n <- length(x) #less likely to make mistakes if we calculate it inside the function
-  sigma <- sd(x) * sqrt((n - 1) / n) #want MLE for AIC, not unbiased estimator 
-  # (and less likely to make mistakes if we calculate it once). 
-  # Square root because the (n - 1) / n is for variance
-  mu <- mean(x)
-  llnorm <- -n * log (sigma) - n / 2 *log (2*pi) - 1/2 * sum(((x - mu)/sigma)^2) #I think you had the brackets in the wrong place: we want the sum of each of squared terms, not the square of the sum of terms
-  AIC <- 2*2 - 2*llnorm
-  return(list(llnorm = llnorm , AICnorm = AIC)) 
+  logx <- log(x)
+  sigma <- sd(logx) * sqrt((n - 1) / n) #want MLE for AIC, not unbiased estimator 
+  mu <- mean(logx)
+  lllognorm <- sum(dlnorm(x = x, meanlog = mu, sdlog = sigma, log = TRUE))
+  AIC <- 2*2 - 2*lllognorm
+  return(list(lllognorm = lllognorm , AIClognorm = AIC)) 
 }
 
 # log likelihood and AIC of a bounded power law distribution ----

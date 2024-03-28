@@ -76,7 +76,7 @@ for(i in 1:nsites){
     annotate("text", x = 10, y = 1, label = bquote(paste(italic(b)[MSBPL]==.(round(MSPLB.bMLE.site.b[i],2))))) +
     theme_classic() + 
     theme(axis.title = element_blank())
-  lognormalAIC[[i]] <- normAIC(log(x))
+  lognormalAIC[[i]] <- lnormAIC(x)
   boundedpowerlawAIC[[i]] <- BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)
   mslognormalAIC[[i]] <- MSlnormAIC(thetaML = thetaML)
 }
