@@ -36,6 +36,7 @@ for(i in 1:nsites){
                          x_min = siteinput$min.Area, x_max = siteinput$max.Area)
   PLB.bMLE.site.b[i] <- bML[[1]] 
   MSPLB.bMLE.site.b[i] <- estimatebMSBPL(x = sitedata$Area, w = w, v = v)$minimum
+  thetaML <- estimateMSlnorm(x = sitedata$Area, w = w, v = v)
   x <- sitedata$Area
   sitex = seq(min(sitedata$Area), max(sitedata$Area), length = 1000)
   par(mfrow=c(2,2))
