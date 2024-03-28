@@ -364,7 +364,7 @@ lnormAIC <- function(x){
 
 BPLAIC <- function(C, b, x){#making the argument be x instead of a may be easier to remember (same as for normal)
   n <- length(x)
-  llBPL <- n * log(C) + b * sum(x) 
+  llBPL <- n * log(C) + b * sum(log(x)) 
   AIC <- 2*3 - 2*llBPL
   return(list(llBPL = llBPL, AICBPL = AIC))
 }
