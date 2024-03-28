@@ -25,6 +25,7 @@ msbplqq <-list()
 lognormalAIC <- list()
 boundedpowerlawAIC <- list()
 mslognormalAIC <- list()
+msboundedpowerlawAIC <- list()
 
 w <- 3648/35
 v <- 2736/35
@@ -36,7 +37,8 @@ for(i in 1:nsites){
   bML <- mle_b(Site == s, x = siteinput$Area, log_x = sitedata$log.Area, sum_log_x = siteinput$sum.log.Area,
                          x_min = siteinput$min.Area, x_max = siteinput$max.Area)
   PLB.bMLE.site.b[i] <- bML[[1]] 
-  MSPLB.bMLE.site.b[i] <- estimatebMSBPL(x = sitedata$Area, w = w, v = v)$minimum
+  msbplfit <- estimatebMSBPL(x = sitedata$Area, w = w, v = v)
+  MSPLB.bMLE.site.b[i] <- msbplfit$minimum
   thetaML <- estimateMSlnorm(x = sitedata$Area, w = w, v = v)
   x <- sitedata$Area
   sitex = seq(min(sitedata$Area), max(sitedata$Area), length = 1000)
@@ -79,6 +81,7 @@ for(i in 1:nsites){
   lognormalAIC[[i]] <- lnormAIC(x)
   boundedpowerlawAIC[[i]] <- BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)
   mslognormalAIC[[i]] <- MSlnormAIC(thetaML = thetaML)
+  msboundedpowerlawAIC[[i]] <- MSBPLAIC(msbplfit = msbplfit)
 }
 
 leftlabel <- grid::textGrob(expression(paste("Number of colonies with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
@@ -99,6 +102,7 @@ ggsave(file = "siteb_plot.svg", plot = siteb_plot, width = 13, height = 9)
 boundedpowerlawAIC <- do.call(rbind.data.frame,boundedpowerlawAIC)
 lognormalAIC <- do.call(rbind.data.frame,lognormalAIC)
 mslognormalAIC <- do.call(rbind.data.frame, mslognormalAIC)
-AICdf <- cbind(boundedpowerlawAIC, lognormalAIC, mslognormalAIC)
+msboundedpowerlawAIC <- do.call(rbind.data.frame, msboundedpowerlawAIC)
+AICdf <- cbind(boundedpowerlawAIC, msboundedpowerlawAIC, lognormalAIC, mslognormalAIC)
 row.names(AICdf) <- sites
 write.csv(AICdf,'AIC.csv') 

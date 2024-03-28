@@ -360,7 +360,7 @@ lnormAIC <- function(x){
   return(list(lllognorm = lllognorm , AIClognorm = AIC)) 
 }
 
-# log likelihood and AIC of a bounded power law distribution ----
+# log likelihood and AIC of a bounded power law distribution ---- , AIC is probably wrong because log likelihood not locally quadratic around xmin
 
 BPLAIC <- function(C, b, x){#making the argument be x instead of a may be easier to remember (same as for normal)
   n <- length(x)
@@ -493,4 +493,11 @@ estimateMSlnorm <- function(x, w, v){
 MSlnormAIC <- function(thetaML){
   AIC <- 2*2 - 2*(-thetaML$value)
   return(list(llmslognorm = -thetaML$value , AICmslognorm = AIC))
+}
+
+#AIC for minus sampled bounded power law, this is probably wrong because log likelihood not locally quadratic around xmin 
+#arguments: msbplfit is an object returned by estimatebMSBPL()
+MSBPLAIC <- function(msbplfit){
+  AIC <- 2*2 - 2*(-msbplfit$objective)
+  return(list(llMSBPL =-msbplfit$objective, AICMSBPL = AIC))
 }
