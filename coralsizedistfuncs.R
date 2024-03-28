@@ -361,7 +361,7 @@ normAIC <- function(x){
   mu <- mean(x)
   llnorm <- -n * log (sigma) - n / 2 *log (2*pi) - 1/2 * sum(((x - mu)/sigma)^2) #I think you had the brackets in the wrong place: we want the sum of each of squared terms, not the square of the sum of terms
   AIC <- 2*2 - 2*llnorm
-  return(list(llnorm = llnorm , AIC = AIC)) #naming the items makes it easier to use the right numbers (and I like to put return() so that if you call the function without assigning the output to an object, it prints out the values)
+  return(list(llnorm = llnorm , AICnorm = AIC)) 
 }
 
 # log likelihood and AIC of a bounded power law distribution ----
@@ -370,7 +370,7 @@ BPLAIC <- function(C, b, x){#making the argument be x instead of a may be easier
   n <- length(x)
   llBPL <- n * log(C) + b * sum(x) 
   AIC <- 2*3 - 2*llBPL
-  return(list(llBPL = llBPL, AIC = AIC))
+  return(list(llBPL = llBPL, AICBPL = AIC))
 }
 
 #density for minus-sampled lognormal
@@ -487,4 +487,14 @@ estimateMSlnorm <- function(x, w, v){
   #print(c(ordinary$par, ordinary$value, ordinary$convergence))
   thetamslnorm <- optim(f = negloglikMSlnorm, par = par, method = "Nelder-Mead", x = x, w = w, v = v) #BFGS didn't behave nicely in this case
   return(thetamslnorm)
+}
+
+# AIC for minus sampled lognormal
+# AIC = 2K - 2ln(L)
+# K = number of model parameters - we have 2 for normal distribution
+# ln(L) is the log likelihood from thetaML$value is the object returned by estimateMSlnorm
+
+MSlnormAIC <- function(thetaML){
+  AIC <- 2*2 - 2*(-thetaML$value)
+  return(list(llmslognorm = -thetaML$value , AICmslognorm = AIC))
 }

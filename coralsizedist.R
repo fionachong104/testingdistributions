@@ -24,6 +24,7 @@ msbplqq <-list()
 
 lognormalAIC <- list()
 boundedpowerlawAIC <- list()
+mslognormalAIC <- list()
 
 w <- 3648/35
 v <- 2736/35
@@ -73,6 +74,7 @@ for(i in 1:nsites){
     theme(axis.title = element_blank())
   lognormalAIC[[i]] <- normAIC(log(x))
   boundedpowerlawAIC[[i]] <- BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)
+  mslognormalAIC[[i]] <- MSlnormAIC(thetaML = thetaML)
 }
 
 leftlabel <- grid::textGrob(expression(paste("Number of colonies with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
@@ -92,6 +94,7 @@ ggsave(file = "siteb_plot.svg", plot = siteb_plot, width = 13, height = 9)
 # compare AIC easily 
 boundedpowerlawAIC <- do.call(rbind.data.frame,boundedpowerlawAIC)
 lognormalAIC <- do.call(rbind.data.frame,lognormalAIC)
-AICdf <- cbind(boundedpowerlawAIC, lognormalAIC)
+mslognormalAIC <- do.call(rbind.data.frame, mslognormalAIC)
+AICdf <- cbind(boundedpowerlawAIC, lognormalAIC, mslognormalAIC)
 row.names(AICdf) <- sites
 write.csv(AICdf,'AIC.csv') 
