@@ -50,9 +50,13 @@ for(i in 1:nsites){
   qqline(x, distribution = function(p){
     FMSBPLinv(p, b =  MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
   })
-  hist(log(sitedata$Area), main = paste("(C)", sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
-  qqnorm(log(sitedata$Area), main = paste("(D)", sites[i], ": Log-normal Q-Q plot"))
-  qqline(log(sitedata$Area))
+  #hist(log(sitedata$Area), main = paste("(C)", sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
+  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = mean(log(x)), sdlog = sd(log(x))), x, xlab = "theoretical quantiles", ylab = "sample quantiles", main = " lognormal Q-Q plot")
+  qqline(x, distribution = function(p){qlnorm(p, meanlog = mean(log(x)), sdlog = sd(log(x)))})
+  qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaML$par[1], sigma = thetaML$par[2], w = w, v = v), sitedata$Area, xlab = "theoretical quantiles", ylab = "sample quantiles", main = "minus-sampled lognormal Q-Q plot")
+  qqline(sitedata$Area, distribution = function(p){
+    FMSlnorminv(p, mu = thetaML$par[1], sigma = thetaML$par[2], w = w, v = v)
+  })
   sitey.PLB = (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
                        xmax = max(sitex))) * length(sitedata$Area)
   sitey.MSBPL = (1 - FMSBPL(x = sitex, b = MSPLB.bMLE.site.b[i], xmin = min(sitex),
