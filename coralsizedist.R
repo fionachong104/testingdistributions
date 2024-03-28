@@ -22,10 +22,7 @@ siteb_plot <- list()
 bplqq <- list()
 msbplqq <-list()
 
-lognormalAIC <- list()
-boundedpowerlawAIC <- list()
-mslognormalAIC <- list()
-msboundedpowerlawAIC <- list()
+AICdf <- data.frame(site = sites, llBPL = NA, llMSBPL = NA, lllognorm = NA, llmslognorm = NA, AICBPL = NA, AICMSBPL = NA, AIClognorm = NA, AICmslognorm = NA)
 
 w <- 3648/35
 v <- 2736/35
@@ -78,10 +75,14 @@ for(i in 1:nsites){
     annotate("text", x = 10, y = 1, label = bquote(paste(italic(b)[MSBPL]==.(round(MSPLB.bMLE.site.b[i],2))))) +
     theme_classic() + 
     theme(axis.title = element_blank())
-  lognormalAIC[[i]] <- lnormAIC(x)
-  boundedpowerlawAIC[[i]] <- BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)
-  mslognormalAIC[[i]] <- MSlnormAIC(thetaML = thetaML)
-  msboundedpowerlawAIC[[i]] <- MSBPLAIC(msbplfit = msbplfit)
+  AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
+  AICdf$AIClognorm[i] <- lnormAIC(x)$AIClognorm
+  AICdf$llBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$llBPL
+  AICdf$AICBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$AICBPL
+  AICdf$llmslognorm[i] <- MSlnormAIC(thetaML)$llmslognorm
+  AICdf$AICmslognorm[i] <- MSlnormAIC(thetaML)$AICmslognorm
+  AICdf$llMSBPL[i] <- MSBPLAIC(msbplfit)$llMSBPL
+  AICdf$AICMSBPL[i] <- MSBPLAIC(msbplfit)$AICMSBPL
 }
 
 leftlabel <- grid::textGrob(expression(paste("Number of colonies with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
@@ -98,11 +99,5 @@ ggsave(file = "siteb_plot.svg", plot = siteb_plot, width = 13, height = 9)
 # plots.png.paths <- list.files(plots.dir.path, pattern = ".png", full.names = TRUE)
 # file.copy(from = plots.png.paths, to = "C:/Users/624225/OneDrive - hull.ac.uk/_BoxData/PhD/testingdistributions")
 
-# compare AIC easily 
-boundedpowerlawAIC <- do.call(rbind.data.frame,boundedpowerlawAIC)
-lognormalAIC <- do.call(rbind.data.frame,lognormalAIC)
-mslognormalAIC <- do.call(rbind.data.frame, mslognormalAIC)
-msboundedpowerlawAIC <- do.call(rbind.data.frame, msboundedpowerlawAIC)
-AICdf <- cbind(boundedpowerlawAIC, msboundedpowerlawAIC, lognormalAIC, mslognormalAIC)
-row.names(AICdf) <- sites
-write.csv(AICdf,'AIC.csv') 
+
+# write.csv(AICdf,'AIC.csv') 
