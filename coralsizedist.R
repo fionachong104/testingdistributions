@@ -39,27 +39,30 @@ for(i in 1:nsites){
   thetaML <- estimateMSlnorm(x = sitedata$Area, w = w, v = v)
   x <- sitedata$Area
   sitex = seq(min(sitedata$Area), max(sitedata$Area), length = 1000)
-  par(mfrow=c(2,2))
-  bplqq[[i]] <- qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
-               xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", main = paste("(A)", sites[i], ": Power law Q-Q plot"))
-  qqline(x, distribution = function(p){
-    FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
-  })
-  msbplqq[[i]] <- qqplot(FMSBPLinv(u = ppoints(siteinput$n), b = MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v), x, xlab = "Theoretical quantiles", ylab = "Sample quantiles", main = paste("(B)", sites[i], ": Minus-sampled bounded power law Q-Q plot"))
-  qqline(x, distribution = function(p){
-    FMSBPLinv(p, b =  MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
-  })
-  #hist(log(sitedata$Area), main = paste("(C)", sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
-  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = mean(log(x)), sdlog = sd(log(x))), x, xlab = "theoretical quantiles", ylab = "sample quantiles", main = " lognormal Q-Q plot")
-  qqline(x, distribution = function(p){qlnorm(p, meanlog = mean(log(x)), sdlog = sd(log(x)))})
-  qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaML$par[1], sigma = thetaML$par[2], w = w, v = v), sitedata$Area, xlab = "theoretical quantiles", ylab = "sample quantiles", main = "minus-sampled lognormal Q-Q plot")
-  qqline(sitedata$Area, distribution = function(p){
-    FMSlnorminv(p, mu = thetaML$par[1], sigma = thetaML$par[2], w = w, v = v)
-  })
-  sitey.PLB = (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
+  # par(mfrow=c(2,2))
+  # bplqq[[i]] <- qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
+  #              xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", main = paste("(A)", sites[i], ": Power law Q-Q plot"))
+  # qqline(x, distribution = function(p){
+  #   FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
+  # })
+  # msbplqq[[i]] <- qqplot(FMSBPLinv(u = ppoints(siteinput$n), b = MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v), x, xlab = "Theoretical quantiles", ylab = "Sample quantiles", main = paste("(B)", sites[i], ": Minus-sampled bounded power law Q-Q plot"))
+  # qqline(x, distribution = function(p){
+  #   FMSBPLinv(p, b =  MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
+  # })
+  # #hist(log(sitedata$Area), main = paste("(C)", sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
+  # qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = mean(log(x)), sdlog = sd(log(x))), x, xlab = "theoretical quantiles", ylab = "sample quantiles", main = " lognormal Q-Q plot")
+  # qqline(x, distribution = function(p){qlnorm(p, meanlog = mean(log(x)), sdlog = sd(log(x)))})
+  # qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaML$par[1], sigma = thetaML$par[2], w = w, v = v), sitedata$Area, xlab = "theoretical quantiles", ylab = "sample quantiles", main = "minus-sampled lognormal Q-Q plot")
+  # qqline(sitedata$Area, distribution = function(p){
+  #   FMSlnorminv(p, mu = thetaML$par[1], sigma = thetaML$par[2], w = w, v = v)
+  # })
+  sitey.PLB <- (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
                        xmax = max(sitex))) * length(sitedata$Area)
-  sitey.MSBPL = (1 - FMSBPL(x = sitex, b = MSPLB.bMLE.site.b[i], xmin = min(sitex),
+  sitey.MSBPL <-  (1 - FMSBPL(x = sitex, b = MSPLB.bMLE.site.b[i], xmin = min(sitex),
                             w = w, v = v)) * length(sitedata$Area)
+  sitey.MSlnorm <- (1-sapply(sitex, FUN = FMSlnorm, mu = thetaML$par[1], sigma = thetaML$par[2], w = w, v = v))* length(sitedata$Area)
+  sitey.lnorm <- plnorm(q = sitex, meanlog = mean(log(x)), sdlog = sd(log(x)), lower.tail = FALSE, log.p = FALSE) * length(sitedata$Area)
+ # 1 - sapply(sitex.MSlnorm, FUN = FMSlnorm, mu = mu, sigma = sigma, w = w, v = v
   siteb_plot[[i]] <- ggplot() +
     geom_point(aes_(x = (sort(sitedata$Area, decreasing=TRUE)), y = (1:length(sitedata$Area))),
                color = "cadetblue", size = 2, alpha = 0.3) +
@@ -69,6 +72,8 @@ for(i in 1:nsites){
                        limits = range(oneyeardf$Area))+
     geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.MSBPL), col = 'red', lwd = 1) +
+    geom_line(aes_(x = sitex, y = sitey.MSlnorm), col = 'blue', lwd = 1) +
+    geom_line(aes_(x = sitex, y = sitey.lnorm), col = 'green', lwd = 1) +
     labs(tag = LETTERS[i]) +
     annotate("text", x = 10, y = 10, label = s) +
     annotate("text", x = 10, y = 3, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
