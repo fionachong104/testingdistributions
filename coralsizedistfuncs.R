@@ -360,6 +360,15 @@ lnormAIC <- function(x){
   return(list(lllognorm = lllognorm , AIClognorm = AIC)) 
 }
 
+#maximum likelihood estimates of parameters of lognormal distribution
+#Arguments: vector x of positive observations
+#Value: list containing meanlog (ML estimate of mean of log x) and sdlog (ML estimate of sd of log x)
+estimatelognormal <- function(x){
+  n <- length(x)
+  meanlog <- mean(log(x))
+  sdlog <- sd(logx) * sqrt((n - 1) / n)
+  return(list(meanlog = meanlog, sdlog = sdlog))
+}
 # log likelihood and AIC of a bounded power law distribution ---- , AIC is probably wrong because log likelihood not locally quadratic around xmin
 
 BPLAIC <- function(C, b, x){#making the argument be x instead of a may be easier to remember (same as for normal)
