@@ -105,6 +105,7 @@ getpir <- function(w, v, r){
 #w, v: rectangular window dimensions
 #x: circle area
 #Value: probability a circle of area x is minus-sampled
+#NOTE: IGNORES THE DENOMINATOR w * v, which cancels out in the formulas for minus-sampled distributions
 getgx <- function(v, w, x){
   return(v * w - 2 * (v + w) * sqrt(x / pi) + 4 * x / pi)
 }
