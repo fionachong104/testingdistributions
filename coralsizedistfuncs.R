@@ -351,11 +351,8 @@ plotcircle <- function(alpha, beta, r, isinframe){
 #Arguments: x: vector of sizes (not logged)
 #Value: list containing lognormal log likelihood and AIC
 lnormAIC <- function(x){
-  n <- length(x) #less likely to make mistakes if we calculate it inside the function
-  logx <- log(x)
-  sigma <- sd(logx) * sqrt((n - 1) / n) #want MLE for AIC, not unbiased estimator 
-  mu <- mean(logx)
-  lllognorm <- sum(dlnorm(x = x, meanlog = mu, sdlog = sigma, log = TRUE))
+  theta <- estimatelognormal(x = x)
+  lllognorm <- sum(dlnorm(x = x, meanlog = theta$meanlog, sdlog = theta$sdlog, log = TRUE))
   AIC <- 2*2 - 2*lllognorm
   return(list(lllognorm = lllognorm , AIClognorm = AIC)) 
 }
@@ -365,8 +362,9 @@ lnormAIC <- function(x){
 #Value: list containing meanlog (ML estimate of mean of log x) and sdlog (ML estimate of sd of log x)
 estimatelognormal <- function(x){
   n <- length(x)
-  meanlog <- mean(log(x))
-  sdlog <- sd(logx) * sqrt((n - 1) / n)
+  logx <- log(x)
+  meanlog <- mean(logx)
+  sdlog <- sd(logx) * sqrt((n - 1) / n) #ML estimate
   return(list(meanlog = meanlog, sdlog = sdlog))
 }
 # log likelihood and AIC of a bounded power law distribution ---- , AIC is probably wrong because log likelihood not locally quadratic around xmin
