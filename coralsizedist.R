@@ -36,7 +36,8 @@ for(i in 1:nsites){
   PLB.bMLE.site.b[i] <- bML[[1]] 
   msbplfit <- estimatebMSBPL(x = sitedata$Area, w = w, v = v)
   MSPLB.bMLE.site.b[i] <- msbplfit$minimum
-  thetaML <- estimateMSlnorm(x = sitedata$Area, w = w, v = v)
+  thetalnorm <- estimatelognormal(x = sitedata$Area)
+  thetaMSlnorm <- estimateMSlnorm(x = sitedata$Area, w = w, v = v)
   x <- sitedata$Area
   sitex = seq(min(sitedata$Area), max(sitedata$Area), length = 1000)
   # par(mfrow=c(2,2))
@@ -50,18 +51,18 @@ for(i in 1:nsites){
   #   FMSBPLinv(p, b =  MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
   # })
   # #hist(log(sitedata$Area), main = paste("(C)", sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
-  # qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = mean(log(x)), sdlog = sd(log(x))), x, xlab = "theoretical quantiles", ylab = "sample quantiles", main = " lognormal Q-Q plot")
-  # qqline(x, distribution = function(p){qlnorm(p, meanlog = mean(log(x)), sdlog = sd(log(x)))})
-  # qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaML$par[1], sigma = thetaML$par[2], w = w, v = v), sitedata$Area, xlab = "theoretical quantiles", ylab = "sample quantiles", main = "minus-sampled lognormal Q-Q plot")
+  # qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog, x, xlab = "theoretical quantiles", ylab = "sample quantiles", main = " lognormal Q-Q plot")
+  # qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)})
+  # qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v), sitedata$Area, xlab = "theoretical quantiles", ylab = "sample quantiles", main = "minus-sampled lognormal Q-Q plot")
   # qqline(sitedata$Area, distribution = function(p){
-  #   FMSlnorminv(p, mu = thetaML$par[1], sigma = thetaML$par[2], w = w, v = v)
+  #   FMSlnorminv(p, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v)
   # })
   sitey.PLB <- (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
                        xmax = max(sitex))) * length(sitedata$Area)
   sitey.MSBPL <-  (1 - FMSBPL(x = sitex, b = MSPLB.bMLE.site.b[i], xmin = min(sitex),
                             w = w, v = v)) * length(sitedata$Area)
-  sitey.MSlnorm <- (1-sapply(sitex, FUN = FMSlnorm, mu = thetaML$par[1], sigma = thetaML$par[2], w = w, v = v))* length(sitedata$Area)
-  sitey.lnorm <- plnorm(q = sitex, meanlog = mean(log(x)), sdlog = sd(log(x)), lower.tail = FALSE, log.p = FALSE) * length(sitedata$Area)
+  sitey.MSlnorm <- (1-sapply(sitex, FUN = FMSlnorm, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v))* length(sitedata$Area)
+  sitey.lnorm <- plnorm(q = sitex, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog, lower.tail = FALSE, log.p = FALSE) * length(sitedata$Area)
  # 1 - sapply(sitex.MSlnorm, FUN = FMSlnorm, mu = mu, sigma = sigma, w = w, v = v
   siteb_plot[[i]] <- ggplot() +
     geom_point(aes_(x = (sort(sitedata$Area, decreasing=TRUE)), y = (1:length(sitedata$Area))),
@@ -84,8 +85,8 @@ for(i in 1:nsites){
   AICdf$AIClognorm[i] <- lnormAIC(x)$AIClognorm
   AICdf$llBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$llBPL
   AICdf$AICBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$AICBPL
-  AICdf$llmslognorm[i] <- MSlnormAIC(thetaML)$llmslognorm
-  AICdf$AICmslognorm[i] <- MSlnormAIC(thetaML)$AICmslognorm
+  AICdf$llmslognorm[i] <- MSlnormAIC(thetaMSlnorm)$llmslognorm
+  AICdf$AICmslognorm[i] <- MSlnormAIC(thetaMSlnorm)$AICmslognorm
   AICdf$llMSBPL[i] <- MSBPLAIC(msbplfit)$llMSBPL
   AICdf$AICMSBPL[i] <- MSBPLAIC(msbplfit)$AICMSBPL
 }
