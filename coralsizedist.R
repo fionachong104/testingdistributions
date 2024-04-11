@@ -50,13 +50,15 @@ for(i in 1:nsites){
   qqline(x, distribution = function(p){
      FMSBPLinv(p, b =  MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
    })
-  hist(log(sitedata$Area), main = paste("(C)", sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
-  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "theoretical quantiles", ylab = "sample quantiles", main = " lognormal Q-Q plot")
+  #hist(log(sitedata$Area), main = paste("(C)", sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
+  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "theoretical quantiles", ylab = "sample quantiles", main = paste("(C)", sites[i], ": Log-normal Q-Q plot"))
   qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)})
-  qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v), sitedata$Area, xlab = "theoretical quantiles", ylab = "sample quantiles", main = "minus-sampled lognormal Q-Q plot")
+  qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v), sitedata$Area, xlab = "theoretical quantiles", ylab = "sample quantiles", main = paste("(D)", sites[i], ": Minus-sampled log-normal Q-Q plot"))
   qqline(sitedata$Area, distribution = function(p){
   FMSlnorminv(p, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v)
   })
+
+#rank plot   
   sitey.PLB <- (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
                        xmax = max(sitex))) * length(sitedata$Area)
   sitey.MSBPL <-  (1 - FMSBPL(x = sitex, b = MSPLB.bMLE.site.b[i], xmin = min(sitex),
@@ -97,8 +99,41 @@ bottomlabel <- grid::textGrob(expression(paste("Colony area, ", italic("x"), ~(c
 siteb_plot <- grid.arrange(grobs = siteb_plot, ncol = 4, 
              left = leftlabel,
              bottom = bottomlabel)
+#ggsave(file = "siteb_plot.svg", plot = siteb_plot, width = 13, height = 9)
 
-ggsave(file = "siteb_plot.svg", plot = siteb_plot, width = 13, height = 9)
+# site-wise SFD of log coral area
+par(
+  mfrow = c(5,4),
+  mar = c(1,1.5,1,0),
+  oma = c(4,4,2,2)
+)  
+for(i in 1:nsites){
+  s <- sites[i]
+  sitedata <- oneyeardf %>% filter(Site == s)
+  siteproportions <- hist(log(sitedata$Area), plot = FALSE)
+  plot(siteproportions, freq = FALSE, col = "darkgrey", main = "", xlab = "", ylab = "", axes = FALSE,  ylim = c(0,0.4), xlim = c(0,10))
+  title(paste(sites[i]), cex.main = 1.5, line = -1.5)
+  lines(density(log(sitedata$Area)), na.rm=TRUE, col = "blue", lty = "dashed", lwd = 2)
+  abline(v=mean(log(sitedata$Area)), col = "red", lwd = 2, lty = "dashed")
+  axis(side = 1, at=c(0,5,10), labels = c(0,5,10), cex.axis = 1.5)
+  axis(side = 2, at=c(0,0.2,0.4), labels = c(0,0.2,0.4), cex.axis = 1.5)
+  #xlab = expression(paste("Log coral area"~(cm^2))))
+}
+mtext(expression(paste("log(coral area/"*cm^2*")")) , side=1,line=3,outer=TRUE,cex=1.3)
+mtext("Proportion of coral colonies", side=2,line=2,outer=TRUE,cex=1.3,las=0)
+
+
+
+
+# LEIproportions <- hist(LEI$logArea, plot = FALSE)
+# plot(LEIproportions, freq = FALSE, col = "darkgrey", main = "a: Lady Elliot Island", cex.main = 1.5, xlab = "", ylab = "", axes = FALSE,  ylim = c(0,0.4), xlim = c(0,10))
+# lines(density(LEI$logArea), na.rm=TRUE, col = "blue", lty = "dashed", lwd = 2)
+# abline(v=mean(LEI$logArea), col = "red", lwd = 2, lty = 1)
+# abline(v=mean(oneyeardf$logArea), col = "red", lwd = 2, lty = 3)
+# legend("topright", bty = "n", cex = 1.5, legend = bquote(n == .(length(LEI$logArea))))
+# axis(side = 1, at=c(0,5,10), labels = FALSE)
+# axis(side = 2, at=c(0,0.2,0.4), labels = c(0,0.2,0.4), cex.axis = 1.5)
+
 
 # saves the temp images from the plotting envrionment
 # plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)
@@ -106,4 +141,4 @@ ggsave(file = "siteb_plot.svg", plot = siteb_plot, width = 13, height = 9)
 # file.copy(from = plots.png.paths, to = "C:/Users/624225/OneDrive - hull.ac.uk/_BoxData/PhD/testingdistributions")
 
 
-# write.csv(AICdf,'AIC.csv') 
+#write.csv(AICdf,'AIC.csv') 
