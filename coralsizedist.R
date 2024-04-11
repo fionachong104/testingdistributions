@@ -134,8 +134,8 @@ mtext("Proportion of coral colonies", side=2,line=2,outer=TRUE,cex=1.3,las=0)
 # axis(side = 1, at=c(0,5,10), labels = FALSE)
 # axis(side = 2, at=c(0,0.2,0.4), labels = c(0,0.2,0.4), cex.axis = 1.5)
 
-
-# saves the temp images from the plotting envrionment
+# 
+# # saves the temp images from the plotting envrionment
 # plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)
 # plots.png.paths <- list.files(plots.dir.path, pattern = ".png", full.names = TRUE)
 # file.copy(from = plots.png.paths, to = "C:/Users/624225/OneDrive - hull.ac.uk/_BoxData/PhD/testingdistributions")
