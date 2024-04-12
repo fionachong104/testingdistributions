@@ -81,7 +81,7 @@ for(i in 1:nsites){
     annotate("text", x = 10, y = 10, label = s) +
     annotate("text", x = 10, y = 3, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
     annotate("text", x = 10, y = 1, label = bquote(paste(italic(b)[MSBPL]==.(round(MSPLB.bMLE.site.b[i],2))))) +
-    annotate("text", x = 650, y = 800, label = bquote(n == .(length(sitedata$Area)))) +
+    annotate("text", x = 800, y = 1000, label = bquote(n == .(length(sitedata$Area)))) +
     theme_classic() + 
     theme(axis.title = element_blank())
   AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
