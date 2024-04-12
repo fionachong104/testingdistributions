@@ -112,7 +112,7 @@ for(i in 1:nsites){
   sitedata <- oneyeardf %>% filter(Site == s)
   siteproportions <- hist(log(sitedata$Area), plot = FALSE)
   plot(siteproportions, freq = FALSE, col = "darkgrey", main = "", xlab = "", ylab = "", axes = FALSE,  ylim = c(0,0.4), xlim = c(0,10))
-  title(paste(sites[i]), cex.main = 1.5, line = -1.5)
+  title(paste("(",LETTERS[i],")"," ",sites[i], sep= ""), cex.main = 1.5, line = -1.5)
   lines(density(log(sitedata$Area)), na.rm=TRUE, col = "blue", lty = "dashed", lwd = 2)
   abline(v=mean(log(sitedata$Area)), col = "red", lwd = 2, lty = "dashed")
   axis(side = 1, at=c(0,5,10), labels = c(0,5,10), cex.axis = 1.5)
@@ -121,18 +121,6 @@ for(i in 1:nsites){
 }
 mtext(expression(paste("log(coral area/"*cm^2*")")) , side=1,line=3,outer=TRUE,cex=1.3)
 mtext("Proportion of coral colonies", side=2,line=2,outer=TRUE,cex=1.3,las=0)
-
-
-
-
-# LEIproportions <- hist(LEI$logArea, plot = FALSE)
-# plot(LEIproportions, freq = FALSE, col = "darkgrey", main = "a: Lady Elliot Island", cex.main = 1.5, xlab = "", ylab = "", axes = FALSE,  ylim = c(0,0.4), xlim = c(0,10))
-# lines(density(LEI$logArea), na.rm=TRUE, col = "blue", lty = "dashed", lwd = 2)
-# abline(v=mean(LEI$logArea), col = "red", lwd = 2, lty = 1)
-# abline(v=mean(oneyeardf$logArea), col = "red", lwd = 2, lty = 3)
-# legend("topright", bty = "n", cex = 1.5, legend = bquote(n == .(length(LEI$logArea))))
-# axis(side = 1, at=c(0,5,10), labels = FALSE)
-# axis(side = 2, at=c(0,0.2,0.4), labels = c(0,0.2,0.4), cex.axis = 1.5)
 
 # 
 # # saves the temp images from the plotting envrionment
