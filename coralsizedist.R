@@ -81,6 +81,7 @@ for(i in 1:nsites){
     annotate("text", x = 10, y = 10, label = s) +
     annotate("text", x = 10, y = 3, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
     annotate("text", x = 10, y = 1, label = bquote(paste(italic(b)[MSBPL]==.(round(MSPLB.bMLE.site.b[i],2))))) +
+    annotate("text", x = 650, y = 800, label = bquote(n == .(length(sitedata$Area)))) +
     theme_classic() + 
     theme(axis.title = element_blank())
   AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
@@ -110,11 +111,13 @@ par(
 for(i in 1:nsites){
   s <- sites[i]
   sitedata <- oneyeardf %>% filter(Site == s)
-  siteproportions <- hist(log(sitedata$Area), plot = FALSE)
+  custom_breaks <- c(-1:10)
+  siteproportions <- hist(log(sitedata$Area), plot = FALSE, breaks = custom_breaks)
   plot(siteproportions, freq = FALSE, col = "darkgrey", main = "", xlab = "", ylab = "", axes = FALSE,  ylim = c(0,0.4), xlim = c(0,10))
   title(paste("(",LETTERS[i],")"," ",sites[i], sep= ""), cex.main = 1.5, line = -1.5)
   lines(density(log(sitedata$Area)), na.rm=TRUE, col = "blue", lty = "dashed", lwd = 2)
   abline(v=mean(log(sitedata$Area)), col = "red", lwd = 2, lty = "dashed")
+  legend("topright", inset = .05, bty = "n", cex = 1.5, legend = bquote(n == .(length(sitedata$Area))))
   axis(side = 1, at=c(0,5,10), labels = c(0,5,10), cex.axis = 1.5)
   axis(side = 2, at=c(0,0.2,0.4), labels = c(0,0.2,0.4), cex.axis = 1.5)
   #xlab = expression(paste("Log coral area"~(cm^2))))
