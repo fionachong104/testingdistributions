@@ -99,6 +99,7 @@ siteb_plot <- grid.arrange(grobs = siteb_plot, ncol = 4,
                            bottom = bottomlabel)
 
 
+write.csv(AICdf,'fish_AIC.csv') 
 
 # #input Carvalho fish df
 # fish.df <- fish_size_spectra_data
@@ -163,8 +164,8 @@ siteb_plot <- grid.arrange(grobs = siteb_plot, ncol = 4,
 # siteb_plot <- grid.arrange(grobs = siteb_plot, ncol = 3, 
 #                            left = leftlabel,
 #                            bottom = bottomlabel)
-
-# saves the temp images from the plotting envrionment
-plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)
-plots.png.paths <- list.files(plots.dir.path, pattern = ".png", full.names = TRUE)
-file.copy(from = plots.png.paths, to = "C:/Users/624225/OneDrive - hull.ac.uk/_BoxData/PhD/testingdistributions")
+# 
+# # saves the temp images from the plotting envrionment
+# plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)
+# plots.png.paths <- list.files(plots.dir.path, pattern = ".png", full.names = TRUE)
+# file.copy(from = plots.png.paths, to = "C:/Users/624225/OneDrive - hull.ac.uk/_BoxData/PhD/testingdistributions")
