@@ -13,6 +13,19 @@ set.params = function(Area){
   return(out.list)
 }
 
+set.fish.params = function(biomass_kg){
+  # Creates a list of parameters for input into the negll.PLB and pPLB functions
+  biomass <- biomass_kg
+  log.biomass <- log(biomass)
+  sum.log.biomass <- sum(log.biomass, na.rm = TRUE)
+  min.biomass <- min(biomass_kg, na.rm = TRUE)
+  max.biomass <- max(biomass_kg, na.rm = TRUE)
+  n <- length(biomass)
+  out.list <- (list(biomass, log.biomass, sum.log.biomass, min.biomass, max.biomass, n))
+  names(out.list) <- c("biomass", "log.biomass", "sum.log.biomass", "min.biomass", "max.biomass", "n")
+  return(out.list)
+}
+
 # Use analytical value of MLE b for PL model (Box 1, Edwards et al. 2017)
 # as a starting point for nlm for MLE of b for PLB model. Code adopted from
 # Edwards et al. (2017).

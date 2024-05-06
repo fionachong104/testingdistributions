@@ -51,9 +51,9 @@ for(i in 1:nsites){
      FMSBPLinv(p, b =  MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
    })
   #hist(log(sitedata$Area), main = paste("(C)", sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
-  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "theoretical quantiles", ylab = "sample quantiles", main = paste("(C)", sites[i], ": Log-normal Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
+  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "theoretical quantiles", ylab = "Sample quantiles", main = paste("(C)", sites[i], ": Log-normal Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
   qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)})
-  qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v), sitedata$Area, xlab = "theoretical quantiles", ylab = "sample quantiles", main = paste("(D)", sites[i], ": Minus-sampled log-normal Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
+  qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v), sitedata$Area, xlab = "theoretical quantiles", ylab = "Sample quantiles", main = paste("(D)", sites[i], ": Minus-sampled log-normal Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
   qqline(sitedata$Area, distribution = function(p){
   FMSlnorminv(p, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v)
   })
@@ -68,15 +68,15 @@ for(i in 1:nsites){
  # 1 - sapply(sitex.MSlnorm, FUN = FMSlnorm, mu = mu, sigma = sigma, w = w, v = v
   siteb_plot[[i]] <- ggplot() +
     geom_point(aes_(x = (sort(sitedata$Area, decreasing=TRUE)), y = (1:length(sitedata$Area))),
-               color = "cadetblue", size = 2, alpha = 0.3) +
+               color = "#666666", size = 2, alpha = 0.3) +
     scale_y_continuous(trans = 'log10', breaks = c(1,10,100,500,3000), 
                        limits = c(0.25, max(table(oneyeardf$Site)))) +
     scale_x_continuous(trans = 'log10', breaks = c(0,1,5,10,100,1000,10000),
                        limits = range(oneyeardf$Area))+
     geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
-    geom_line(aes_(x = sitex, y = sitey.MSBPL), col = 'red', lwd = 1) +
-    geom_line(aes_(x = sitex, y = sitey.MSlnorm), col = 'blue', lwd = 1) +
-    geom_line(aes_(x = sitex, y = sitey.lnorm), col = 'green', lwd = 1) +
+    geom_line(aes_(x = sitex, y = sitey.MSBPL), col = '#D95F02', lwd = 1) +
+    geom_line(aes_(x = sitex, y = sitey.MSlnorm), col = '#7570B3', lwd = 1) +
+    geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
     labs(tag = LETTERS[i]) +
     annotate("text", x = 10, y = 10, label = s) +
     annotate("text", x = 10, y = 3, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
