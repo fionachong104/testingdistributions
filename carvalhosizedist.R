@@ -39,7 +39,7 @@ for(i in 1:nsites){
   thetalnorm <- estimatelognormal(x = sitedata$biomass_kg)
   x <- sitedata$biomass_kg
   sitex = seq(min(sitedata$biomass_kg), max(sitedata$biomass_kg), length = 1000)
-  par(mfrow=c(2,2))
+  par(mfrow=c(1,2))
   bplqq[[i]] <- qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
                              xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", main = paste("(A)", sites[i], ": Power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
   qqline(x, distribution = function(p){
@@ -79,3 +79,6 @@ bottomlabel <- grid::textGrob(expression(paste("Fish biomass, ", italic("x"), ~(
 siteb_plot <- grid.arrange(grobs = siteb_plot, ncol = 3,
                            left = leftlabel,
                            bottom = bottomlabel)
+
+
+write.csv(AICdf,'carvalho_AIC.csv')
