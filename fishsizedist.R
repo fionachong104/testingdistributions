@@ -74,13 +74,13 @@ for(i in 1:nsites){
                color = "#666666", size = 2, alpha = 0.3) +
     scale_y_continuous(trans = 'log10', breaks = c(1,10,100,500,3000), 
                        limits = c(0.25, max(table(allfish$Site)))) +
-    scale_x_continuous( trans = 'log10',breaks = c(1,10,100),
+    scale_x_continuous(trans = 'log10',#breaks = c(-10,0,1,10,100),
                         limits = range(allfish$individual_biomass_kg))+
     geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
     labs(tag = LETTERS[i]) +
-    annotate("text", x = 0.02, y = 10, label = s) +
-    annotate("text", x = 0.02, y = 3, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
+    annotate("text", x = 0.001, y = 10, label = s) +
+    annotate("text", x = 0.001, y = 3, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
     annotate("text", x = 100, y =1000, label = bquote(n == .(length(sitedata$individual_biomass_kg)))) +
     theme_classic() + 
     theme(axis.title = element_blank())
@@ -94,78 +94,37 @@ leftlabel <- grid::textGrob(expression(paste("Number of fish with sizes", " ">="
 #bottomlabel <- grid::textGrob(expression(paste("Fish biomass, ", italic("x"), ~(kg))))
 bottomlabel <- grid::textGrob(expression(paste("Fish biomass, ", italic("x"), ~(kg))))
 
-siteb_plot <- grid.arrange(grobs = siteb_plot, ncol = 4, 
+siteb_plot <- grid.arrange(grobs = siteb_plot, ncol = 4,
                            left = leftlabel,
                            bottom = bottomlabel)
 
 
-write.csv(AICdf,'fish_AIC.csv') 
+write.csv(AICdf,'fish_AIC.csv')
 
-# #input Carvalho fish df
-# fish.df <- fish_size_spectra_data
-# # Remove observer "ch" (initials PS) from analysis due to different overall size spectrum slope with 
-# # # other divers in Lombok. See methods section.
-# fish.df <- fish.df %>% filter(observer != "ch")
-# carn.df <- fish.df %>% filter(tp == "Carnivore")
-# herb.df <- fish.df %>% filter(tp == "Herbivore")
-# 
-# 
+par(
+  mfrow = c(5,4),
+  mar = c(1,1.5,1,0),
+  oma = c(4,4,2,2)
+)
+for(i in 1:nsites){
+  s <- sites[i]
+  sitedata <- allfish %>% filter(Site == s)
+  custom_breaks <- c(-14:3)
+  siteproportions <- hist(log(sitedata$individual_biomass_kg), plot = FALSE) #breaks = custom_breaks)
+  plot(siteproportions, freq = FALSE, col = "darkgrey", main = "", xlab = "", ylab = "", axes = FALSE,  ylim = c(0,0.9), xlim = c(-15,3))
+  title(paste("(",LETTERS[i],")"," ",sites[i], sep= ""), cex.main = 1.5, line = -1.5)
+  lines(density(log(sitedata$individual_biomass_kg)), na.rm=TRUE, col = "blue", lty = "dashed", lwd = 2)
+  abline(v=mean(log(sitedata$individual_biomass_kg)), col = "red", lwd = 2, lty = "dashed")
+  legend("topright", inset = .05, bty = "n", cex = 1.5, legend = bquote(n == .(length(sitedata$individual_biomass_kg))))
+  axis(side = 1, at=c(-14,-12,-10,-8, -6, -4,-2, 0, 2), labels = c(14,-12,-10,-8, -6, -4,-2, 0, 2), cex.axis = 1.5)
+  axis(side = 2, at=c(0,0.45,0.9), labels = c(0,0.45,0.9), cex.axis = 1.5)}
+  #xlab = expression(paste("Log coral area"~(cm^2))))
 
+mtext(expression(paste("log(fish biomass (kg))")) , side=1,line=3,outer=TRUE,cex=1.3)
+mtext("Proportion of fish abundance", side=2,line=2,outer=TRUE,cex=1.3,las=0)
 
-# ##for carvalho
 # 
-# for(i in 1:nsites){
-#   s <- sites[i]
-#   sitedata <- fish.df %>% filter(region == s)
-#   siteinput <- set.params(sitedata$size_cm)
-#   bML <- mle_b(Site == s, x = siteinput$Area, log_x = sitedata$log.Area, sum_log_x = siteinput$sum.log.Area,
-#                x_min = siteinput$min.Area, x_max = siteinput$max.Area)
-#   PLB.bMLE.site.b[i] <- bML[[1]] 
-#   thetalnorm <- estimatelognormal(x = sitedata$size_cm)
-#   x <- sitedata$size_cm
-#   sitex = seq(min(sitedata$size_cm), max(sitedata$size_cm), length = 1000)
-#   par(mfrow=c(2,2))
-#   bplqq[[i]] <- qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
-#                              xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", main = paste("(A)", sites[i], ": Power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
-#   qqline(x, distribution = function(p){
-#     FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
-#   })
-#   qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "theoretical quantiles", ylab = "sample quantiles", main = paste("(B)", sites[i], ": Log-normal Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
-#   qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)})
-#   #rank plot   
-#   sitey.PLB <- (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
-#                          xmax = max(sitex))) * length(sitedata$size_cm)
-#   sitey.lnorm <- plnorm(q = sitex, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog, lower.tail = FALSE, log.p = FALSE) * length(sitedata$size_cm)
-#   siteb_plot[[i]] <- ggplot() +
-#     geom_point(aes_(x = (sort(sitedata$size_cm, decreasing=TRUE)), y = (1:length(sitedata$size_cm))),
-#                color = "cadetblue", size = 2, alpha = 0.3) +
-#     scale_y_continuous(trans = 'log10', breaks = c(1,10,100,500,3000), 
-#                        limits = c(0.25, max(table(fish.df$region)))) +
-#     scale_x_continuous( breaks = c(10,20, 30, 40, 50, 60, 70),
-#                        limits = range(fish.df$size_cm))+
-#     geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
-#     geom_line(aes_(x = sitex, y = sitey.lnorm), col = 'green', lwd = 1) +
-#     labs(tag = LETTERS[i]) +
-#     annotate("text", x = 1, y = 10, label = s) +
-#     annotate("text", x = 1, y = 3, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
-#     annotate("text", x = 3, y = 500, label = bquote(n == .(length(sitedata$size_cm)))) +
-#     theme_classic() + 
-#     theme(axis.title = element_blank())
-#   AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
-#   AICdf$AIClognorm[i] <- lnormAIC(x)$AIClognorm
-#   AICdf$llBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$llBPL
-#   AICdf$AICBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$AICBPL
-# }
-# 
-# leftlabel <- grid::textGrob(expression(paste("Number of fish with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
-# #bottomlabel <- grid::textGrob(expression(paste("Fish biomass, ", italic("x"), ~(kg))))
-# bottomlabel <- grid::textGrob(expression(paste("Fish length, ", italic("x"), ~(cm))))
-# 
-# siteb_plot <- grid.arrange(grobs = siteb_plot, ncol = 3, 
-#                            left = leftlabel,
-#                            bottom = bottomlabel)
-# 
-# # saves the temp images from the plotting envrionment
+# # # saves the temp images from the plotting envrionment
 # plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)
 # plots.png.paths <- list.files(plots.dir.path, pattern = ".png", full.names = TRUE)
-# file.copy(from = plots.png.paths, to = "C:/Users/624225/OneDrive - hull.ac.uk/_BoxData/PhD/testingdistributions")
+# file.copy(from = plots.png.paths, to = "C:/Users/624225/OneDrive - hull.ac.uk/_BoxData/PhD/testingdistributions/qqplots/fish")
