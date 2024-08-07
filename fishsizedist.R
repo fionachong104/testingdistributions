@@ -3,6 +3,7 @@ library(dplyr)
 library(ggplot2)
 library(gridExtra)
 library(tidyverse)
+library(moments) 
 
 source("coralsizedistfuncs.R")
 
@@ -35,6 +36,23 @@ allfish <- fishbiomass %>%
 allfish$individual_biomass_kg <- as.numeric(allfish$individual_biomass_kg)
 allfish %>% mutate(individual_biomass_kg = ifelse(is.na(individual_biomass_kg), 0, individual_biomass_kg))
 
+
+#extract summary statistics 
+all_fish <- allfish%>%
+  group_by(Site) %>%
+  summarise(
+    fish_count = length(Fish),
+    mean_indiv_length = round(mean(Size), digits = 3),
+    mean_indiv_biomass = round(mean(individual_biomass_kg), digits = 3),
+    median_indiv_biomass  = round(median(individual_biomass_kg), digits = 3),
+    mean_log_biomass = round(mean(log(individual_biomass_kg)), digits = 3),
+    median_log_biomass  = round(median(log(individual_biomass_kg)), digits = 3),
+    sd = round(sd(log(individual_biomass_kg)), digits = 3), 
+    #CV = round((sd/mean_log_biomass)*100, digits = 3),  removing this as our emans a negative so quite misleading
+    skewness = round(skewness(log(individual_biomass_kg)), digits = 3),
+    kurtosis = round(kurtosis(log(individual_biomass_kg)), digits = 3))
+all_fish<- all_fish[match(rownames(axisscores), all_fish$Site), ] # order by PC1 scores 
+write.csv(all_fish,'fishsummarystats.csv') 
 
 sites <- unique(allfish$Site) #carn vs herb
 sites <- sites[match(row.names(axisscores), sites)] #re-ordering based on increasing PC1 scores
