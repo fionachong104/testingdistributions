@@ -31,7 +31,7 @@ for(i in 1:nsites){
   s <- sites[i]
   sitedata <- oneyeardf %>% filter(Site == s)
   siteinput <- set.params(sitedata$Area)
-  bML <- mle_b(Site == s, x = siteinput$Area, log_x = sitedata$log.Area, sum_log_x = siteinput$sum.log.Area,
+  bML <- mle_b(Site == s, x = siteinput$Area, sum_log_x = siteinput$sum.log.Area,
                          x_min = siteinput$min.Area, x_max = siteinput$max.Area)
   PLB.bMLE.site.b[i] <- bML[[1]] 
   msbplfit <- estimatebMSBPL(x = sitedata$Area, w = w, v = v)
@@ -39,21 +39,21 @@ for(i in 1:nsites){
   thetalnorm <- estimatelognormal(x = sitedata$Area)
   thetaMSlnorm <- estimateMSlnorm(x = sitedata$Area, w = w, v = v)
   x <- sitedata$Area
-  sitex = seq(min(sitedata$Area), max(sitedata$Area), length = 1000)
+  sitex = seq(min(sitedata$Area), max(sitedata$Area), length = 10000)
   par(mfrow=c(2,2))
   bplqq[[i]] <- qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
-                xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", main = paste("(A)", sites[i], ": Power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
+                xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
   qqline(x, distribution = function(p){
   FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
   })
-  msbplqq[[i]] <- qqplot(FMSBPLinv(u = ppoints(siteinput$n), b = MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v), x, xlab = "Theoretical quantiles", ylab = "Sample quantiles", main = paste("(B)", sites[i], ": Minus-sampled bounded power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
+  msbplqq[[i]] <- qqplot(FMSBPLinv(u = ppoints(siteinput$n), b = MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Minus-sampled bounded power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
   qqline(x, distribution = function(p){
      FMSBPLinv(p, b =  MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
    })
   #hist(log(sitedata$Area), main = paste("(C)", sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
-  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "theoretical quantiles", ylab = "Sample quantiles", main = paste("(C)", sites[i], ": Log-normal Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
+  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(C)", sites[i], ": Log-normal Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
   qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)})
-  qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v), sitedata$Area, xlab = "theoretical quantiles", ylab = "Sample quantiles", main = paste("(D)", sites[i], ": Minus-sampled log-normal Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
+  qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v), sitedata$Area, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(D)", sites[i], ": Minus-sampled log-normal Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
   qqline(sitedata$Area, distribution = function(p){
   FMSlnorminv(p, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v)
   })

@@ -27,9 +27,9 @@ set.fish.params = function(biomass_kg){
 }
 
 # Use analytical value of MLE b for PL model (Box 1, Edwards et al. 2017)
-# as a starting point for nlm for MLE of b for PLB model. Code adopted from
+# as a starting point for nlm for MLE of b for PLB model. Code adapted from
 # Edwards et al. (2017).
-mle_b = function(region, x, log_x, sum_log_x, x_min, x_max){
+mle_b = function(region, x, sum_log_x, x_min, x_max){
   
   PL.bMLE = 1/( log(min(x)) - sum_log_x/length(x)) - 1
   
