@@ -69,7 +69,7 @@ for(i in 1:nsites){
   s <- sites[i]
   sitedata <- allfish %>% filter(Site == s)
   siteinput <- set.fish.params(sitedata$individual_biomass_kg)
-  bML <- mle_b(Site == s, x = siteinput$biomass, log_x = sitedata$log.biomass, sum_log_x = siteinput$sum.log.biomass,
+  bML <- mle_b(Site == s, x = siteinput$biomass, sum_log_x = siteinput$sum.log.biomass,
                x_min = siteinput$min.biomass, x_max = siteinput$max.biomass)
   PLB.bMLE.site.b[i] <- bML[[1]] 
   thetalnorm <- estimatelognormal(x = sitedata$individual_biomass_kg)
@@ -80,9 +80,9 @@ for(i in 1:nsites){
                              xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
   qqline(x, distribution = function(p){
     FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
-  })
+  }, untf=T)
   qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
-  qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)})
+  qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
   #rank plot   
   sitey.PLB <- (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
                          xmax = max(sitex))) * length(sitedata$individual_biomass_kg)
@@ -97,7 +97,7 @@ for(i in 1:nsites){
     geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
     labs(tag = LETTERS[i]) +
-    annotate("text", x = 0.001, y = 10, label = s) +
+    annotate("text", x = 0.002, y = 10, label = s) +
     annotate("text", x = 0.001, y = 3, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
     annotate("text", x = 100, y =1000, label = bquote(n == .(length(sitedata$individual_biomass_kg)))) +
     theme_classic() + 
