@@ -74,13 +74,13 @@ for(i in 1:nsites){
     scale_x_continuous(trans = 'log10', breaks = c(0,1,5,10,100,1000,10000),
                        limits = range(oneyeardf$Area))+
     geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
-    geom_line(aes_(x = sitex, y = sitey.MSBPL), col = '#D95F02', lwd = 1) +
-    geom_line(aes_(x = sitex, y = sitey.MSlnorm), col = '#7570B3', lwd = 1) +
+    #geom_line(aes_(x = sitex, y = sitey.MSBPL), col = '#D95F02', lwd = 1) +
+    #geom_line(aes_(x = sitex, y = sitey.MSlnorm), col = '#7570B3', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
     labs(tag = LETTERS[i]) +
     annotate("text", x = 10, y = 10, label = s) +
     annotate("text", x = 10, y = 3, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
-    annotate("text", x = 10, y = 1, label = bquote(paste(italic(b)[MSBPL]==.(round(MSPLB.bMLE.site.b[i],2))))) +
+   # annotate("text", x = 10, y = 1, label = bquote(paste(italic(b)[MSBPL]==.(round(MSPLB.bMLE.site.b[i],2))))) +
     annotate("text", x = 800, y = 1000, label = bquote(n == .(length(sitedata$Area)))) +
     theme_classic() + 
     theme(axis.title = element_blank())

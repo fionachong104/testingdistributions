@@ -33,7 +33,7 @@ for(i in 1:nsites){
   s <- sites[i]
   sitedata <- fish.df %>% filter(region == s)
   siteinput <- set.fish.params(sitedata$biomass_kg)
-  bML <- mle_b(Site == s, x = siteinput$biomass, log_x = sitedata$log.biomass, sum_log_x = siteinput$sum.log.biomass,
+  bML <- mle_b(Site == s, x = siteinput$biomass, sum_log_x = siteinput$sum.log.biomass,
                x_min = siteinput$min.biomass, x_max = siteinput$max.biomass)
   PLB.bMLE.site.b[i] <- bML[[1]]
   thetalnorm <- estimatelognormal(x = sitedata$biomass_kg)
@@ -41,12 +41,12 @@ for(i in 1:nsites){
   sitex = seq(min(sitedata$biomass_kg), max(sitedata$biomass_kg), length = 1000)
   par(mfrow=c(1,2))
   bplqq[[i]] <- qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
-                             xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", main = paste("(A)", sites[i], ": Power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
+                             xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Power law"), pch = 16, col = adjustcolor("black", 0.25))
   qqline(x, distribution = function(p){
     FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
-  })
-  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "theoretical quantiles", ylab = "sample quantiles", main = paste("(B)", sites[i], ": Log-normal Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
-  qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)})
+  }, untf=T)
+  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical quantiles", ylab = "Sample quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
+  qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
   #rank plot
   sitey.PLB <- (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
                          xmax = max(sitex))) * length(sitedata$biomass_kg)

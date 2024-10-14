@@ -141,8 +141,8 @@ for(i in 1:nsites){
 mtext(expression(paste("log(fish biomass (kg))")) , side=1,line=3,outer=TRUE,cex=1.3)
 mtext("Proportion of fish abundance", side=2,line=2,outer=TRUE,cex=1.3,las=0)
 
-# 
+
 # # # saves the temp images from the plotting envrionment
 # plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)
 # plots.png.paths <- list.files(plots.dir.path, pattern = ".png", full.names = TRUE)
-# file.copy(from = plots.png.paths, to = "C:/Users/624225/OneDrive - hull.ac.uk/_BoxData/PhD/testingdistributions/qqplots/fish")
+# file.copy(from = plots.png.paths, to = "C:/Users/624225/OneDrive - hull.ac.uk/_BoxData/PhD/testingdistributions/qqplots/fish_logged")
