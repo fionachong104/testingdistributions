@@ -95,8 +95,8 @@ for(i in 1:nsites){
   AICdf$AICmslognorm[i] <- MSlnormAIC(thetaMSlnorm)$AICmslognorm
   AICdf$llMSBPL[i] <- MSBPLAIC(msbplfit)$llMSBPL
   AICdf$AICMSBPL[i] <- MSBPLAIC(msbplfit)$AICMSBPL
-  sigmadf$lognorm[i] <- thetalnorm$sdlog[i]
-  sigmadf$mslognorm[i] <- thetaMSlnorm$par[2] # need to work out how to do it for every site
+  sigmadf$lognorm[i] <- thetalnorm$sdlog
+  sigmadf$mslognorm[i] <- thetaMSlnorm$par[2]
 }
 
 leftlabel <- grid::textGrob(expression(paste("Number of colonies with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
@@ -128,7 +128,7 @@ for(i in 1:nsites){
   #xlab = expression(paste("Log coral area"~(cm^2))))
 }
 mtext(expression(paste("log(coral area/"*cm^2*")")) , side=1,line=3,outer=TRUE,cex=1.3)
-mtext("Proportion of coral colonies", side=2,line=2,outer=TRUE,cex=1.3,las=0)
+mtext("Density", side=2,line=2,outer=TRUE,cex=1.3,las=0)
 
 
 # # saves the temp images from the plotting envrionment

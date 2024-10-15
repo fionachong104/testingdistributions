@@ -139,7 +139,7 @@ for(i in 1:nsites){
   #xlab = expression(paste("Log coral area"~(cm^2))))
 
 mtext(expression(paste("log(fish biomass (kg))")) , side=1,line=3,outer=TRUE,cex=1.3)
-mtext("Proportion of fish abundance", side=2,line=2,outer=TRUE,cex=1.3,las=0)
+mtext("Density", side=2,line=2,outer=TRUE,cex=1.3,las=0)
 
 
 # # # saves the temp images from the plotting envrionment
