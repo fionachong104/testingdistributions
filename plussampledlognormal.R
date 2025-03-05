@@ -8,8 +8,8 @@ source("coralsizedistfuncs.R")
 w <- 3648/35
 v <- 2736/35
 
-r <- 10 #fixed r for now
-n <- 1e2
+n <- 1e3
+r <- rep(10, n) #fixed r for now
 nplot <- 1e2
 mycolors <- brewer.pal(3, "Dark2")
 alpha <- runif(n = n, min = 0 - r, max = w + r) #(alpha, beta) uniform random points in plus-sampling window
@@ -19,6 +19,7 @@ plot(c(0 - r, w + r), c(0 - r, v + r), type = "n", asp = 1, xlab = "", ylab = ""
 plotframe(w = w, v = v)
 istrunc <- intrunc(alpha = alpha, beta = beta, r = r, w = w, v = v)
 for(i in 1:nplot){#drawing all the circles can be slow so make nplot not too large
+  print(c(i, alpha[i], beta[i], istrunc[i]))
   plotcircle(alpha = alpha[i], beta = beta[i], r = r[i], isinframe = istrunc[i])
 }
 
