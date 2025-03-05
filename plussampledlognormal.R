@@ -35,7 +35,7 @@ for(i in 1:nplot){#drawing all the circles can be slow so make nplot not too lar
 #is probability of being truncated correct?
 print(paste("simulated probability:", sum(istrunc) / sum(isvisible)))
 if(v > 2 * rconst){
-  P <- (w + 2 * rconst) * (v + 2 * rconst) #THINK THE CORRECT FORMULA IS v * w + 2 * rconst * (v + w) + pi * rconst^2
+  P <- v * w + 2 * rconst * (v + w) + pi * rconst^2
   M <- (w - 2 * rconst) * (v - 2 * rconst)
   expectprob <- (P - M) / P
 } else {
