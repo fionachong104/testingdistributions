@@ -363,7 +363,7 @@ plotplusframe <- function(w, v, r){
   xtopright <- r * cos(theta) + w
   ytopright <- r * sin(theta) + v
   xtopleft <- r * cos(theta + pi / 2)
-  ytopright <- r * sin(theta + pi / 2) + v
+  ytopleft <- r * sin(theta + pi / 2) + v
   xbottomleft <- r * cos(theta + pi)
   ybottomleft <- r * sin(theta + pi)
   xbottomright <- r * cos(theta + 3 * pi / 2) + w

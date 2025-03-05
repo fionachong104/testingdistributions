@@ -1,5 +1,6 @@
 rm(list = ls())
 library(RColorBrewer)
+set.seed(123456789)
 
 source("coralsizedistfuncs.R")
 
@@ -20,6 +21,7 @@ beta <- runif(n = n, min = 0 - maxdist, max = v + maxdist)
 par(mfrow = c(1, 1))
 plot(c(0 - maxdist, w + maxdist), c(0 - maxdist, v + maxdist), type = "n", asp = 1, xlab = "", ylab = "")
 plotframe(w = w, v = v)
+plotplusframe(w = w, v = v, r = rconst)
 istrunc <- intrunc(alpha = alpha, beta = beta, r = r, w = w, v = v) #partly visible in frame NOT CORRECT IN CORNER CASES YET
 isinframe <- inframe(alpha = alpha, beta = beta, r = r, w = w, v = v) #entirely in frame
 isvisible <- istrunc | isinframe #partly or entirely visible
