@@ -334,6 +334,19 @@ inframe <- function(alpha, beta, r, w, v){
   return(alpha >= r & alpha <= (w - r) & beta >= r & beta <= (v - r))
 }
 
+#does circle of radius r centred at (alpha, beta) fall partly but not entirely within a rectangle of side lengths w, v, lower left corner at origin?
+#Arguments:
+#alpha, beta: coordinates of circle centre
+#r: radius of circle
+#w, v: width and height of rectangle
+#Value:
+#logical: circle partly but not entirely in rectangle?
+intrunc <- function(alpha, beta, r, w, v){
+  M <- alpha >= r & alpha <= (w - r) & beta >= r & beta <= (v - r) #in minus-sampling area?
+  P <- alpha >= -r & alpha <= (w + r) & beta >= -r & beta <= (v + r) #in area of sampling window plus border of width r?
+  P & !M
+}
+
 #draw sampling window
 #Arguments: w, v width and height of rectangular window
 #Value: rectangle representing the window
