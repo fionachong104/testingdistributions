@@ -8,8 +8,9 @@ source("coralsizedistfuncs.R")
 w <- 3648/35
 v <- 2736/35
 
+xmaxminus <- pi / 4 * v^2 #max area of circle that can fit in window
 n <- 1e4
-rconst <- 10
+rconst <- 20
 r <- rep(rconst, n) #fixed r for now
 nplot <- 1e2
 mycolors <- brewer.pal(3, "Dark2")
@@ -25,11 +26,16 @@ for(i in 1:nplot){#drawing all the circles can be slow so make nplot not too lar
 
 #is probability of being truncated correct?
 print(paste("simulated probability:", sum(istrunc) / n))
-expectprob <- ((w + 2 * rconst) * (v + 2 * rconst) - (w - 2 * rconst) * (v - 2 * rconst)) / ((w + 2 * rconst) * (v + 2 * rconst))
+if(v > 2 * rconst){
+  P <- (w + 2 * rconst) * (v + 2 * rconst)
+  M <- (w - 2 * rconst) * (v - 2 * rconst)
+  expectprob <- (P - M) / P
+} else {
+  expectprob <- 1
+}
 print(paste("expected probability:", expectprob))
       
 
-#xmaxminus <- pi / 4 * v^2 #max area of circle that can fit in window
 #n <- 1e4 #number of circles
 #nplot <- 100 #number to plot
 #mu <- 5 #mean log area
