@@ -343,7 +343,7 @@ inframe <- function(alpha, beta, r, w, v){
 #logical: circle partly but not entirely in rectangle?
 intrunc <- function(alpha, beta, r, w, v){
   M <- alpha >= r & alpha <= (w - r) & beta >= r & beta <= (v - r) #in minus-sampling area?
-  P <- alpha >= -r & alpha <= (w + r) & beta >= -r & beta <= (v + r) #in area of sampling window plus border of width r?
+  P <- alpha >= -r & alpha <= (w + r) & beta >= -r & beta <= (v + r) #in area of sampling window plus border of width r? NOT CORRECT YET. NEED TO DO ALL FOUR CORNER CASES
   P & !M
 }
 
@@ -353,6 +353,25 @@ intrunc <- function(alpha, beta, r, w, v){
 plotframe <- function(w, v){
   polygon(x = c(0, w, w, 0), y = c(0, 0, v, v))
 }
+
+#draw plus-sampling window for circles of radius r
+#Arguments: w, v width and height of rectangular window
+#r: radius of circle
+#Value: rectangle representing the window
+plotplusframe <- function(w, v, r){
+  theta <- seq(from = 0, to = pi / 2, length.out = 1e3)
+  xtopright <- r * cos(theta) + w
+  ytopright <- r * sin(theta) + v
+  xtopleft <- r * cos(theta + pi / 2)
+  ytopright <- r * sin(theta + pi / 2) + v
+  xbottomleft <- r * cos(theta + pi)
+  ybottomleft <- r * sin(theta + pi)
+  xbottomright <- r * cos(theta + 3 * pi / 2) + w
+  ybottomright <- r * sin(theta + 3 * pi / 2)
+  polygon(x = c(xtopright, xtopleft, xbottomleft, xbottomright), y = c(ytopright, ytopleft, ybottomleft, ybottomright))
+}
+
+
 
 #draw circle, filled if entirely in window
 #Arguments:

@@ -10,8 +10,8 @@ v <- 2736/35
 
 xmaxminus <- pi / 4 * v^2 #max area of circle that can fit in window
 maxdist <- 50 #max perpendicular distance from edge of image frame to simulate
-n <- 1e2
-rconst <- 20
+n <- 1e3
+rconst <- 10
 r <- rep(rconst, n) #fixed r for now
 nplot <- 1e2
 mycolors <- brewer.pal(3, "Dark2")
@@ -20,7 +20,7 @@ beta <- runif(n = n, min = 0 - maxdist, max = v + maxdist)
 par(mfrow = c(1, 1))
 plot(c(0 - maxdist, w + maxdist), c(0 - maxdist, v + maxdist), type = "n", asp = 1, xlab = "", ylab = "")
 plotframe(w = w, v = v)
-istrunc <- intrunc(alpha = alpha, beta = beta, r = r, w = w, v = v) #partly visible in frame
+istrunc <- intrunc(alpha = alpha, beta = beta, r = r, w = w, v = v) #partly visible in frame NOT CORRECT IN CORNER CASES YET
 isinframe <- inframe(alpha = alpha, beta = beta, r = r, w = w, v = v) #entirely in frame
 isvisible <- istrunc | isinframe #partly or entirely visible
 for(i in 1:nplot){#drawing all the circles can be slow so make nplot not too large
@@ -30,7 +30,7 @@ for(i in 1:nplot){#drawing all the circles can be slow so make nplot not too lar
 #is probability of being truncated correct?
 print(paste("simulated probability:", sum(istrunc) / sum(isvisible)))
 if(v > 2 * rconst){
-  P <- (w + 2 * rconst) * (v + 2 * rconst)
+  P <- (w + 2 * rconst) * (v + 2 * rconst) #THINK THE CORRECT FORMULA IS v * w + 2 * rconst * (v + w) + pi * rconst^2
   M <- (w - 2 * rconst) * (v - 2 * rconst)
   expectprob <- (P - M) / P
 } else {
