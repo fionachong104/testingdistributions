@@ -341,9 +341,16 @@ inframe <- function(alpha, beta, r, w, v){
 #w, v: width and height of rectangle
 #Value:
 #logical: circle partly but not entirely in rectangle?
+#NEEDS VECTORIZING
 intrunc <- function(alpha, beta, r, w, v){
   M <- alpha >= r & alpha <= (w - r) & beta >= r & beta <= (v - r) #in minus-sampling area?
-  P <- alpha >= -r & alpha <= (w + r) & beta >= -r & beta <= (v + r) #in area of sampling window plus border of width r? NOT CORRECT YET. NEED TO DO ALL FOUR CORNER CASES
+  if(alpha > 0 & alpha < w | beta > 0 & beta < v){#not a corner case
+    P <- alpha >= -r & alpha <= (w + r) & beta >= -r & beta <= (v + r) #in area of sampling window plus border of width r?
+  } else {
+    corners <- cbind(c(0, w, w, 0), c(0, 0, v, v))
+    cdist <- sqrt((alpha - corners[, 1])^2 + (beta - corners[, 2])^2)
+    P <- min(cdist) <= r
+  }
   P & !M
 }
 

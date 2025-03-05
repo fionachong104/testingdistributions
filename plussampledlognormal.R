@@ -1,6 +1,6 @@
 rm(list = ls())
 library(RColorBrewer)
-set.seed(123456789)
+#set.seed(123456789) #gives corner case check with rconst <- 10, n <- 10
 
 source("coralsizedistfuncs.R")
 
@@ -22,7 +22,10 @@ par(mfrow = c(1, 1))
 plot(c(0 - maxdist, w + maxdist), c(0 - maxdist, v + maxdist), type = "n", asp = 1, xlab = "", ylab = "")
 plotframe(w = w, v = v)
 plotplusframe(w = w, v = v, r = rconst)
-istrunc <- intrunc(alpha = alpha, beta = beta, r = r, w = w, v = v) #partly visible in frame NOT CORRECT IN CORNER CASES YET
+istrunc <- logical(n)
+for(i in 1:n){
+  istrunc[i] <- intrunc(alpha = alpha[i], beta = beta[i], r = r[i], w = w, v = v) #partly visible in frame NEEDS VECTORIZING
+}
 isinframe <- inframe(alpha = alpha, beta = beta, r = r, w = w, v = v) #entirely in frame
 isvisible <- istrunc | isinframe #partly or entirely visible
 for(i in 1:nplot){#drawing all the circles can be slow so make nplot not too large
