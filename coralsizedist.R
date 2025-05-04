@@ -44,22 +44,23 @@ for(i in 1:nsites){
   par(mfrow=c(2,2))
   bplqq[[i]] <- qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
                 xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Power law"), pch = 16, col = adjustcolor("black", 0.25))
-  qqline(x, distribution = function(p){
-  FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
-  }, untf=T)
+  #qqline(x, distribution = function(p){
+  # FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
+  # }, untf=T)
   msbplqq[[i]] <- qqplot(FMSBPLinv(u = ppoints(siteinput$n), b = MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Minus-sampled bounded power law"), pch = 16, col = adjustcolor("black", 0.25))
-  qqline(x, distribution = function(p){
-     FMSBPLinv(p, b =  MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
-   }, untf=T)
+  #qqline(x, distribution = function(p){
+   #   FMSBPLinv(p, b =  MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
+   # }, untf=T)
   #hist(log(sitedata$Area), main = paste("(C)", sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
   qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(C)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
-  qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
+  #qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
   qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v), sitedata$Area, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(D)", sites[i], ": Minus-sampled log-normal"), pch = 16, col = adjustcolor("black", 0.25))
-  qqline(sitedata$Area, distribution = function(p){
-  FMSlnorminv(p, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v)
-  }, untf=T)
+  }
+#qqline(sitedata$Area, distribution = function(p){
+  #FMSlnorminv(p, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v)
+  #}, untf=T)
 
-#rank plot   
+#rank plot
   sitey.PLB <- (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
                        xmax = max(sitex))) * length(sitedata$Area)
   sitey.MSBPL <-  (1 - FMSBPL(x = sitex, b = MSPLB.bMLE.site.b[i], xmin = min(sitex),
@@ -70,7 +71,7 @@ for(i in 1:nsites){
   siteb_plot[[i]] <- ggplot() +
     geom_point(aes_(x = (sort(sitedata$Area, decreasing=TRUE)), y = (1:length(sitedata$Area))),
                color = "#666666", size = 2, alpha = 0.3) +
-    scale_y_continuous(trans = 'log10', breaks = c(1,10,100,500,3000), 
+    scale_y_continuous(trans = 'log10', breaks = c(1,10,100,500,3000),
                        limits = c(0.25, max(table(oneyeardf$Site)))) +
     scale_x_continuous(trans = 'log10', breaks = c(0,1,5,10,100,1000,10000),
                        limits = range(oneyeardf$Area))+
@@ -85,7 +86,7 @@ for(i in 1:nsites){
     annotate("text", x = 10, y = 3, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
     annotate("text", x = 10, y = 1, label = bquote(paste(italic(b)[MSBPL]==.(round(MSPLB.bMLE.site.b[i],2))))) +
     annotate("text", x = 800, y = 1000, label = bquote(n == .(length(sitedata$Area)))) +
-    theme_classic() + 
+    theme_classic() +
     theme(axis.title = element_blank())
   AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
   AICdf$AIClognorm[i] <- lnormAIC(x)$AIClognorm
@@ -102,17 +103,17 @@ for(i in 1:nsites){
 leftlabel <- grid::textGrob(expression(paste("Number of colonies with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
 bottomlabel <- grid::textGrob(expression(paste("Colony area, ", italic("x"), ~(cm^2))))
 
-siteb_plot <- grid.arrange(grobs = siteb_plot, ncol = 4, 
+siteb_plot <- grid.arrange(grobs = siteb_plot, ncol = 4,
              left = leftlabel,
              bottom = bottomlabel)
-#ggsave(file = "siteb_plot.svg", plot = siteb_plot, width = 13, height = 9)
+ggsave(file = "siteb_plot.svg", plot = siteb_plot, width = 13, height = 9)
 
 # site-wise SFD of log coral area
 par(
   mfrow = c(5,4),
   mar = c(1,1.5,1,0),
   oma = c(4,4,2,2)
-)  
+)
 for(i in 1:nsites){
   s <- sites[i]
   sitedata <- oneyeardf %>% filter(Site == s)
@@ -134,7 +135,5 @@ mtext("Density", side=2,line=2,outer=TRUE,cex=1.3,las=0)
 # # saves the temp images from the plotting envrionment
 # plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)
 # plots.png.paths <- list.files(plots.dir.path, pattern = ".png", full.names = TRUE)
-# file.copy(from = plots.png.paths, to = "C:/Users/624225/OneDrive - hull.ac.uk/_BoxData/PhD/testingdistributions")
-
-
-#write.csv(AICdf,'AIC.csv') 
+# file.copy(from = plots.png.paths, to = "C:/Users/tvkx991/OneDrive-University of Leeds/PhD/testingdistributions/")
+# write.csv(AICdf,'AIC.csv') 
