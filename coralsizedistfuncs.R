@@ -334,12 +334,51 @@ inframe <- function(alpha, beta, r, w, v){
   return(alpha >= r & alpha <= (w - r) & beta >= r & beta <= (v - r))
 }
 
+#does circle of radius r centred at (alpha, beta) fall partly but not entirely within a rectangle of side lengths w, v, lower left corner at origin?
+#Arguments:
+#alpha, beta: coordinates of circle centre
+#r: radius of circle
+#w, v: width and height of rectangle
+#Value:
+#logical: circle partly but not entirely in rectangle?
+#NEEDS VECTORIZING
+intrunc <- function(alpha, beta, r, w, v){
+  M <- alpha >= r & alpha <= (w - r) & beta >= r & beta <= (v - r) #in minus-sampling area?
+  if(alpha > 0 & alpha < w | beta > 0 & beta < v){#not a corner case
+    P <- alpha >= -r & alpha <= (w + r) & beta >= -r & beta <= (v + r) #in area of sampling window plus border of width r?
+  } else {
+    corners <- cbind(c(0, w, w, 0), c(0, 0, v, v))
+    cdist <- sqrt((alpha - corners[, 1])^2 + (beta - corners[, 2])^2)
+    P <- min(cdist) <= r
+  }
+  P & !M
+}
+
 #draw sampling window
 #Arguments: w, v width and height of rectangular window
 #Value: rectangle representing the window
 plotframe <- function(w, v){
   polygon(x = c(0, w, w, 0), y = c(0, 0, v, v))
 }
+
+#draw plus-sampling window for circles of radius r
+#Arguments: w, v width and height of rectangular window
+#r: radius of circle
+#Value: rectangle representing the window
+plotplusframe <- function(w, v, r){
+  theta <- seq(from = 0, to = pi / 2, length.out = 1e3)
+  xtopright <- r * cos(theta) + w
+  ytopright <- r * sin(theta) + v
+  xtopleft <- r * cos(theta + pi / 2)
+  ytopleft <- r * sin(theta + pi / 2) + v
+  xbottomleft <- r * cos(theta + pi)
+  ybottomleft <- r * sin(theta + pi)
+  xbottomright <- r * cos(theta + 3 * pi / 2) + w
+  ybottomright <- r * sin(theta + 3 * pi / 2)
+  polygon(x = c(xtopright, xtopleft, xbottomleft, xbottomright), y = c(ytopright, ytopleft, ybottomleft, ybottomright))
+}
+
+
 
 #draw circle, filled if entirely in window
 #Arguments:
