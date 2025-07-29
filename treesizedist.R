@@ -7,7 +7,7 @@ library(tidyverse)
 source("coralsizedistfuncs.R")
 
 #load data
-tree <- read.csv("C:/Users/tvkx991/OneDrive - University of Leeds/PhD/testingdistributions/testingdistributions/Ausplots_large_tree_survey_data.csv")
+tree <- read.csv("Ausplots_large_tree_survey_data.csv")
 tree <- tree %>% drop_na(aboveGroundLiveBiomass_kilograms)  # to remove dead trees
 # axisscores <- read.csv("axisscores.csv", row.names=1)
 # axisscores <- axisscores[order(axisscores$PC1), ]
@@ -74,7 +74,7 @@ bottomlabel <- grid::textGrob(expression(paste("tree biomass, ", italic("x"), ~(
 #                            left = leftlabel,
 #                            bottom = bottomlabel)
 
-marrangeGrob(grobs= siteb_plot, nrow=4, ncol=4)
+(marrangeGrob(grobs= siteb_plot, nrow=4, ncol=4))
 
 
 write.csv(AICdf,'tree_AIC.csv')
