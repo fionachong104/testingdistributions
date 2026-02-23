@@ -26,6 +26,58 @@ set.fish.params = function(biomass_kg){
   return(out.list)
 }
 
+set.bird.params = function(Weight){
+  # Creates a list of parameters for input into the negll.PLB and pPLB functions
+  biomass <- Weight
+  log.biomass <- log(biomass)
+  sum.log.biomass <- sum(log.biomass, na.rm = TRUE)
+  min.biomass <- min(Weight, na.rm = TRUE)
+  max.biomass <- max(Weight, na.rm = TRUE)
+  n <- length(biomass)
+  out.list <- (list(biomass, log.biomass, sum.log.biomass, min.biomass, max.biomass, n))
+  names(out.list) <- c("biomass", "log.biomass", "sum.log.biomass", "min.biomass", "max.biomass", "n")
+  return(out.list)
+}
+
+set.arthro.params = function(bodylegnth_mm){
+  # Creates a list of parameters for input into the negll.PLB and pPLB functions
+  biomass <- bodylegnth_mm
+  log.biomass <- log(biomass)
+  sum.log.biomass <- sum(log.biomass, na.rm = TRUE)
+  min.biomass <- min(bodylegnth_mm, na.rm = TRUE)
+  max.biomass <- max(bodylegnth_mm, na.rm = TRUE)
+  n <- length(biomass)
+  out.list <- (list(biomass, log.biomass, sum.log.biomass, min.biomass, max.biomass, n))
+  names(out.list) <- c("biomass", "log.biomass", "sum.log.biomass", "min.biomass", "max.biomass", "n")
+  return(out.list)
+}
+
+set.stream.params = function(dw){
+  # Creates a list of parameters for input into the negll.PLB and pPLB functions
+  biomass <- dw
+  log.biomass <- log(biomass)
+  sum.log.biomass <- sum(log.biomass, na.rm = TRUE)
+  min.biomass <- min(dw, na.rm = TRUE)
+  max.biomass <- max(dw, na.rm = TRUE)
+  n <- length(biomass)
+  out.list <- (list(biomass, log.biomass, sum.log.biomass, min.biomass, max.biomass, n))
+  names(out.list) <- c("biomass", "log.biomass", "sum.log.biomass", "min.biomass", "max.biomass", "n")
+  return(out.list)
+}
+
+set.shark.params = function(Size..cm.){
+  # Creates a list of parameters for input into the negll.PLB and pPLB functions
+  biomass <- Size..cm.
+  log.biomass <- log(biomass)
+  sum.log.biomass <- sum(log.biomass, na.rm = TRUE)
+  min.biomass <- min(Size..cm., na.rm = TRUE)
+  max.biomass <- max(Size..cm., na.rm = TRUE)
+  n <- length(biomass)
+  out.list <- (list(biomass, log.biomass, sum.log.biomass, min.biomass, max.biomass, n))
+  names(out.list) <- c("biomass", "log.biomass", "sum.log.biomass", "min.biomass", "max.biomass", "n")
+  return(out.list)
+}
+
 # Use analytical value of MLE b for PL model (Box 1, Edwards et al. 2017)
 # as a starting point for nlm for MLE of b for PLB model. Code adapted from
 # Edwards et al. (2017).
