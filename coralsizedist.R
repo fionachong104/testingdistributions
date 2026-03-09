@@ -2,6 +2,7 @@ rm(list = ls())
 library(dplyr)
 library(ggplot2)
 library(gridExtra)
+library(goftest)
 
 source("coralsizedistfuncs.R")
 
@@ -55,7 +56,7 @@ for(i in 1:nsites){
   qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(C)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
   #qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
   qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v), sitedata$Area, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(D)", sites[i], ": Minus-sampled log-normal"), pch = 16, col = adjustcolor("black", 0.25))
-  }
+  
 #qqline(sitedata$Area, distribution = function(p){
   #FMSlnorminv(p, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v)
   #}, untf=T)
@@ -83,9 +84,9 @@ for(i in 1:nsites){
     annotate("text", x = 10, y = 10, label = s) +
    # annotate("text", x = 10, y = 13, label = bquote(paste(italic(sigma)[LN]==.(round(thetalnorm$sdlog[i],2))))) +
     #annotate("text", x = 10, y = 10, label = bquote(paste(italic(sigma)[MSLN]==.(round(thetaMSlnorm$par[2],2))))) +
-    annotate("text", x = 10, y = 3, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
-    annotate("text", x = 10, y = 1, label = bquote(paste(italic(b)[MSBPL]==.(round(MSPLB.bMLE.site.b[i],2))))) +
-    annotate("text", x = 800, y = 1000, label = bquote(n == .(length(sitedata$Area)))) +
+    annotate("text", x = 10, y = 3, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
+    annotate("text", x = 10, y = 1, label = paste("italic(b)[MSBPL]==",(round(MSPLB.bMLE.site.b[i],2))), parse = T) +
+    annotate("text", x = 800, y = 1000, label = paste("n =" ,(length(sitedata$Area)))) +
     theme_classic() +
     theme(axis.title = element_blank())
   AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
@@ -98,15 +99,20 @@ for(i in 1:nsites){
   AICdf$AICMSBPL[i] <- MSBPLAIC(msbplfit)$AICMSBPL
   sigmadf$lognorm[i] <- thetalnorm$sdlog
   sigmadf$mslognorm[i] <- thetaMSlnorm$par[2]
-}
+}  
 
 leftlabel <- grid::textGrob(expression(paste("Number of colonies with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
 bottomlabel <- grid::textGrob(expression(paste("Colony area, ", italic("x"), ~(cm^2))))
 
-siteb_plot <- grid.arrange(grobs = siteb_plot, ncol = 4,
-             left = leftlabel,
-             bottom = bottomlabel)
-ggsave(file = "siteb_plot.svg", plot = siteb_plot, width = 13, height = 9)
+ggsave(
+  filename = "siteb_plot.pdf", 
+  plot = marrangeGrob(grobs= siteb_plot, nrow=2, ncol=2,
+                      left = leftlabel,
+                      bottom = bottomlabel,
+                      layout_matrix = rbind(c(1,2), c(3,4))), 
+  width = 15, height = 9
+)
+
 
 # site-wise SFD of log coral area
 par(

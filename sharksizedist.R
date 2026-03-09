@@ -71,10 +71,13 @@ for(i in 1:nsites){
 leftlabel <- grid::textGrob(expression(paste("Number of sharks with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
 bottomlabel <- grid::textGrob(expression(paste("Shark length, ", italic("x"), ~(cm))))
 
- siteb_plot <- grid.arrange(grobs = siteb_plot, ncol = 2,
-                            left = leftlabel,
-                           bottom = bottomlabel)
-
+ ggsave(
+   filename = "bioregionlengths.pdf", 
+   plot = marrangeGrob(grobs= siteb_plot, nrow=2, ncol=2,
+                       left = leftlabel,
+                       bottom = bottomlabel, 
+                       width = 15, height = 9))
+ 
  
 # 20 locations
  PLB.bMLE.site2.b <- numeric(nsites2)
@@ -133,7 +136,7 @@ bottomlabel <- grid::textGrob(expression(paste("Shark length, ", italic("x"), ~(
 #  
 
 ggsave(
-  filename = "regionlengths.pdf", 
+  filename = "locationlengths.pdf", 
   plot = marrangeGrob(grobs= site2b_plot, nrow=2, ncol=2,
                       left = leftlabel,
                       bottom = bottomlabel,
@@ -199,13 +202,12 @@ for(i in 1:nsites){
 leftlabel_biomass <- grid::textGrob(expression(paste("Number of sharks with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
 bottomlabel_biomass <- grid::textGrob(expression(paste("Shark biomass, ", italic("x"), ~(kg))))
 
-siteb_plot_biomass <- grid.arrange(grobs = siteb_plot_biomass, ncol = 2,
-                           left = leftlabel_biomass,
-                           bottom = bottomlabel_biomass)
-# 
-# (marrangeGrob(grobs= siteb_plot, nrow=2, ncol=2,
-#               layout_matrix = rbind(c(1,2), c(3,4))))
-
+ggsave(
+  filename = "bioregionbiomass.pdf", 
+  plot = marrangeGrob(grobs= siteb_plot_biomass, nrow=2, ncol=2,
+                      left = leftlabel_biomass,
+                      bottom = bottomlabel_biomass, 
+                      width = 15, height = 9))
 
 # create empty lists to store things in 
 PLB.bMLE.site2.b_biomass <- numeric(nsites2)
@@ -262,7 +264,7 @@ bottomlabel_biomass <- grid::textGrob(expression(paste("Shark biomass, ", italic
 
 
 ggsave(
-  filename = "regionbiomass.pdf", 
+  filename = "locationbiomass.pdf", 
   plot = marrangeGrob(grobs= site2b_plot_biomass, nrow=2, ncol=2,
                       left = leftlabel_biomass,
                       bottom = bottomlabel_biomass,
