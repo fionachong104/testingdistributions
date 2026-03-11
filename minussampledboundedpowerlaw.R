@@ -85,5 +85,5 @@ qqline(x[isinframe], distribution = function(p){
 })
 
 #goodness-of-fit test
-print("chi-square goodness-of-fit test:")
+print("chi-square goodness-of-fit test for minus-sampled bounded power law:")
 print(MSBPLgof(x = x[isinframe], b = bML$minimum, xmin = min(x[isinframe]), w = w, v = v))
