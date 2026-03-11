@@ -7,9 +7,8 @@ source("coralsizedistfuncs.R")
 # 10 cm = roughly 350 pixels; 1 m = 3500; 1 cm = 35; so dividing by 35 to see what that translates to in cm x cm
 w <- 3648/35
 v <- 2736/35
-
 xmaxminus <- pi / 4 * v^2 #max area of circle that can fit in window
-n <- 1e4 #number of circles
+n <- 1e3 #number of circles
 nplot <- 100 #number to plot
 mu <- 5 #mean log area
 sigma <- 1 #sd log area
