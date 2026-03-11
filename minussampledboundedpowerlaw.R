@@ -83,3 +83,7 @@ qqplot(FMSBPLinv(u = ppoints(ninframe), b = b, xmin = xmin, w = w, v = v), x[isi
 qqline(x[isinframe], distribution = function(p){
   FMSBPLinv(p, b = b, xmin = xmin, w = w, v = v)
 })
+
+#goodness-of-fit test
+print("chi-square goodness-of-fit test:")
+print(MSBPLgof(x = x[isinframe], b = bML$minimum, xmin = min(x[isinframe]), w = w, v = v))
