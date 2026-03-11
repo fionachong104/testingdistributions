@@ -65,3 +65,7 @@ qqline(x[isinframe], distribution = function(p){
 #goodness-of-fit test
 print("chi-square goodness-of-fit test:")
 print(MSlnormgof(x = x[isinframe], mu = thetaML$par[1], sigma = thetaML$par[2], w = w, v = v))
+
+#goodness-of-fit test to all data, WITHOUT minus sampling
+print("chi-square goodness-of-fit test to all data, WITHOUT minus sampling:")
+print(lnormgof(x = x, mu = mean(log(x)), sigma = sd(log(x))))

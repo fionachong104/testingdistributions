@@ -555,7 +555,7 @@ FMSlnorminv <- function(u, mu, sigma, w, v){
 #list containing X2, df and P for chi-square goodness of fit test to minus-sampled lognormal
 #Notes:
 #Follows recommendations in Moore, D.S. (1986) Tests of Chi-squared type. Chapter 3 in D'Agostino, R.B. and Stephens, M. A. (eds). Goodness-of-fit techniques. Marcel Dekker, Inc, New York and Basel.
-MSlnormgof <- function(x, FUN, mu, sigma, w, v){
+MSlnormgof <- function(x, mu, sigma, w, v){
   n <- length(x) #number of observations
   M <- floor(1.88 * n ^ (2 / 5)) #Number of equiprobable cells for chi-square test: D'Agostino p . 70
   quantiles <- sapply(list(u = seq(from = 0, to = 1, length.out = M + 1)), FUN = FMSlnorminv, mu = mu, sigma = sigma, w = w, v = v) #quantiles of the hypothesized distribution give equal-probability cells if data from hypothesized distribution
@@ -572,14 +572,10 @@ MSlnormgof <- function(x, FUN, mu, sigma, w, v){
 #list containing X2, df and P for chi-square goodness of fit test to lognormal
 #Notes:
 #Follows recommendations in Moore, D.S. (1986) Tests of Chi-squared type. Chapter 3 in D'Agostino, R.B. and Stephens, M. A. (eds). Goodness-of-fit techniques. Marcel Dekker, Inc, New York and Basel.
-lnormgof <- function(x, FUN, mu, sigma){
+lnormgof <- function(x, mu, sigma){
   n <- length(x) #number of observations
   M <- floor(1.88 * n ^ (2 / 5)) #Number of equiprobable cells for chi-square test: D'Agostino p . 70
-  quantiles <- sapply(list(u = seq(from = 0, to = 1, length.out = M + 1)), FUN = qlnorm, mu = mu, sigma = sigma) #quantiles of the hypothesized distribution give equal-probability cells if data from hypothesized distribution
-  
-  print(quantiles)
-  print(diff(plnorm(q = quantiles, meanlog = mu, sdlog = sigma)))
-  
+  quantiles <- sapply(list(u = seq(from = 0, to = 1, length.out = M + 1)), FUN = qlnorm, meanlog = mu, sdlog = sigma) #quantiles of the hypothesized distribution give equal-probability cells if data from hypothesized distribution
   observed <- hist(x, breaks = quantiles, plot = FALSE)$counts #observed count in each cell
   chisqgof <- chisq.test(x = observed) #Pearson chi-square test, null hypothesis is equal probability in each cell (D'Agostino p. 72)
   list(X2 = chisqgof$statistic, df = chisqgof$parameter, P = chisqgof$p.value)
