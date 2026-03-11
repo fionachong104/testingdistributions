@@ -26,6 +26,7 @@ msbplqq <-list()
 AICdf <- data.frame(site = sites, llBPL = NA, llMSBPL = NA, lllognorm = NA, llmslognorm = NA, AICBPL = NA, AICMSBPL = NA, AIClognorm = NA, AICmslognorm = NA)
 
 sigmadf <- data.frame(site = sites, lognorm = NA, mslognorm = NA)
+gof <- data.frame(site = sites, MSlognormX2 = NA, MSlognormdf = NA, MSlognormP = NA)
 
 w <- 3648/35
 v <- 2736/35
@@ -40,6 +41,13 @@ for(i in 1:nsites){
   MSPLB.bMLE.site.b[i] <- msbplfit$minimum
   thetalnorm <- estimatelognormal(x = sitedata$Area)
   thetaMSlnorm <- estimateMSlnorm(x = sitedata$Area, w = w, v = v)
+  
+  #goodness-of-fit test for minus-sampled lognormal
+  mslnormgof <- MSlnormgof(x = sitedata$Area, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v)
+  gof$MSlognormX2[i] <- mslnormgof$X2
+  gof$MSlognormdf[i] <- mslnormgof$df
+  gof$MSlognormP[i] <- mslnormgof$P
+  
   x <- sitedata$Area
   sitex = seq(min(sitedata$Area), max(sitedata$Area), length = 10000)
   par(mfrow=c(2,2))
