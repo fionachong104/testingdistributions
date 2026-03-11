@@ -583,6 +583,30 @@ MSBPLgof <- function(x, b, xmin, w, v){
   list(X2 = chisqgof$statistic, df = chisqgof$parameter, P = chisqgof$p.value)
 }
 
+#goodness-of-fit test for bounded power law
+#Arguments:
+#x: vector of sizes
+#b: power law coefficient
+#xmin, xmax: min and max for bounded power law
+#Value:
+#list containing X2, df and P for chi-square goodness of fit test to bounded power law
+#Notes:
+#Follows recommendations in Moore, D.S. (1986) Tests of Chi-squared type. Chapter 3 in D'Agostino, R.B. and Stephens, M. A. (eds). Goodness-of-fit techniques. Marcel Dekker, Inc, New York and Basel.
+BPLgof <- function(x, b, xmin, xmax){
+  n <- length(x) #number of observations
+  M <- floor(1.88 * n ^ (2 / 5)) #Number of equiprobable cells for chi-square test: D'Agostino p . 70
+  FXinv <- function(u, b, xmin, xmax)
+  quantiles <- sapply(list(u = seq(from = 0, to = 1, length.out = M + 1)), FUN = FXinv, b = b, xmin = xmin, xmax = xmax) #quantiles of the hypothesized distribution give equal-probability cells if data from hypothesized distribution
+  
+  print(quantiles)
+  print(pPLB(x = quantiles, b = b, xmin = xmin, xmax = xmax))
+  
+  observed <- hist(x, breaks = quantiles, plot = FALSE)$counts #observed count in each cell
+  chisqgof <- chisq.test(x = observed) #Pearson chi-square test, null hypothesis is equal probability in each cell (D'Agostino p. 72)
+  list(X2 = chisqgof$statistic, df = chisqgof$parameter, P = chisqgof$p.value)
+}
+
+
 #negative log likelihood for minus-sampled lognormal (in form we can supply to optimizer)
 #Arguments:
 #theta: parameter vector (mu, sigma): mean and sd of log area
