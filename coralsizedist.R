@@ -26,7 +26,7 @@ msbplqq <-list()
 AICdf <- data.frame(site = sites, llBPL = NA, llMSBPL = NA, lllognorm = NA, llmslognorm = NA, AICBPL = NA, AICMSBPL = NA, AIClognorm = NA, AICmslognorm = NA)
 
 sigmadf <- data.frame(site = sites, lognorm = NA, mslognorm = NA)
-gof <- data.frame(site = sites, MSlognormX2 = NA, MSlognormdf = NA, MSlognormP = NA)
+gof <- data.frame(site = sites, MSlognormX2 = NA, MSlognormdf = NA, MSlognormP = NA, MSBPLX2 = NA, MSBPLdf = NA, MSBPLP = NA)
 
 w <- 3648/35
 v <- 2736/35
@@ -47,7 +47,14 @@ for(i in 1:nsites){
   gof$MSlognormX2[i] <- mslnormgof$X2
   gof$MSlognormdf[i] <- mslnormgof$df
   gof$MSlognormP[i] <- mslnormgof$P
+
+  #goodness-of-fit test for minus-sampled bounded power law
+  msbplgof <- MSBPLgof(x = sitedata$Area, b = msbplfit$minimum, xmin = min(sitedata$Area), w = w, v = v)
+  gof$MSBPLX2[i] <- msbplgof$X2
+  gof$MSBPLdf[i] <- msbplgof$df
+  gof$MSBPLP[i] <- msbplgof$P
   
+    
   x <- sitedata$Area
   sitex = seq(min(sitedata$Area), max(sitedata$Area), length = 10000)
   par(mfrow=c(2,2))
