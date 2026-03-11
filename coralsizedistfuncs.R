@@ -596,10 +596,6 @@ BPLgof <- function(x, b, xmin, xmax){
   n <- length(x) #number of observations
   M <- floor(1.88 * n ^ (2 / 5)) #Number of equiprobable cells for chi-square test: D'Agostino p . 70
   quantiles <- sapply(list(u = seq(from = 0, to = 1, length.out = M + 1)), FUN = FXinv, b = b, xmin = xmin, xmax = xmax) #quantiles of the hypothesized distribution give equal-probability cells if data from hypothesized distribution
-  
-  print(quantiles)
-  print(diff(pPLB(x = quantiles, b = b, xmin = xmin, xmax = xmax)))
-  
   observed <- hist(x, breaks = quantiles, plot = FALSE)$counts #observed count in each cell
   chisqgof <- chisq.test(x = observed) #Pearson chi-square test, null hypothesis is equal probability in each cell (D'Agostino p. 72)
   list(X2 = chisqgof$statistic, df = chisqgof$parameter, P = chisqgof$p.value)
