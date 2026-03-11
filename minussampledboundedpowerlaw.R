@@ -87,3 +87,8 @@ qqline(x[isinframe], distribution = function(p){
 #goodness-of-fit test
 print("chi-square goodness-of-fit test for minus-sampled bounded power law:")
 print(MSBPLgof(x = x[isinframe], b = bML$minimum, xmin = min(x[isinframe]), w = w, v = v))
+
+#fit bounded power law to all the data WITHOUT minus sampling
+bnotminusML <- mle_b(region = NULL, x = x, sum_log_x = sum(log(x)), x_min = min(x), x_max = max(x))
+print("chi-square goodness-of-fit test for bounded power law applied to all data WITHOUT minus sampling:")
+print(BPLgof(x = x, b = bnotminusML[[1]], xmin = min(x), xmax = max(x)))
