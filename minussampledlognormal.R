@@ -61,3 +61,6 @@ qqplot(FMSlnorminv(u = ppoints(ninframe), mu = mu, sigma = sigma, w = w, v = v),
 qqline(x[isinframe], distribution = function(p){
   FMSlnorminv(p, mu = mu, sigma = sigma, w = w, v = v)
 })
+
+#goodness-of-fit test
+print(MSlnormgof(x = x[isinframe], mu = thetaML$par[1], sigma = thetaML$par[2], w = w, v = v))
