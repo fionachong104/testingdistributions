@@ -26,7 +26,7 @@ msbplqq <-list()
 AICdf <- data.frame(site = sites, llBPL = NA, llMSBPL = NA, lllognorm = NA, llmslognorm = NA, AICBPL = NA, AICMSBPL = NA, AIClognorm = NA, AICmslognorm = NA)
 
 sigmadf <- data.frame(site = sites, lognorm = NA, mslognorm = NA)
-gof <- data.frame(site = sites, MSlognormX2 = NA, MSlognormdf = NA, MSlognormP = NA, MSBPLX2 = NA, MSBPLdf = NA, MSBPLP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
+gof <- data.frame(site = sites, MSlognormX2 = NA, MSlognormdf = NA, MSlognormP = NA, lognormX2 = NA, lognormdf = NA, lognormP = NA, MSBPLX2 = NA, MSBPLdf = NA, MSBPLP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
 
 w <- 3648/35
 v <- 2736/35
@@ -47,6 +47,12 @@ for(i in 1:nsites){
   gof$MSlognormX2[i] <- mslnormgof$X2
   gof$MSlognormdf[i] <- mslnormgof$df
   gof$MSlognormP[i] <- mslnormgof$P
+  
+  #goodness-of-fit test for lognormal
+  lngof <- lnormgof(x = sitedata$Area, mu = thetalnorm$meanlog, sigma = thetalnorm$sdlog)
+  gof$lognormX2[i] <- lngof$X2
+  gof$lognormdf[i] <- lngof$df
+  gof$lognormP[i] <- lngof$P
 
   #goodness-of-fit test for minus-sampled bounded power law
   msbplgof <- MSBPLgof(x = sitedata$Area, b = msbplfit$minimum, xmin = min(sitedata$Area), w = w, v = v)
