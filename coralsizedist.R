@@ -2,7 +2,6 @@ rm(list = ls())
 library(dplyr)
 library(ggplot2)
 library(gridExtra)
-library(goftest)
 
 source("coralsizedistfuncs.R")
 
