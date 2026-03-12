@@ -577,17 +577,26 @@ MSlnormgof <- function(x, mu, sigma, w, v, adjustdf = FALSE){
 #Arguments:
 #x: vector of sizes
 #mu, sigma: mean and sd for log area
+#adjustdf (default FALSE): subtract number of estimated parameters from degrees of freedom?
 #Value:
 #list containing X2, df and P for chi-square goodness of fit test to lognormal
 #Notes:
 #Follows recommendations in Moore, D.S. (1986) Tests of Chi-squared type. Chapter 3 in D'Agostino, R.B. and Stephens, M. A. (eds). Goodness-of-fit techniques. Marcel Dekker, Inc, New York and Basel.
-lnormgof <- function(x, mu, sigma){
+lnormgof <- function(x, mu, sigma, adjustdf = FALSE){
   n <- length(x) #number of observations
   M <- floor(1.88 * n ^ (2 / 5)) #Number of equiprobable cells for chi-square test: D'Agostino p . 70
   quantiles <- sapply(list(u = seq(from = 0, to = 1, length.out = M + 1)), FUN = qlnorm, meanlog = mu, sdlog = sigma) #quantiles of the hypothesized distribution give equal-probability cells if data from hypothesized distribution
   observed <- hist(x, breaks = quantiles, plot = FALSE)$counts #observed count in each cell
   chisqgof <- chisq.test(x = observed) #Pearson chi-square test, null hypothesis is equal probability in each cell (D'Agostino p. 72)
-  list(X2 = chisqgof$statistic, df = chisqgof$parameter, P = chisqgof$p.value)
+  if(adjustdf){#D'Agostino p. 68. Correct critical points fall somewhere between those from M - p - 1 df (where p is number of estimated parameters) and M - 1
+    df <- chisqgof$parameter - 2 #in this model, 2 parameters estimated from data
+    P <- 1 - pchisq(q = chisqgof$statistic, df = df)
+  }
+  else{
+    df <- chisqgof$parameter
+    P <- chisqgof$p.value
+  }
+  list(X2 = chisqgof$statistic, df = df, P = P)
 }
 
 #goodness-of-fit test for minus-sampled bounded power law
