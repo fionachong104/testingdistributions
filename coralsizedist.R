@@ -33,6 +33,7 @@ v <- 2736/35
 
 for(i in 1:nsites){
   s <- sites[i]
+  print(s)
   sitedata <- oneyeardf %>% filter(Site == s)
   siteinput <- set.params(sitedata$Area)
   bML <- mle_b(Site == s, x = siteinput$Area, sum_log_x = siteinput$sum.log.Area, x_min = siteinput$min.Area, x_max = siteinput$max.Area)
@@ -154,7 +155,7 @@ for(i in 1:nsites){
   siteproportions <- hist(log(sitedata$Area), plot = FALSE, breaks = custom_breaks)
   plot(siteproportions, freq = FALSE, col = "darkgrey", main = "", xlab = "", ylab = "", axes = FALSE,  ylim = c(0,0.4), xlim = c(0,10))
   title(paste("(",LETTERS[i],")"," ",sites[i], sep= ""), cex.main = 1.5, line = -1.5)
-  lines(density(log(sitedata$Area)), na.rm=TRUE, col = "blue", lty = "dashed", lwd = 2)
+  lines(density(log(sitedata$Area), na.rm=TRUE), col = "blue", lty = "dashed", lwd = 2)
   abline(v=mean(log(sitedata$Area)), col = "red", lwd = 2, lty = "dashed")
   legend("topright", inset = .05, bty = "n", cex = 1.5, legend = bquote(n == .(length(sitedata$Area))))
   axis(side = 1, at=c(0,5,10), labels = c(0,5,10), cex.axis = 1.5)
