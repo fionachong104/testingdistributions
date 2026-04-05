@@ -21,6 +21,8 @@ PLB.bMLE.site.b <- numeric(nsites)
 siteb_plot <- list()
 bplqq <- list()
 AICdf <- data.frame(site = sites, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
+sigmadf <- data.frame(site = sites, lognorm = NA)
+gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
 
 
 for(i in 1:nsites){
@@ -31,6 +33,19 @@ for(i in 1:nsites){
                x_min = siteinput$min.biomass, x_max = siteinput$max.biomass)
   PLB.bMLE.site.b[i] <- bML[[1]] 
   thetalnorm <- estimatelognormal(x = sitedata$aboveGroundLiveBiomass_kilograms)
+  
+  #goodness-of-fit test for lognormal
+  lngof <- lnormgof(x = sitedata$aboveGroundLiveBiomass_kilograms, mu = thetalnorm$meanlog, sigma = thetalnorm$sdlog)
+  gof$lognormX2[i] <- lngof$X2
+  gof$lognormdf[i] <- lngof$df
+  gof$lognormP[i] <- lngof$P
+  
+  #goodness-of-fit test for bounded power law
+  bplgof <- BPLgof(x = sitedata$aboveGroundLiveBiomass_kilograms, b = bML[[1]], xmin = min(sitedata$aboveGroundLiveBiomass_kilograms), xmax = max(sitedata$aboveGroundLiveBiomass_kilograms))
+  gof$BPLX2[i] <- bplgof$X2
+  gof$BPLdf[i] <- bplgof$df
+  gof$BPLP[i] <- bplgof$P
+  
   x <- sitedata$aboveGroundLiveBiomass_kilograms
   sitex = seq(min(sitedata$aboveGroundLiveBiomass_kilograms), max(sitedata$aboveGroundLiveBiomass_kilograms), length = 10000)
   par(mfrow=c(1,2))
@@ -46,36 +61,39 @@ for(i in 1:nsites){
                          xmax = max(sitex))) * length(sitedata$aboveGroundLiveBiomass_kilograms)
   sitey.lnorm <- plnorm(q = sitex, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog, lower.tail = FALSE, log.p = FALSE) * length(sitedata$aboveGroundLiveBiomass_kilograms)
   siteb_plot[[i]] <- ggplot() +
-    geom_point(aes_(x = (sort(sitedata$aboveGroundLiveBiomass_kilograms, decreasing=TRUE)), y = (1:length(sitedata$aboveGroundLiveBiomass_kilograms))),
+    geom_point(aes(x = (sort(sitedata$aboveGroundLiveBiomass_kilograms, decreasing=TRUE)), y = (1:length(sitedata$aboveGroundLiveBiomass_kilograms))),
                color = "#666666", size = 2, alpha = 0.3) +
     scale_y_continuous(trans = 'log10', breaks = c(1,10,100,500,3000), 
                        limits = c(0.25, max(table(tree$siteName)))) +
     scale_x_continuous(trans = 'log10',#breaks = c(-10,0,1,10,100),
                        limits = range(tree$aboveGroundLiveBiomass_kilograms))+
-    geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
-    geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
-    labs(tag = LETTERS[i]) +
-    annotate("text", x = 0.002, y = 10, label = s) +
-    annotate("text", x = 100, y = 100, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
-    annotate("text", x = 100, y =1000, label = bquote(n == .(length(sitedata$aboveGroundLiveBiomass_kilograms)))) +
+    geom_line(aes(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
+    geom_line(aes(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
+    labs(tag = paste0("A", i)) +
+    annotate("text", x = 100, y = 10, label = s) +
+    annotate("text", x = 100, y = 3, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
+    annotate("text", x = 100, y =1, label = paste("n =" ,(length(sitedata$aboveGroundLiveBiomass_kilograms)))) +
     theme_classic() + 
     theme(axis.title = element_blank())
   AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
   AICdf$AIClognorm[i] <- lnormAIC(x)$AIClognorm
   AICdf$llBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.biomass, xmax = siteinput$max.biomass, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$llBPL
   AICdf$AICBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.biomass, xmax = siteinput$max.biomass, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$AICBPL
+  sigmadf$lognorm[i] <- thetalnorm$sdlog
 }
 
-leftlabel <- grid::textGrob(expression(paste("Number of tree with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
+leftlabel <- grid::textGrob(expression(paste("Number of trees with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
 #bottomlabel <- grid::textGrob(expression(paste("tree biomass, ", italic("x"), ~(kg))))
 bottomlabel <- grid::textGrob(expression(paste("tree biomass, ", italic("x"), ~(kg))))
 
-# siteb_plot <- grid.arrange(grobs = siteb_plot, ncol = 2,
-#                            left = leftlabel,
-#                            bottom = bottomlabel)
-
-(marrangeGrob(grobs= siteb_plot, nrow=4, ncol=4))
-
+ggsave(
+  filename = "trees.pdf", 
+  plot = marrangeGrob(grobs= siteb_plot, nrow=2, ncol=2,
+                      left = leftlabel,
+                      bottom = bottomlabel,
+                      layout_matrix = rbind(c(1,2), c(3,4))), 
+  width = 15, height = 9
+)
 
 write.csv(AICdf,'tree_AIC.csv')
 
