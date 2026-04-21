@@ -45,7 +45,7 @@ for(i in 1:nsites){
   #qqline(x, distribution = function(p){
  #   FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
   #}, untf=T)
-  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical quantiles", ylab = "Sample quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))}
+  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical quantiles", ylab = "Sample quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
 #  qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
   #rank plot
   sitey.PLB <- (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
@@ -60,25 +60,30 @@ for(i in 1:nsites){
                         limits = range(fish.df$biomass_kg))+
     geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.lnorm), col = 'green', lwd = 1) +
-    labs(tag = LETTERS[i]) +
+    labs(tag = paste0("C", i)) +
     annotate("text", x = 1.5, y = 10, label = s) +
-    annotate("text", x = 1.5, y = 3, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
-    annotate("text", x = 4, y = 1000, label = bquote(n == .(length(sitedata$biomass_kg)))) +
+    annotate("text", x = 1.5, y = 3, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T)  +
+    annotate("text", x = 4, y = 1000, label = paste("n =" ,(length(sitedata$biomass_kg)))) +
     theme_classic() +
     theme(axis.title = element_blank())
   AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
   AICdf$AIClognorm[i] <- lnormAIC(x)$AIClognorm
   AICdf$llBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.biomass, xmax = siteinput$max.biomass, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$llBPL
   AICdf$AICBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.biomass, xmax = siteinput$max.biomass, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$AICBPL
-
+}
 
 leftlabel <- grid::textGrob(expression(paste("Number of fish with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
 bottomlabel <- grid::textGrob(expression(paste("Fish biomass, ", italic("x"), ~(kg))))
 #bottomlabel <- grid::textGrob(expression(paste("Fish length, ", italic("x"), ~(cm))))
 
-siteb_plot <- grid.arrange(grobs = siteb_plot, ncol = 3,
-                           left = leftlabel,
-                           bottom = bottomlabel)
+ggsave(
+  filename = "carvalhobiomass.pdf", 
+  plot = marrangeGrob(grobs= siteb_plot, nrow=2, ncol=2,
+                      left = leftlabel,
+                      bottom = bottomlabel,
+                      layout_matrix = rbind(c(1,2), c(3,4))), 
+  width = 15, height = 9
+)
 
 
 write.csv(AICdf,'carvalho_AIC.csv')

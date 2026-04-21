@@ -18,6 +18,8 @@ PLB.bMLE.site.b <- numeric(nsites)
 siteb_plot <- list()
 bplqq <- list()
 AICdf <- data.frame(site = sites, Number = NA, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
+sigmadf <- data.frame(site = sites, lognorm = NA)
+gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
 
 
 for(i in 1:nsites){
@@ -28,6 +30,19 @@ for(i in 1:nsites){
                x_min = siteinput$min.biomass, x_max = siteinput$max.biomass)
   PLB.bMLE.site.b[i] <- bML[[1]] 
   thetalnorm <- estimatelognormal(x = sitedata$dw)
+  
+  #goodness-of-fit test for lognormal
+  lngof <- lnormgof(x = sitedata$dw, mu = thetalnorm$meanlog, sigma = thetalnorm$sdlog)
+  gof$lognormX2[i] <- lngof$X2
+  gof$lognormdf[i] <- lngof$df
+  gof$lognormP[i] <- lngof$P
+  
+  #goodness-of-fit test for bounded power law
+  bplgof <- BPLgof(x = sitedata$dw, b = bML[[1]], xmin = min(sitedata$dw), xmax = max(sitedata$dw))
+  gof$BPLX2[i] <- bplgof$X2
+  gof$BPLdf[i] <- bplgof$df
+  gof$BPLP[i] <- bplgof$P
+  
   x <- sitedata$dw
   sitex = seq(min(sitedata$dw), max(sitedata$dw), length = 10000)
   par(mfrow=c(1,2))

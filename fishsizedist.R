@@ -96,10 +96,10 @@ for(i in 1:nsites){
                         limits = range(allfish$individual_biomass_kg))+
     geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
-    labs(tag = LETTERS[i]) +
+    labs(tag = paste0("A", i)) +
     annotate("text", x = 0.002, y = 10, label = s) +
-    annotate("text", x = 0.001, y = 3, label = bquote(paste(italic(b)[PLB]==.(round(PLB.bMLE.site.b[i],2))))) +
-    annotate("text", x = 100, y =1000, label = bquote(n == .(length(sitedata$individual_biomass_kg)))) +
+    annotate("text", x = 0.001, y = 3, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
+    annotate("text", x = 100, y =1000, label = paste("n =" ,(length(sitedata$individual_biomass_kg)))) +
     theme_classic() + 
     theme(axis.title = element_blank())
   AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
@@ -108,39 +108,44 @@ for(i in 1:nsites){
   AICdf$AICBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.biomass, xmax = siteinput$max.biomass, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$AICBPL
 }
 
-leftlabel <- grid::textGrob(expression(paste("Number of fish with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
-#bottomlabel <- grid::textGrob(expression(paste("Fish biomass, ", italic("x"), ~(kg))))
-bottomlabel <- grid::textGrob(expression(paste("Fish biomass, ", italic("x"), ~(kg))))
-
-siteb_plot <- grid.arrange(grobs = siteb_plot, ncol = 4,
-                           left = leftlabel,
-                           bottom = bottomlabel)
-
-
 write.csv(AICdf,'fish_AIC.csv')
 
-par(
-  mfrow = c(5,4),
-  mar = c(1,1.5,1,0),
-  oma = c(4,4,2,2)
+
+leftlabel <- grid::textGrob(expression(paste("Number of fish with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
+bottomlabel <- grid::textGrob(expression(paste("Fish biomass, ", italic("x"), ~(kg))))
+
+ggsave(
+  filename = "fishbiomass.pdf", 
+  plot = marrangeGrob(grobs= siteb_plot, nrow=2, ncol=2,
+                      left = leftlabel,
+                      bottom = bottomlabel,
+                      layout_matrix = rbind(c(1,2), c(3,4))), 
+  width = 15, height = 9
 )
-for(i in 1:nsites){
-  s <- sites[i]
-  sitedata <- allfish %>% filter(Site == s)
-  custom_breaks <- c(-14:3)
-  siteproportions <- hist(log(sitedata$individual_biomass_kg), plot = FALSE) #breaks = custom_breaks)
-  plot(siteproportions, freq = FALSE, col = "darkgrey", main = "", xlab = "", ylab = "", axes = FALSE,  ylim = c(0,0.9), xlim = c(-15,3))
-  title(paste("(",LETTERS[i],")"," ",sites[i], sep= ""), cex.main = 1.5, line = -1.5)
-  lines(density(log(sitedata$individual_biomass_kg)), na.rm=TRUE, col = "blue", lty = "dashed", lwd = 2)
-  abline(v=mean(log(sitedata$individual_biomass_kg)), col = "red", lwd = 2, lty = "dashed")
-  legend("topright", inset = .05, bty = "n", cex = 1.5, legend = bquote(n == .(length(sitedata$individual_biomass_kg))))
-  axis(side = 1, at=c(-14,-12,-10,-8, -6, -4,-2, 0, 2), labels = c(14,-12,-10,-8, -6, -4,-2, 0, 2), cex.axis = 1.5)
-  axis(side = 2, at=c(0,0.45,0.9), labels = c(0,0.45,0.9), cex.axis = 1.5)}
-  #xlab = expression(paste("Log coral area"~(cm^2))))
 
-mtext(expression(paste("log(fish biomass (kg))")) , side=1,line=3,outer=TRUE,cex=1.3)
-mtext("Density", side=2,line=2,outer=TRUE,cex=1.3,las=0)
 
+# par(
+#   mfrow = c(5,4),
+#   mar = c(1,1.5,1,0),
+#   oma = c(4,4,2,2)
+# )
+# for(i in 1:nsites){
+#   s <- sites[i]
+#   sitedata <- allfish %>% filter(Site == s)
+#   custom_breaks <- c(-14:3)
+#   siteproportions <- hist(log(sitedata$individual_biomass_kg), plot = FALSE) #breaks = custom_breaks)
+#   plot(siteproportions, freq = FALSE, col = "darkgrey", main = "", xlab = "", ylab = "", axes = FALSE,  ylim = c(0,0.9), xlim = c(-15,3))
+#   title(paste("(",LETTERS[i],")"," ",sites[i], sep= ""), cex.main = 1.5, line = -1.5)
+#   lines(density(log(sitedata$individual_biomass_kg)), na.rm=TRUE, col = "blue", lty = "dashed", lwd = 2)
+#   abline(v=mean(log(sitedata$individual_biomass_kg)), col = "red", lwd = 2, lty = "dashed")
+#   legend("topright", inset = .05, bty = "n", cex = 1.5, legend = bquote(n == .(length(sitedata$individual_biomass_kg))))
+#   axis(side = 1, at=c(-14,-12,-10,-8, -6, -4,-2, 0, 2), labels = c(14,-12,-10,-8, -6, -4,-2, 0, 2), cex.axis = 1.5)
+#   axis(side = 2, at=c(0,0.45,0.9), labels = c(0,0.45,0.9), cex.axis = 1.5)}
+#   #xlab = expression(paste("Log coral area"~(cm^2))))
+# 
+# mtext(expression(paste("log(fish biomass (kg))")) , side=1,line=3,outer=TRUE,cex=1.3)
+# mtext("Density", side=2,line=2,outer=TRUE,cex=1.3,las=0)
+# 
 
 # # # saves the temp images from the plotting envrionment
 # plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)

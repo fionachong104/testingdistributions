@@ -290,6 +290,8 @@ ggsave(
 
 #write.csv(AICdf_biomass,'shark_biomass_AIC.csv')
 write.csv(AICdf_biomass,'shark_biomass_region_AIC.csv')
+hist(gof$BPLP, main = "(A) GOF test bounded power law p-values")
+hist(gof$lognormP, main = "(B) GOF test log-normal p-values")
 
 # # # # saves the temp images from the plotting envrionment
 # plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)

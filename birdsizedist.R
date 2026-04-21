@@ -21,6 +21,8 @@ PLB.bMLE.site.b <- numeric(nsites)
 siteb_plot <- list()
 bplqq <- list()
 AICdf <- data.frame(Site = sites, Number = NA, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
+sigmadf <- data.frame(site = sites, lognorm = NA)
+gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
 
 
 for(i in 1:nsites){
@@ -31,11 +33,24 @@ for(i in 1:nsites){
                x_min = siteinput$min.biomass, x_max = siteinput$max.biomass)
   PLB.bMLE.site.b[i] <- bML[[1]] 
   thetalnorm <- estimatelognormal(x = sitedata$Weight)
+  
+  #goodness-of-fit test for lognormal
+  lngof <- lnormgof(x = sitedata$Weight, mu = thetalnorm$meanlog, sigma = thetalnorm$sdlog)
+  gof$lognormX2[i] <- lngof$X2
+  gof$lognormdf[i] <- lngof$df
+  gof$lognormP[i] <- lngof$P
+  
+  #goodness-of-fit test for bounded power law
+  bplgof <- BPLgof(x = sitedata$Weight, b = bML[[1]], xmin = min(sitedata$Weight), xmax = max(sitedata$Weight))
+  gof$BPLX2[i] <- bplgof$X2
+  gof$BPLdf[i] <- bplgof$df
+  gof$BPLP[i] <- bplgof$P
+  
   x <- sitedata$Weight
   sitex = seq(min(sitedata$Weight), max(sitedata$Weight), length = 10000)
   par(mfrow=c(1,2))
   bplqq[[i]] <- qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
-                             xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
+                             xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Bounded power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
   #qqline(x, distribution = function(p){
   #  FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
   #}, untf=T)
@@ -81,6 +96,9 @@ ggsave(
 
 
 write.csv(AICdf,'bird_AIC.csv')
+
+hist(gof$BPLP, main = "(A) GOF test bounded power law p-values")
+hist(gof$lognormP, main = "(B) GOF test log-normal p-values")
 
 # # # saves the temp images from the plotting envrionment
 # plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)

@@ -107,7 +107,7 @@ for(i in 1:nsites){
     geom_line(aes_(x = sitex, y = sitey.MSBPL), col = '#D95F02', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.MSlnorm), col = '#7570B3', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
-    labs(tag = LETTERS[i]) +
+    labs(tag = paste0("B", i)) +
     annotate("text", x = 10, y = 10, label = s) +
    # annotate("text", x = 10, y = 13, label = bquote(paste(italic(sigma)[LN]==.(round(thetalnorm$sdlog[i],2))))) +
     #annotate("text", x = 10, y = 10, label = bquote(paste(italic(sigma)[MSLN]==.(round(thetaMSlnorm$par[2],2))))) +
@@ -132,7 +132,7 @@ leftlabel <- grid::textGrob(expression(paste("Number of colonies with sizes", " 
 bottomlabel <- grid::textGrob(expression(paste("Colony area, ", italic("x"), ~(cm^2))))
 
 ggsave(
-  filename = "siteb_plot.pdf", 
+  filename = "coralsizespec.pdf", 
   plot = marrangeGrob(grobs= siteb_plot, nrow=2, ncol=2,
                       left = leftlabel,
                       bottom = bottomlabel,
@@ -140,8 +140,20 @@ ggsave(
   width = 15, height = 9
 )
 
+write.csv(AICdf,'coralAIC.csv') 
 
-# site-wise SFD of log coral area
+h <- hist(gof$BPLP, main = "(A) GOF test bounded power law p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05), xlim = c(0,1), ylim = c(0,20))
+badfit <- ifelse(h$breaks < 0.05, "red", "grey") # only need this once because co-incidentally the intervals started at the same places
+hist(gof$BPLP, main = "(A) GOF test bounded power law p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05), col = badfit,
+     xlim = c(0,1), ylim = c(0,20))
+hist(gof$MSBPLP, main = "(A) GOF test minus-sampled bounded power law p-values", breaks = seq(min(gof$MSBPLP), max(gof$MSBPLP) + 0.05, by = 0.05), col = badfit,
+     xlim = c(0,1), ylim = c(0,20))
+hist(gof$lognormP, main = "(B) GOF test log-normal p-values", breaks = seq(min(gof$lognormP), max(gof$lognormP) + 0.05, by = 0.05), col = badfit,
+     xlim = c(0,1), ylim = c(0,20))
+hist(gof$MSlognormP, main = "(B) GOF test minus-sampled log-normal p-values", breaks = seq(min(gof$MSlognormP), max(gof$MSlognormP) + 0.05, by = 0.05), col = badfit,
+     xlim = c(0,1), ylim = c(0,20))
+
+#site-wise SFD of log coral area
 par(
   mfrow = c(5,4),
   mar = c(1,1.5,1,0),
@@ -169,4 +181,5 @@ mtext("Density", side=2,line=2,outer=TRUE,cex=1.3,las=0)
 # plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)
 # plots.png.paths <- list.files(plots.dir.path, pattern = ".png", full.names = TRUE)
 # file.copy(from = plots.png.paths, to = "C:/Users/tvkx991/OneDrive-University of Leeds/PhD/testingdistributions/")
-# write.csv(AICdf,'AIC.csv') 
+
+
