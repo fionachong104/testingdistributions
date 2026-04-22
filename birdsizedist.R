@@ -21,7 +21,6 @@ PLB.bMLE.site.b <- numeric(nsites)
 siteb_plot <- list()
 bplqq <- list()
 AICdf <- data.frame(Site = sites, Number = NA, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
-sigmadf <- data.frame(site = sites, lognorm = NA)
 gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
 
 
@@ -31,21 +30,21 @@ for(i in 1:nsites){
   siteinput <- set.bird.params(sitedata$Weight)
   bML <- mle_b(Site == s, x = siteinput$biomass, sum_log_x = siteinput$sum.log.biomass,
                x_min = siteinput$min.biomass, x_max = siteinput$max.biomass)
-  PLB.bMLE.site.b[i] <- bML[[1]] 
+  PLB.bMLE.site.b[i] <- bML[[1]]
   thetalnorm <- estimatelognormal(x = sitedata$Weight)
-  
+
   #goodness-of-fit test for lognormal
   lngof <- lnormgof(x = sitedata$Weight, mu = thetalnorm$meanlog, sigma = thetalnorm$sdlog)
   gof$lognormX2[i] <- lngof$X2
   gof$lognormdf[i] <- lngof$df
   gof$lognormP[i] <- lngof$P
-  
+
   #goodness-of-fit test for bounded power law
   bplgof <- BPLgof(x = sitedata$Weight, b = bML[[1]], xmin = min(sitedata$Weight), xmax = max(sitedata$Weight))
   gof$BPLX2[i] <- bplgof$X2
   gof$BPLdf[i] <- bplgof$df
   gof$BPLP[i] <- bplgof$P
-  
+
   x <- sitedata$Weight
   sitex = seq(min(sitedata$Weight), max(sitedata$Weight), length = 10000)
   par(mfrow=c(1,2))
@@ -65,14 +64,14 @@ for(i in 1:nsites){
                color = "#666666", size = 2, alpha = 0.3) +
     scale_y_continuous(trans = 'log10', breaks = c(1,10,100,350), 
                        limits = c(0.25, max(table(bird$siteName)))) +
-    scale_x_continuous(trans = 'log10',#breaks = c(-10,0,1,10,100),
+    scale_x_continuous(trans = 'log10', breaks = c(10, 100, 500),
                        limits = range(bird$Weight))+
     geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
-    labs(tag = LETTERS[i]) +
+    labs(tag = paste0("F", i))+
      annotate("text", x = 10, y = 10, label = s) +
   annotate("text", x = 10, y = 5, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
-  annotate("text", x = 10, y =1, label = paste("n =" ,(length(sitedata$Weight)))) +
+  annotate("text", x = 10, y = 3, label = paste("n =" ,(length(sitedata$Weight)))) +
     theme_classic() + 
     theme(axis.title = element_blank())
   AICdf$Number[i] <- length(sitedata$Weight)
@@ -96,6 +95,7 @@ ggsave(
 
 
 write.csv(AICdf,'bird_AIC.csv')
+write.csv(gof,'birdgof.csv')
 
 hist(gof$BPLP, main = "(A) GOF test bounded power law p-values")
 hist(gof$lognormP, main = "(B) GOF test log-normal p-values")

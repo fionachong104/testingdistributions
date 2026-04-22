@@ -23,7 +23,7 @@ PLB.bMLE.site.b <- numeric(nsites)
 siteb_plot <- list()
 bplqq <- list()
 AICdf <- data.frame(Treatment = sites, Number = NA, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
-
+gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
 
 for(i in 1:nsites){
   s <- sites[i]
@@ -33,6 +33,19 @@ for(i in 1:nsites){
                x_min = siteinput$min.biomass, x_max = siteinput$max.biomass)
   PLB.bMLE.site.b[i] <- bML[[1]] 
   thetalnorm <- estimatelognormal(x = sitedata$bodylength_mm)
+  
+  #goodness-of-fit test for lognormal
+  lngof <- lnormgof(x = sitedata$bodylength_mm, mu = thetalnorm$meanlog, sigma = thetalnorm$sdlog)
+  gof$lognormX2[i] <- lngof$X2
+  gof$lognormdf[i] <- lngof$df
+  gof$lognormP[i] <- lngof$P
+  
+  #goodness-of-fit test for bounded power law
+  bplgof <- BPLgof(x = sitedata$bodylength_mm, b = bML[[1]], xmin = min(sitedata$bodylength_mm), xmax = max(sitedata$bodylength_mm))
+  gof$BPLX2[i] <- bplgof$X2
+  gof$BPLdf[i] <- bplgof$df
+  gof$BPLP[i] <- bplgof$P
+  
   x <- sitedata$bodylength_mm
   sitex = seq(min(sitedata$bodylength_mm), max(sitedata$bodylength_mm), length = 10000)
   par(mfrow=c(1,2))
@@ -82,6 +95,14 @@ ggsave(
 )
 
 write.csv(AICdf,'arthro_AIC.csv')
+write.csv(gof, 'gofarthro.csv')
+
+
+hist(gof$BPLP, main = "(A) GOF test bounded power law p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05),#, col = badfit,
+     xlim = c(0,1), ylim = c(0,16))
+hist(gof$lognormP, main = "(B) GOF test log-normal p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05),#, col = badfit,
+     xlim = c(0,1), ylim = c(0,16))
+
 
 # # # saves the temp images from the plotting envrionment
 # plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)
