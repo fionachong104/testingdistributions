@@ -3,7 +3,7 @@ library(dplyr)
 library(ggplot2)
 library(gridExtra)
 library(tidyverse)
-library(moments) 
+library(moments)
 
 source("coralsizedistfuncs.R")
 
@@ -63,7 +63,8 @@ PLB.bMLE.site.b <- numeric(nsites)
 siteb_plot <- list()
 bplqq <- list()
 AICdf <- data.frame(site = sites, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
-
+sigmadf <- data.frame(site = sites, lognorm = NA)
+gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
 
 for(i in 1:nsites){
   s <- sites[i]
@@ -73,6 +74,17 @@ for(i in 1:nsites){
                x_min = siteinput$min.biomass, x_max = siteinput$max.biomass)
   PLB.bMLE.site.b[i] <- bML[[1]] 
   thetalnorm <- estimatelognormal(x = sitedata$individual_biomass_kg)
+  #goodness-of-fit test for lognormal
+  lngof <- lnormgof(x = sitedata$individual_biomass_kg, mu = thetalnorm$meanlog, sigma = thetalnorm$sdlog)
+  gof$lognormX2[i] <- lngof$X2
+  gof$lognormdf[i] <- lngof$df
+  gof$lognormP[i] <- lngof$P
+  
+  #goodness-of-fit test for bounded power law
+  bplgof <- BPLgof(x = sitedata$individual_biomass_kg, b = bML[[1]], xmin = min(sitedata$individual_biomass_kg), xmax = max(sitedata$individual_biomass_kg))
+  gof$BPLX2[i] <- bplgof$X2
+  gof$BPLdf[i] <- bplgof$df
+  gof$BPLP[i] <- bplgof$P
   x <- sitedata$individual_biomass_kg
   sitex = seq(min(sitedata$individual_biomass_kg), max(sitedata$individual_biomass_kg), length = 10000)
   par(mfrow=c(1,2))
@@ -92,14 +104,14 @@ for(i in 1:nsites){
                color = "#666666", size = 2, alpha = 0.3) +
     scale_y_continuous(trans = 'log10', breaks = c(1,10,100,500,3000), 
                        limits = c(0.25, max(table(allfish$Site)))) +
-    scale_x_continuous(trans = 'log10',#breaks = c(-10,0,1,10,100),
+    scale_x_continuous(trans = 'log10', breaks = c(0.0001,0.01,1,100),
                         limits = range(allfish$individual_biomass_kg))+
     geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
     labs(tag = paste0("A", i)) +
     annotate("text", x = 0.002, y = 10, label = s) +
-    annotate("text", x = 0.001, y = 3, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
-    annotate("text", x = 100, y =1000, label = paste("n =" ,(length(sitedata$individual_biomass_kg)))) +
+    annotate("text", x = 0.002, y = 5, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
+    annotate("text", x = 0.002, y = 3, label = paste("n =" ,(length(sitedata$individual_biomass_kg)))) +
     theme_classic() + 
     theme(axis.title = element_blank())
   AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
@@ -109,6 +121,7 @@ for(i in 1:nsites){
 }
 
 write.csv(AICdf,'fish_AIC.csv')
+write.csv(gof, "fishgof.csv")
 
 
 leftlabel <- grid::textGrob(expression(paste("Number of fish with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
@@ -123,6 +136,10 @@ ggsave(
   width = 15, height = 9
 )
 
+hist(gof$BPLP, main = "(A) GOF test bounded power law p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05),#, col = badfit,
+     xlim = c(0,1), ylim = c(0,20))
+hist(gof$lognormP, main = "(B) GOF test log-normal p-values", breaks = seq(min(gof$lognormP), max(gof$lognormP) + 0.05, by = 0.05), #col = badfit,
+     xlim = c(0,1), ylim = c(0,20))
 
 # par(
 #   mfrow = c(5,4),
