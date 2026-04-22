@@ -69,7 +69,7 @@ for(i in 1:nsites){
                        limits = range(tree$aboveGroundLiveBiomass_kilograms))+
     geom_line(aes(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
     geom_line(aes(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
-    labs(tag = paste0("A", i)) +
+    labs(tag = paste0("H", i)) +
     annotate("text", x = 100, y = 10, label = s) +
     annotate("text", x = 100, y = 3, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
     annotate("text", x = 100, y =1, label = paste("n =" ,(length(sitedata$aboveGroundLiveBiomass_kilograms)))) +
@@ -96,6 +96,12 @@ ggsave(
 )
 
 write.csv(AICdf,'tree_AIC.csv')
+write.csv(gof, 'goftree.csv')
+
+hist(gof$BPLP, main = "(A) GOF test bounded power law p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05))#, col = badfit,
+     #xlim = c(0,1), ylim = c(0,16))
+hist(gof$lognormP, main = "(B) GOF test log-normal p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05))#, col = badfit,
+    # xlim = c(0,1), ylim = c(0,16))
 
 # # # saves the temp images from the plotting envrionment
 # plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)

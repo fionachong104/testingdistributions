@@ -69,7 +69,7 @@ for(i in 1:nsites){
                        limits = range(arthro$bodylength_mm))+
     geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
-    labs(tag = LETTERS[i]) +
+    labs(tag = paste0("G", i))+
      annotate("text", x = 1, y = 10, label = s) +
    annotate("text", x = 1, y = 5, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
    annotate("text", x = 1, y =1, label = paste("n =" ,(length(sitedata$bodylength_mm)))) +
