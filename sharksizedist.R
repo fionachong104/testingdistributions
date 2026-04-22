@@ -22,7 +22,6 @@ PLB.bMLE.site.b <- numeric(nsites)
 siteb_plot <- list()
 bplqq <- list()
 AICdf <- data.frame(Site = sites, Number = NA, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
-sigmadf <- data.frame(site = sites, lognorm = NA)
 gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
 
 # # run analysis for shark lengths by the three bioregions
@@ -201,7 +200,7 @@ for(i in 1:nsites){
                        limits = c(1,max(sitedata$biomass_kg)))+
     geom_line(aes_(x = sitex_biomass, y = sitey.PLB_biomass), col = 'black', lwd = 1) +
     geom_line(aes_(x = sitex_biomass, y = sitey.lnorm_biomass), col = '#1B9E77', lwd = 1) +
-    labs(tag = LETTERS[i]) +
+    labs(tag = paste0("D", i)) +
     annotate("text", x = 100, y = 5, label = s) +
     annotate("text", x = 100, y = 2.5, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b_biomass[i],2))), parse = T) +
     annotate("text", x = 100, y = 1.5, label = paste("n =" ,(length(sitedata$biomass_kg)))) +
@@ -290,8 +289,24 @@ ggsave(
 
 #write.csv(AICdf_biomass,'shark_biomass_AIC.csv')
 write.csv(AICdf_biomass,'shark_biomass_region_AIC.csv')
-hist(gof$BPLP, main = "(A) GOF test bounded power law p-values")
-hist(gof$lognormP, main = "(B) GOF test log-normal p-values")
+write.csv(gof,'sharkgof.csv')
+
+hist(gof$BPLP, main = "(A) GOF test bounded power law p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05),#, col = badfit,
+     xlim = c(0,1), ylim = c(0,20))
+hist(gof$lognormP, main = "(B) GOF test log-normal p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05),#, col = badfit,
+     xlim = c(0,1), ylim = c(0,20))
+
+# h <- hist(gof$BPLP, main = "(A) GOF test bounded power law p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05), xlim = c(0,1), ylim = c(0,20))
+# badfit <- ifelse(h$breaks < 0.05, "red", "grey") # only need this once because co-incidentally the intervals started at the same places
+# hist(gof$BPLP, main = "(A) GOF test bounded power law p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05), col = badfit,
+#      xlim = c(0,1), ylim = c(0,20))
+# hist(gof$MSBPLP, main = "(A) GOF test minus-sampled bounded power law p-values", breaks = seq(min(gof$MSBPLP), max(gof$MSBPLP) + 0.05, by = 0.05), col = badfit,
+#      xlim = c(0,1), ylim = c(0,20))
+# hist(gof$lognormP, main = "(B) GOF test log-normal p-values", breaks = seq(min(gof$lognormP), max(gof$lognormP) + 0.05, by = 0.05), col = badfit,
+#      xlim = c(0,1), ylim = c(0,20))
+# hist(gof$MSlognormP, main = "(B) GOF test minus-sampled log-normal p-values", breaks = seq(min(gof$MSlognormP), max(gof$MSlognormP) + 0.05, by = 0.05), col = badfit,
+#      xlim = c(0,1), ylim = c(0,20))
+
 
 # # # # saves the temp images from the plotting envrionment
 # plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)

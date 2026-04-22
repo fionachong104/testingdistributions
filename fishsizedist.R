@@ -85,6 +85,7 @@ for(i in 1:nsites){
   gof$BPLX2[i] <- bplgof$X2
   gof$BPLdf[i] <- bplgof$df
   gof$BPLP[i] <- bplgof$P
+  
   x <- sitedata$individual_biomass_kg
   sitex = seq(min(sitedata$individual_biomass_kg), max(sitedata$individual_biomass_kg), length = 10000)
   par(mfrow=c(1,2))
