@@ -141,16 +141,17 @@ ggsave(
 )
 
 write.csv(AICdf,'coralAIC.csv') 
+write.csv(gof,'coralgof.csv') 
 
 h <- hist(gof$BPLP, main = "(A) GOF test bounded power law p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05), xlim = c(0,1), ylim = c(0,20))
 badfit <- ifelse(h$breaks < 0.05, "red", "grey") # only need this once because co-incidentally the intervals started at the same places
 hist(gof$BPLP, main = "(A) GOF test bounded power law p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05), col = badfit,
      xlim = c(0,1), ylim = c(0,20))
-hist(gof$MSBPLP, main = "(A) GOF test minus-sampled bounded power law p-values", breaks = seq(min(gof$MSBPLP), max(gof$MSBPLP) + 0.05, by = 0.05), col = badfit,
+hist(gof$MSBPLP, main = "(B) GOF test minus-sampled bounded power law p-values", breaks = seq(min(gof$MSBPLP), max(gof$MSBPLP) + 0.05, by = 0.05), col = badfit,
      xlim = c(0,1), ylim = c(0,20))
-hist(gof$lognormP, main = "(B) GOF test log-normal p-values", breaks = seq(min(gof$lognormP), max(gof$lognormP) + 0.05, by = 0.05), col = badfit,
+hist(gof$lognormP, main = "(C) GOF test log-normal p-values", breaks = seq(min(gof$lognormP), max(gof$lognormP) + 0.05, by = 0.05), col = badfit,
      xlim = c(0,1), ylim = c(0,20))
-hist(gof$MSlognormP, main = "(B) GOF test minus-sampled log-normal p-values", breaks = seq(min(gof$MSlognormP), max(gof$MSlognormP) + 0.05, by = 0.05), col = badfit,
+hist(gof$MSlognormP, main = "(D) GOF test minus-sampled log-normal p-values", breaks = seq(min(gof$MSlognormP), max(gof$MSlognormP) + 0.05, by = 0.05), col = badfit,
      xlim = c(0,1), ylim = c(0,20))
 
 #site-wise SFD of log coral area
