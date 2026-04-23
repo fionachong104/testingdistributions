@@ -86,7 +86,7 @@ mle_b = function(region, x, sum_log_x, x_min, x_max){
   PL.bMLE = 1/( log(min(x)) - sum_log_x/length(x)) - 1
   
   PLB.minLL =  nlm(negLL.PLB, p=PL.bMLE, x=x, n=length(x),
-                   xmin=x_min, xmax=x_max, sumlogx=sum_log_x, hessian = TRUE) #, print.level=2 )
+                   xmin=x_min, xmax=x_max, sumlogx=sum_log_x, hessian = TRUE, stepmax = max(100 * sqrt(sum((PL.bMLE)^2)), 100)) #default stepmax was causing problems in R versions later than 4.4.3
   
   PLB.bMLE = PLB.minLL$estimate
   
@@ -651,8 +651,6 @@ BPLgof <- function(x, b, xmin, xmax, adjustdf = FALSE){
   n <- length(x) #number of observations
   M <- chooseM(n = n) #Number of equiprobable cells for chi-square test: D'Agostino p . 70
   quantiles <- sapply(list(u = seq(from = 0, to = 1, length.out = M + 1)), FUN = FXinv, b = b, xmin = xmin, xmax = xmax) #quantiles of the hypothesized distribution give equal-probability cells if data from hypothesized distribution
-  print(quantiles)
-  print(summary(x))
   observed <- hist(x, breaks = quantiles, plot = FALSE)$counts #observed count in each cell
   chisqgof <- chisq.test(x = observed) #Pearson chi-square test, null hypothesis is equal probability in each cell (D'Agostino p. 72)
   if(adjustdf){#D'Agostino p. 68. Correct critical points fall somewhere between those from M - p - 1 df (where p is number of estimated parameters) and M - 1
