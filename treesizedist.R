@@ -61,25 +61,24 @@ for(i in 1:nsites){
                          xmax = max(sitex))) * length(sitedata$aboveGroundLiveBiomass_kilograms)
   sitey.lnorm <- plnorm(q = sitex, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog, lower.tail = FALSE, log.p = FALSE) * length(sitedata$aboveGroundLiveBiomass_kilograms)
   siteb_plot[[i]] <- ggplot() +
-    geom_point(aes(x = (sort(sitedata$aboveGroundLiveBiomass_kilograms, decreasing=TRUE)), y = (1:length(sitedata$aboveGroundLiveBiomass_kilograms))),
+    geom_point(aes_(x = (sort(sitedata$aboveGroundLiveBiomass_kilograms, decreasing=TRUE)), y = (1:length(sitedata$aboveGroundLiveBiomass_kilograms))),
                color = "#666666", size = 2, alpha = 0.3) +
-    scale_y_continuous(trans = 'log10', breaks = c(1,10,100,500,3000), 
+    scale_y_continuous(trans = 'log10', breaks = c(1,10,100,500,3000),
                        limits = c(0.25, max(table(tree$siteName)))) +
-    scale_x_continuous(trans = 'log10',#breaks = c(-10,0,1,10,100),
+    scale_x_continuous(trans = 'log10',
                        limits = range(tree$aboveGroundLiveBiomass_kilograms))+
-    geom_line(aes(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
-    geom_line(aes(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
-    labs(tag = paste0("H", i)) +
+    geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
+    geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
+    labs(tag = paste0("B", i)) +
     annotate("text", x = 100, y = 10, label = s) +
-    annotate("text", x = 100, y = 3, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
-    annotate("text", x = 100, y =1, label = paste("n =" ,(length(sitedata$aboveGroundLiveBiomass_kilograms)))) +
-    theme_classic() + 
+    annotate("text", x = 100, y = 5, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
+    annotate("text", x = 100, y = 2, label = paste("n =" ,(length(sitedata$aboveGroundLiveBiomass_kilograms)))) +
+    theme_classic() +
     theme(axis.title = element_blank())
   AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
   AICdf$AIClognorm[i] <- lnormAIC(x)$AIClognorm
   AICdf$llBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.biomass, xmax = siteinput$max.biomass, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$llBPL
   AICdf$AICBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.biomass, xmax = siteinput$max.biomass, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$AICBPL
-  sigmadf$lognorm[i] <- thetalnorm$sdlog
 }
 
 leftlabel <- grid::textGrob(expression(paste("Number of trees with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
