@@ -133,7 +133,7 @@ pdf("qqplots_fish.pdf", width = 12, height = 6)
 for(i in 1:nsites){
   par(mfrow=c(1,2))
   qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
-                             xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ":Bounded Power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
+                             xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Bounded Power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
   #qqline(x, distribution = function(p){
   #  FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
   #}, untf=T)

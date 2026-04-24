@@ -69,24 +69,6 @@ for(i in 1:nsites){
     
   x <- sitedata$Area
   sitex = seq(min(sitedata$Area), max(sitedata$Area), length = 10000)
-  par(mfrow=c(2,2))
-  bplqq[[i]] <- qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
-                xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Power law"), pch = 16, col = adjustcolor("black", 0.25))
-  #qqline(x, distribution = function(p){
-  # FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
-  # }, untf=T)
-  msbplqq[[i]] <- qqplot(FMSBPLinv(u = ppoints(siteinput$n), b = MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Minus-sampled bounded power law"), pch = 16, col = adjustcolor("black", 0.25))
-  #qqline(x, distribution = function(p){
-   #   FMSBPLinv(p, b =  MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
-   # }, untf=T)
-  #hist(log(sitedata$Area), main = paste("(C)", sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
-  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(C)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
-  #qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
-  qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v), sitedata$Area, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(D)", sites[i], ": Minus-sampled log-normal"), pch = 16, col = adjustcolor("black", 0.25))
-  
-#qqline(sitedata$Area, distribution = function(p){
-  #FMSlnorminv(p, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v)
-  #}, untf=T)
 
 #rank plot
   sitey.PLB <- (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
@@ -107,7 +89,7 @@ for(i in 1:nsites){
     geom_line(aes_(x = sitex, y = sitey.MSBPL), col = '#D95F02', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.MSlnorm), col = '#7570B3', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
-    labs(tag = paste0("B", i)) +
+    labs(tag = LETTERS[ ((i - 1) %% 4) + 1 ]) +
     annotate("text", x = 10, y = 10, label = s) +
    # annotate("text", x = 10, y = 13, label = bquote(paste(italic(sigma)[LN]==.(round(thetalnorm$sdlog[i],2))))) +
     #annotate("text", x = 10, y = 10, label = bquote(paste(italic(sigma)[MSLN]==.(round(thetaMSlnorm$par[2],2))))) +
@@ -143,39 +125,69 @@ ggsave(
 write.csv(AICdf,'coralAIC.csv') 
 write.csv(gof,'coralgof.csv') 
 
-h <- hist(gof$BPLP, main = "(A) GOF test bounded power law p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05), xlim = c(0,1), ylim = c(0,20))
-badfit <- ifelse(h$breaks < 0.05, "red", "grey") # only need this once because co-incidentally the intervals started at the same places
-hist(gof$BPLP, main = "(A) GOF test bounded power law p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05), col = badfit,
-     xlim = c(0,1), ylim = c(0,20))
-hist(gof$MSBPLP, main = "(B) GOF test minus-sampled bounded power law p-values", breaks = seq(min(gof$MSBPLP), max(gof$MSBPLP) + 0.05, by = 0.05), col = badfit,
-     xlim = c(0,1), ylim = c(0,20))
-hist(gof$lognormP, main = "(C) GOF test log-normal p-values", breaks = seq(min(gof$lognormP), max(gof$lognormP) + 0.05, by = 0.05), col = badfit,
-     xlim = c(0,1), ylim = c(0,20))
-hist(gof$MSlognormP, main = "(D) GOF test minus-sampled log-normal p-values", breaks = seq(min(gof$MSlognormP), max(gof$MSlognormP) + 0.05, by = 0.05), col = badfit,
-     xlim = c(0,1), ylim = c(0,20))
 
-#site-wise SFD of log coral area
-par(
-  mfrow = c(5,4),
-  mar = c(1,1.5,1,0),
-  oma = c(4,4,2,2)
-)
+
+# qqplots saved as pdf
+pdf("qqplots_corals.pdf", width = 12, height = 6)
 for(i in 1:nsites){
-  s <- sites[i]
-  sitedata <- oneyeardf %>% filter(Site == s)
-  custom_breaks <- c(-1:10)
-  siteproportions <- hist(log(sitedata$Area), plot = FALSE, breaks = custom_breaks)
-  plot(siteproportions, freq = FALSE, col = "darkgrey", main = "", xlab = "", ylab = "", axes = FALSE,  ylim = c(0,0.4), xlim = c(0,10))
-  title(paste("(",LETTERS[i],")"," ",sites[i], sep= ""), cex.main = 1.5, line = -1.5)
-  lines(density(log(sitedata$Area), na.rm=TRUE), col = "blue", lty = "dashed", lwd = 2)
-  abline(v=mean(log(sitedata$Area)), col = "red", lwd = 2, lty = "dashed")
-  legend("topright", inset = .05, bty = "n", cex = 1.5, legend = bquote(n == .(length(sitedata$Area))))
-  axis(side = 1, at=c(0,5,10), labels = c(0,5,10), cex.axis = 1.5)
-  axis(side = 2, at=c(0,0.2,0.4), labels = c(0,0.2,0.4), cex.axis = 1.5)
-  #xlab = expression(paste("Log coral area"~(cm^2))))
+  par(mfrow=c(2,2))
+  bplqq[[i]] <- qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
+                             xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Bounded power law"), pch = 16, col = adjustcolor("black", 0.25))
+  #qqline(x, distribution = function(p){
+  # FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
+  # }, untf=T)
+  msbplqq[[i]] <- qqplot(FMSBPLinv(u = ppoints(siteinput$n), b = MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Minus-sampled bounded power law"), pch = 16, col = adjustcolor("black", 0.25))
+  #qqline(x, distribution = function(p){
+  #   FMSBPLinv(p, b =  MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
+  # }, untf=T)
+  #hist(log(sitedata$Area), main = paste("(C)", sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
+  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(C)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
+  #qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
+  qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v), sitedata$Area, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(D)", sites[i], ": Minus-sampled log-normal"), pch = 16, col = adjustcolor("black", 0.25))
+  
+  #qqline(sitedata$Area, distribution = function(p){
+  #FMSlnorminv(p, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v)
+  #}, untf=T)
 }
-mtext(expression(paste("log(coral area/"*cm^2*")")) , side=1,line=3,outer=TRUE,cex=1.3)
-mtext("Density", side=2,line=2,outer=TRUE,cex=1.3,las=0)
+dev.off()
+
+# 
+# h <- hist(gof$BPLP, main = "(A) GOF test bounded power law p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05), xlim = c(0,1), ylim = c(0,20))
+# badfit <- ifelse(h$breaks < 0.05, "red", "grey") # only need this once because co-incidentally the intervals started at the same places
+# hist(gof$BPLP, main = "(A) GOF test bounded power law p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05), col = badfit,
+#      xlim = c(0,1), ylim = c(0,20))
+# hist(gof$MSBPLP, main = "(B) GOF test minus-sampled bounded power law p-values", breaks = seq(min(gof$MSBPLP), max(gof$MSBPLP) + 0.05, by = 0.05), col = badfit,
+#      xlim = c(0,1), ylim = c(0,20))
+# hist(gof$lognormP, main = "(C) GOF test log-normal p-values", breaks = seq(min(gof$lognormP), max(gof$lognormP) + 0.05, by = 0.05), col = badfit,
+#      xlim = c(0,1), ylim = c(0,20))
+# hist(gof$MSlognormP, main = "(D) GOF test minus-sampled log-normal p-values", breaks = seq(min(gof$MSlognormP), max(gof$MSlognormP) + 0.05, by = 0.05), col = badfit,
+#      xlim = c(0,1), ylim = c(0,20))
+# 
+
+
+# 
+# #site-wise SFD of log coral area
+# par(
+#   mfrow = c(5,4),
+#   mar = c(1,1.5,1,0),
+#   oma = c(4,4,2,2)
+# )
+# for(i in 1:nsites){
+#   s <- sites[i]
+#   sitedata <- oneyeardf %>% filter(Site == s)
+#   custom_breaks <- c(-1:10)
+#   siteproportions <- hist(log(sitedata$Area), plot = FALSE, breaks = custom_breaks)
+#   plot(siteproportions, freq = FALSE, col = "darkgrey", main = "", xlab = "", ylab = "", axes = FALSE,  ylim = c(0,0.4), xlim = c(0,10))
+#   title(paste("(",LETTERS[i],")"," ",sites[i], sep= ""), cex.main = 1.5, line = -1.5)
+#   lines(density(log(sitedata$Area), na.rm=TRUE), col = "blue", lty = "dashed", lwd = 2)
+#   abline(v=mean(log(sitedata$Area)), col = "red", lwd = 2, lty = "dashed")
+#   legend("topright", inset = .05, bty = "n", cex = 1.5, legend = bquote(n == .(length(sitedata$Area))))
+#   axis(side = 1, at=c(0,5,10), labels = c(0,5,10), cex.axis = 1.5)
+#   axis(side = 2, at=c(0,0.2,0.4), labels = c(0,0.2,0.4), cex.axis = 1.5)
+#   #xlab = expression(paste("Log coral area"~(cm^2))))
+# }
+# mtext(expression(paste("log(coral area/"*cm^2*")")) , side=1,line=3,outer=TRUE,cex=1.3)
+# mtext("Density", side=2,line=2,outer=TRUE,cex=1.3,las=0)
 
 
 # # saves the temp images from the plotting envrionment

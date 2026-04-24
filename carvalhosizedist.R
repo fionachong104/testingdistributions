@@ -22,13 +22,8 @@ nsites <- length(sites)
 # create empty lists to store things in 
 PLB.bMLE.site.b <- numeric(nsites)
 siteb_plot <- list()
-bplqq <- list()
 AICdf <- data.frame(site = sites, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
 gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
-
-
-
-##for carvalho
 
 for(i in 1:nsites){
   s <- sites[i]
@@ -53,14 +48,7 @@ for(i in 1:nsites){
   
   x <- sitedata$biomass_kg
   sitex = seq(min(sitedata$biomass_kg), max(sitedata$biomass_kg), length = 1000)
-  par(mfrow=c(1,2))
-  bplqq[[i]] <- qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
-                             xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Power law"), pch = 16, col = adjustcolor("black", 0.25))
-  #qqline(x, distribution = function(p){
- #   FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
-  #}, untf=T)
-  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical quantiles", ylab = "Sample quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
-#  qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
+ 
   #rank plot
   sitey.PLB <- (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
                          xmax = max(sitex))) * length(sitedata$biomass_kg)
@@ -74,10 +62,10 @@ for(i in 1:nsites){
                         limits = range(fish.df$biomass_kg))+
     geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
-    labs(tag = paste0("C", i)) +
-    annotate("text", x = 1.5, y = 10, label = s) +
-    annotate("text", x = 1.5, y = 5, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T)  +
-    annotate("text", x = 1.5, y = 3, label = paste("n =" ,(length(sitedata$biomass_kg)))) +
+    labs(tag = LETTERS[i]) +
+    annotate("text", x = 0.5, y = 10, label = s) +
+    annotate("text", x = 0.5, y = 5, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T)  +
+    annotate("text", x = 0.5, y = 3, label = paste("n =" ,(length(sitedata$biomass_kg)))) +
     theme_classic() +
     theme(axis.title = element_blank())
   AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
@@ -103,7 +91,17 @@ ggsave(
 write.csv(AICdf,'carvalho_AIC.csv')
 write.csv(gof,'carvalhogof.csv')
 
-hist(gof$BPLP, main = "(A) GOF test bounded power law p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05),#, col = badfit,
-     xlim = c(0,1), ylim = c(0,20))
-hist(gof$lognormP, main = "(B) GOF test log-normal p-values", breaks = seq(min(gof$lognormP), max(gof$lognormP) + 0.05, by = 0.05), #col = badfit,
-     xlim = c(0,1), ylim = c(0,20))
+
+# qqplots saved as pdf
+pdf("qqplots_carvalho.pdf", width = 12, height = 6)
+for(i in 1:nsites){
+  par(mfrow=c(1,2))
+  qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
+               xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Bounded power law"), pch = 16, col = adjustcolor("black", 0.25))
+  #qqline(x, distribution = function(p){
+  #   FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
+  #}, untf=T)
+  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical quantiles", ylab = "Sample quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
+  #  qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
+  }
+dev.off()

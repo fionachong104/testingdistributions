@@ -14,8 +14,6 @@ shark <- shark %>% filter(!Species %in% c("Loggerhead Turtle", "Seal", "Tailor",
 
 sites <- unique(shark$Bioregion) # into 3 bioregions
 nsites <- length(sites)
-sites2 <- unique(shark$SD.region) # into 20 admin regions
-nsites2 <- length(sites2)
 
 # create empty lists to store things in 
 PLB.bMLE.site.b_biomass <- numeric(nsites)
@@ -46,20 +44,7 @@ for(i in 1:nsites){
   
   x_biomass <- sitedata$biomass_kg
   sitex_biomass = seq(min(sitedata$biomass_kg), max(sitedata$biomass_kg), length = 10000)
-  
-  # qqplots saved as pdf
-  # pdf("qqplots_sharks.pdf", width = 12, height = 6)
-  # for(i in 1:nsites){
-  par(mfrow=c(1,2))
-  qqplot(FXinv(u = ppoints(siteinput_biomass$n), b = PLB.bMLE.site.b_biomass[i], xmin = min(sitex_biomass),
-                             xmax = max(sitex_biomass)), x_biomass , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
-  #qqline(x, distribution = function(p){
-  #  FXinv(p, b = PLB.bMLE.site.b_biomass[i], xmin = min(sitex), xmax = max(sitex))
-  #}, untf=T)
-  qqplot(qlnorm(p = ppoints(siteinput_biomass$n), meanlog = thetalnorm_biomass$meanlog, sdlog = thetalnorm_biomass$sdlog), x_biomass, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
- #  qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
-# }
-# dev.off()
+
   #rank plot   
   sitey.PLB_biomass <- (1 - pPLB(x = sitex_biomass, b = PLB.bMLE.site.b_biomass[i], xmin = min(sitex_biomass),
                          xmax = max(sitex_biomass))) * length(sitedata$biomass_kg)
@@ -73,7 +58,7 @@ for(i in 1:nsites){
                        limits = c(1,max(sitedata$biomass_kg)))+
     geom_line(aes_(x = sitex_biomass, y = sitey.PLB_biomass), col = 'black', lwd = 1) +
     geom_line(aes_(x = sitex_biomass, y = sitey.lnorm_biomass), col = '#1B9E77', lwd = 1) +
-    labs(tag = paste0("D", i)) +
+    labs(tag = LETTERS[i]) +
     annotate("text", x = 100, y = 5, label = s) +
     annotate("text", x = 100, y = 2.5, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b_biomass[i],2))), parse = T) +
     annotate("text", x = 100, y = 1.5, label = paste("n =" ,(length(sitedata$biomass_kg)))) +
@@ -103,7 +88,7 @@ pdf("qqplots_sharks.pdf", width = 12, height = 6)
 for(i in 1:nsites){
 par(mfrow=c(1,2))
 qqplot(FXinv(u = ppoints(siteinput_biomass$n), b = PLB.bMLE.site.b_biomass[i], xmin = min(sitex_biomass),
-             xmax = max(sitex_biomass)), x_biomass , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
+             xmax = max(sitex_biomass)), x_biomass , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Bounded power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
 #qqline(x, distribution = function(p){
 #  FXinv(p, b = PLB.bMLE.site.b_biomass[i], xmin = min(sitex), xmax = max(sitex))
 #}, untf=T)
