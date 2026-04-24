@@ -100,7 +100,7 @@ for(i in 1:nsites){
                         limits = range(allfish$individual_biomass_kg))+
     geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
-    labs(tag = paste0("A", i)) +
+    labs(tag = LETTERS[ ((i - 1) %% 4) + 1 ]) +
     annotate("text", x = 0.002, y = 10, label = s) +
     annotate("text", x = 0.002, y = 5, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
     annotate("text", x = 0.002, y = 3, label = paste("n =" ,(length(sitedata$individual_biomass_kg)))) +
@@ -133,7 +133,7 @@ pdf("qqplots_fish.pdf", width = 12, height = 6)
 for(i in 1:nsites){
   par(mfrow=c(1,2))
   qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
-                             xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
+                             xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ":Bounded Power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
   #qqline(x, distribution = function(p){
   #  FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
   #}, untf=T)
