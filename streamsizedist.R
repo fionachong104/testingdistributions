@@ -15,7 +15,6 @@ nsites <- length(sites)
 # create empty lists to store things in 
 PLB.bMLE.site.b <- numeric(nsites)
 siteb_plot <- list()
-bplqq <- list()
 AICdf <- data.frame(site = sites, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
 gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
 
@@ -44,15 +43,7 @@ for(i in 1:nsites){
   
   x <- sitedata$dw
   sitex = seq(min(sitedata$dw), max(sitedata$dw), length = 10000)
-  par(mfrow=c(1,2))
-  bplqq[[i]] <- qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
-                             xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Power law"), pch = 16, col = adjustcolor("black", 0.25))
-  #qqline(x, distribution = function(p){
-  # FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
-  # }, untf=T)
-   qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
-  #qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
- 
+  
   #rank plot
   sitey.PLB <- (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
                          xmax = max(sitex))) * length(sitedata$dw)
@@ -67,7 +58,7 @@ for(i in 1:nsites){
                        limits = range(stream$dw))+
     geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
-    labs(tag = paste0("B", i)) +
+    labs(tag = LETTERS[ ((i - 1) %% 4) + 1 ]) +
     annotate("text", x = 1e-05, y = 10, label = s) +
     annotate("text", x = 1e-05, y = 5, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
        annotate("text", x = 1e-05, y = 2, label = paste("n =" ,(length(sitedata$dw)))) +
@@ -95,10 +86,22 @@ ggsave(
 write.csv(AICdf,'stream_AIC.csv')
 write.csv(gof, 'gofstream.csv')
 
-hist(gof$BPLP, main = "(A) GOF test bounded power law p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05))#, col = badfit,
-#xlim = c(0,1), ylim = c(0,16))
-hist(gof$lognormP, main = "(B) GOF test log-normal p-values", breaks = seq(min(gof$BPLP), max(gof$BPLP) + 0.05, by = 0.05))#, col = badfit,
-# xlim = c(0,1), ylim = c(0,16))
+
+# qqplots saved as pdf
+pdf("qqplots_stream.pdf", width = 12, height = 6)
+for(i in 1:nsites){
+  par(mfrow=c(1,2))
+  qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
+                             xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Bounded power law"), pch = 16, col = adjustcolor("black", 0.25))
+  #qqline(x, distribution = function(p){
+  # FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
+  # }, untf=T)
+  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
+  #qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
+}
+dev.off()
+
+
 
 # # # saves the temp images from the plotting envrionment
 # plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)
