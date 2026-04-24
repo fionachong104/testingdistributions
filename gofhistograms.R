@@ -5,7 +5,7 @@ library(dplyr)
 
 gofall <- read.csv("gofall.csv")
 
-custom_breaks <- seq(-0.15, 1.25, by = 0.2)
+custom_breaks <- seq(from = 0, to = 1, length.out = 21)
 
 
 ggplot(gofall, aes(x = lognormP, fill = Taxa)) +
@@ -18,7 +18,6 @@ ggplot(gofall, aes(x = lognormP, fill = Taxa)) +
   ) +
   scale_x_continuous(breaks = custom_breaks, limits = c(-0.2, 1.25)) +
   scale_fill_brewer(palette = "Dark2") +
-  geom_vline(xintercept = 0.05) +
   labs(x = "Log-normal GOF test P-value", y = "Number of observations") +
   theme_classic()+
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
@@ -33,7 +32,6 @@ ggplot(gofall, aes(x = lognormP, fill = Taxa)) +
   ) +
   scale_x_continuous(breaks = custom_breaks, limits = c(-0.2, 1.25)) +
   scale_fill_brewer(palette = "Dark2") +
-  geom_vline(xintercept = 0.05) +
   labs(x = "Bounded Power Law GOF test P-value", y = "Number of observations") +
   theme_classic()+
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
@@ -48,7 +46,6 @@ ggplot(gofall, aes(x = MSBPLP)) +
     vjust = -1
   ) +
   scale_x_continuous(breaks = custom_breaks, limits = c(-0.2, 1.25)) +
-  geom_vline(xintercept = 0.05) +
   labs(x = "Minus-sampled Bounded Power Law GOF test P-value", y = "Number of observations") +
   theme_classic()+
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
@@ -62,7 +59,6 @@ ggplot(gofall, aes(x = MSlognormP)) +
     vjust = -1
   ) +
   scale_x_continuous(breaks = custom_breaks, limits = c(-0.2, 1.25)) +
-  geom_vline(xintercept = 0.05) +
   labs(x = "Minus-sampled Log-normal GOF test P-value", y = "Number of observations") +
   theme_classic()+
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
