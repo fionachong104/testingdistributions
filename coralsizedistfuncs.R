@@ -512,7 +512,7 @@ dMSlnormintegral <- function(x, mu, sigma, w, v){
     f <- dlnorm(x = x, meanlog = mu, sdlog = sigma) * getgx(w = w, v = v, x = x)
     return(f)
   }
-  return(integrate(f = myfunction, lower = 0, upper = x))
+  return(integrate(f = myfunction, lower = 0, upper = x, rel.tol = .Machine$double.eps^0.75)) #rel.tol smaller than default seems to be needed sometimes
 }
 
 #cdf for minus sampled lognormal
