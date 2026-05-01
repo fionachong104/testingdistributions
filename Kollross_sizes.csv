@@ -1,0 +1,1586 @@
+﻿treatment,species,individual,year,abundance,notes id,order,notes_id,guild,bodylength_mm,stage
+no predators+fertilised,Tillia,TPF18,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.1,Adult
+fertilised,Tillia,TF4,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4.5,Adult
+no predators,Alnus,APC25,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+no predators,Alnus,APC25,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+no predators,Alnus,APC25,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.1,Adult
+no predators,Alnus,APC25,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+no predators,Alnus,APC25,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+no predators,Alnus,APC25,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.3,Adult
+no predators,Alnus,APC25,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.1,Adult
+no predators+fertilised,Tillia,TPF15,2020,1,Psocoptera,Psocoptera,NA,No relationship,2,Adult
+no predators+fertilised,Tillia,TPF15,2020,1,Thysanoptera,Thysanoptera,NA,Sucking,1.3,Adult
+no predators+fertilised,Tillia,TPF15,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,15,Juvenile
+no predators+fertilised,Tillia,TPF15,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,11,Juvenile
+no predators+fertilised,Tillia,TPF15,2020,1,Hymenoptera,Hymenoptera,wasp,Chewing,10,Juvenile
+control,Tillia,TC14,2021,1,Hymenoptera,Hymenoptera,CHALCIDOIDEA,Predator,0.6,Adult
+no predators,Alnus,APC24,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.2,Adult
+no predators,Alnus,APC24,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+no predators,Alnus,APC24,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.2,Adult
+no predators,Alnus,APC24,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,2.9,Adult
+no predators,Alnus,APC24,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+no predators,Alnus,APC24,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.4,Adult
+no predators,Alnus,APC24,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+no predators,Alnus,APC24,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.1,Adult
+no predators,Alnus,APC24,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.1,Adult
+no predators,Alnus,APC24,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.3,Adult
+no predators,Alnus,APC24,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.2,Adult
+no predators+fertilised,Alnus,APF19,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF19,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4.6,Adult
+control,Tillia,TC12,2020,1,Thysanoptera,Thysanoptera,NA,Sucking,0.9,Adult
+no predators+fertilised,Tillia,TPF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4.1,Adult
+no predators+fertilised,Tillia,TPF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4.2,Adult
+no predators+fertilised,Tillia,TPF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4.6,Adult
+no predators+fertilised,Tillia,TPF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+control,Alnus,AC11,2020,1,Auchenorrhyncha,Heteroptera,Aphidoidea,Sucking,0.9,Juvenile
+no predators,Alnus,APC23,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4.1,Adult
+no predators+fertilised,Tillia,TPF18,2020,1,Ixodoidea,Ixodoidea,NA,No relationship,1.5,Juvenile
+fertilised,Tillia,TF4,2020,1,Diptera,Diptera,Cecidomyiidae,No relationship,2.2,Adult
+fertilised,Tillia,TF4,2020,1,Collembola,Collembola,Entomobryidae,No relationship,1.1,Adult
+fertilised,Tillia,TF4,2020,1,Araneae,Araneae,Araneidae,Predator,1.2,Adult
+fertilised,Tillia,TF4,2020,1,Auchenorrhyncha,Heteroptera,NA,Sucking,2,Juvenile
+fertilised,Tillia,TF4,2020,1,Heteroptera,Heteroptera,NA,Sucking,2.5,Juvenile
+fertilised,Tillia,TF4,2020,1,Psocoptera,Psocoptera,NA,No relationship,1,Adult
+fertilised,Tillia,TF4,2020,1,Diptera,Diptera,Platypalpus,Predator,2.2,Adult
+fertilised,Tillia,TF4,2020,1,Heteroptera,Heteroptera,NA,Sucking,6,Adult
+fertilised,Tillia,TF4,2020,1,Curculionidae,Coleoptera,NA,Chewing,7.1,Adult
+fertilised,Tillia,TF4,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,40,NA
+fertilised,Tillia,TF4,2020,1,Elateridae,Coleoptera,NA,Chewing,11.1,Adult
+fertilised,Alnus,AF5,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3.1,Adult
+fertilised,Alnus,AF5,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.9,Adult
+fertilised,Alnus,AF5,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3,Adult
+fertilised,Alnus,AF5,2020,1,Diptera,Diptera,Platypalpus2?,Predator,2.8,Adult
+fertilised,Alnus,AF5,2020,1,Araneae,Araneae,Araneidae,Predator,2.1,Adult
+fertilised,Alnus,AF5,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,40,NA
+fertilised,Alnus,AF5,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,40,NA
+fertilised,Alnus,AF5,2020,1,Curculionidae,Coleoptera,NA,Chewing,5,Adult
+fertilised,Alnus,AF5,2020,1,Auchenorrhyncha,Heteroptera,NA,Sucking,1.2,Adult
+fertilised,Alnus,AF5,2020,1,Collembola,Collembola,Entomobryidae,No relationship,1.9,Adult
+fertilised,Alnus,AF5,2020,1,Collembola,Collembola,Entomobryidae,No relationship,2,Adult
+fertilised,Alnus,AF5,2020,1,Psocoptera,Psocoptera,NA,No relationship,3,Adult
+fertilised,Alnus,AF5,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.8,Adult
+fertilised,Alnus,AF5,2020,1,Psocoptera,Psocoptera,NA,No relationship,3,Adult
+fertilised,Alnus,AF5,2020,1,Heteroptera,Heteroptera,Reduviidae,Predator,2.2,Juvenile
+fertilised,Alnus,AF5,2020,1,Diptera,Diptera,Cecidomyiidae,No relationship,4,Adult
+fertilised,Alnus,AF5,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,12,Juvenile
+fertilised,Alnus,AF5,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,8,Juvenile
+fertilised,Alnus,AF5,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,10,Juvenile
+fertilised,Alnus,AF5,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,14,Juvenile
+fertilised,Tillia,TF2,2020,1,Elateridae,Coleoptera,NA,Chewing,12,Adult
+fertilised,Tillia,TF2,2020,1,Elateridae,Coleoptera,NA,Chewing,10,Adult
+fertilised,Tillia,TF2,2020,1,Elateridae,Coleoptera,NA,Chewing,14,Adult
+fertilised,Tillia,TF2,2020,1,Elateridae,Coleoptera,NA,Chewing,9,Adult
+fertilised,Tillia,TF2,2020,1,Elateridae,Coleoptera,NA,Chewing,11,Adult
+fertilised,Tillia,TF2,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,13,Juvenile
+fertilised,Tillia,TF2,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,20,Juvenile
+fertilised,Tillia,TF2,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,17,Juvenile
+fertilised,Tillia,TF2,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.2,Adult
+fertilised,Tillia,TF2,2020,1,Psocoptera,Psocoptera,NA,No relationship,2,Adult
+fertilised,Tillia,TF2,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.1,Adult
+fertilised,Tillia,TF2,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.1,Adult
+fertilised,Tillia,TF2,2020,1,Araneae,Araneae,NA,Predator,2.8,Adult
+fertilised,Tillia,TF2,2020,1,Araneae,Araneae,NA,Predator,6.1,Adult
+fertilised,Tillia,TF2,2020,1,Araneae,Araneae,NA,Predator,4.1,Adult
+fertilised,Tillia,TF2,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,40,NA
+fertilised,Tillia,TF2,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,40,NA
+fertilised,Tillia,TF2,2020,1,Trichoptera,Trichoptera,NA,No relationship,3,Adult
+fertilised,Tillia,TF2,2020,1,Diptera,Diptera,Celiphidae,No relationship,2.1,Adult
+no predators+fertilised,Alnus,APF16,2020,1,Coleoptera,Coleoptera,Curculionidae,Chewing,5,Adult
+no predators+fertilised,Alnus,APF16,2020,1,Coleoptera,Coleoptera,Curculionidae,Chewing,2.2,Adult
+no predators+fertilised,Alnus,APF16,2020,1,Coleoptera,Coleoptera,Chrysomelidae,Chewing,2.4,Adult
+no predators+fertilised,Alnus,APF16,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,14.2,Juvenile
+no predators+fertilised,Alnus,APF16,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,14,Juvenile
+no predators+fertilised,Alnus,APF16,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,13,Juvenile
+no predators+fertilised,Alnus,APF16,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,12.8,Juvenile
+no predators+fertilised,Alnus,APF16,2020,1,Araneae,Araneae,NA,Predator,4.9,Adult
+no predators+fertilised,Alnus,APF16,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+no predators+fertilised,Alnus,APF16,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.2,Adult
+no predators+fertilised,Alnus,APF16,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+no predators+fertilised,Alnus,APF16,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,2.9,Adult
+no predators+fertilised,Alnus,APF16,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.2,Adult
+no predators+fertilised,Alnus,APF16,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+no predators+fertilised,Alnus,APF16,2020,1,Heteroptera,Heteroptera,NA,Sucking,5,Juvenile
+no predators+fertilised,Alnus,APF16,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,4.8,Juvenile
+no predators+fertilised,Alnus,APF16,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.2,Adult
+no predators+fertilised,Alnus,APF16,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,NA
+no predators+fertilised,Alnus,APF16,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.1,NA
+no predators+fertilised,Alnus,APF16,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,NA
+no predators+fertilised,Alnus,APF16,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,NA
+no predators+fertilised,Alnus,APF16,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.3,NA
+no predators+fertilised,Alnus,APF16,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,NA
+no predators+fertilised,Alnus,APF16,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,NA
+no predators+fertilised,Alnus,APF16,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.1,NA
+no predators+fertilised,Alnus,APF16,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.1,NA
+no predators+fertilised,Alnus,APF16,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,NA
+no predators+fertilised,Alnus,APF16,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.1,NA
+no predators+fertilised,Alnus,APF16,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,NA
+no predators+fertilised,Alnus,APF16,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,NA
+no predators,Tillia,TPC25,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,6.1,Juvenile
+no predators,Tillia,TPC25,2020,1,Collembola,Collembola,Entomobryidae,No relationship,1.2,Adult
+no predators,Tillia,TPC25,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.2,Adult
+no predators,Tillia,TPC25,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.4,Adult
+no predators,Tillia,TPC25,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.1,Adult
+no predators,Tillia,TPC25,2020,1,Psocoptera,Psocoptera,NA,No relationship,1.9,Adult
+no predators,Tillia,TPC25,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4.1,Adult
+no predators,Tillia,TPC25,2020,1,Coleoptera,Coleoptera,Nitidulidae,No relationship,1,Adult
+no predators,Tillia,TPC25,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.8,Adult
+no predators,Tillia,TPC25,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,2,Adult
+no predators,Tillia,TPC25,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,2.1,Adult
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,0.9,Adult
+control,Alnus,AC10,2020,1,Araneae,Araneae,NA,Predator,1,Adult
+control,Alnus,AC11,2020,1,Auchenorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+control,Alnus,AC12,2020,1,Araneae,Araneae,NA,Predator,1,Adult
+control,Alnus,AC12,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Tillia,TPC24,2020,1,Diptera,Diptera,Asilidae,Predator,9.7,Adult
+no predators,Tillia,TPC24,2020,1,Heteroptera,Heteroptera,NA,Sucking,3,Adult
+no predators,Tillia,TPC24,2020,1,Heteroptera,Heteroptera,NA,Sucking,2.9,Adult
+no predators,Tillia,TPC24,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,2,Adult
+no predators,Tillia,TPC24,2020,1,Heteroptera,Heteroptera,NA,Sucking,2,Juvenile
+no predators,Tillia,TPC24,2020,1,Hymenoptera,Hymenoptera,Megaspilidae,Predator,1.9,Adult
+no predators,Tillia,TPC24,2020,1,Psocoptera,Psocoptera,p,No relationship,1.5,Adult
+no predators,Tillia,TPC24,2020,1,Diptera,Diptera,Brachycera,No relationship,1.7,Adult
+no predators,Tillia,TPC27,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,4,Juvenile
+no predators,Tillia,TPC27,2020,1,Heteroptera,Heteroptera,NA,Sucking,2,Juvenile
+no predators,Tillia,TPC27,2020,1,Diptera,Diptera,Brachycera,No relationship,1.6,Adult
+no predators,Tillia,TPC27,2020,1,Araneae,Araneae,NA,Predator,2.5,Adult
+no predators,Tillia,TPC22,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.9,NA
+no predators,Tillia,TPC22,2020,1,Araneae,Araneae,NA,Predator,1.1,Adult
+no predators,Tillia,TPC22,2020,1,Araneae,Araneae,NA,Predator,2.4,Adult
+no predators,Tillia,TPC22,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,2,NA
+no predators,Tillia,TPC21,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,18,Adult
+no predators,Tillia,TPC22,2020,1,Coleoptera,Coleoptera,Cleridae,Predator,9,Adult
+no predators,Tillia,TPC22,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.2,Adult
+no predators,Tillia,TPC22,2020,1,Diptera,Diptera,Asilidae,Predator,4.5,Adult
+no predators,Tillia,TPC22,2020,1,Diptera,Diptera,Asilidae,Predator,5,Adult
+no predators,Tillia,TPC22,2020,1,Diptera,Diptera,Brachycera,No relationship,3,Adult
+control,Tillia,TC14,2020,1,Hymenoptera,Hymenoptera,Chalcidoidea,Predator,1,Adult
+control,Tillia,TC8,2020,1,Heteroptera,Heteroptera,NA,Sucking,1,Juvenile
+control,Tillia,TC8,2021,1,araneae,araneae,NA,Predator,1,NA
+control,Alnus,AC9,2021,1,araneae,araneae,NA,Predator,1,NA
+fertilised,Alnus,AF3,2020,1,Diptera,Diptera,NA,No relationship,11,Adult
+fertilised,Alnus,AF3,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,12,Adult
+fertilised,Alnus,AF3,2020,1,Araneae,Araneae,NA,Predator,2.1,Adult
+fertilised,Alnus,AF3,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,6.5,Juvenile
+fertilised,Alnus,AF3,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,15.6,Juvenile
+fertilised,Alnus,AF3,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,9.5,Juvenile
+fertilised,Alnus,AF3,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,10.4,Juvenile
+fertilised,Alnus,AF3,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,10.5,Juvenile
+fertilised,Alnus,AF3,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,9.9,Juvenile
+fertilised,Alnus,AF3,2020,1,Diptera,Diptera,Asilidae,Predator,9.4,Adult
+fertilised,Alnus,AF3,2020,1,Hymenoptera,Hymenoptera,Braconidae,Predator,3.8,Adult
+fertilised,Tillia,TF1,2020,1,Araneae,Araneae,Thomisidae,Predator,5.1,Adult
+fertilised,Tillia,TF1,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,16,Juvenile
+fertilised,Tillia,TF1,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,15.8,Juvenile
+fertilised,Tillia,TF1,2020,1,Heteroptera,Heteroptera,NA,Sucking,6.6,Adult
+fertilised,Tillia,TF1,2020,1,Araneae,Araneae,NA,Predator,2.3,Adult
+fertilised,Tillia,TF1,2020,1,Diptera,Diptera,Asilidae,Predator,7.5,Adult
+fertilised,Tillia,TF1,2020,1,Diptera,Diptera,Asilidae,Predator,6.9,Adult
+fertilised,Tillia,TF1,2020,1,Coleoptera,Coleoptera,Carabidae,Predator,4,Adult
+fertilised,Tillia,TF1,2020,1,Coleoptera,Coleoptera,Chrysomelidae,Chewing,3.5,Adult
+fertilised,Tillia,TF1,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,3,Adult
+fertilised,Tillia,TF1,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,3.1,Adult
+fertilised,Tillia,TF1,2020,1,Coleoptera,Coleoptera,Chrysomelidae,Chewing,2.3,Adult
+fertilised,Tillia,TF1,2020,1,Thysanoptera,Thysanoptera,NA,Sucking,0.9,Adult
+fertilised,Tillia,TF1,2020,1,Heteroptera,Heteroptera,Reduviidae,Predator,2.5,Juvenile
+fertilised,Tillia,TF1,2020,1,Hymenoptera,Hymenoptera,Chalcidoidea,Predator,2,Adult
+fertilised,Tillia,TF1,2020,1,Diptera,Diptera,Asilidae,Predator,4,Adult
+fertilised,Tillia,TF1,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.9,Adult
+fertilised,Tillia,TF1,2020,1,Psocoptera,Psocoptera,NA,No relationship,1.7,Adult
+fertilised,Tillia,TF1,2020,1,Psocoptera,Psocoptera,NA,No relationship,2,Adult
+fertilised,Tillia,TF1,2020,1,Diptera,Diptera,NA,Predator,3.9,Adult
+fertilised,Tillia,TF1,2020,1,Diptera,Diptera,NA,Predator,3.5,Adult
+fertilised,Tillia,TF1,2020,1,Hymenoptera,Hymenoptera,Platygastridae,Predator,1.4,Adult
+no predators,Alnus,APC25,2020,1,Auchenorrhyncha,Heteroptera,NA,Sucking,14,Juvenile
+no predators,Tillia,TPC28,2020,1,Tenebrionidae,Coleoptera,NA,Chewing,2,Adult
+no predators,Tillia,TPC25,2020,1,Coleoptera,Coleoptera,Chrysomelidae,Chewing,2.2,Adult
+no predators,Alnus,APC25,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,5,Juvenile
+no predators,Alnus,APC25,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,5.4,Juvenile
+no predators,Alnus,APC25,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,5.9,Juvenile
+no predators,Alnus,APC25,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,5.3,Juvenile
+no predators,Alnus,APC25,2020,1,Diptera,Diptera,Asilidae,Predator,9,Adult
+no predators,Alnus,APC25,2020,1,Diptera,Diptera,NA,Predator,3,Adult
+no predators,Alnus,APC25,2020,1,Araneae,Araneae,NA,Predator,5,Adult
+no predators,Alnus,APC25,2020,1,Araneae,Araneae,NA,Predator,2.8,Adult
+no predators,Alnus,APC25,2020,1,Araneae,Araneae,NA,Predator,1.9,Adult
+no predators,Alnus,APC23,2020,1,Coleoptera,Coleoptera,Chrysomelidae,Chewing,2.3,Adult
+no predators,Alnus,APC27,2021,1,Coleoptera,Coleoptera,curculionidae,Chewing,2.8,Adult
+fertilised,Tillia,TF7,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,7,Juvenile
+fertilised,Tillia,TF7,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,15,Juvenile
+fertilised,Tillia,TF7,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,12.3,Juvenile
+fertilised,Tillia,TF7,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,13.4,Juvenile
+fertilised,Tillia,TF7,2020,1,Hymenoptera,Hymenoptera,NA,Chewing,14.6,Juvenile
+fertilised,Tillia,TF7,2020,1,Diptera,Diptera,Asilidae,Predator,9.2,Adult
+fertilised,Tillia,TF7,2020,1,Diptera,Diptera,Asilidae,Predator,11.8,Adult
+fertilised,Tillia,TF7,2020,1,Diptera,Diptera,Asilidae,Predator,10.3,Adult
+fertilised,Tillia,TF7,2020,1,Coleoptera,Coleoptera,Curculionidae,Chewing,5.8,Adult
+fertilised,Tillia,TF7,2020,1,Araneae,Araneae,NA,Predator,3.3,Adult
+fertilised,Tillia,TF7,2020,1,Araneae,Araneae,NA,Predator,1.8,Adult
+fertilised,Tillia,TF7,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,6.5,Juvenile
+fertilised,Tillia,TF7,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,5.1,Juvenile
+fertilised,Tillia,TF7,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.9,NA
+fertilised,Tillia,TF7,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.5,NA
+fertilised,Tillia,TF7,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2,NA
+fertilised,Tillia,TF7,2020,1,Hymenoptera,Hymenoptera,Braconidae,Predator,1.9,Adult
+fertilised,Tillia,TF7,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.6,Adult
+fertilised,Tillia,TF7,2020,1,Diptera,Diptera,NA,Predator,4.1,Adult
+fertilised,Tillia,TF7,2020,1,Hymenoptera,Hymenoptera,Megaspilidae,Predator,3.9,Adult
+fertilised,Tillia,TF7,2020,1,Hymenoptera,Hymenoptera,Braconidae,Predator,2.5,Adult
+fertilised,Tillia,TF7,2020,1,Diptera,Diptera,Anisopodidae,No relationship,4.3,Adult
+fertilised,Tillia,TF7,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3.1,Adult
+fertilised,Tillia,TF7,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.9,Adult
+fertilised,Tillia,TF7,2020,1,Hymenoptera,Hymenoptera,Platygastridae,Predator,3,Adult
+fertilised,Tillia,TF7,2020,1,Hymenoptera,Hymenoptera,Braconidae,Predator,3.1,Adult
+fertilised,Tillia,TF7,2020,1,Hymenoptera,Hymenoptera,Braconidae,Predator,2.8,Adult
+fertilised,Tillia,TF7,2020,1,Hymenoptera,Hymenoptera,Ichneumonidae,Predator,4.6,Adult
+fertilised,Tillia,TF7,2020,1,Hymenoptera,Hymenoptera,Ichneumonidae,Predator,4.1,Adult
+control,Alnus,AC9,2021,1,collembola,collembola,NA,No relationship,1,NA
+control,Tillia,TC13,2021,1,Hymenoptera,Hymenoptera,CHALCIDOIDEA,Predator,1,Adult
+control,Tillia,TC13,2021,1,opiliones,opiliones,NA,Predator,1,NA
+control,Tillia,TC13,2021,1,araneae,araneae,NA,Predator,1,NA
+control,Alnus,AC14,2021,1,Ixodoidea,Ixodoidea,NA,No relationship,1,Juvenile
+control,Tillia,TC14,2021,1,diptera,diptera,NA,No relationship,1,Adult
+control,Tillia,TC14,2021,1,diptera,diptera,NA,No relationship,1,Adult
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.1,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.1,Juvenile
+control,Alnus,AC12,2020,1,Araneae,Araneae,NA,Predator,1.1,Adult
+control,Tillia,TC8,2021,1,Hymenoptera,Hymenoptera,Platygastridae,Predator,1.1,Adult
+control,Tillia,TC9,2021,1,araneae,araneae,NA,Chewing,1.2,NA
+no predators,Tillia,TPC27,2021,1,Coleoptera,Coleoptera,curculionidae,Chewing,3,Adult
+no predators,Alnus,APC27,2021,1,Coleoptera,Coleoptera,CHRYSOMELIDAE,Chewing,3.2,Adult
+no predators,Alnus,APC27,2021,1,Coleoptera,Coleoptera,CHRYSOMELIDAE,Chewing,3.3,Adult
+no predators,Alnus,APC27,2020,1,Araneae,Araneae,NA,Predator,7.5,Adult
+no predators,Alnus,APC27,2021,1,Coleoptera,Coleoptera,curculionidae,Chewing,3.3,Adult
+no predators,Tillia,TPC22,2021,1,Coleoptera,Coleoptera,CHRYSOMELIDAE,Chewing,4,Adult
+no predators,Alnus,APC27,2021,1,Coleoptera,Coleoptera,CHRYSOMELIDAE,Chewing,4.2,Adult
+no predators,Tillia,TPC22,2021,1,Coleoptera,Coleoptera,curculionidae,Chewing,4.6,Adult
+no predators,Alnus,APC27,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,4.3,Juvenile
+no predators,Alnus,APC27,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,4.2,Juvenile
+no predators,Alnus,APC27,2020,1,Heteroptera,Heteroptera,NA,Sucking,1.5,Juvenile
+no predators,Alnus,APC27,2020,1,Auchenorrhyncha,Heteroptera,NA,Sucking,2.2,Juvenile
+no predators,Alnus,APC27,2020,1,Heteroptera,Heteroptera,NA,Sucking,2.9,Juvenile
+no predators,Tillia,TPC23,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,5,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+control,Tillia,TC9,2020,1,Collembola,Collembola,Entomobryidae,No relationship,1.2,Adult
+control,Tillia,TC9,2020,1,Collembola,Collembola,Entomobryidae,No relationship,1.2,Adult
+control,Tillia,TC9,2020,1,Heteroptera,Heteroptera,NA,Sucking,1.2,Juvenile
+control,Tillia,TC8,2021,1,Hymenoptera,Hymenoptera,Platygastridae,Predator,1.2,Adult
+control,Alnus,AC9,2021,1,Heteroptera,Heteroptera,NA,Sucking,1.2,Juvenile
+control,Tillia,TC12,2021,1,Hymenoptera,Hymenoptera,Platygastridae,Predator,1.2,Adult
+control,Tillia,TC13,2021,1,Hymenoptera,Hymenoptera,CHALCIDOIDEA,Predator,1.2,Adult
+control,Tillia,TC13,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.2,Adult
+control,Tillia,TC14,2020,1,Araneae,Araneae,NA,Predator,1.3,Adult
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.3,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.3,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.3,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.3,Juvenile
+no predators,Alnus,APC24,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,4.1,Juvenile
+no predators,Alnus,APC28,2020,1,Gastropoda,Gastropoda,NA,Chewing,5,Adult
+no predators,Tillia,TPC21,2021,1,Gastropoda,Gastropoda,NA,Chewing,5,NA
+no predators,Alnus,APC24,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Alnus,APC24,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Alnus,APC24,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.7,Juvenile
+no predators,Alnus,APC24,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,0.9,Juvenile
+no predators,Alnus,APC24,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators,Alnus,APC24,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.1,Juvenile
+no predators,Alnus,APC24,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.6,Juvenile
+no predators,Alnus,APC24,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.1,Juvenile
+no predators,Alnus,APC24,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators,Alnus,APC24,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.3,Juvenile
+no predators,Alnus,APC24,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Alnus,APC24,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators,Alnus,APC24,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.1,Juvenile
+no predators,Alnus,APC24,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Alnus,APC24,2020,1,Heteroptera,Heteroptera,NA,Sucking,2.9,Juvenile
+no predators+fertilised,Alnus,APF19,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,18.3,Juvenile
+no predators+fertilised,Alnus,APF19,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,9,Adult
+no predators+fertilised,Alnus,APF19,2020,1,Coleoptera,Coleoptera,Curculionidae,Chewing,6.4,Adult
+no predators+fertilised,Alnus,APF19,2020,1,Araneae,Araneae,NA,Predator,1.1,Adult
+no predators+fertilised,Alnus,APF19,2020,1,Araneae,Araneae,NA,Predator,1.5,Adult
+no predators+fertilised,Alnus,APF19,2020,1,Coleoptera,Coleoptera,Cantharidae,Predator,4,Adult
+control,Alnus,AC12,2020,1,Heteroptera,Heteroptera,NA,Sucking,1.3,Juvenile
+control,Tillia,TC13,2020,1,Araneae,Araneae,NA,Predator,1.3,Adult
+control,Tillia,TC14,2021,1,Hymenoptera,Hymenoptera,Braconidae,Predator,1.3,Adult
+control,Tillia,TC12,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.3,Adult
+control,Tillia,TC14,2021,1,Hymenoptera,Hymenoptera,Cynipidae,Chewing,1.4,Adult
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.4,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.4,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.4,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.4,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.4,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.4,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.4,Juvenile
+control,Alnus,AC8,2020,1,Araneae,Araneae,NA,Predator,1.4,Adult
+control,Tillia,TC14,2020,1,Hymenoptera,Hymenoptera,Braconidae,Predator,1.4,Adult
+control,Tillia,TC12,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.4,Adult
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.5,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.5,Juvenile
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.5,Juvenile
+control,Tillia,TC8,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.5,Adult
+control,Alnus,AC9,2021,1,araneae,araneae,NA,Predator,1.5,NA
+control,Tillia,TC13,2021,1,Hymenoptera,Hymenoptera,Braconidae,Predator,1.5,Adult
+control,Alnus,AC8,2021,1,araneae,araneae,NA,Predator,1.5,NA
+control,Alnus,AC8,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.6,Adult
+control,Alnus,AC13,2021,1,Coleoptera,Coleoptera,Latridiidae,No relationship,1.6,Adult
+no predators+fertilised,Alnus,APF15,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,11.6,Adult
+no predators+fertilised,Alnus,APF15,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,12,Juvenile
+no predators+fertilised,Alnus,APF15,2020,1,Diptera,Diptera,Asilidae,Predator,10.2,Adult
+no predators+fertilised,Alnus,APF15,2020,1,Coleoptera,Coleoptera,Anthribidae- curcullionidae,No relationship,4.1,Adult
+no predators+fertilised,Alnus,APF15,2020,1,Heteroptera,Heteroptera,Reduviidae,Predator,2.2,Juvenile
+no predators+fertilised,Alnus,APF15,2020,1,Psocoptera,Psocoptera,NA,No relationship,2,Adult
+no predators+fertilised,Alnus,APF15,2020,1,Araneae,Araneae,NA,Predator,3,Adult
+no predators+fertilised,Alnus,APF15,2020,1,Araneae,Araneae,NA,Predator,3.2,Adult
+no predators+fertilised,Tillia,TPF21,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,16.9,Juvenile
+no predators+fertilised,Tillia,TPF21,2020,1,Araneae,Araneae,NA,Predator,2.5,Adult
+no predators+fertilised,Tillia,TPF21,2020,1,Auchenorrhyncha,Heteroptera,Aphidoidea,Sucking,1.3,Juvenile
+no predators+fertilised,Tillia,TPF21,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.2,Adult
+no predators+fertilised,Tillia,TPF21,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.8,Adult
+no predators+fertilised,Tillia,TPF21,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.7,Adult
+no predators+fertilised,Tillia,TPF21,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.4,Adult
+no predators+fertilised,Tillia,TPF21,2020,1,Psocoptera,Psocoptera,NA,No relationship,2,Adult
+no predators+fertilised,Tillia,TPF21,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.1,Adult
+no predators,Tillia,TPC23,2020,1,Ixodoidea,Ixodoidea,NA,No relationship,1.1,NA
+no predators,Tillia,TPC23,2020,1,Araneae,Araneae,NA,Predator,6.7,Adult
+no predators,Tillia,TPC23,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.6,Adult
+no predators,Tillia,TPC23,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.2,Adult
+no predators,Tillia,TPC28,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,6,Juvenile
+no predators,Tillia,TPC23,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,5.2,Juvenile
+no predators,Tillia,TPC23,2020,1,Heteroptera,Heteroptera,NA,Sucking,2.9,Juvenile
+no predators,Tillia,TPC23,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2.2,Adult
+no predators,Tillia,TPC23,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2.1,Adult
+no predators,Tillia,TPC23,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2,Adult
+control,Tillia,TC8,2021,1,Hymenoptera,Hymenoptera,wasp,Predator,1.6,Adult
+control,Tillia,TC8,2021,1,Hymenoptera,Hymenoptera,CHALCIDOIDEA,Predator,1.6,Adult
+control,Tillia,TC12,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.6,Adult
+control,Alnus,AC8,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.6,Adult
+control,Alnus,AC13,2020,1,Hymenoptera,Hymenoptera,Figitidae,Predator,1.7,Adult
+control,Tillia,TC11,2021,1,araneae,araneae,NA,Predator,1.7,NA
+control,Alnus,AC14,2020,1,NA,NA,NA,No relationship,1.8,Juvenile
+control,Alnus,AC14,2020,1,Araneae,Araneae,NA,Predator,1.8,Adult
+control,Alnus,AC8,2020,1,Heteroptera,Heteroptera,NA,Sucking,1.8,Juvenile
+control,Tillia,TC14,2020,1,Diptera,Diptera,Mycetophilidae,No relationship,1.8,Adult
+control,Tillia,TC8,2020,1,Thysanoptera,Thysanoptera,NA,Sucking,1.8,Adult
+control,Tillia,TC11,2020,1,Coleoptera,Coleoptera,Latridiidae,No relationship,1.8,Adult
+control,Tillia,TC11,2021,1,auchenorrhyncha,Heteroptera,NA,Sucking,1.8,Juvenile
+control,Tillia,TC8,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.8,Adult
+control,Tillia,TC8,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.8,Adult
+control,Alnus,AC14,2020,1,Hymenoptera,Hymenoptera,Chalcidoidea,Predator,1.9,Adult
+control,Alnus,AC10,2020,1,Coleoptera,Coleoptera,NA,Chewing,1.9,Adult
+control,Alnus,AC11,2020,1,Araneae,Araneae,NA,Predator,1.9,Adult
+control,Tillia,TC14,2020,1,Hymenoptera,Hymenoptera,Braconidae,Predator,1.9,Adult
+control,Alnus,AC14,2020,1,Heteroptera,Heteroptera,NA,Sucking,2,Juvenile
+control,Tillia,TC9,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,2,Adult
+control,Tillia,TC9,2021,1,araneae,araneae,NA,Chewing,2,NA
+control,Tillia,TC9,2021,1,Hymenoptera,Hymenoptera,Cynipidae,Chewing,2,Adult
+control,Alnus,AC13,2020,1,Araneae,Araneae,NA,Predator,2,Adult
+control,Alnus,AC11,2020,1,Diptera,Diptera,NA,Predator,2,Adult
+control,Tillia,TC13,2020,1,Araneae,Araneae,NA,Predator,2,Adult
+control,Tillia,TC13,2020,1,Araneae,Araneae,NA,Predator,2,Adult
+control,Tillia,TC13,2020,1,Thysanoptera,Thysanoptera,NA,Sucking,2,Adult
+fertilised,Alnus,AF6,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,7.5,Adult
+fertilised,Alnus,AF6,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3,Adult
+fertilised,Alnus,AF6,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3.1,Adult
+fertilised,Alnus,AF6,2020,1,Araneae,Araneae,NA,Predator,1.1,Adult
+fertilised,Alnus,AF6,2020,1,Collembola,Collembola,Entomobryidae,No relationship,1.3,Adult
+fertilised,Alnus,AF6,2020,1,Psocoptera,Psocoptera,NA,No relationship,2,Adult
+fertilised,Tillia,TF6,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3.2,Adult
+fertilised,Tillia,TF6,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,2.1,Adult
+fertilised,Tillia,TF6,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.1,Juvenile
+fertilised,Tillia,TF6,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.6,Juvenile
+fertilised,Tillia,TF6,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.9,Adult
+fertilised,Tillia,TF6,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.4,Juvenile
+fertilised,Tillia,TF6,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.6,Juvenile
+fertilised,Tillia,TF6,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.3,Juvenile
+fertilised,Tillia,TF6,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.6,Juvenile
+fertilised,Tillia,TF6,2020,1,Araneae,Araneae,NA,Predator,1.3,Adult
+fertilised,Tillia,TF6,2020,1,Heteroptera,Heteroptera,NA,Sucking,2,Juvenile
+no predators,Alnus,APC23,2020,1,Hymenoptera,Hymenoptera,Ichneumonidae,Predator,13.5,Adult
+no predators,Alnus,APC23,2020,1,Diptera,Diptera,Asilidae,Predator,5.3,Adult
+no predators,Alnus,APC23,2021,1,Gastropoda,Gastropoda,NA,Chewing,6,NA
+no predators,Alnus,APC23,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.4,Juvenile
+no predators,Alnus,APC23,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.1,Juvenile
+no predators,Alnus,APC23,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Alnus,APC23,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators,Alnus,APC23,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.1,Juvenile
+no predators,Alnus,APC23,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.1,Juvenile
+no predators,Alnus,APC23,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Alnus,APC23,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.1,Juvenile
+no predators,Alnus,APC23,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators,Alnus,APC23,2020,1,Psocoptera,Psocoptera,NA,No relationship,2,Adult
+no predators,Tillia,TPC26,2020,1,Araneae,Araneae,NA,Predator,4.9,Adult
+no predators,Tillia,TPC26,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3,Adult
+no predators,Tillia,TPC26,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.2,Adult
+no predators,Tillia,TPC26,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.5,Adult
+no predators,Tillia,TPC26,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.1,Adult
+no predators,Tillia,TPC26,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Tillia,TPC26,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,0.9,Juvenile
+no predators,Tillia,TPC26,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.5,Juvenile
+no predators,Tillia,TPC26,2020,1,Diptera,Diptera,Asilidae,Predator,5.7,Adult
+no predators,Tillia,TPC26,2020,1,Diptera,Diptera,Cecidomyiidae,No relationship,1.1,Adult
+no predators+fertilised,Tillia,TPF19,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,5.3,Juvenile
+no predators+fertilised,Tillia,TPF19,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,6.2,Juvenile
+no predators+fertilised,Tillia,TPF19,2020,1,Heteroptera,Heteroptera,NA,Sucking,2.6,Juvenile
+no predators+fertilised,Tillia,TPF19,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,7,Adult
+no predators+fertilised,Tillia,TPF19,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2.1,Adult
+no predators+fertilised,Tillia,TPF19,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.8,Juvenile
+no predators+fertilised,Tillia,TPF19,2020,1,Heteroptera,Heteroptera,Reduviidae,Predator,2.6,Juvenile
+no predators+fertilised,Tillia,TPF19,2020,1,Heteroptera,Heteroptera,Reduviidae,Predator,2.4,Juvenile
+no predators+fertilised,Tillia,TPF19,2020,1,Opiliones,Opiliones,NA,Predator,1.5,Adult
+no predators+fertilised,Tillia,TPF19,2020,1,Collembola,Collembola,NA,No relationship,1,Adult
+no predators+fertilised,Tillia,TPF19,2020,1,Collembola,Collembola,NA,No relationship,1.1,Adult
+control,Alnus,AC13,2021,1,araneae,araneae,NA,Predator,2,NA
+control,Alnus,AC13,2021,1,psocoptera,psocoptera,NA,No relationship,2,Adult
+control,Tillia,TC8,2021,1,araneae,araneae,NA,Predator,2,NA
+control,Tillia,TC12,2021,1,opiliones,opiliones,NA,Predator,2,NA
+control,Tillia,TC13,2021,1,diptera,diptera,ochthera ,Predator,2,Adult
+control,Tillia,TC9,2021,1,Hymenoptera,Hymenoptera,Platygastridae,Predator,2,Adult
+control,Alnus,AC14,2021,1,araneae,araneae,NA,Predator,2,NA
+control,Alnus,AC12,2021,1,araneae,araneae,NA,Predator,2,NA
+control,Alnus,AC12,2021,1,Neuroptera,Neuroptera,SISYRIDAE,Predator,2,Adult
+control,Alnus,AC8,2021,1,araneae,araneae,NA,Predator,2,NA
+control,Alnus,AC8,2021,1,collembola,collembola,NA,No relationship,2,NA
+control,Alnus,AC10,2020,1,Hymenoptera,Hymenoptera,Diapriidae,Predator,2.1,Adult
+control,Tillia,TC12,2020,1,Hymenoptera,Hymenoptera,Diapriidae,Predator,2.1,Adult
+control,Alnus,AC14,2020,1,Heteroptera,Heteroptera,NA,Sucking,2.1,Juvenile
+control,Tillia,TC8,2021,1,Hymenoptera,Hymenoptera,Cynipidae,Chewing,2.1,Adult
+control,Alnus,AC13,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.1,Adult
+control,Alnus,AC12,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.1,Adult
+fertilised,Alnus,AF1,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,24,Juvenile
+fertilised,Alnus,AF1,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,13,Juvenile
+fertilised,Alnus,AF1,2020,1,Araneae,Araneae,NA,Predator,6,Adult
+fertilised,Alnus,AF1,2020,1,Araneae,Araneae,NA,Predator,2,Adult
+fertilised,Alnus,AF1,2020,1,Heteroptera,Heteroptera,Reduvidae,Predator,2,Juvenile
+fertilised,Alnus,AF1,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,3,Adult
+control,Tillia,TC8,2020,1,Araneae,Araneae,NA,Predator,2.1,Adult
+control,Tillia,TC8,2021,1,araneae,araneae,NA,Predator,2.1,NA
+control,Tillia,TC8,2021,1,araneae,araneae,NA,Predator,2.1,NA
+control,Tillia,TC9,2021,1,Hymenoptera,Hymenoptera,Platygastridae,Predator,2.1,Adult
+control,Tillia,TC9,2021,1,Hymenoptera,Hymenoptera,NA,Predator,2.1,Adult
+control,Alnus,AC8,2021,1,araneae,araneae,NA,Predator,2.1,NA
+control,Alnus,AC13,2020,1,Araneae,Araneae,NA,Predator,2.2,Adult
+control,Alnus,AC9,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.2,Adult
+control,Alnus,AC11,2020,1,Diptera,Diptera,Cecidomyiidae,No relationship,2.2,Adult
+no predators+fertilised,Tillia,TPF16,2020,1,Auchenorrhyncha,Heteroptera,NA,Sucking,3,Juvenile
+no predators+fertilised,Tillia,TPF16,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Tillia,TPF16,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,5.2,Adult
+no predators+fertilised,Tillia,TPF16,2020,1,Hymenoptera,Hymenoptera,Diapriidae,Predator,3,Adult
+no predators+fertilised,Tillia,TPF16,2020,1,Hymenoptera,Hymenoptera,Diapriidae,Predator,3,Adult
+no predators+fertilised,Tillia,TPF16,2020,1,Collembola,Collembola,Entomobryidae,No relationship,2.1,Adult
+no predators+fertilised,Tillia,TPF16,2020,1,Hymenoptera,Hymenoptera,Chalcidoidea,Predator,1.5,Adult
+no predators+fertilised,Tillia,TPF16,2020,1,Heteroptera,Heteroptera,NA,Sucking,2,Juvenile
+no predators+fertilised,Tillia,TPF16,2020,1,Araneae,Araneae,NA,Predator,2.1,Adult
+no predators+fertilised,Tillia,TPF16,2020,1,Thysanoptera,Thysanoptera,NA,Sucking,2,Adult
+no predators+fertilised,Tillia,TPF16,2020,1,Araneae,Araneae,Tomisidae,Predator,9,Adult
+control,Alnus,AC13,2021,1,araneae,araneae,NA,Predator,2.2,NA
+control,Tillia,TC14,2021,1,diptera,diptera,platypalpus,Predator,2.2,Adult
+control,Tillia,TC11,2021,1,araneae,araneae,NA,Predator,2.2,NA
+control,Tillia,TC8,2021,1,araneae,araneae,NA,Predator,2.2,NA
+control,Tillia,TC12,2021,1,araneae,araneae,NA,Predator,2.2,NA
+control,Tillia,TC12,2021,1,Hymenoptera,Hymenoptera,CHALCIDOIDEA,Predator,2.2,Adult
+control,Tillia,TC13,2021,1,diptera,diptera,platypalpus,Predator,2.2,Adult
+control,Alnus,AC8,2021,1,araneae,araneae,NA,Predator,2.2,NA
+control,Alnus,AC10,2021,1,araneae,araneae,NA,Predator,2.2,NA
+control,Alnus,AC14,2020,1,Heteroptera,Heteroptera,NA,Sucking,2.3,Juvenile
+control,Alnus,AC12,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.3,Adult
+control,Tillia,TC13,2020,1,Heteroptera,Heteroptera,NA,Sucking,2.3,Juvenile
+control,Tillia,TC12,2021,1,diptera,diptera,platypalpus,Predator,2.3,Adult
+control,Alnus,AC10,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.4,Adult
+control,Alnus,AC11,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,2.4,Adult
+control,Alnus,AC13,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.4,Adult
+control,Alnus,AC9,2020,1,Auchenorrhyncha,Heteroptera,NA,Sucking,2.4,Juvenile
+control,Alnus,AC8,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.4,Adult
+control,Alnus,AC13,2021,1,Coleoptera,Coleoptera,curculionidae,Chewing,2.5,Adult
+control,Tillia,TC9,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.5,Adult
+no predators,Alnus,APC26,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators,Alnus,APC26,2020,1,Collembola,Collembola,Entomobryidae,No relationship,0.8,Adult
+no predators,Alnus,APC26,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.9,Adult
+no predators,Alnus,APC26,2020,1,Psocoptera,Psocoptera,NA,No relationship,3.1,Adult
+no predators,Alnus,APC25,2020,1,Coleoptera,Coleoptera,Curculionidae,Chewing,6.5,Adult
+no predators,Alnus,APC25,2020,1,Coleoptera,Coleoptera,Curculionidae,Chewing,6.7,Adult
+no predators,Alnus,APC26,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators,Alnus,APC26,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.5,Adult
+no predators,Alnus,APC26,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.5,Adult
+no predators,Alnus,APC26,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.2,Adult
+no predators,Alnus,APC26,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+no predators,Alnus,APC26,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.1,Adult
+no predators,Alnus,APC26,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.2,Adult
+no predators,Alnus,APC26,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+no predators,Tillia,TPC28,2020,1,Coleoptera,Coleoptera,Carabidae,Predator,2.2,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.3,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.8,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.3,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.5,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.3,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.9,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.1,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.3,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.8,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.3,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.5,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.9,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.1,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.3,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.6,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.3,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.3,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.3,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.5,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.8,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.8,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.1,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.5,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.5,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.5,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.5,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.2,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.5,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.8,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.2,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.5,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.2,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.9,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.2,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.1,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.5,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.8,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.5,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.2,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.5,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.5,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.2,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.8,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.7,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.5,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.1,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4.1,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.2,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.5,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.1,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,12,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,12,Juvenile
+no predators+fertilised,Alnus,APF21,2020,1,Diptera,Diptera,Cecidomyiidae,No relationship,4,Adult
+no predators+fertilised,Alnus,APF21,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,10,NA
+no predators+fertilised,Alnus,APF21,2020,1,Coleoptera,Coleoptera,Latridiidae,No relationship,2,Adult
+fertilised,Tillia,TF3,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2.5,Adult
+fertilised,Tillia,TF3,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2.5,Adult
+fertilised,Tillia,TF3,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2,Adult
+fertilised,Tillia,TF3,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2.8,Adult
+fertilised,Tillia,TF3,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2,Adult
+fertilised,Tillia,TF3,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2.5,Adult
+fertilised,Tillia,TF3,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2.5,Adult
+fertilised,Tillia,TF3,2020,1,Elateridae,Coleoptera,NA,Chewing,10,Adult
+fertilised,Tillia,TF3,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,12,Juvenile
+fertilised,Tillia,TF3,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,14,Juvenile
+fertilised,Tillia,TF3,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,16,Juvenile
+fertilised,Tillia,TF3,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,12,Juvenile
+fertilised,Tillia,TF3,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,40,NA
+fertilised,Tillia,TF3,2020,1,Heteroptera,Heteroptera,NA,Sucking,4,Adult
+fertilised,Tillia,TF3,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3.1,Adult
+fertilised,Tillia,TF3,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3.2,Adult
+fertilised,Tillia,TF3,2020,1,Diptera,Diptera,Asilidae,Predator,8,Adult
+fertilised,Tillia,TF3,2020,1,Diptera,Diptera,Cecidomyiidae,No relationship,3.5,Adult
+fertilised,Tillia,TF3,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,40,NA
+fertilised,Tillia,TF3,2020,1,Araneae,Araneae,NA,Predator,2,Adult
+fertilised,Tillia,TF3,2020,1,Collembola,Collembola,Entomobryidae,No relationship,1.5,Adult
+fertilised,Tillia,TF3,2020,1,Hymenoptera,Hymenoptera,Braconidae,Predator,3.5,Adult
+fertilised,Tillia,TF3,2020,1,Hymenoptera,Hymenoptera,Braconidae,Predator,2,Adult
+fertilised,Tillia,TF3,2020,1,Hymenoptera,Hymenoptera,Braconidae,Predator,2,Adult
+fertilised,Tillia,TF3,2020,1,Hymenoptera,Hymenoptera,Chalcidoidea,Predator,1.1,Adult
+fertilised,Tillia,TF5,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,15,Juvenile
+fertilised,Tillia,TF5,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,17,Juvenile
+fertilised,Tillia,TF5,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,40,NA
+fertilised,Tillia,TF5,2020,1,Araneae,Araneae,NA,Predator,4.5,Adult
+fertilised,Tillia,TF5,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,3.3,Adult
+fertilised,Tillia,TF5,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,3,Adult
+fertilised,Tillia,TF5,2020,1,Psocoptera,Psocoptera,NA,No relationship,2,Adult
+fertilised,Tillia,TF5,2020,1,Psocoptera,Psocoptera,NA,No relationship,1.8,Adult
+fertilised,Tillia,TF5,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2,Juvenile
+fertilised,Tillia,TF5,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,2.3,Juvenile
+fertilised,Tillia,TF5,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.8,Juvenile
+fertilised,Tillia,TF5,2020,1,Diptera,Diptera,Brachycera,No relationship,3,Adult
+fertilised,Tillia,TF5,2020,1,Diptera,Diptera,Asilidae,Predator,3,Adult
+fertilised,Tillia,TF5,2020,1,Diptera,Diptera,Asilidae,Predator,5,Adult
+fertilised,Tillia,TF5,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.3,Adult
+fertilised,Tillia,TF5,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.5,Adult
+fertilised,Tillia,TF5,2020,1,Heteroptera,Heteroptera,NA,Sucking,2.2,Juvenile
+fertilised,Tillia,TF5,2020,1,Heteroptera,Heteroptera,NA,Sucking,2.1,Juvenile
+fertilised,Tillia,TF5,2020,1,Heteroptera,Heteroptera,NA,Sucking,1.8,Juvenile
+fertilised,Tillia,TF5,2020,1,Coleoptera,Coleoptera,Latridiidae,No relationship,2.1,Adult
+fertilised,Tillia,TF5,2020,1,Curculionidae,Coleoptera,NA,Chewing,2,Adult
+fertilised,Tillia,TF5,2020,1,Hymenoptera,Hymenoptera,Platygastridae,Predator,1.5,Adult
+fertilised,Tillia,TF5,2020,1,Hymenoptera,Hymenoptera,Platygastridae,Predator,2.1,Adult
+fertilised,Tillia,TF5,2020,1,Hymenoptera,Hymenoptera,Platygastridae,Predator,2.2,Adult
+no predators+fertilised,Alnus,APF18,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3,Adult
+no predators+fertilised,Alnus,APF18,2020,1,Araneae,Araneae,NA,Predator,2.8,Adult
+no predators+fertilised,Alnus,APF18,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,10,NA
+no predators+fertilised,Alnus,APF18,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,25,Juvenile
+no predators+fertilised,Alnus,APF18,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+fertilised,Alnus,AF2,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,16,Juvenile
+fertilised,Alnus,AF2,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,10,Juvenile
+fertilised,Alnus,AF2,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,40,NA
+fertilised,Alnus,AF2,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,40,NA
+fertilised,Alnus,AF2,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3,Adult
+fertilised,Alnus,AF2,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3.2,Adult
+fertilised,Alnus,AF2,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.6,Adult
+fertilised,Alnus,AF2,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.5,Adult
+fertilised,Alnus,AF2,2020,1,Elateridae,Coleoptera,NA,Chewing,7,Adult
+fertilised,Alnus,AF2,2020,1,Coleoptera,Coleoptera,Latridiidae,No relationship,2,Adult
+fertilised,Alnus,AF2,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.8,Adult
+fertilised,Alnus,AF2,2020,1,Psocoptera,Psocoptera,NA,No relationship,3.2,Adult
+fertilised,Alnus,AF2,2020,1,Ixodoidea,Ixodoidea,NA,No relationship,2.5,Adult
+fertilised,Alnus,AF2,2020,1,Araneae,Araneae,NA,Predator,1.2,Adult
+fertilised,Alnus,AF2,2020,1,Collembola,Collembola,NA,No relationship,2,Adult
+fertilised,Alnus,AF2,2020,1,Diptera,Diptera,Asilidae,Predator,3.4,Adult
+fertilised,Alnus,AF2,2020,1,Chrysopidae,Neuroptera,NA,Predator,2.2,Juvenile
+control,Tillia,TC10,2021,1,Hymenoptera,Hymenoptera,Ant,Predator,2.5,Adult
+control,Tillia,TC13,2021,1,Hymenoptera,Hymenoptera,Platygastridae,Predator,2.5,Adult
+control,Tillia,TC13,2021,1,diptera,diptera,platypalpus,Predator,2.5,Adult
+control,Tillia,TC9,2021,1,diptera,diptera,platypalpus,Predator,2.5,Adult
+control,Alnus,AC10,2020,1,Heteroptera,Heteroptera,Reduviidae,Predator,2.6,Juvenile
+control,Tillia,TC12,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,2.7,Adult
+control,Alnus,AC13,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.8,Adult
+control,Alnus,AC9,2020,1,Araneae,Araneae,NA,Predator,2.8,Adult
+control,Alnus,AC11,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.8,Adult
+control,Tillia,TC13,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.8,Adult
+control,Tillia,TC9,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.8,Adult
+control,Tillia,TC11,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.8,Adult
+control,Alnus,AC8,2021,1,diptera,diptera,platypalpus,Predator,2.8,Adult
+control,Alnus,AC10,2021,1,diptera,diptera,MYCetophilidae,No relationship,2.8,Adult
+control,Alnus,AC13,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.9,Adult
+control,Tillia,TC13,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.9,Adult
+control,Alnus,AC11,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,3,Adult
+control,Tillia,TC14,2021,1,Coleoptera,Coleoptera,curculionidae,Chewing,3,Adult
+control,Tillia,TC14,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,3,Adult
+control,Alnus,AC9,2021,1,coleoptera,Coleoptera,CHRYSOMELIDAE,Chewing,3,Adult
+control,Alnus,AC10,2021,1,Coleoptera,Coleoptera,curculionidae,Chewing,3,Adult
+control,Alnus,AC9,2020,1,Auchenorrhyncha,Heteroptera,NA,Sucking,3,Juvenile
+control,Alnus,AC9,2020,1,Hymenoptera,Hymenoptera,Ichneumonidae,Predator,3,Adult
+control,Alnus,AC11,2020,1,Araneae,Araneae,NA,Predator,3,Adult
+control,Alnus,AC11,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3,Adult
+control,Alnus,AC12,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3,Adult
+control,Tillia,TC13,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3,Adult
+control,Tillia,TC14,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3,Adult
+no predators,Alnus,APC27,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,7,Juvenile
+fertilised,Alnus,AF4,2020,1,Araneae,Araneae,NA,Predator,3,Adult
+fertilised,Alnus,AF4,2020,1,Araneae,Araneae,NA,Predator,4,Adult
+fertilised,Alnus,AF4,2020,1,Heteroptera,Heteroptera,NA,Sucking,5,Juvenile
+fertilised,Alnus,AF4,2020,1,Heteroptera,Heteroptera,Reduvidae,Predator,3,Juvenile
+fertilised,Alnus,AF4,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,10,Juvenile
+fertilised,Alnus,AF4,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,8,Juvenile
+fertilised,Alnus,AF4,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,15,Juvenile
+fertilised,Alnus,AF4,2020,1,Curculionidae,Coleoptera,NA,Chewing,7,Adult
+fertilised,Alnus,AF4,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,3,Adult
+fertilised,Alnus,AF4,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,4,Juvenile
+fertilised,Alnus,AF4,2020,1,Diptera,Diptera,Asilidae,Predator,7,Adult
+fertilised,Alnus,AF4,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,40,NA
+fertilised,Alnus,AF4,2020,1,Opiliones,Opiliones,NA,Predator,1.1,Adult
+fertilised,Alnus,AF4,2020,1,Hymenoptera,Hymenoptera,Diapriidae,Predator,2.5,Adult
+fertilised,Alnus,AF4,2020,1,Auchenorrhyncha,Heteroptera,NA,Sucking,2,Juvenile
+fertilised,Alnus,AF4,2020,1,Hymenoptera,Hymenoptera,Apoidea,No relationship,12,Adult
+no predators,Alnus,APC22,2020,1,Araneae,Araneae,NA,Predator,2.8,Adult
+no predators,Alnus,APC22,2020,1,Hemerobiidae,Neuroptera,NA,Predator,5,Adult
+no predators,Alnus,APC22,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,10,NA
+no predators,Alnus,APC22,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,10,NA
+no predators,Alnus,APC22,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,10,NA
+no predators,Alnus,APC22,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,10,NA
+no predators,Alnus,APC22,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Alnus,APC22,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Alnus,APC22,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Alnus,APC22,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators,Alnus,APC22,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators,Alnus,APC22,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators,Alnus,APC22,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Alnus,APC22,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Alnus,APC22,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Alnus,APC22,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Alnus,APC22,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Alnus,APC22,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators,Alnus,APC22,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Alnus,APC22,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1,Juvenile
+no predators,Alnus,APC22,2020,1,Sternorrhyncha,Heteroptera,Aphidoidea,Sucking,1.2,Juvenile
+no predators,Alnus,APC22,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,5,Adult
+no predators,Alnus,APC22,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators,Alnus,APC22,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.5,Adult
+no predators,Alnus,APC22,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,5.8,Adult
+no predators,Alnus,APC22,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.5,Adult
+no predators,Alnus,APC22,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators,Alnus,APC22,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators,Alnus,APC22,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.9,Adult
+no predators,Alnus,APC22,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators,Alnus,APC22,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,3.2,Adult
+no predators,Alnus,APC22,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+no predators,Alnus,APC26,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,7,Adult
+no predators,Tillia,TPC25,2021,1,Gastropoda,Gastropoda,NA,Chewing,7,NA
+control,Tillia,TC10,2020,1,Psocoptera,Psocoptera,NA,No relationship,3,Adult
+control,Tillia,TC9,2020,1,Araneae,Araneae,Tomisidae,Predator,3,Adult
+control,Tillia,TC11,2020,1,Psocoptera,Psocoptera,NA,No relationship,3,Adult
+control,Tillia,TC11,2020,1,Psocoptera,Psocoptera,NA,No relationship,3,Adult
+control,Tillia,TC11,2020,1,Hymenoptera,Hymenoptera,Ichneumonidae,Predator,3,Adult
+control,Tillia,TC10,2021,1,auchenorrhyncha,Heteroptera,NA,Sucking,3,Juvenile
+control,Tillia,TC14,2021,1,ORTHOPTERA,ORTHOPTERA,TETTIGONIIDAE,Predator,3,Juvenile
+control,Tillia,TC11,2021,1,diptera,diptera,SCIARIDAE,No relationship,3,Adult
+control,Alnus,AC9,2021,1,diptera,diptera,platypalpus,Predator,3,Adult
+control,Tillia,TC12,2021,1,araneae,araneae,NA,Predator,3,NA
+control,Tillia,TC12,2021,1,diptera,diptera,Asilidae,Predator,3,Adult
+control,Tillia,TC12,2021,1,Hymenoptera,Hymenoptera,Braconidae,Predator,3,Adult
+control,Tillia,TC13,2021,1,diptera,diptera,platypalpus,Predator,3,Adult
+control,Alnus,AC8,2021,1,Hymenoptera,Hymenoptera,ichneumonidae,Predator,3,Adult
+control,Alnus,AC8,2021,1,Hymenoptera,Hymenoptera,NA,Predator,3,Adult
+control,Alnus,AC13,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3.1,Adult
+control,Alnus,AC13,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3.1,Adult
+control,Alnus,AC11,2020,1,Diptera,Diptera,NA,No relationship,3.1,Adult
+no predators,Tillia,TPC24,2021,1,Coleoptera,Coleoptera,curculionidae,Chewing,7,Adult
+no predators,Alnus,APC28,2020,1,hymenoptera,hymenoptera,ant,Predator,4,Adult
+no predators,Alnus,APC28,2020,1,hymenoptera,hymenoptera,ant,Predator,4,Adult
+no predators,Alnus,APC28,2020,1,hymenoptera,hymenoptera,ant,Predator,4,Adult
+no predators,Alnus,APC28,2020,1,hymenoptera,hymenoptera,ant,Predator,4,Adult
+no predators,Alnus,APC28,2020,1,hymenoptera,hymenoptera,ant,Predator,4,Adult
+no predators,Alnus,APC28,2020,1,hymenoptera,hymenoptera,ant,Predator,4.5,Adult
+no predators,Alnus,APC28,2020,1,hymenoptera,hymenoptera,ant,Predator,4,Adult
+no predators,Alnus,APC28,2020,1,hymenoptera,hymenoptera,ant,Predator,5,Adult
+no predators,Alnus,APC28,2020,1,hymenoptera,hymenoptera,ant,Predator,4,Adult
+no predators,Alnus,APC28,2020,1,hymenoptera,hymenoptera,ant,Predator,4.5,Adult
+no predators,Alnus,APC28,2020,1,araneae,araneae,NA,Predator,3,Adult
+no predators,Tillia,TPC24,2021,1,Coleoptera,Coleoptera,curculionidae,Chewing,7,Adult
+no predators,Alnus,APC28,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,4,Juvenile
+no predators,Alnus,APC28,2020,1,araneae,araneae,NA,Predator,3,Adult
+no predators,Alnus,APC28,2020,1,Cucujoidea,Coleoptera,NA,No relationship,2.1,Adult
+no predators,Alnus,APC28,2020,1,Diptera,Diptera,NA,No relationship,3.5,Adult
+no predators,Alnus,APC28,2020,1,heteroptera,Heteroptera,NA,Sucking,2,Juvenile
+no predators+fertilised,Alnus,APF20,2020,1,hymenoptera,hymenoptera,NA,Chewing,18,Juvenile
+no predators+fertilised,Alnus,APF20,2020,1,Diptera,Diptera,NA,Predator,8,Adult
+no predators+fertilised,Alnus,APF20,2020,1,Psocoptera,Psocoptera,NA,No relationship,3,Adult
+no predators+fertilised,Alnus,APF20,2020,1,Ixodoidea,Ixodoidea,NA,No relationship,1,Juvenile
+no predators+fertilised,Alnus,APF20,2020,1,Auchenorrhyncha,Heteroptera,NA,Sucking,2.1,Juvenile
+no predators+fertilised,Alnus,APF20,2020,1,Latriidae,Coleoptera,NA,No relationship,1.5,Adult
+no predators+fertilised,Tillia,TPF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,2.5,Adult
+no predators+fertilised,Tillia,TPF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,2,Adult
+no predators+fertilised,Tillia,TPF17,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.8,Adult
+no predators+fertilised,Tillia,TPF17,2020,1,heteroptera,Heteroptera,NA,Sucking,3,Juvenile
+no predators+fertilised,Tillia,TPF17,2020,1,hymenoptera,hymenoptera,Chalcidoidea,Predator,1.3,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,ELATERIDAE,Coleoptera,NA,Chewing,13,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3.5,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,Diptera,Diptera,Platypalpus1?,Predator,2.5,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3.1,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,Diptera,Diptera,Platypalpus1?,Predator,4,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,hymenoptera,hymenoptera,Chalcidoidea,Predator,1.2,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,araneae,araneae,NA,Predator,1.5,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.1,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.5,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.1,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.2,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.5,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.5,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.5,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.5,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,Thysanoptera,Thysanoptera,NA,Sucking,2,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,hymenoptera,hymenoptera,Ichneumonidae,Predator,13,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,hymenoptera,hymenoptera,BRACONIDAE,Predator,4,Adult
+no predators+fertilised,Tillia,TPF20,2020,1,Thysanoptera,Thysanoptera,NA,Sucking,1.5,Adult
+no predators+fertilised,Alnus,APF17,2020,1,hymenoptera,hymenoptera,NA,Chewing,17,Juvenile
+no predators+fertilised,Alnus,APF17,2020,1,hymenoptera,hymenoptera,NA,Predator,3,Adult
+no predators+fertilised,Alnus,APF17,2020,1,hymenoptera,hymenoptera,NA,Predator,3,Adult
+no predators+fertilised,Alnus,APF17,2020,1,hymenoptera,hymenoptera,NA,Predator,3,Adult
+no predators+fertilised,Alnus,APF17,2020,1,hymenoptera,hymenoptera,NA,Predator,3,Adult
+no predators+fertilised,Alnus,APF17,2020,1,chrysomelidae,Coleoptera,NA,Chewing,2.5,Adult
+no predators+fertilised,Alnus,APF17,2020,1,araneae,araneae,NA,Predator,1,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,18,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.2,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.5,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.3,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.3,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.8,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.5,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.7,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.2,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.3,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,0.2,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,0.2,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,0.2,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,0.2,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.3,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.1,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.3,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.2,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.5,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,0.8,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.2,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.2,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,0.9,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.4,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,0.4,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,0.8,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.8,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,2,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.4,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.8,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.6,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.2,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.5,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.2,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.4,NA
+no predators+fertilised,Alnus,APF17,2020,1,collembola,collembola,NA,No relationship,1,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.3,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,0.8,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1.2,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1,NA
+no predators+fertilised,Alnus,APF17,2020,1,Sternorrhyncha,Heteroptera,NA,Sucking,1,NA
+no predators,Alnus,APC27,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,7.2,Adult
+no predators,Alnus,APC26,2020,1,Curculionidae,Coleoptera,NA,Chewing,8,Adult
+no predators,Alnus,APC25,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,8.5,Juvenile
+fertilised,Alnus,AF7,2020,1,Diptera,Diptera,NA,No relationship,3.8,Adult
+fertilised,Alnus,AF7,2020,1,Diptera,Diptera,NA,No relationship,3,Adult
+fertilised,Alnus,AF7,2020,1,Diptera,Diptera,NA,No relationship,19,Adult
+fertilised,Alnus,AF7,2020,1,araneae,araneae,NA,Predator,4,Adult
+fertilised,Alnus,AF7,2020,1,heteroptera,Heteroptera,NA,Sucking,2,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,4,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3.5,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3.3,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3.2,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3.5,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3.3,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,4,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3.2,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,4,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3,Adult
+fertilised,Alnus,AF7,2020,1,hymenoptera,hymenoptera,ANT,Predator,3.2,Adult
+fertilised,Alnus,AF7,2020,1,Orthoptera,ORTHOPTERA,NA,Predator,4,Adult
+no predators,Tillia,TPC24,2021,1,LEPIDOPTERA,LEPIDOPTERA,NA,Chewing,8.5,Juvenile
+no predators,Tillia,TPC28,2020,1,araneae,araneae,NA,Predator,2,Adult
+no predators,Tillia,TPC28,2020,1,Diptera,Diptera,NA,No relationship,2.5,Adult
+no predators,Tillia,TPC28,2020,1,Psocoptera,Psocoptera,NA,No relationship,3,Adult
+no predators,Tillia,TPC28,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.5,Adult
+no predators,Tillia,TPC28,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.4,Adult
+no predators,Tillia,TPC28,2020,1,Psocoptera,Psocoptera,NA,No relationship,2.3,Adult
+no predators,Tillia,TPC28,2020,1,hymenoptera,hymenoptera,Braconidae,Predator,2,Adult
+no predators,Tillia,TPC23,2020,1,Orthoptera,ORTHOPTERA,TETTIGONIDAE,Predator,18,NA
+no predators,Tillia,TPC23,2020,1,Diptera,Diptera,NA,No relationship,18,Adult
+control,Alnus,AC9,2021,1,ORTHOPTERA,ORTHOPTERA,TETTIGONIIDAE,Predator,3.1,Juvenile
+control,Alnus,AC10,2020,1,Araneae,Araneae,NA,Predator,3.2,Adult
+control,Alnus,AC13,2020,1,Diptera,Diptera,NA,No relationship,3.2,Adult
+control,Tillia,TC10,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3.2,Adult
+control,Alnus,AC9,2021,1,ORTHOPTERA,ORTHOPTERA,TETTIGONIIDAE,Predator,3.2,Juvenile
+control,Alnus,AC11,2020,1,Araneae,Araneae,NA,Predator,3.3,Adult
+control,Tillia,TC13,2020,1,Diptera,Diptera,Platypalpus1?,Predator,3.3,Adult
+control,Tillia,TC14,2020,1,Coleoptera,Coleoptera,Coccinellidae,Predator,3.5,Adult
+control,Alnus,AC12,2021,1,Hymenoptera,Hymenoptera,NA,Chewing,3.5,Juvenile
+control,Alnus,AC12,2021,1,Hymenoptera,Hymenoptera,NA,Chewing,3.5,Juvenile
+control,Alnus,AC10,2021,1,Coleoptera,Coleoptera,CHRYSOMELIDAE,Chewing,3.5,Adult
+control,Alnus,AC11,2021,1,araneae,araneae,NA,Predator,3.5,NA
+control,Alnus,AC9,2021,1,diptera,diptera,NA,No relationship,3.5,Adult
+control,Alnus,AC10,2021,1,araneae,araneae,NA,Predator,3.5,NA
+control,Alnus,AC9,2020,1,Heteroptera,Heteroptera,NA,Sucking,3.9,Juvenile
+control,Tillia,TC14,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4,Adult
+control,Alnus,AC14,2020,1,Coleoptera,Coleoptera,NA,Chewing,4,Adult
+control,Alnus,AC9,2020,1,Coleoptera,Coleoptera,Curculionidae,Chewing,4,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,Ant,Predator,2.5,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+fertilised,Alnus,AF7,2021,1,araneae,araneae,NA,Predator,4,NA
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ant,Predator,3,Adult
+fertilised,Alnus,AF7,2021,1,araneae,araneae,NA,Predator,3,NA
+fertilised,Alnus,AF7,2021,1,araneae,araneae,NA,Predator,3,NA
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+fertilised,Alnus,AF7,2021,1,diptera,diptera,Asilidae,Predator,3,Adult
+fertilised,Alnus,AF7,2021,1,diptera,diptera,Asilidae,Predator,2.8,Adult
+fertilised,Alnus,AF7,2021,1,diptera,diptera,platypalpus,Predator,2,Adult
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,NA,Sucking,1,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,NA,Sucking,1,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,NA,Sucking,0.5,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,NA,Sucking,1,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,NA,Sucking,1,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,NA,Sucking,1,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,NA,Sucking,1,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,NA,Sucking,1,Juvenile
+control,Tillia,TC13,2021,1,Hymenoptera,Hymenoptera,wasp,Chewing,4,Juvenile
+control,Alnus,AC12,2021,1,Hymenoptera,Hymenoptera,NA,Chewing,4,Juvenile
+control,Alnus,AC12,2020,1,Diptera,Diptera,Brachycera,No relationship,4,Adult
+no predators,Tillia,TPC28,2021,1,araneae,araneae,NA,Predator,2,NA
+no predators,Tillia,TPC28,2021,1,araneae,araneae,NA,Predator,3.2,NA
+no predators,Tillia,TPC28,2021,1,araneae,araneae,NA,Predator,3,NA
+no predators,Tillia,TPC28,2021,1,diptera,diptera,platypalpus,Predator,3,Adult
+no predators,Tillia,TPC25,2021,1,Gastropoda,Gastropoda,NA,Chewing,9,NA
+no predators,Tillia,TPC28,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.6,Adult
+no predators,Tillia,TPC28,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.4,Adult
+no predators,Tillia,TPC28,2021,1,Hymenoptera,Hymenoptera,CHALCIDOIDEA,Predator,2,Adult
+fertilised,Alnus,AF3,2021,1,Hymenoptera,Hymenoptera,ant,Predator,3,Adult
+fertilised,Alnus,AF3,2021,1,psocoptera,psocoptera,NA,No relationship,2.7,Adult
+fertilised,Alnus,AF3,2021,1,araneae,araneae,NA,Predator,2,NA
+fertilised,Alnus,AF3,2021,1,sternorrhyncha,Heteroptera,NA,Sucking,2,Adult
+fertilised,Alnus,AF3,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,7,Juvenile
+fertilised,Alnus,AF3,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.6,Adult
+fertilised,Alnus,AF3,2021,1,Hymenoptera,Hymenoptera,NA,Chewing,3.5,Juvenile
+fertilised,Alnus,AF3,2021,1,thysanoptera,thysanoptera,NA,Sucking,2,Adult
+fertilised,Alnus,AF3,2021,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+fertilised,Alnus,AF3,2021,1,Hymenoptera,Hymenoptera,Ant,Predator,2.8,Adult
+fertilised,Alnus,AF3,2021,1,Hymenoptera,Hymenoptera,Ant,Predator,2.8,Adult
+fertilised,Alnus,AF3,2021,1,Hymenoptera,Hymenoptera,Ant,Predator,2.8,Adult
+fertilised,Alnus,AF3,2021,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+no predators+fertilised,Alnus,APF18,2021,1,araneae,araneae,SP,Predator,3,NA
+no predators+fertilised,Alnus,APF18,2021,1,araneae,araneae,SP,Predator,2.5,NA
+no predators+fertilised,Alnus,APF18,2021,1,araneae,araneae,SP,Predator,2,NA
+no predators+fertilised,Alnus,APF18,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,18,Juvenile
+no predators+fertilised,Alnus,APF18,2021,1,ORTHOPTERA,ORTHOPTERA,TETTIGONIIDAE,Predator,3.2,Juvenile
+no predators+fertilised,Alnus,APF18,2021,1,heteroptera,Heteroptera,NA,Sucking,3,Juvenile
+no predators+fertilised,Alnus,APF18,2021,1,Coleoptera,Coleoptera,Latridiidae,No relationship,2,Adult
+no predators+fertilised,Alnus,APF18,2021,1,Hymenoptera,Hymenoptera,ant,Predator,2.5,Adult
+no predators+fertilised,Alnus,APF18,2021,1,Hymenoptera,Hymenoptera,ant,Predator,3,Adult
+no predators+fertilised,Alnus,APF18,2021,1,araneae,araneae,NA,Predator,1,NA
+no predators+fertilised,Alnus,APF18,2021,1,diptera,diptera,NA,No relationship,1.5,Adult
+control,Tillia,TC9,2020,1,Araneae,Araneae,NA,Predator,4,Adult
+control,Alnus,AC13,2021,1,araneae,araneae,NA,Predator,4,NA
+control,Tillia,TC14,2021,1,Hymenoptera,Hymenoptera,ichneumonidae,Predator,4,Adult
+control,Tillia,TC14,2021,1,Hymenoptera,Hymenoptera,ichneumonidae,Predator,4,Adult
+no predators,Alnus,APC26,2021,1,diptera,diptera,Asilidae,Predator,5,Adult
+no predators,Tillia,TPC23,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,9.3,Adult
+no predators,Alnus,APC26,2021,1,araneae,araneae,NA,Predator,2.8,NA
+no predators,Alnus,APC26,2021,1,Hymenoptera,Hymenoptera,Ant,Predator,2,Adult
+no predators,Alnus,APC26,2021,1,araneae,araneae,NA,Predator,1,NA
+no predators,Alnus,APC26,2021,1,psocoptera,psocoptera,NA,No relationship,2.5,Adult
+no predators,Alnus,APC26,2021,1,araneae,araneae,NA,Predator,1.8,NA
+no predators,Alnus,APC26,2021,1,araneae,araneae,NA,Predator,1,NA
+no predators,Alnus,APC26,2021,1,diptera,diptera,platypalpus,Predator,3,Adult
+no predators,Alnus,APC26,2021,1,collembola,collembola,NA,No relationship,2,Adult
+no predators,Tillia,TPC26,2021,1,araneae,araneae,NA,Predator,2,NA
+no predators,Tillia,TPC26,2021,1,Hymenoptera,Hymenoptera,Ant,Predator,2.5,Adult
+no predators,Tillia,TPC26,2021,1,araneae,araneae,NA,Predator,2,NA
+no predators,Tillia,TPC26,2021,1,Hymenoptera,Hymenoptera,Ant,Predator,3,Adult
+no predators,Tillia,TPC26,2021,1,diptera,diptera,platypalpus,Predator,2.5,Adult
+no predators,Tillia,TPC26,2021,1,diptera,diptera,platypalpus,Predator,2.8,Adult
+no predators,Tillia,TPC26,2021,1,ORTHOPTERA,ORTHOPTERA,TETTIGONIIDAE,Predator,4,Juvenile
+fertilised,Alnus,AF6,2021,1,araneae,araneae,NA,Predator,2,NA
+fertilised,Alnus,AF6,2021,1,araneae,araneae,NA,Predator,2,NA
+fertilised,Alnus,AF6,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,3,Adult
+fertilised,Alnus,AF6,2021,1,diptera,diptera,platypalpus,Predator,3.2,Adult
+fertilised,Alnus,AF6,2021,1,COLEOPTERA,Coleoptera,CANTHARIDAE,Predator,5.1,Adult
+no predators,Alnus,APC27,2021,1,lepidoptera,lepidoptera,NA,Chewing,9.4,Juvenile
+fertilised,Alnus,AF2,2021,1,araneae,araneae,NA,Predator,2,NA
+fertilised,Alnus,AF2,2021,1,araneae,araneae,NA,Predator,1.5,NA
+fertilised,Alnus,AF2,2021,1,araneae,araneae,NA,Predator,1.5,NA
+fertilised,Alnus,AF2,2021,1,lepidoptera,lepidoptera,NA,Chewing,9,Juvenile
+fertilised,Alnus,AF2,2021,1,diptera,diptera,NA,No relationship,2.5,Adult
+fertilised,Alnus,AF2,2021,1,araneae,araneae,NA,Predator,2,NA
+no predators,Alnus,APC25,2021,1,diptera,diptera,NA,No relationship,11,Adult
+no predators,Alnus,APC25,2021,1,collembola,collembola,NA,No relationship,1.5,NA
+no predators,Alnus,APC25,2021,1,collembola,collembola,NA,No relationship,1.2,NA
+no predators,Alnus,APC25,2021,1,Coleoptera,Coleoptera,Latridiidae,No relationship,1.7,Adult
+no predators,Alnus,APC25,2021,1,ORTHOPTERA,ORTHOPTERA,TETTIGONIIDAE,Predator,3.3,Juvenile
+no predators,Alnus,APC25,2021,1,araneae,araneae,NA,Predator,1,NA
+no predators,Alnus,APC25,2021,1,araneae,araneae,NA,Predator,2,NA
+no predators,Alnus,APC25,2021,1,araneae,araneae,NA,Predator,3.5,NA
+no predators,Alnus,APC25,2021,1,diptera,diptera,platypalpus,Predator,2.8,Adult
+no predators,Alnus,APC25,2021,1,araneae,araneae,NA,Predator,1,NA
+control,Alnus,AC14,2021,1,diptera,diptera,Sciaridae,No relationship,4,Adult
+control,Alnus,AC8,2021,1,araneae,araneae,NA,Predator,4,NA
+no predators,Alnus,APC27,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,9.8,Juvenile
+fertilised,Tillia,TF7,2021,1,araneae,araneae,NA,Predator,4,NA
+fertilised,Tillia,TF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4,Adult
+fertilised,Tillia,TF7,2021,1,diptera,diptera,platypalpus,Predator,2.5,Adult
+fertilised,Tillia,TF7,2021,1,collembola,collembola,NA,No relationship,2,Adult
+fertilised,Tillia,TF7,2021,1,heteroptera,Heteroptera,NA,Predator,2.5,Juvenile
+fertilised,Tillia,TF7,2021,1,lepidoptera,lepidoptera,NA,Chewing,15.5,Juvenile
+fertilised,Tillia,TF7,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,3.8,Juvenile
+fertilised,Tillia,TF7,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,3.8,Juvenile
+fertilised,Tillia,TF7,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.5,Adult
+fertilised,Tillia,TF7,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.6,Adult
+fertilised,Tillia,TF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,3.3,Adult
+fertilised,Tillia,TF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,3.8,Adult
+fertilised,Tillia,TF7,2021,1,diptera,diptera,platypalpus,Predator,2.5,Adult
+fertilised,Tillia,TF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,3.5,Adult
+fertilised,Tillia,TF7,2021,1,diptera,diptera,N,No relationship,3.5,Adult
+fertilised,Tillia,TF7,2021,1,ORTHOPTERA,ORTHOPTERA,TETTIGONIIDAE,Predator,3,Juvenile
+fertilised,Tillia,TF7,2021,1,ORTHOPTERA,ORTHOPTERA,TETTIGONIIDAE,Predator,4,Juvenile
+fertilised,Tillia,TF7,2021,1,ORTHOPTERA,ORTHOPTERA,TETTIGONIIDAE,Predator,3,Juvenile
+fertilised,Tillia,TF7,2021,1,ORTHOPTERA,ORTHOPTERA,TETTIGONIIDAE,Predator,3,Juvenile
+fertilised,Tillia,TF7,2021,1,ORTHOPTERA,ORTHOPTERA,TETTIGONIIDAE,Predator,3.2,Juvenile
+fertilised,Tillia,TF7,2021,1,ORTHOPTERA,ORTHOPTERA,TETTIGONIIDAE,Predator,3,Juvenile
+fertilised,Tillia,TF7,2021,1,ORTHOPTERA,ORTHOPTERA,TETTIGONIIDAE,Predator,4.5,Juvenile
+fertilised,Tillia,TF7,2021,1,thysanoptera,thysanoptera,NA,Chewing,1.5,Adult
+fertilised,Tillia,TF7,2021,1,araneae,araneae,NA,Predator,4,NA
+fertilised,Tillia,TF7,2021,1,Coleoptera,Coleoptera,curculionidae,Chewing,7.5,Adult
+fertilised,Tillia,TF7,2021,1,diptera,diptera,NA,No relationship,10,Adult
+fertilised,Tillia,TF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4,Adult
+fertilised,Tillia,TF7,2021,1,araneae,araneae,NA,Predator,3,NA
+fertilised,Tillia,TF7,2021,1,araneae,araneae,NA,Predator,2.2,NA
+fertilised,Tillia,TF7,2021,1,araneae,araneae,NA,Predator,5,NA
+fertilised,Tillia,TF7,2021,1,araneae,araneae,NA,Predator,2,NA
+fertilised,Tillia,TF7,2021,1,araneae,araneae,NA,Predator,4,NA
+fertilised,Tillia,TF7,2021,1,araneae,araneae,NA,Predator,3,NA
+fertilised,Tillia,TF7,2021,1,COLEOPTERA,Coleoptera,CHRYSOMELIDAE,Chewing,9,Juvenile
+no predators+fertilised,Tillia,TPF20,2021,1,lepidoptera,lepidoptera,NA,Chewing,17.5,Juvenile
+no predators+fertilised,Tillia,TPF20,2021,1,araneae,araneae,NA,Predator,4,NA
+no predators+fertilised,Tillia,TPF20,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.5,Adult
+no predators+fertilised,Tillia,TPF20,2021,1,diptera,diptera,platypalpus,Predator,3.3,Adult
+no predators+fertilised,Tillia,TPF20,2021,1,araneae,araneae,NA,Predator,2.3,NA
+no predators+fertilised,Tillia,TPF20,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.5,Adult
+no predators+fertilised,Tillia,TPF20,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.4,Adult
+no predators+fertilised,Tillia,TPF20,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,2.3,Adult
+control,Alnus,AC10,2020,1,Heteroptera,Heteroptera,NA,Sucking,4.1,Juvenile
+control,Tillia,TC14,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4.1,Adult
+control,Tillia,TC14,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4.1,Adult
+control,Alnus,AC13,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,4.1,Juvenile
+control,Alnus,AC9,2020,1,Coleoptera,Coleoptera,Curculionidae,Chewing,4.1,Adult
+no predators+fertilised,Alnus,APF21,2021,1,araneae,araneae,NA,Predator,3,NA
+no predators+fertilised,Alnus,APF21,2021,1,araneae,araneae,NA,Predator,2,NA
+no predators+fertilised,Alnus,APF21,2021,1,araneae,araneae,NA,Predator,2.2,NA
+no predators+fertilised,Alnus,APF21,2021,1,araneae,araneae,NA,Predator,3.3,NA
+no predators+fertilised,Alnus,APF21,2021,1,lepidoptera,lepidoptera,NA,Chewing,12.2,Juvenile
+no predators,Tillia,TPC25,2021,1,araneae,araneae,NA,Predator,1.2,NA
+no predators,Tillia,TPC25,2021,1,araneae,araneae,NA,Predator,2.8,NA
+no predators,Tillia,TPC25,2021,1,araneae,araneae,NA,Predator,1.3,NA
+no predators,Tillia,TPC25,2021,1,araneae,araneae,NA,Predator,1.2,NA
+no predators,Tillia,TPC25,2021,1,araneae,araneae,NA,Predator,1.2,NA
+no predators,Tillia,TPC25,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,3,Adult
+no predators,Tillia,TPC25,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,3.2,Adult
+no predators,Tillia,TPC25,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,3.3,Adult
+no predators,Tillia,TPC25,2021,1,psocoptera,psocoptera,NA,No relationship,2.3,Adult
+no predators,Tillia,TPC25,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,12,Juvenile
+no predators+fertilised,Tillia,TPF15,2021,1,araneae,araneae,NA,Predator,3,NA
+no predators+fertilised,Tillia,TPF15,2021,1,araneae,araneae,NA,Predator,7,NA
+no predators+fertilised,Tillia,TPF15,2021,1,araneae,araneae,NA,Predator,7,NA
+no predators+fertilised,Tillia,TPF15,2021,1,araneae,araneae,NA,Predator,1.2,NA
+no predators+fertilised,Tillia,TPF15,2021,1,araneae,araneae,NA,Predator,1.3,NA
+no predators+fertilised,Tillia,TPF15,2021,1,araneae,araneae,NA,Predator,1.8,NA
+no predators+fertilised,Tillia,TPF15,2021,1,auchenorrhyncha,Heteroptera,NA,Sucking,2.2,Juvenile
+no predators+fertilised,Tillia,TPF15,2021,1,Coleoptera,Coleoptera,byturidae,No relationship,3,Adult
+no predators+fertilised,Tillia,TPF15,2021,1,diptera,diptera,platypalpus,Predator,2.8,Adult
+no predators+fertilised,Tillia,TPF15,2021,1,diptera,diptera,platypalpus,Predator,3,Adult
+no predators+fertilised,Tillia,TPF15,2021,1,diptera,diptera,platypalpus,Predator,3.1,Adult
+no predators+fertilised,Tillia,TPF15,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,3.3,Adult
+no predators+fertilised,Tillia,TPF15,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,3,Adult
+no predators+fertilised,Tillia,TPF15,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,2.5,Adult
+no predators+fertilised,Tillia,TPF15,2021,1,diptera,diptera,Sciaroidea,Predator,1.5,Adult
+no predators+fertilised,Tillia,TPF15,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,11,Adult
+no predators,Alnus,APC28,2021,1,araneae,araneae,NA,Predator,1.5,NA
+no predators,Alnus,APC28,2021,1,araneae,araneae,NA,Predator,1.3,NA
+no predators,Alnus,APC28,2021,1,araneae,araneae,NA,Predator,2.6,NA
+no predators,Alnus,APC28,2021,1,araneae,araneae,NA,Predator,1.4,NA
+no predators,Alnus,APC28,2021,1,araneae,araneae,NA,Predator,1.2,NA
+no predators,Alnus,APC28,2021,1,opiliones,opiliones,NA,Predator,1,NA
+control,Tillia,TC14,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4.2,Adult
+control,Tillia,TC12,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,4.2,Adult
+control,Tillia,TC14,2020,1,Hymenoptera,Hymenoptera,Ichneumonidae,Predator,4.2,Adult
+control,Alnus,AC13,2020,1,Diptera,Diptera,Asilidae,Predator,4.2,Adult
+control,Tillia,TC12,2021,1,araneae,araneae,NA,Predator,4.2,NA
+control,Alnus,AC12,2021,1,araneae,araneae,NA,Predator,4.2,NA
+control,Tillia,TC9,2021,1,araneae,araneae,NA,Chewing,4.3,NA
+control,Alnus,AC12,2021,1,DIPTERA,DIPTERA,NA,No relationship,4.3,Adult
+control,Tillia,TC14,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4.4,Adult
+control,Alnus,AC9,2020,1,Coleoptera,Coleoptera,Curculionidae,Chewing,4.4,Adult
+control,Alnus,AC11,2020,1,Heteroptera,Heteroptera,NA,Sucking,4.5,Juvenile
+control,Alnus,AC12,2021,1,Hymenoptera,Hymenoptera,NA,Chewing,4.5,Juvenile
+control,Alnus,AC12,2021,1,Hymenoptera,Hymenoptera,NA,Chewing,4.5,Juvenile
+control,Tillia,TC14,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4.7,Adult
+no predators+fertilised,Alnus,APF15,2021,1,araneae,araneae,NA,Predator,4,NA
+no predators+fertilised,Alnus,APF15,2021,1,araneae,araneae,NA,Predator,3,NA
+no predators+fertilised,Alnus,APF15,2021,1,Coleoptera,Coleoptera,Coccinellidae,Predator,4,Adult
+no predators+fertilised,Alnus,APF15,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,14.3,Adult
+no predators+fertilised,Alnus,APF15,2021,1,lepidoptera,lepidoptera,NA,Chewing,15,Juvenile
+no predators+fertilised,Alnus,APF15,2021,1,lepidoptera,lepidoptera,NA,Chewing,10,Juvenile
+control,Alnus,AC13,2020,1,Araneae,Araneae,NA,Predator,4.7,Adult
+control,Alnus,AC9,2020,1,Heteroptera,Heteroptera,NA,Sucking,4.8,Juvenile
+control,Alnus,AC12,2021,1,Hymenoptera,Hymenoptera,NA,Chewing,4.8,Juvenile
+control,Alnus,AC9,2020,1,Hymenoptera,Hymenoptera,Ant,Predator,4.9,Adult
+control,Tillia,TC12,2020,1,Heteroptera,Heteroptera,NA,Sucking,4.9,Adult
+control,Alnus,AC14,2020,1,Coleoptera,Coleoptera,Dermestidae,No relationship,5,Adult
+control,Alnus,AC8,2020,1,Tettigoniidae,ORTHOPTERA,NA,Predator,5,Juvenile
+control,Tillia,TC9,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,5,Juvenile
+control,Alnus,AC12,2021,1,Hymenoptera,Hymenoptera,NA,Chewing,5,Juvenile
+control,Alnus,AC8,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,5,Juvenile
+control,Tillia,TC13,2020,1,Araneae,Araneae,NA,Predator,5,Adult
+control,Tillia,TC9,2020,1,Neuroptera,Neuroptera,Hemerobiidae,Predator,5,Juvenile
+control,Tillia,TC14,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,5,Adult
+control,Tillia,TC8,2021,1,araneae,araneae,NA,Predator,5,NA
+control,Tillia,TC12,2021,1,Heteroptera,Heteroptera,NA,Predator,5,NA
+control,Alnus,AC12,2021,1,Heteroptera,Heteroptera,NA,Sucking,5,Adult
+control,Alnus,AC8,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,5.1,Juvenile
+control,Alnus,AC12,2021,1,Coleoptera,Coleoptera,curculionidae,Chewing,5.5,Adult
+control,Alnus,AC14,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,6,Juvenile
+control,Alnus,AC12,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,6,Juvenile
+control,Alnus,AC12,2021,1,Coleoptera,Coleoptera,curculionidae,Chewing,6,Adult
+control,Alnus,AC9,2021,1,diptera,diptera,Mycetophilidae,No relationship,6,Adult
+control,Alnus,AC9,2021,1,diptera,diptera,Mycetophilidae,No relationship,6,Adult
+control,Alnus,AC11,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,6.1,Adult
+no predators+fertilised,Alnus,APF20,2021,1,Hymenoptera,Hymenoptera,Braconidae,Predator,2.8,Adult
+no predators+fertilised,Alnus,APF20,2021,1,diptera,diptera,Asilidae,Predator,9,Adult
+no predators+fertilised,Alnus,APF20,2021,1,diptera,diptera,Asilidae,Predator,7,Adult
+no predators+fertilised,Alnus,APF20,2021,1,ORTHOPTERA,ORTHOPTERA,TETTIGONIIDAE,Predator,4,Juvenile
+no predators+fertilised,Alnus,APF20,2021,1,ORTHOPTERA,ORTHOPTERA,TETTIGONIIDAE,Predator,5,Juvenile
+no predators+fertilised,Alnus,APF20,2021,1,lepidoptera,lepidoptera,NA,Chewing,13,Juvenile
+no predators+fertilised,Alnus,APF20,2021,1,Coleoptera,Coleoptera,Latridiidae,No relationship,1.8,Adult
+no predators,Tillia,TPC22,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,12,Juvenile
+no predators,Alnus,APC23,2021,1,araneae,araneae,NA,Predator,3.2,NA
+no predators,Alnus,APC23,2021,1,araneae,araneae,NA,Predator,3.8,NA
+no predators,Alnus,APC23,2021,1,araneae,araneae,NA,Predator,1.2,NA
+no predators+fertilised,Tillia,TPF17,2021,1,collembola,collembola,NA,No relationship,2.5,NA
+no predators+fertilised,Tillia,TPF17,2021,1,araneae,araneae,NA,Predator,3.3,NA
+no predators+fertilised,Tillia,TPF17,2021,1,araneae,araneae,NA,Predator,1.5,NA
+no predators+fertilised,Tillia,TPF17,2021,1,psocoptera,psocoptera,NA,No relationship,1.5,Juvenile
+no predators+fertilised,Tillia,TPF17,2021,1,araneae,araneae,NA,Predator,1.6,NA
+no predators+fertilised,Tillia,TPF17,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.2,Adult
+no predators+fertilised,Tillia,TPF17,2021,1,diptera,diptera,NA,No relationship,8.5,Adult
+no predators+fertilised,Tillia,TPF17,2021,1,opiliones,opiliones,NA,Predator,1,NA
+no predators+fertilised,Tillia,TPF17,2021,1,collembola,collembola,NA,No relationship,2,NA
+no predators+fertilised,Tillia,TPF17,2021,1,collembola,collembola,NA,No relationship,1.2,NA
+no predators+fertilised,Tillia,TPF17,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.2,Adult
+no predators+fertilised,Tillia,TPF17,2021,1,diptera,diptera,NA,Predator,4,Adult
+no predators+fertilised,Tillia,TPF17,2021,1,collembola,collembola,NA,No relationship,1.6,NA
+no predators,Alnus,APC27,2021,1,araneae,araneae,NA,Predator,1.2,NA
+no predators,Alnus,APC26,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,12,Juvenile
+no predators,Alnus,APC27,2021,1,araneae,araneae,NA,Predator,1.5,NA
+no predators,Alnus,APC27,2021,1,araneae,araneae,NA,Predator,4.5,NA
+no predators,Alnus,APC27,2021,1,araneae,araneae,NA,Predator,4,NA
+no predators,Alnus,APC27,2021,1,araneae,araneae,NA,Predator,3.5,NA
+no predators,Tillia,TPC28,2020,1,Elateridae,Coleoptera,NA,Chewing,12,Adult
+no predators,Tillia,TPC24,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,12,Juvenile
+no predators,Alnus,APC25,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,12.1,Juvenile
+no predators,Tillia,TPC22,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,12.8,Juvenile
+no predators,Alnus,APC27,2021,1,araneae,araneae,NA,Predator,0.8,NA
+no predators,Alnus,APC27,2021,1,araneae,araneae,NA,Predator,3.3,NA
+no predators,Alnus,APC27,2021,1,collembola,collembola,NA,No relationship,1.3,NA
+fertilised,Alnus,AF5,2021,1,araneae,araneae,NA,Predator,2.3,NA
+fertilised,Alnus,AF5,2021,1,araneae,araneae,NA,Predator,4,NA
+fertilised,Alnus,AF5,2021,1,diptera,diptera,NA,No relationship,NA,Adult
+fertilised,Alnus,AF5,2021,1,psocoptera,psocoptera,NA,No relationship,3.1,Adult
+fertilised,Alnus,AF5,2021,1,coleoptera,Coleoptera,curculionidae,Chewing,6.2,Adult
+fertilised,Alnus,AF5,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,3.5,Adult
+fertilised,Alnus,AF5,2021,1,Heteroptera,Heteroptera,NA,Sucking,2.5,Juvenile
+fertilised,Alnus,AF5,2021,1,diptera,diptera,NA,No relationship,1,Adult
+fertilised,Alnus,AF5,2021,1,araneae,araneae,NA,Predator,1,NA
+fertilised,Alnus,AF5,2021,1,diptera,diptera,platypalpus,Predator,2.8,Adult
+fertilised,Alnus,AF5,2021,1,diptera,diptera,NA,No relationship,1,Adult
+no predators+fertilised,Alnus,APF17,2021,1,araneae,araneae,NA,Predator,3.7,NA
+no predators+fertilised,Alnus,APF17,2021,1,Ixodoidea,Ixodoidea,ixodidae,No relationship,3,NA
+no predators+fertilised,Alnus,APF17,2021,1,coleoptera,Coleoptera,ELATERIDAE,Chewing,13,Adult
+no predators+fertilised,Alnus,APF17,2021,1,lepidoptera,lepidoptera,NA,Chewing,9.5,Juvenile
+no predators+fertilised,Alnus,APF17,2021,1,heteroptera,Heteroptera,NA,Sucking,2,Juvenile
+no predators+fertilised,Alnus,APF17,2021,1,araneae,araneae,NA,Predator,1.2,NA
+no predators+fertilised,Alnus,APF17,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,2.3,Adult
+no predators+fertilised,Alnus,APF17,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,2.3,Adult
+control,Alnus,AC12,2020,1,Chrysomelidae,Coleoptera,NA,Chewing,6.5,Adult
+control,Alnus,AC13,2020,1,Diptera,Diptera,Asilidae,Predator,6.8,Adult
+control,Alnus,AC13,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,7,Juvenile
+control,Tillia,TC10,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,7,Juvenile
+control,Tillia,TC12,2021,1,araneae,araneae,NA,Predator,7,NA
+control,Alnus,AC11,2020,1,Diptera,Diptera,Asilidae,Predator,7.9,Adult
+control,Alnus,AC12,2020,1,Diptera,Diptera,Asilidae,Predator,8,Adult
+control,Alnus,AC13,2021,1,Heteroptera,Heteroptera,NA,Sucking,8,Adult
+control,Tillia,TC14,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,8.5,Adult
+no predators,Alnus,APC27,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,12.9,Juvenile
+no predators,Alnus,APC24,2021,1,araneae,araneae,NA,Predator,2.2,NA
+no predators,Alnus,APC25,2021,1,Coleoptera,Coleoptera,CANTHARIDAE,Predator,8,Adult
+no predators,Alnus,APC25,2021,1,Hymenoptera,Hymenoptera,wasp,Predator,3,Adult
+no predators+fertilised,Alnus,APF16,2021,1,collembola,collembola,NA,No relationship,1.2,NA
+no predators+fertilised,Alnus,APF16,2021,1,araneae,araneae,NA,Predator,2,NA
+no predators+fertilised,Alnus,APF16,2021,1,Coleoptera,Coleoptera,curculionidae,Chewing,3,Adult
+no predators+fertilised,Alnus,APF16,2021,1,araneae,araneae,NA,Predator,1.5,NA
+no predators+fertilised,Alnus,APF16,2021,1,Heteroptera,Heteroptera,NA,Sucking,2,Juvenile
+no predators+fertilised,Alnus,APF16,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,2,Adult
+no predators+fertilised,Alnus,APF16,2021,1,araneae,araneae,NA,Predator,2,NA
+no predators+fertilised,Alnus,APF16,2021,1,lepidoptera,lepidoptera,NA,Chewing,11,Juvenile
+no predators+fertilised,Alnus,APF16,2021,1,collembola,collembola,NA,No relationship,1.3,NA
+no predators+fertilised,Alnus,APF16,2021,1,araneae,araneae,NA,Predator,3.8,NA
+no predators,Tillia,TPC24,2021,1,Hymenoptera,Hymenoptera,ANT1,Predator,5,Adult
+no predators,Alnus,APC27,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,13.1,Juvenile
+no predators,Tillia,TPC24,2021,1,Hymenoptera,Hymenoptera,ichneumonidae,Predator,18,Adult
+no predators,Tillia,TPC24,2021,1,araneae,araneae,NA,Predator,5.2,NA
+no predators,Tillia,TPC24,2021,1,araneae,araneae,NA,Predator,4,NA
+no predators,Tillia,TPC24,2021,1,araneae,araneae,NA,Predator,6,NA
+no predators,Tillia,TPC24,2021,1,araneae,araneae,NA,Predator,3,NA
+no predators,Tillia,TPC24,2021,1,araneae,araneae,NA,Predator,2,NA
+no predators,Tillia,TPC24,2021,1,araneae,araneae,NA,Predator,1,NA
+no predators,Tillia,TPC24,2021,1,araneae,araneae,NA,Predator,1.2,NA
+no predators,Tillia,TPC24,2021,1,Heteroptera,Heteroptera,NA,Sucking,5,Juvenile
+no predators,Tillia,TPC24,2021,1,sternorrhyncha,Heteroptera,NA,Sucking,2,NA
+fertilised,Tillia,TF6,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,19.5,Juvenile
+fertilised,Tillia,TF6,2021,1,araneae,araneae,NA,Predator,2,NA
+fertilised,Tillia,TF6,2021,1,araneae,araneae,NA,Predator,3.3,NA
+fertilised,Tillia,TF6,2021,1,araneae,araneae,NA,Predator,2.2,NA
+fertilised,Tillia,TF6,2021,1,araneae,araneae,NA,Predator,2.1,NA
+fertilised,Tillia,TF6,2021,1,diptera,diptera,platypalpus,Predator,2.5,Adult
+fertilised,Tillia,TF6,2021,1,lepidoptera,lepidoptera,NA,Chewing,18.5,Juvenile
+fertilised,Tillia,TF6,2021,1,auchenorrhyncha,Heteroptera,NA,Sucking,3,NA
+fertilised,Tillia,TF6,2021,1,diptera,diptera,Sciaroidea,No relationship,3,Adult
+fertilised,Tillia,TF6,2021,1,Hymenoptera,Hymenoptera,ichneumonidae,Predator,2,Adult
+control,Alnus,AC9,2020,1,Diptera,Diptera,Asilidae,Predator,8.6,Adult
+control,Alnus,AC12,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,9,Juvenile
+control,Alnus,AC9,2021,1,diptera,diptera,NA,No relationship,9,Adult
+control,Alnus,AC8,2020,1,Diptera,Diptera,Asilidae,Predator,9.1,Adult
+control,Alnus,AC8,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,9.5,Juvenile
+control,Alnus,AC9,2021,1,lepidoptera,lepidoptera,NA,Chewing,9.5,Juvenile
+control,Alnus,AC12,2020,1,Elateridae,Coleoptera,NA,Chewing,10,Adult
+control,Tillia,TC10,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,10,Juvenile
+no predators+fertilised,Tillia,TPF16,2021,1,Hymenoptera,Hymenoptera,ANT2,Predator,4.7,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,Hymenoptera,Hymenoptera,ANT2?,Predator,3,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,Hymenoptera,Hymenoptera,ANT3,Predator,2,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,Hymenoptera,Hymenoptera,ANT3,Predator,2,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,Hymenoptera,Hymenoptera,ANT3,Predator,2,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,Hymenoptera,Hymenoptera,ANT3,Predator,2,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,Hymenoptera,Hymenoptera,ANT3,Predator,2,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,Hymenoptera,Hymenoptera,ANT3,Predator,2,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,Hymenoptera,Hymenoptera,ANT3,Predator,2,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,Hymenoptera,Hymenoptera,ANT3,Predator,2,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,Hymenoptera,Hymenoptera,ANT3,Predator,2,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,Hymenoptera,Hymenoptera,ANT3,Predator,2,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,Hymenoptera,Hymenoptera,ANT3,Predator,2,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,araneae,araneae,NA,Predator,8,NA
+no predators+fertilised,Tillia,TPF16,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.5,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,2,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,2,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,auchenorrhyncha,Heteroptera,NA,Sucking,2,NA
+no predators+fertilised,Tillia,TPF16,2021,1,ORTHOPTERA,ORTHOPTERA,TETTIGONIIDAE,Predator,2.1,Juvenile
+no predators+fertilised,Tillia,TPF16,2021,1,thysanoptera,thysanoptera,NA,Sucking,1,Juvenile
+no predators+fertilised,Tillia,TPF16,2021,1,araneae,araneae,NA,Predator,3,NA
+no predators+fertilised,Tillia,TPF16,2021,1,araneae,araneae,NA,Predator,3.5,NA
+no predators+fertilised,Tillia,TPF16,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,2,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,Heteroptera,Heteroptera,NA,Sucking,1.8,Juvenile
+no predators+fertilised,Tillia,TPF16,2021,1,diptera,diptera,NA,No relationship,10,Adult
+no predators+fertilised,Tillia,TPF16,2021,1,diptera,diptera,platypalpus,Predator,3,Adult
+no predators,Tillia,TPC22,2021,1,araneae,araneae,NA,Predator,2.1,NA
+no predators,Tillia,TPC22,2021,1,araneae,araneae,NA,Predator,4,NA
+no predators,Tillia,TPC22,2021,1,araneae,araneae,NA,Predator,4,NA
+no predators,Tillia,TPC22,2021,1,Heteroptera,Heteroptera,NA,Sucking,2.3,Juvenile
+no predators,Alnus,APC28,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,17,Juvenile
+no predators,Tillia,TPC22,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.3,Juvenile
+no predators,Tillia,TPC22,2021,1,ORTHOPTERA,ORTHOPTERA,TETTIGONIIDAE,Predator,4,Juvenile
+no predators,Tillia,TPC22,2021,1,collembola,collembola,NA,No relationship,1.2,NA
+no predators,Alnus,APC27,2020,1,Coleoptera,Coleoptera,NA,Chewing,18,Adult
+no predators,Tillia,TPC22,2021,1,araneae,araneae,NA,Predator,1.6,NA
+no predators,Tillia,TPC22,2021,1,collembola,collembola,NA,No relationship,1.2,NA
+no predators,Alnus,APC24,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,18.8,Juvenile
+no predators,Tillia,TPC22,2021,1,collembola,collembola,NA,No relationship,1.8,NA
+no predators+fertilised,Tillia,TPF19,2021,1,araneae,araneae,NA,Predator,1,NA
+no predators+fertilised,Tillia,TPF19,2021,1,araneae,araneae,NA,Predator,1.5,NA
+no predators+fertilised,Tillia,TPF19,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,12.2,Juvenile
+no predators+fertilised,Tillia,TPF19,2021,1,Coleoptera,Coleoptera,Scolytinae,No relationship,4.6,Adult
+no predators+fertilised,Tillia,TPF19,2021,1,opiliones,opiliones,NA,Predator,1,NA
+no predators+fertilised,Tillia,TPF19,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,5,Juvenile
+fertilised,Tillia,TF4,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,8.5,Juvenile
+fertilised,Tillia,TF4,2021,1,psocoptera,psocoptera,NA,No relationship,1,NA
+fertilised,Tillia,TF4,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,9.5,Juvenile
+fertilised,Tillia,TF4,2021,1,araneae,araneae,NA,Predator,1.5,NA
+fertilised,Tillia,TF4,2021,1,Ixodoidea,Ixodoidea,NA,No relationship,1,Juvenile
+fertilised,Tillia,TF4,2021,1,diptera,diptera,NA,No relationship,8.5,Adult
+fertilised,Tillia,TF4,2021,1,araneae,araneae,NA,Predator,1.5,NA
+fertilised,Tillia,TF4,2021,1,diptera,diptera,Brachycera,No relationship,4,Adult
+fertilised,Tillia,TF1,2021,1,Hymenoptera,Hymenoptera,Megaspilidae,Predator,2,Adult
+fertilised,Tillia,TF1,2021,1,Hymenoptera,Hymenoptera,ANT5,Predator,4,Adult
+fertilised,Tillia,TF1,2021,1,Hymenoptera,Hymenoptera,Braconidae,Predator,3.1,Adult
+fertilised,Tillia,TF1,2021,1,Hymenoptera,Hymenoptera,Braconidae,Predator,4,Adult
+fertilised,Tillia,TF1,2021,1,Hymenoptera,Hymenoptera,ichneumonidae,Predator,3.2,Adult
+fertilised,Tillia,TF1,2021,1,Hymenoptera,Hymenoptera,CHALCIDOIDEA,Predator,2.5,Adult
+fertilised,Tillia,TF1,2021,1,Hymenoptera,Hymenoptera,ANT1,Predator,5,Adult
+fertilised,Tillia,TF1,2021,1,Hymenoptera,Hymenoptera,ANT1,Predator,3,Adult
+fertilised,Tillia,TF1,2021,1,Hymenoptera,Hymenoptera,ANT1,Predator,3.6,Adult
+fertilised,Tillia,TF1,2021,1,Hymenoptera,Hymenoptera,ANT1,Predator,3,Adult
+fertilised,Tillia,TF1,2021,1,Hymenoptera,Hymenoptera,ANT1,Predator,3,Adult
+fertilised,Tillia,TF1,2021,1,Hymenoptera,Hymenoptera,ANT1,Predator,3,Adult
+fertilised,Tillia,TF1,2021,1,Hymenoptera,Hymenoptera,ANT1,Predator,3.2,Adult
+fertilised,Tillia,TF1,2021,1,Hymenoptera,Hymenoptera,ANT1,Predator,3.8,Adult
+fertilised,Tillia,TF1,2021,1,Hymenoptera,Hymenoptera,ANT1,Predator,3.2,Adult
+fertilised,Tillia,TF1,2021,1,Coleoptera,Coleoptera,curculionidae,Chewing,8.5,Adult
+fertilised,Tillia,TF1,2021,1,diptera,diptera,Sciaridae,No relationship,3,Adult
+fertilised,Tillia,TF1,2021,1,lepidoptera,lepidoptera,NA,Chewing,12,Juvenile
+fertilised,Tillia,TF1,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,10,Juvenile
+fertilised,Tillia,TF1,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,6,Juvenile
+fertilised,Tillia,TF1,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,8,Juvenile
+fertilised,Tillia,TF1,2021,1,diptera,diptera,platypalpus,Predator,2.6,Adult
+fertilised,Tillia,TF1,2021,1,diptera,diptera,platypalpus,Predator,3,Adult
+fertilised,Tillia,TF1,2021,1,diptera,diptera,platypalpus,Predator,3,Adult
+fertilised,Tillia,TF1,2021,1,diptera,diptera,NA,No relationship,4,Adult
+fertilised,Tillia,TF1,2021,1,Gastropoda,Gastropoda,NA,Chewing,50,NA
+fertilised,Tillia,TF1,2021,1,araneae,araneae,NA,Predator,1.8,NA
+fertilised,Tillia,TF1,2021,1,araneae,araneae,NA,Predator,3,NA
+fertilised,Tillia,TF1,2021,1,araneae,araneae,NA,Predator,1.8,NA
+fertilised,Tillia,TF1,2021,1,araneae,araneae,NA,Predator,1.5,NA
+fertilised,Tillia,TF1,2021,1,orthoptera,ORTHOPTERA,tettigonidae,Predator,3,Juvenile
+fertilised,Tillia,TF1,2021,1,opiliones,opiliones,NA,Predator,1,NA
+fertilised,Tillia,TF1,2021,1,opiliones,opiliones,NA,Predator,1,NA
+fertilised,Tillia,TF1,2021,1,Coleoptera,Coleoptera,NA,Predator,8,Adult
+control,Tillia,TC9,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,10,Juvenile
+control,Alnus,AC13,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,10.9,Juvenile
+control,Alnus,AC13,2020,1,Diptera,Diptera,Asilidae,Predator,11,Adult
+control,Alnus,AC13,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,11,Juvenile
+control,Alnus,AC13,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,11,Juvenile
+control,Tillia,TC14,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,11,Adult
+control,Tillia,TC14,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,11.2,Adult
+control,Alnus,AC11,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,11.7,Adult
+control,Tillia,TC10,2021,1,coleoptera,Coleoptera,endroxena quadrimaculata,Predator,12,Adult
+no predators,Alnus,APC22,2021,1,araneae,araneae,NA,Predator,3,NA
+no predators,Alnus,APC22,2021,1,Heteroptera,Heteroptera,NA,Predator,2,Juvenile
+no predators,Alnus,APC22,2021,1,Hymenoptera,Hymenoptera,ANT4,Predator,2.9,Adult
+no predators,Alnus,APC22,2021,1,Hymenoptera,Hymenoptera,ANT4,Predator,3,Adult
+no predators,Alnus,APC22,2021,1,Hymenoptera,Hymenoptera,ANT4,Predator,3,Adult
+control,Tillia,TC13,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,12,Juvenile
+control,Tillia,TC13,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,12,Juvenile
+fertilised,Alnus,AF4,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,11,Juvenile
+fertilised,Alnus,AF4,2021,1,araneae,araneae,NA,Predator,2.5,NA
+fertilised,Alnus,AF4,2021,1,araneae,araneae,NA,Predator,2,NA
+fertilised,Alnus,AF4,2021,1,thysanoptera,thysanoptera,NA,Sucking,1,Juvenile
+fertilised,Alnus,AF4,2021,1,ARANEAE,ARANEAE,NA,Predator,1.5,NA
+fertilised,Alnus,AF4,2021,1,diptera,diptera,TIPLICE,No relationship,13,Adult
+fertilised,Alnus,AF4,2021,1,araneae,araneae,NA,Predator,0.5,NA
+fertilised,Alnus,AF4,2021,1,auchenorrhyncha,Heteroptera,NA,Sucking,2,NA
+fertilised,Alnus,AF4,2021,1,araneae,araneae,NA,Predator,1.5,NA
+fertilised,Alnus,AF4,2021,1,Heteroptera,Heteroptera,NA,Sucking,2.1,Juvenile
+fertilised,Alnus,AF4,2021,1,Hymenoptera,Hymenoptera,ANT4,Predator,3,Adult
+fertilised,Alnus,AF4,2021,1,Hymenoptera,Hymenoptera,ANT4,Predator,3,Adult
+fertilised,Alnus,AF4,2021,1,Hymenoptera,Hymenoptera,ANT4,Predator,3.2,Adult
+fertilised,Alnus,AF4,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.1,Adult
+control,Alnus,AC12,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,12,Adult
+control,Tillia,TC10,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,12,Juvenile
+control,Alnus,AC13,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,12,Adult
+control,Alnus,AC13,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,12,Adult
+control,Tillia,TC12,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,12,Adult
+control,Alnus,AC13,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,12.5,Adult
+control,Alnus,AC10,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,12.7,Adult
+control,Alnus,AC13,2020,1,Coleoptera,Coleoptera,Elateridae,Chewing,12.9,Adult
+control,Alnus,AC11,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,13,Juvenile
+control,Tillia,TC8,2021,1,lepidoptera,lepidoptera,NA,Chewing,13,Juvenile
+control,Tillia,TC14,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,13.5,Juvenile
+control,Alnus,AC9,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,13.7,Juvenile
+control,Tillia,TC14,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,13.9,Juvenile
+control,Tillia,TC13,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,14,Juvenile
+control,Tillia,TC13,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,14,Juvenile
+control,Tillia,TC14,2021,1,lepidoptera,lepidoptera,NA,Chewing,14,Juvenile
+control,Tillia,TC14,2021,1,lepidoptera,lepidoptera,NA,Chewing,14.3,Juvenile
+control,Tillia,TC12,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,14.3,Adult
+control,Tillia,TC11,2021,1,Mecoptera,Mecoptera,NA,Predator,15,Adult
+control,Tillia,TC14,2021,1,lepidoptera,lepidoptera,NA,Chewing,15.1,Juvenile
+control,Alnus,AC13,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,15.2,Juvenile
+control,Alnus,AC9,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,16.8,Juvenile
+fertilised,Alnus,AF1,2021,1,diptera,diptera,NA,No relationship,2.5,Adult
+fertilised,Alnus,AF1,2021,1,diptera,diptera,platypalpus,Predator,2.6,Adult
+fertilised,Alnus,AF1,2021,1,araneae,araneae,NA,Predator,4,NA
+fertilised,Alnus,AF1,2021,1,araneae,araneae,NA,Predator,1.5,NA
+fertilised,Alnus,AF1,2021,1,araneae,araneae,NA,Predator,3.2,NA
+fertilised,Alnus,AF1,2021,1,araneae,araneae,NA,Predator,2.8,NA
+fertilised,Alnus,AF1,2021,1,diptera,diptera,Sciaridae,No relationship,3.2,Adult
+no predators,Tillia,TPC22,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,19,Juvenile
+no predators,Tillia,TPC23,2021,1,Heteroptera,Heteroptera,NA,Sucking,1,Juvenile
+no predators,Tillia,TPC23,2021,1,Heteroptera,Heteroptera,NA,Sucking,3.1,Juvenile
+no predators,Tillia,TPC23,2021,1,diptera,diptera,Sciaridae,No relationship,2.5,Adult
+no predators,Tillia,TPC23,2021,1,araneae,araneae,NA,Predator,2,NA
+no predators,Tillia,TPC23,2021,1,araneae,araneae,NA,Predator,2,NA
+no predators,Tillia,TPC23,2021,1,araneae,araneae,NA,Predator,1,NA
+no predators,Tillia,TPC23,2021,1,araneae,araneae,NA,Predator,1,NA
+no predators,Tillia,TPC23,2021,1,araneae,araneae,NA,Predator,2,NA
+no predators,Tillia,TPC23,2021,1,diptera,diptera,platypalpus,Predator,2.4,Adult
+no predators,Tillia,TPC23,2021,1,collembola,collembola,NA,No relationship,1.8,NA
+no predators,Tillia,TPC23,2021,1,Coleoptera,Coleoptera,Latridiidae,No relationship,1.5,Adult
+no predators,Tillia,TPC23,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.2,Adult
+no predators,Tillia,TPC23,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.4,Adult
+no predators,Tillia,TPC23,2021,1,Heteroptera,Heteroptera,NA,Sucking,1.7,Juvenile
+no predators,Tillia,TPC23,2021,1,Heteroptera,Heteroptera,NA,Sucking,2.5,Juvenile
+no predators+fertilised,Tillia,TPF18,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.9,Adult
+no predators+fertilised,Tillia,TPF18,2021,1,Coleoptera,Coleoptera,NITINULIDAE,No relationship,2.1,Adult
+no predators+fertilised,Tillia,TPF18,2021,1,Hymenoptera,Hymenoptera,CHALCIDOIDEA,Predator,1.2,Adult
+no predators+fertilised,Tillia,TPF18,2021,1,Hymenoptera,Hymenoptera,NA,No relationship,18,Adult
+no predators,Tillia,TPC27,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.6,Adult
+no predators,Tillia,TPC27,2021,1,araneae,araneae,NA,Predator,3,NA
+no predators,Tillia,TPC27,2021,1,araneae,araneae,NA,Predator,1.5,NA
+no predators,Tillia,TPC27,2021,1,araneae,araneae,NA,Predator,4.5,NA
+no predators,Alnus,APC24,2020,1,Lepidoptera,Lepidoptera,NA,Chewing,20.2,Juvenile
+no predators,Tillia,TPC27,2021,1,araneae,araneae,NA,Predator,16,NA
+no predators,Tillia,TPC27,2021,1,Hymenoptera,Hymenoptera,ANT5,Predator,3.8,Adult
+no predators,Tillia,TPC27,2021,1,Hymenoptera,Hymenoptera,ANT5,Predator,3.5,Adult
+no predators,Tillia,TPC27,2021,1,Coleoptera,Coleoptera,Latridiidae,No relationship,1.8,Adult
+no predators,Tillia,TPC21,2021,1,araneae,araneae,NA,Predator,7,NA
+no predators,Tillia,TPC21,2021,1,diptera,diptera,platypalpus,Predator,3,Adult
+no predators,Tillia,TPC21,2021,1,diptera,diptera,platypalpus,Predator,3,Adult
+no predators,Tillia,TPC21,2021,1,araneae,araneae,NA,Predator,1,NA
+no predators,Tillia,TPC21,2021,1,araneae,araneae,NA,Predator,2.3,NA
+no predators,Tillia,TPC21,2021,1,opiliones,opiliones,NA,Predator,1,NA
+no predators,Tillia,TPC21,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.8,Adult
+no predators,Tillia,TPC21,2021,1,Hymenoptera,Hymenoptera,CHALCIDOIDEA,Predator,2,Adult
+fertilised,Tillia,TF2,2021,1,LEPIDOPTERA,LEPIDOPTERA,NA,Chewing,19,Juvenile
+fertilised,Tillia,TF2,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,12,Juvenile
+fertilised,Tillia,TF2,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,7.5,Adult
+fertilised,Tillia,TF2,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,7,Juvenile
+fertilised,Tillia,TF2,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,6,Juvenile
+fertilised,Tillia,TF2,2021,1,araneae,araneae,NA,Predator,1.6,NA
+fertilised,Tillia,TF2,2021,1,araneae,araneae,NA,Predator,1.2,NA
+fertilised,Tillia,TF2,2021,1,araneae,araneae,NA,Predator,1.2,NA
+fertilised,Tillia,TF2,2021,1,araneae,araneae,NA,Predator,1.6,NA
+fertilised,Tillia,TF2,2021,1,Coleoptera,Coleoptera,MORDELLIDAE,No relationship,2.5,Adult
+fertilised,Tillia,TF2,2021,1,Hymenoptera,Hymenoptera,Cynipidae,Chewing,2,Adult
+no predators+fertilised,Alnus,APF19,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,10.5,Juvenile
+no predators+fertilised,Alnus,APF19,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,13,Juvenile
+no predators+fertilised,Alnus,APF19,2021,1,opiliones,opiliones,NA,Predator,1,NA
+no predators+fertilised,Alnus,APF19,2021,1,araneae,araneae,NA,Predator,2.4,NA
+no predators+fertilised,Alnus,APF19,2021,1,orthoptera,ORTHOPTERA,TETTIGONIDAE,Predator,4,Juvenile
+no predators+fertilised,Alnus,APF19,2021,1,thysanoptera,thysanoptera,NA,Predator,1.6,Adult
+control,Tillia,TC11,2021,1,lepidoptera,lepidoptera,NA,Chewing,17,Juvenile
+fertilised,Tillia,TF3,2021,1,Lepidoptera,Lepidoptera,NA,Chewing,14,Juvenile
+fertilised,Tillia,TF3,2021,1,collembola,collembola,NA,No relationship,2,NA
+fertilised,Tillia,TF3,2021,1,araneae,araneae,NA,Predator,3.8,NA
+fertilised,Tillia,TF3,2021,1,araneae,araneae,NA,Predator,1.2,NA
+fertilised,Tillia,TF3,2021,1,diptera,diptera,platypalpus,Predator,3.5,Adult
+fertilised,Tillia,TF3,2021,1,diptera,diptera,platypalpus,Predator,3,Adult
+fertilised,Tillia,TF3,2021,1,diptera,diptera,Sciaridae,No relationship,2.8,Adult
+fertilised,Tillia,TF3,2021,1,Hymenoptera,Hymenoptera,CHALCIDOIDEA,Predator,1,Adult
+no predators,Alnus,APC25,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,25,Juvenile
+fertilised,Tillia,TF5,2021,1,lepidoptera,lepidoptera,NA,Chewing,20,Juvenile
+fertilised,Tillia,TF5,2021,1,Coleoptera,Coleoptera,ELATERIDAE,Chewing,12.4,Adult
+fertilised,Tillia,TF5,2021,1,diptera,diptera,NA,No relationship,5,Adult
+fertilised,Tillia,TF5,2021,1,araneae,araneae,NA,Predator,4,NA
+fertilised,Tillia,TF5,2021,1,araneae,araneae,NA,Predator,7,NA
+fertilised,Tillia,TF5,2021,1,diptera,diptera,Sciaridae,No relationship,1,Adult
+fertilised,Tillia,TF5,2021,1,diptera,diptera,Sciaridae,No relationship,1.2,Adult
+fertilised,Tillia,TF5,2021,1,thysanoptera,thysanoptera,NA,Sucking,1.8,Adult
+fertilised,Tillia,TF5,2021,1,Heteroptera,Heteroptera,NA,Sucking,2.5,Juvenile
+fertilised,Tillia,TF5,2021,1,Coleoptera,Coleoptera,curculionidae,Chewing,3,Adult
+fertilised,Tillia,TF5,2021,1,araneae,araneae,NA,Predator,2,NA
+fertilised,Tillia,TF5,2021,1,araneae,araneae,NA,Predator,2,NA
+fertilised,Tillia,TF5,2021,1,araneae,araneae,NA,Predator,1.7,NA
+fertilised,Tillia,TF5,2021,1,araneae,araneae,NA,Predator,4,NA
+fertilised,Tillia,TF5,2021,1,Hymenoptera,Hymenoptera,Platygastridae,Predator,2,Adult
+fertilised,Tillia,TF5,2021,1,Heteroptera,Heteroptera,NA,Sucking,1.2,Juvenile
+no predators+fertilised,Tillia,TPF21,2021,1,orthoptera,ORTHOPTERA,TETTIGONIDAE,Predator,4,Juvenile
+no predators+fertilised,Tillia,TPF21,2021,1,araneae,araneae,NA,Predator,3.5,NA
+no predators+fertilised,Tillia,TPF21,2021,1,araneae,araneae,NA,Predator,3.5,NA
+no predators+fertilised,Tillia,TPF21,2021,1,araneae,araneae,NA,Predator,2,NA
+no predators+fertilised,Tillia,TPF21,2021,1,Hymenoptera,Hymenoptera,ANT1,Predator,5.1,Adult
+no predators+fertilised,Tillia,TPF21,2021,1,Hymenoptera,Hymenoptera,ANT2- formica fusca,Predator,2.5,Adult
+no predators+fertilised,Tillia,TPF21,2021,1,Hymenoptera,Hymenoptera,ANT3,Predator,2,Adult
+fertilised,Alnus,AF2,2021,1,Coleoptera,Coleoptera,NA,No relationship,15,Adult
+no predators,Alnus,APC26,2021,1,diptera,diptera,NA,No relationship,18,Adult
+no predators,Alnus,APC26,2021,1,diptera,diptera,NA,No relationship,18,Adult
+fertilised,Tillia,TF7,2021,1,araneae,araneae,NA,No relationship,NA,NA
+fertilised,Tillia,TF7,2021,1,diptera,diptera,NA,No relationship,NA,Adult
+fertilised,Tillia,TF7,2021,1,diptera,diptera,NA,No relationship,NA,Adult
+control,Alnus,AC12,2020,1,Lepidoptera,Lepidoptera,Geometridae,Chewing,21,Juvenile
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF7,2021,1,sternorrhyncha,Heteroptera,STERNORRHYNCHA,Sucking,NA,Juvenile
+fertilised,Alnus,AF3,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF3,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult
+fertilised,Alnus,AF3,2021,1,Hymenoptera,Hymenoptera,ANT,Predator,4.08,Adult

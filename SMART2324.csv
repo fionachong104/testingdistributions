@@ -1,0 +1,1214 @@
+﻿Date,Time,Species,Scientific name,"Size
+(cm)",Sex,Status,Tags,Bioregion,SD region,Beach,a,b,biomass_g,biomass_kg
+29/07/2023,13:23,White Shark,Carcharodon carcharias,334,M,Alive,"ID, A",NSW North Coast,Ballina,Angels Beach,0.00871,3.04,409456.1647,409.4561647
+15/12/2023,08:45,Tiger Shark,Galeocerdo cuvier,218,F,Alive,"ID, A",NSW North Coast,Ballina,Angels Beach,0.00724,3.09,121778.0825,121.7780825
+04/01/2024,07:27,Common Blacktip,Carcharhinus limbatus,181,M,Alive,ID,NSW North Coast,Ballina,Angels Beach,0.022941,2.881574,73498.79629,73.49879629
+07/01/2024,12:59,Common Blacktip,Carcharhinus limbatus,NA,NA,Dead,,NSW North Coast,Ballina,Angels Beach,0.022941,2.881574,NA,NA
+28/01/2024,16:43,Great Hammerhead,Sphyrna mokarran,280,NA,Alive,,NSW North Coast,Ballina,Angels Beach,0.00224,3.1,86384.91604,86.38491604
+29/07/2023,11:07,White Shark,Carcharodon carcharias,305,M,Alive,"ID, A",NSW North Coast,Ballina,Boulders Beach,0.00871,3.04,310663.0964,310.6630964
+13/09/2023,10:10,Silky Whaler,Carcharhinus falciformis,330,F,Alive,ID,NSW North Coast,Ballina,Boulders Beach,0.006645,3.006672,248222.0339,248.2220339
+28/11/2023,NA,Smooth Hammerhead,Sphyrna zygaena,153,M,Alive,ID,NSW North Coast,Ballina,Boulders Beach,0.00417,3.03,17368.05119,17.36805119
+24/12/2023,09:24,Smooth Hammerhead,Sphyrna zygaena,179,M,Alive,ID,NSW North Coast,Ballina,Boulders Beach,0.00417,3.03,27943.49595,27.94349595
+08/04/2024,14:33,Common Blacktip,Carcharhinus limbatus,136,F,Alive,ID,NSW North Coast,Ballina,Boulders Beach,0.022941,2.881574,32252.44113,32.25244113
+06/06/2024,10:23,Tiger Shark,Galeocerdo cuvier,258,F,Alive,"ID, A",NSW North Coast,Ballina,Boulders Beach,0.00724,3.09,204947.8929,204.9478929
+23/06/2024,10:39,Tiger Shark,Galeocerdo cuvier,173,M,Alive,"ID, A",NSW North Coast,Ballina,Boulders Beach,0.00724,3.09,59607.51611,59.60751611
+05/08/2023,07:23,Greynurse Shark,Carcharias taurus,233,M,Alive,ID,NSW North Coast,Ballina,Lennox Headland,0.0107,3.03,159394.0914,159.3940914
+05/08/2023,11:45,Dusky Whaler,Carcharhinus obscurus,308,F,Alive,ID,NSW North Coast,Ballina,Lennox Headland,0.00794,3.07,346474.4405,346.4744405
+08/12/2023,07:36,Shortfin Mako Shark,Isurus oxyrinchus,335,F,Alive,ID,NSW North Coast,Ballina,Lennox Headland,0.093585714,2.891142857,1868421.333,1868.421333
+12/12/2023,09:03,Smooth Hammerhead,Sphyrna zygaena,177,M,Alive,ID,NSW North Coast,Ballina,Lennox Headland,0.00417,3.03,27008.16338,27.00816338
+30/07/2023,07:08,White Shark,Carcharodon carcharias,263,F,Alive,"ID, A",NSW North Coast,Ballina,Lighthouse Beach,0.00871,3.04,198008.4073,198.0084073
+25/08/2023,11:45,White Shark,Carcharodon carcharias,189,F,Alive,"ID, A",NSW North Coast,Ballina,Lighthouse Beach,0.00871,3.04,72520.70873,72.52070873
+05/12/2023,07:10,White Shark,Carcharodon carcharias,227,F,Alive,"ID, A",NSW North Coast,Ballina,Lighthouse Beach,0.00871,3.04,126571.743,126.571743
+02/02/2024,08:12,Bull Shark,Carcharhinus leucas,204,M,Alive,"ID, A",NSW North Coast,Ballina,Lighthouse Beach,0.0175,2.84,63443.58625,63.44358625
+19/03/2024,12:14,Bull Shark,Carcharhinus leucas,242,F,Alive,"ID, A",NSW North Coast,Ballina,Lighthouse Beach,0.0175,2.84,103056.0964,103.0560964
+28/04/2024,06:37,Bull Shark,Carcharhinus leucas,216,F,Alive,"ID, A",NSW North Coast,Ballina,Lighthouse Beach,0.0175,2.84,74625.40515,74.62540515
+06/07/2023,12:44,Bull Shark,Carcharhinus leucas,280,F,Alive,"ID, A",NSW North Coast,Ballina,Main Beach,0.0175,2.84,155943.3493,155.9433493
+07/07/2023,14:52,Dusky Whaler,Carcharhinus obscurus,282,M,Alive,ID,NSW North Coast,Ballina,Main Beach,0.00794,3.07,264292.7592,264.2927592
+12/07/2023,08:52,Shortfin Mako Shark,Isurus oxyrinchus,186,M,Alive,ID,NSW North Coast,Ballina,Main Beach,0.093585714,2.891142857,340953.9273,340.9539273
+09/08/2023,11:58,Smooth Hammerhead,Sphyrna zygaena,168,F,Alive,ID,NSW North Coast,Ballina,Main Beach,0.00417,3.03,23058.08196,23.05808196
+18/08/2023,14:12,Greynurse Shark,Carcharias taurus,249,M,Alive,ID,NSW North Coast,Ballina,Main Beach,0.0107,3.03,194925.1151,194.9251151
+27/08/2023,14:45,White Shark,Carcharodon carcharias,280,F,Alive,"ID, A",NSW North Coast,Ballina,Main Beach,0.00871,3.04,239540.2896,239.5402896
+01/09/2023,15:07,Bronze Whaler,Carcharhinus brachyurus,267,M,Alive,ID,NSW North Coast,Ballina,Main Beach,0.00468,3.1,155750.9712,155.7509712
+13/09/2023,13:38,Bronze Whaler,Carcharhinus brachyurus,263,M,Alive,ID,NSW North Coast,Ballina,Main Beach,0.00468,3.1,148630.7514,148.6307514
+10/10/2023,11:56,Common Blacktip,Carcharhinus limbatus,162,F,Alive,ID,NSW North Coast,Ballina,Main Beach,0.022941,2.881574,53394.11142,53.39411142
+23/11/2023,07:47,Shortfin Mako Shark,Isurus oxyrinchus,279,F,Alive,ID,NSW North Coast,Ballina,Main Beach,0.093585714,2.891142857,1101033.881,1101.033881
+28/11/2023,10:44,White Shark,Carcharodon carcharias,223,F,Alive,"ID, A",NSW North Coast,Ballina,Main Beach,0.00871,3.04,119912.6329,119.9126329
+18/01/2024,14:25,Common Blacktip,Carcharhinus limbatus,160,F,Alive,ID,NSW North Coast,Ballina,Main Beach,0.022941,2.881574,51516.59847,51.51659847
+15/02/2024,07:12,Bull Shark,Carcharhinus leucas,182,F,Alive,"ID, A",NSW North Coast,Ballina,Main Beach,0.0175,2.84,45881.83625,45.88183625
+18/03/2024,12:17,Common Blacktip,Carcharhinus limbatus,174,F,Alive,ID,NSW North Coast,Ballina,Main Beach,0.022941,2.881574,65602.56262,65.60256262
+20/03/2024,13:21,Common Blacktip,Carcharhinus limbatus,157,F,Alive,ID,NSW North Coast,Ballina,Main Beach,0.022941,2.881574,48782.00989,48.78200989
+20/03/2024,14:05,Common Blacktip,Carcharhinus limbatus,178,F,Alive,ID,NSW North Coast,Ballina,Main Beach,0.022941,2.881574,70042.89898,70.04289898
+27/03/2024,08:22,Smooth Hammerhead,Sphyrna zygaena,209,F,Alive,ID,NSW North Coast,Ballina,Main Beach,0.00417,3.03,44686.80471,44.68680471
+31/05/2024,07:17,Common Blacktip,Carcharhinus limbatus,168,F,Alive,ID,NSW North Coast,Ballina,Main Beach,0.022941,2.881574,59293.31245,59.29331245
+14/07/2023,NA,Tiger Shark,Galeocerdo cuvier,205,M,Alive,"ID, A",NSW North Coast,Ballina,Sharpes Beach,0.00724,3.09,100706.6146,100.7066146
+27/07/2023,11:24,Smooth Hammerhead,Sphyrna zygaena,180,F,Alive,ID,NSW North Coast,Ballina,Sharpes Beach,0.00417,3.03,28419.19326,28.41919326
+28/07/2023,14:36,Common Blacktip,Carcharhinus limbatus,289,F,Alive,ID,NSW North Coast,Ballina,Sharpes Beach,0.022941,2.881574,283055.4917,283.0554917
+14/08/2023,12:37,Dusky Whaler,Carcharhinus obscurus,231,M,Alive,ID,NSW North Coast,Ballina,Sharpes Beach,0.00794,3.07,143254.8323,143.2548323
+16/08/2023,07:32,Smooth Hammerhead,Sphyrna zygaena,198,F,Alive,ID,NSW North Coast,Ballina,Sharpes Beach,0.00417,3.03,37934.25694,37.93425694
+28/08/2023,11:15,Smooth Hammerhead,Sphyrna zygaena,169,F,Alive,ID,NSW North Coast,Ballina,Sharpes Beach,0.00417,3.03,23476.46862,23.47646862
+09/09/2023,07:54,Tiger Shark,Galeocerdo cuvier,305,F,Alive,"ID, A",NSW North Coast,Ballina,Sharpes Beach,0.00724,3.09,343736.0403,343.7360403
+12/09/2023,12:04,White Shark,Carcharodon carcharias,171,F,Alive,"ID, A",NSW North Coast,Ballina,Sharpes Beach,0.00871,3.04,53496.61841,53.49661841
+12/09/2023,13:52,White Shark,Carcharodon carcharias,203,M,Alive,"ID, A",NSW North Coast,Ballina,Sharpes Beach,0.00871,3.04,90116.87232,90.11687232
+19/09/2023,08:24,Smooth Hammerhead,Sphyrna zygaena,180,M,Alive,ID,NSW North Coast,Ballina,Sharpes Beach,0.00417,3.03,28419.19326,28.41919326
+05/10/2023,13:01,White Shark,Carcharodon carcharias,282,F,Alive,"ID, A",NSW North Coast,Ballina,Sharpes Beach,0.00871,3.04,244779.726,244.779726
+09/10/2023,15:34,Smooth Hammerhead,Sphyrna zygaena,170,M,Dead,,NSW North Coast,Ballina,Sharpes Beach,0.00417,3.03,23899.91117,23.89991117
+06/11/2023,13:33,Greynurse Shark,Carcharias taurus,261,M,Alive,ID,NSW North Coast,Ballina,Sharpes Beach,0.0107,3.03,224804.2487,224.8042487
+16/11/2023,09:22,Tiger Shark,Galeocerdo cuvier,237,F,Alive,"ID, A",NSW North Coast,Ballina,Sharpes Beach,0.00724,3.09,157656.164,157.656164
+19/11/2023,07:24,Smooth Hammerhead,Sphyrna zygaena,164,M,Alive,ID,NSW North Coast,Ballina,Sharpes Beach,0.00417,3.03,21434.47815,21.43447815
+23/11/2023,06:27,White Shark,Carcharodon carcharias,248,M,Alive,"ID, A",NSW North Coast,Ballina,Sharpes Beach,0.00871,3.04,165634.6768,165.6346768
+25/12/2023,08:18,Smooth Hammerhead,Sphyrna zygaena,173,M,Alive,ID,NSW North Coast,Ballina,Sharpes Beach,0.00417,3.03,25200.88238,25.20088238
+29/12/2023,10:00,Common Blacktip,Carcharhinus limbatus,142,F,Alive,ID,NSW North Coast,Ballina,Sharpes Beach,0.022941,2.881574,36525.02136,36.52502136
+16/02/2024,11:23,Common Blacktip,Carcharhinus limbatus,139,M,Alive,ID,NSW North Coast,Ballina,Sharpes Beach,0.022941,2.881574,34345.36016,34.34536016
+15/04/2024,07:27,Sandbar Whaler,Carcharhinus plumbeus,148,M,Alive,ID,NSW North Coast,Ballina,Sharpes Beach,0.00639,3.012,21995.26227,21.99526227
+04/05/2024,14:33,Common Blacktip,Carcharhinus limbatus,189,F,Alive,ID,NSW North Coast,Ballina,Sharpes Beach,0.022941,2.881574,83254.07345,83.25407345
+31/05/2024,08:01,White Shark,Carcharodon carcharias,218,M,Alive,"ID, A",NSW North Coast,Ballina,Sharpes Beach,0.00871,3.04,111924.6888,111.9246888
+30/06/2024,08:37,White Shark,Carcharodon carcharias,309,M,Alive,"ID, A",NSW North Coast,Ballina,Sharpes Beach,0.00871,3.04,323215.3162,323.2153162
+03/07/2023,11:10,Tiger Shark,Galeocerdo cuvier,267,M,Alive,"ID, A",NSW North Coast,Ballina,Shelly Beach,0.00724,3.09,227854.8955,227.8548955
+26/07/2023,12:58,Tiger Shark,Galeocerdo cuvier,303,F,Alive,"ID, A",NSW North Coast,Ballina,Shelly Beach,0.00724,3.09,336818.7721,336.8187721
+17/09/2023,08:24,Bronze Whaler,Carcharhinus brachyurus,278,F,Alive,ID,NSW North Coast,Ballina,Shelly Beach,0.00468,3.1,176516.2613,176.5162613
+28/11/2023,08:36,White Shark,Carcharodon carcharias,225,F,Alive,"ID, A",NSW North Coast,Ballina,Shelly Beach,0.00871,3.04,123212.0008,123.2120008
+07/01/2024,10:06,Common Blacktip,Carcharhinus limbatus,168,F,Alive,ID,NSW North Coast,Ballina,Shelly Beach,0.022941,2.881574,59293.31245,59.29331245
+22/01/2024,07:45,Common Blacktip,Carcharhinus limbatus,212,M,Alive,ID,NSW North Coast,Ballina,Shelly Beach,0.022941,2.881574,115910.0991,115.9100991
+25/03/2024,14:57,Tiger Shark,Galeocerdo cuvier,204,F,Alive,"ID, A",NSW North Coast,Ballina,Shelly Beach,0.00724,3.09,99196.37085,99.19637085
+09/04/2024,10:39,Bull Shark,Carcharhinus leucas,198,M,Alive,"ID, A",NSW North Coast,Ballina,Shelly Beach,0.0175,2.84,58286.39418,58.28639418
+17/04/2024,14:25,Common Blacktip,Carcharhinus limbatus,139,F,Alive,ID,NSW North Coast,Ballina,Shelly Beach,0.022941,2.881574,34345.36016,34.34536016
+02/06/2024,07:07,Tiger Shark,Galeocerdo cuvier,338,F,Alive,"ID, A",NSW North Coast,Ballina,Shelly Beach,0.00724,3.09,472162.1504,472.1621504
+05/07/2023,07:33,White Shark,Carcharodon carcharias,329,M,Alive,"ID, A",NSW North Coast,Ballina,South Ballina Beach,0.00871,3.04,391105.2852,391.1052852
+12/07/2023,08:52,Common Blacktip,Carcharhinus limbatus,273,M,Alive,ID,NSW North Coast,Ballina,South Ballina Beach,0.022941,2.881574,240212.3259,240.2123259
+12/07/2023,14:29,White Shark,Carcharodon carcharias,233,F,Alive,"ID, A",NSW North Coast,Ballina,South Ballina Beach,0.00871,3.04,137018.7985,137.0187985
+04/08/2023,15:17,Smooth Hammerhead,Sphyrna zygaena,159,F,Alive,ID,NSW North Coast,Ballina,South Ballina Beach,0.00417,3.03,19515.03532,19.51503532
+30/08/2023,14:15,Bronze Whaler,Carcharhinus brachyurus,287,M,Alive,ID,NSW North Coast,Ballina,South Ballina Beach,0.00468,3.1,194840.7232,194.8407232
+25/09/2023,12:19,Smooth Hammerhead,Sphyrna zygaena,171,F,Alive,ID,NSW North Coast,Ballina,South Ballina Beach,0.00417,3.03,24328.44043,24.32844043
+15/10/2023,17:49,White Shark,Carcharodon carcharias,228,M,Alive,"ID, A",NSW North Coast,Ballina,South Ballina Beach,0.00871,3.04,128274.4289,128.2744289
+24/11/2023,12:22,Smooth Hammerhead,Sphyrna zygaena,172,M,Alive,ID,NSW North Coast,Ballina,South Ballina Beach,0.00417,3.03,24762.08723,24.76208723
+11/12/2023,09:54,Scalloped Hammerhead,Sphyrna lewini,157,F,Alive,ID,NSW North Coast,Ballina,South Ballina Beach,0.003605,3.132793,27302.62027,27.30262027
+18/01/2024,11:15,Bull Shark,Carcharhinus leucas,208,M,Alive,"ID, A",NSW North Coast,Ballina,South Ballina Beach,0.0175,2.84,67040.60424,67.04060424
+18/02/2024,09:00,Bull Shark,Carcharhinus leucas,166,M,Alive,"ID, A",NSW North Coast,Ballina,South Ballina Beach,0.0175,2.84,35330.11237,35.33011237
+06/06/2024,12:24,Smooth Hammerhead,Sphyrna zygaena,196,F,Alive,ID,NSW North Coast,Ballina,South Ballina Beach,0.00417,3.03,36785.10086,36.78510086
+27/07/2023,07:39,Bronze Whaler,Carcharhinus brachyurus,254,F,Alive,ID,Sydney Basin,Barrenjoey,Avalon Beach,0.00468,3.1,133422.8996,133.4228996
+29/07/2023,09:59,Shortfin Mako Shark,Isurus oxyrinchus,142,F,Alive,ID,Sydney Basin,Barrenjoey,Avalon Beach,0.093585714,2.891142857,156236.5473,156.2365473
+09/11/2023,12:33,Shortfin Mako Shark,Isurus oxyrinchus,150,M,Alive,ID,Sydney Basin,Barrenjoey,Avalon Beach,0.093585714,2.891142857,183062.8669,183.0628669
+09/03/2024,14:40,Tiger Shark,Galeocerdo cuvier,240,NA,Alive,,Sydney Basin,Barrenjoey,Avalon Beach,0.00724,3.09,163904.6607,163.9046607
+12/04/2024,09:28,Dusky Whaler,Carcharhinus obscurus,130,F,Alive,ID,Sydney Basin,Barrenjoey,Avalon Beach,0.00794,3.07,24525.99266,24.52599266
+22/04/2024,14:26,Dusky Whaler,Carcharhinus obscurus,140,M,Alive,ID,Sydney Basin,Barrenjoey,Avalon Beach,0.00794,3.07,30791.69327,30.79169327
+27/04/2024,10:24,Dusky Whaler,Carcharhinus obscurus,130,M,Alive,ID,Sydney Basin,Barrenjoey,Avalon Beach,0.00794,3.07,24525.99266,24.52599266
+12/05/2024,13:13,Dusky Whaler,Carcharhinus obscurus,138,F,Alive,ID,Sydney Basin,Barrenjoey,Avalon Beach,0.00794,3.07,29461.12303,29.46112303
+03/06/2024,09:53,Bronze Whaler,Carcharhinus brachyurus,213,F,Alive,ID,Sydney Basin,Barrenjoey,Avalon Beach,0.00468,3.1,77307.67705,77.30767705
+18/06/2024,11:19,Dusky Whaler,Carcharhinus obscurus,136,M,Alive,ID,Sydney Basin,Barrenjoey,Avalon Beach,0.00794,3.07,28169.87703,28.16987703
+28/06/2024,12:47,White Shark,Carcharodon carcharias,233,F,Alive,"ID, A",Sydney Basin,Barrenjoey,Avalon Beach,0.00871,3.04,137018.7985,137.0187985
+16/04/2024,09:19,Dusky Whaler,Carcharhinus obscurus,136,F,Alive,ID,Sydney Basin,Barrenjoey,Bilgola Beach,0.00794,3.07,28169.87703,28.16987703
+17/04/2024,10:52,Dusky Whaler,Carcharhinus obscurus,159,F,Alive,ID,Sydney Basin,Barrenjoey,Bilgola Beach,0.00794,3.07,45510.29746,45.51029746
+08/05/2024,10:01,Dusky Whaler,Carcharhinus obscurus,140,M,Alive,ID,Sydney Basin,Barrenjoey,Bilgola Beach,0.00794,3.07,30791.69327,30.79169327
+18/06/2024,11:41,Bronze Whaler,Carcharhinus brachyurus,253,F,Alive,ID,Sydney Basin,Barrenjoey,Bilgola Beach,0.00468,3.1,131801.2317,131.8012317
+29/06/2024,14:06,Tiger Shark,Galeocerdo cuvier,163,F,Alive,"ID, A",Sydney Basin,Barrenjoey,Bilgola Beach,0.00724,3.09,49590.4745,49.5904745
+15/10/2023,14:05,Bronze Whaler,Carcharhinus brachyurus,271,F,Alive,ID,Sydney Basin,Barrenjoey,Bungan Beach,0.00468,3.1,163098.7583,163.0987583
+26/12/2023,08:06,Dusky Whaler,Carcharhinus obscurus,124,F,Alive,ID,Sydney Basin,Barrenjoey,Bungan Beach,0.00794,3.07,21214.12267,21.21412267
+14/02/2024,10:33,Dusky Whaler,Carcharhinus obscurus,132,F,Alive,ID,Sydney Basin,Barrenjoey,Bungan Beach,0.00794,3.07,25702.9204,25.7029204
+11/03/2024,12:45,Dusky Whaler,Carcharhinus obscurus,116,F,Alive,ID,Sydney Basin,Barrenjoey,Bungan Beach,0.00794,3.07,17286.47846,17.28647846
+07/04/2024,09:37,Dusky Whaler,Carcharhinus obscurus,130,F,Alive,ID,Sydney Basin,Barrenjoey,Bungan Beach,0.00794,3.07,24525.99266,24.52599266
+14/04/2024,12:12,Dusky Whaler,Carcharhinus obscurus,128,F,Alive,ID,Sydney Basin,Barrenjoey,Bungan Beach,0.00794,3.07,23385.95498,23.38595498
+15/04/2024,12:43,Dusky Whaler,Carcharhinus obscurus,136,M,Alive,ID,Sydney Basin,Barrenjoey,Bungan Beach,0.00794,3.07,28169.87703,28.16987703
+31/07/2023,12:22,Bronze Whaler,Carcharhinus brachyurus,248,M,Alive,ID,Sydney Basin,Barrenjoey,Mona Vale Beach,0.00468,3.1,123892.7987,123.8927987
+13/08/2023,13:42,Bronze Whaler,Carcharhinus brachyurus,276,F,Alive,ID,Sydney Basin,Barrenjoey,Mona Vale Beach,0.00468,3.1,172609.2269,172.6092269
+18/01/2024,08:03,Dusky Whaler,Carcharhinus obscurus,152,F,Alive,ID,Sydney Basin,Barrenjoey,Mona Vale Beach,0.00794,3.07,39635.13278,39.63513278
+21/01/2024,14:16,Dusky Whaler,Carcharhinus obscurus,137,M,Alive,ID,Sydney Basin,Barrenjoey,Mona Vale Beach,0.00794,3.07,28810.6226,28.8106226
+05/02/2024,10:06,Dusky Whaler,Carcharhinus obscurus,124,M,Alive,ID,Sydney Basin,Barrenjoey,Mona Vale Beach,0.00794,3.07,21214.12267,21.21412267
+22/02/2024,14:54,Dusky Whaler,Carcharhinus obscurus,155,M,Alive,ID,Sydney Basin,Barrenjoey,Mona Vale Beach,0.00794,3.07,42086.11289,42.08611289
+19/03/2024,13:29,Dusky Whaler,Carcharhinus obscurus,177,F,Alive,ID,Sydney Basin,Barrenjoey,Mona Vale Beach,0.00794,3.07,63255.51999,63.25551999
+01/04/2024,11:39,Dusky Whaler,Carcharhinus obscurus,126,F,Alive,ID,Sydney Basin,Barrenjoey,Mona Vale Beach,0.00794,3.07,22282.20041,22.28220041
+16/04/2024,08:56,Dusky Whaler,Carcharhinus obscurus,129,F,Alive,ID,Sydney Basin,Barrenjoey,Mona Vale Beach,0.00794,3.07,23951.40051,23.95140051
+29/04/2024,10:26,Dusky Whaler,Carcharhinus obscurus,138,M,Alive,ID,Sydney Basin,Barrenjoey,Mona Vale Beach,0.00794,3.07,29461.12303,29.46112303
+09/05/2024,14:13,Dusky Whaler,Carcharhinus obscurus,139,F,Alive,ID,Sydney Basin,Barrenjoey,Mona Vale Beach,0.00794,3.07,30121.4545,30.1214545
+20/09/2023,07:48,Bronze Whaler,Carcharhinus brachyurus,268,F,Alive,ID,Sydney Basin,Barrenjoey,Newport Beach,0.00468,3.1,157566.437,157.566437
+17/01/2024,07:14,Dusky Whaler,Carcharhinus obscurus,122,M,Alive,ID,Sydney Basin,Barrenjoey,Newport Beach,0.00794,3.07,20181.11618,20.18111618
+24/04/2024,07:33,Dusky Whaler,Carcharhinus obscurus,133,F,Alive,ID,Sydney Basin,Barrenjoey,Newport Beach,0.00794,3.07,26305.40788,26.30540788
+29/04/2024,07:29,Dusky Whaler,Carcharhinus obscurus,144,M,Alive,ID,Sydney Basin,Barrenjoey,Newport Beach,0.00794,3.07,33573.24758,33.57324758
+26/07/2023,14:27,Tiger Shark,Galeocerdo cuvier,350,NA,Alive,,Sydney Basin,Barrenjoey,Palm Beach,0.00724,3.09,525906.8447,525.9068447
+10/09/2023,13:21,Thresher Shark,Alopias vulpinus,285,M,Alive,ID,Sydney Basin,Barrenjoey,Palm Beach,0.01275,2.6895,51028.80943,51.02880943
+02/10/2023,NA,Shortfin Mako Shark,Isurus oxyrinchus,196,M,Alive,ID,Sydney Basin,Barrenjoey,Palm Beach,0.093585714,2.891142857,396688.241,396.688241
+13/10/2023,08:16,White Shark,Carcharodon carcharias,226,F,Alive,"ID, A",Sydney Basin,Barrenjoey,Palm Beach,0.00871,3.04,124884.2903,124.8842903
+02/11/2023,14:21,Dusky Whaler,Carcharhinus obscurus,158,M,Alive,ID,Sydney Basin,Barrenjoey,Palm Beach,0.00794,3.07,44637.28377,44.63728377
+31/01/2024,09:57,Tiger Shark,Galeocerdo cuvier,135,F,Alive,"ID, A",Sydney Basin,Barrenjoey,Palm Beach,0.00724,3.09,27699.37123,27.69937123
+05/03/2024,17:15,Dusky Whaler,Carcharhinus obscurus,132,F,Alive,ID,Sydney Basin,Barrenjoey,Palm Beach,0.00794,3.07,25702.9204,25.7029204
+29/04/2024,NA,Dusky Whaler,Carcharhinus obscurus,109,F,Alive,ID,Sydney Basin,Barrenjoey,Palm Beach,0.00794,3.07,14279.72524,14.27972524
+08/06/2024,NA,Shortfin Mako Shark,Isurus oxyrinchus,131,M,Alive,ID,Sydney Basin,Barrenjoey,Palm Beach,0.093585714,2.891142857,123749.4685,123.7494685
+15/10/2023,15:30,Bronze Whaler,Carcharhinus brachyurus,234,F,Alive,ID,Sydney Basin,Barrenjoey,Warriewood Beach,0.00468,3.1,103470.1339,103.4701339
+26/12/2023,10:34,Dusky Whaler,Carcharhinus obscurus,123,F,Alive,ID,Sydney Basin,Barrenjoey,Warriewood Beach,0.00794,3.07,20693.27335,20.69327335
+29/12/2023,14:32,Dusky Whaler,Carcharhinus obscurus,116,M,Alive,ID,Sydney Basin,Barrenjoey,Warriewood Beach,0.00794,3.07,17286.47846,17.28647846
+06/01/2024,07:24,Dusky Whaler,Carcharhinus obscurus,120,M,Alive,ID,Sydney Basin,Barrenjoey,Warriewood Beach,0.00794,3.07,19182.57601,19.18257601
+09/01/2024,08:44,Dusky Whaler,Carcharhinus obscurus,121,M,Alive,ID,Sydney Basin,Barrenjoey,Warriewood Beach,0.00794,3.07,19677.57559,19.67757559
+19/01/2024,07:58,Dusky Whaler,Carcharhinus obscurus,113,F,Alive,ID,Sydney Basin,Barrenjoey,Warriewood Beach,0.00794,3.07,15950.39064,15.95039064
+12/02/2024,07:33,Dusky Whaler,Carcharhinus obscurus,119,F,Alive,ID,Sydney Basin,Barrenjoey,Warriewood Beach,0.00794,3.07,18696.04195,18.69604195
+21/02/2024,09:04,Dusky Whaler,Carcharhinus obscurus,164,F,Alive,ID,Sydney Basin,Barrenjoey,Warriewood Beach,0.00794,3.07,50048.50578,50.04850578
+08/04/2024,10:18,Dusky Whaler,Carcharhinus obscurus,129,F,Alive,ID,Sydney Basin,Barrenjoey,Warriewood Beach,0.00794,3.07,23951.40051,23.95140051
+01/07/2023,13:11,Bronze Whaler,Carcharhinus brachyurus,278,F,Alive,ID,Sydney Basin,Barrenjoey,Whale Beach,0.00468,3.1,176516.2613,176.5162613
+08/04/2024,09:17,Dusky Whaler,Carcharhinus obscurus,136,F,Alive,ID,Sydney Basin,Barrenjoey,Whale Beach,0.00794,3.07,28169.87703,28.16987703
+12/04/2024,11:29,Dusky Whaler,Carcharhinus obscurus,137,F,Alive,ID,Sydney Basin,Barrenjoey,Whale Beach,0.00794,3.07,28810.6226,28.8106226
+28/04/2024,09:57,Dusky Whaler,Carcharhinus obscurus,128,M,Alive,ID,Sydney Basin,Barrenjoey,Whale Beach,0.00794,3.07,23385.95498,23.38595498
+25/07/2023,08:01,Bronze Whaler,Carcharhinus brachyurus,218,M,Alive,ID,Sydney Basin,Central Coast North,Bateau Bay,0.00468,3.1,83073.20829,83.07320829
+02/08/2023,14:39,Dusky Whaler,Carcharhinus obscurus,156,M,Alive,ID,Sydney Basin,Central Coast North,Bateau Bay,0.00794,3.07,42925.2684,42.9252684
+15/08/2023,NA,Broadnose shark,Notorynchus cepedianus,209,M,Alive,ID,Sydney Basin,Central Coast North,Bateau Bay,0.00668,3,60983.91772,60.98391772
+28/08/2023,14:20,Bronze Whaler,Carcharhinus brachyurus,238,F,Alive,ID,Sydney Basin,Central Coast North,Bateau Bay,0.00468,3.1,109052.1971,109.0521971
+21/01/2024,07:47,Dusky Whaler,Carcharhinus obscurus,163,M,Alive,ID,Sydney Basin,Central Coast North,Bateau Bay,0.00794,3.07,49117.52196,49.11752196
+24/01/2024,06:15,Dusky Whaler,Carcharhinus obscurus,217,M,Alive,ID,Sydney Basin,Central Coast North,Bateau Bay,0.00794,3.07,118236.5871,118.2365871
+14/03/2024,13:36,Dusky Whaler,Carcharhinus obscurus,176,M,Alive,ID,Sydney Basin,Central Coast North,Bateau Bay,0.00794,3.07,62164.7788,62.1647788
+19/04/2024,06:28,Dusky Whaler,Carcharhinus obscurus,204,F,Alive,ID,Sydney Basin,Central Coast North,Bateau Bay,0.00794,3.07,97810.41834,97.81041834
+19/04/2024,07:41,Dusky Whaler,Carcharhinus obscurus,191,F,Alive,ID,Sydney Basin,Central Coast North,Bateau Bay,0.00794,3.07,79908.49291,79.90849291
+08/05/2024,06:41,Dusky Whaler,Carcharhinus obscurus,169,M,Alive,ID,Sydney Basin,Central Coast North,Bateau Bay,0.00794,3.07,54882.34829,54.88234829
+20/07/2023,12:16,Shortfin Mako Shark,Isurus oxyrinchus,165,M,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.093585714,2.891142857,241141.7596,241.1417596
+04/08/2023,09:32,Bronze Whaler,Carcharhinus brachyurus,288,F,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.00468,3.1,196952.984,196.952984
+13/08/2023,12:08,White Shark,Carcharodon carcharias,232,M,Alive,"ID, A",Sydney Basin,Central Coast North,Crackneck Point,0.00871,3.04,135238.8998,135.2388998
+20/08/2023,11:28,Shortfin Mako Shark,Isurus oxyrinchus,161,M,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.093585714,2.891142857,224625.1747,224.6251747
+12/09/2023,16:14,Shortfin Mako Shark,Isurus oxyrinchus,145,F,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.093585714,2.891142857,165971.386,165.971386
+24/10/2023,10:14,Dusky Whaler,Carcharhinus obscurus,139,M,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.00794,3.07,30121.4545,30.1214545
+27/11/2023,08:59,Dusky Whaler,Carcharhinus obscurus,190,M,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.00794,3.07,78631.04679,78.63104679
+09/12/2023,08:54,Dusky Whaler,Carcharhinus obscurus,165,M,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.00794,3.07,50991.3149,50.9913149
+26/12/2023,08:47,Dusky Whaler,Carcharhinus obscurus,195,F,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.00794,3.07,85158.25612,85.15825612
+03/01/2024,10:44,Smooth Hammerhead,Sphyrna zygaena,174,M,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.00417,3.03,25644.85674,25.64485674
+10/01/2024,NA,Dusky Whaler,Carcharhinus obscurus,168,F,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.00794,3.07,53891.46594,53.89146594
+11/01/2024,NA,Tiger Shark,Galeocerdo cuvier,144,F,Alive,"ID, A",Sydney Basin,Central Coast North,Crackneck Point,0.00724,3.09,33812.60778,33.81260778
+27/01/2024,16:15,Dusky Whaler,Carcharhinus obscurus,189,M,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.00794,3.07,77367.44257,77.36744257
+12/02/2024,17:59,Dusky Whaler,Carcharhinus obscurus,178,M,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.00794,3.07,64359.09218,64.35909218
+26/02/2024,06:47,Dusky Whaler,Carcharhinus obscurus,198,F,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.00794,3.07,89244.74162,89.24474162
+06/03/2024,10:42,Dusky Whaler,Carcharhinus obscurus,177,M,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.00794,3.07,63255.51999,63.25551999
+13/03/2024,12:19,Dusky Whaler,Carcharhinus obscurus,206,F,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.00794,3.07,100784.2966,100.7842966
+14/03/2024,09:36,Dusky Whaler,Carcharhinus obscurus,228,M,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.00794,3.07,137619.6607,137.6196607
+27/05/2024,13:06,Dusky Whaler,Carcharhinus obscurus,150,M,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.00794,3.07,38055.7835,38.0557835
+27/06/2024,09:19,Dusky Whaler,Carcharhinus obscurus,132,M,Alive,ID,Sydney Basin,Central Coast North,Crackneck Point,0.00794,3.07,25702.9204,25.7029204
+21/08/2023,09:51,Bronze Whaler,Carcharhinus brachyurus,260,F,Alive,ID,Sydney Basin,Central Coast North,Pebbly Beach,0.00468,3.1,143437.6733,143.4376733
+19/06/2024,08:44,Bronze Whaler,Carcharhinus brachyurus,279,F,Alive,ID,Sydney Basin,Central Coast North,Pebbly Beach,0.00468,3.1,178492.0524,178.4920524
+20/07/2023,09:39,Bronze Whaler,Carcharhinus brachyurus,266,F,Alive,ID,Sydney Basin,Central Coast North,Pelican Beach,0.00468,3.1,153949.7283,153.9497283
+16/08/2023,07:56,White Shark,Carcharodon carcharias,198,F,Alive,"ID, A",Sydney Basin,Central Coast North,Pelican Beach,0.00871,3.04,83537.28058,83.53728058
+06/10/2023,12:13,Dusky Whaler,Carcharhinus obscurus,104,F,Alive,ID,Sydney Basin,Central Coast North,Pelican Beach,0.00794,3.07,12362.68644,12.36268644
+22/11/2023,NA,Smooth Hammerhead,Sphyrna zygaena,295,F,Dead,,Sydney Basin,Central Coast North,Pelican Beach,0.00417,3.03,126968.7264,126.9687264
+28/12/2023,13:48,Dusky Whaler,Carcharhinus obscurus,130,M,Alive,ID,Sydney Basin,Central Coast North,Pelican Beach,0.00794,3.07,24525.99266,24.52599266
+12/01/2024,13:59,Bronze Whaler,Carcharhinus brachyurus,251,M,Alive,ID,Sydney Basin,Central Coast North,Pelican Beach,0.00468,3.1,128598.0519,128.5980519
+20/01/2024,07:09,Shortfin Mako Shark,Isurus oxyrinchus,135,M,Alive,ID,Sydney Basin,Central Coast North,Pelican Beach,0.093585714,2.891142857,134992.2442,134.9922442
+21/01/2024,11:40,Dusky Whaler,Carcharhinus obscurus,169,F,Alive,ID,Sydney Basin,Central Coast North,Pelican Beach,0.00794,3.07,54882.34829,54.88234829
+05/03/2024,09:24,Dusky Whaler,Carcharhinus obscurus,114,F,Alive,ID,Sydney Basin,Central Coast North,Pelican Beach,0.00794,3.07,16387.71476,16.38771476
+06/03/2024,13:39,Dusky Whaler,Carcharhinus obscurus,147,F,Alive,ID,Sydney Basin,Central Coast North,Pelican Beach,0.00794,3.07,35767.18163,35.76718163
+16/04/2024,09:58,Bronze Whaler,Carcharhinus brachyurus,227,F,Alive,ID,Sydney Basin,Central Coast North,Pelican Beach,0.00468,3.1,94172.91429,94.17291429
+17/04/2024,11:09,Dusky Whaler,Carcharhinus obscurus,186,M,Alive,ID,Sydney Basin,Central Coast North,Pelican Beach,0.00794,3.07,73658.90207,73.65890207
+18/04/2024,11:17,Smooth Hammerhead,Sphyrna zygaena,179,M,Alive,ID,Sydney Basin,Central Coast North,Pelican Beach,0.00417,3.03,27943.49595,27.94349595
+04/05/2024,13:19,Dusky Whaler,Carcharhinus obscurus,212,F,Alive,ID,Sydney Basin,Central Coast North,Pelican Beach,0.00794,3.07,110070.6663,110.0706663
+09/06/2024,08:08,Bronze Whaler,Carcharhinus brachyurus,253,M,Alive,ID,Sydney Basin,Central Coast North,Pelican Beach,0.00468,3.1,131801.2317,131.8012317
+04/08/2023,13:29,Bronze Whaler,Carcharhinus brachyurus,269,F,Alive,ID,Sydney Basin,Central Coast North,Point Beach,0.00468,3.1,159396.1844,159.3961844
+02/11/2023,07:47,Dusky Whaler,Carcharhinus obscurus,129,M,Alive,ID,Sydney Basin,Central Coast North,Point Beach,0.00794,3.07,23951.40051,23.95140051
+16/11/2023,09:05,Shortfin Mako Shark,Isurus oxyrinchus,110,F,Alive,ID,Sydney Basin,Central Coast North,Point Beach,0.093585714,2.891142857,74673.66029,74.67366029
+26/12/2023,17:09,Dusky Whaler,Carcharhinus obscurus,131,M,Alive,ID,Sydney Basin,Central Coast North,Point Beach,0.00794,3.07,25109.80732,25.10980732
+03/01/2024,NA,Dusky Whaler,Carcharhinus obscurus,181,M,Alive,ID,Sydney Basin,Central Coast North,Point Beach,0.00794,3.07,67747.57077,67.74757077
+10/01/2024,11:04,Tiger Shark,Galeocerdo cuvier,144,M,Alive,"ID, A",Sydney Basin,Central Coast North,Point Beach,0.00724,3.09,33812.60778,33.81260778
+12/02/2024,15:44,Dusky Whaler,Carcharhinus obscurus,161,F,Alive,ID,Sydney Basin,Central Coast North,Point Beach,0.00794,3.07,47290.7217,47.2907217
+17/02/2024,16:08,Dusky Whaler,Carcharhinus obscurus,148,F,Alive,ID,Sydney Basin,Central Coast North,Point Beach,0.00794,3.07,36519.42818,36.51942818
+13/03/2024,11:47,Dusky Whaler,Carcharhinus obscurus,171,F,Alive,ID,Sydney Basin,Central Coast North,Point Beach,0.00794,3.07,56900.82475,56.90082475
+18/03/2024,13:00,Dusky Whaler,Carcharhinus obscurus,153,M,Alive,ID,Sydney Basin,Central Coast North,Point Beach,0.00794,3.07,40441.12189,40.44112189
+27/05/2024,12:55,White Shark,Carcharodon carcharias,236,M,Alive,"ID, A",Sydney Basin,Central Coast North,Point Beach,0.00871,3.04,142452.6865,142.4526865
+07/06/2024,13:28,Bronze Whaler,Carcharhinus brachyurus,249,F,Alive,ID,Sydney Basin,Central Coast North,Point Beach,0.00468,3.1,125448.0252,125.4480252
+24/06/2024,08:54,Bronze Whaler,Carcharhinus brachyurus,270,F,Alive,ID,Sydney Basin,Central Coast North,Point Beach,0.00468,3.1,161240.2719,161.2402719
+15/07/2023,10:43,Bronze Whaler,Carcharhinus brachyurus,301,F,Alive,ID,Sydney Basin,Central Coast North,Shelly Beach,0.00468,3.1,225840.5846,225.8405846
+02/10/2023,09:12,White Shark,Carcharodon carcharias,198,F,Alive,"ID, A",Sydney Basin,Central Coast North,Shelly Beach,0.00871,3.04,83537.28058,83.53728058
+05/02/2024,09:06,Dusky Whaler,Carcharhinus obscurus,137,M,Alive,ID,Sydney Basin,Central Coast North,Shelly Beach,0.00794,3.07,28810.6226,28.8106226
+08/04/2024,07:57,Dusky Whaler,Carcharhinus obscurus,147,F,Alive,ID,Sydney Basin,Central Coast North,Shelly Beach,0.00794,3.07,35767.18163,35.76718163
+13/04/2024,NA,Dusky Whaler,Carcharhinus obscurus,163,M,Alive,ID,Sydney Basin,Central Coast North,Shelly Beach,0.00794,3.07,49117.52196,49.11752196
+21/07/2023,08:51,Dusky Whaler,Carcharhinus obscurus,189,M,Alive,ID,Sydney Basin,Central Coast North,Soldiers Point Beach,0.00794,3.07,77367.44257,77.36744257
+21/07/2023,12:24,Bronze Whaler,Carcharhinus brachyurus,249,F,Alive,ID,Sydney Basin,Central Coast North,Soldiers Point Beach,0.00468,3.1,125448.0252,125.4480252
+08/08/2023,09:01,Shortfin Mako Shark,Isurus oxyrinchus,130,M,Alive,ID,Sydney Basin,Central Coast North,Soldiers Point Beach,0.093585714,2.891142857,121038.0122,121.0380122
+29/08/2023,08:55,Shortfin Mako Shark,Isurus oxyrinchus,124,M,Alive,ID,Sydney Basin,Central Coast North,Soldiers Point Beach,0.093585714,2.891142857,105582.2011,105.5822011
+09/09/2023,10:38,Bronze Whaler,Carcharhinus brachyurus,293,F,Alive,ID,Sydney Basin,Central Coast North,Soldiers Point Beach,0.00468,3.1,207747.3421,207.7473421
+16/10/2023,08:46,Shortfin Mako Shark,Isurus oxyrinchus,154,M,Alive,ID,Sydney Basin,Central Coast North,Soldiers Point Beach,0.093585714,2.891142857,197535.1863,197.5351863
+08/11/2023,11:49,Dusky Whaler,Carcharhinus obscurus,164,M,Alive,ID,Sydney Basin,Central Coast North,Soldiers Point Beach,0.00794,3.07,50048.50578,50.04850578
+22/11/2023,07:38,Bronze Whaler,Carcharhinus brachyurus,255,M,Alive,ID,Sydney Basin,Central Coast North,Soldiers Point Beach,0.00468,3.1,135058.0305,135.0580305
+04/02/2024,08:10,Dusky Whaler,Carcharhinus obscurus,142,F,Alive,ID,Sydney Basin,Central Coast North,Soldiers Point Beach,0.00794,3.07,32162.19788,32.16219788
+20/02/2024,12:06,Dusky Whaler,Carcharhinus obscurus,129,F,Alive,ID,Sydney Basin,Central Coast North,Soldiers Point Beach,0.00794,3.07,23951.40051,23.95140051
+07/03/2024,12:08,Dusky Whaler,Carcharhinus obscurus,167,F,Alive,ID,Sydney Basin,Central Coast North,Soldiers Point Beach,0.00794,3.07,52912.71777,52.91271777
+22/03/2024,14:55,Dusky Whaler,Carcharhinus obscurus,145,M,Alive,ID,Sydney Basin,Central Coast North,Soldiers Point Beach,0.00794,3.07,34294.16786,34.29416786
+29/03/2024,14:33,Dusky Whaler,Carcharhinus obscurus,137,M,Alive,ID,Sydney Basin,Central Coast North,Soldiers Point Beach,0.00794,3.07,28810.6226,28.8106226
+03/04/2024,14:44,Dusky Whaler,Carcharhinus obscurus,141,F,Alive,ID,Sydney Basin,Central Coast North,Soldiers Point Beach,0.00794,3.07,31471.91563,31.47191563
+07/04/2024,15:07,Dusky Whaler,Carcharhinus obscurus,170,F,Alive,ID,Sydney Basin,Central Coast North,Soldiers Point Beach,0.00794,3.07,55885.44212,55.88544212
+28/04/2024,14:10,Dusky Whaler,Carcharhinus obscurus,155,M,Alive,ID,Sydney Basin,Central Coast North,Soldiers Point Beach,0.00794,3.07,42086.11289,42.08611289
+28/07/2023,10:51,Bronze Whaler,Carcharhinus brachyurus,269,F,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00468,3.1,159396.1844,159.3961844
+23/10/2023,NA,Bronze Whaler,Carcharhinus brachyurus,275,M,Dead,,Sydney Basin,Central Coast North,The Entrance Beach,0.00468,3.1,170677.8659,170.6778659
+06/11/2023,14:50,Smooth Hammerhead,Sphyrna zygaena,145,M,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00417,3.03,14759.82138,14.75982138
+08/11/2023,10:30,Bronze Whaler,Carcharhinus brachyurus,211,F,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00468,3.1,75079.51604,75.07951604
+28/11/2023,NA,Dusky Whaler,Carcharhinus obscurus,110,M,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,14685.74713,14.68574713
+29/12/2023,08:02,Smooth Hammerhead,Sphyrna zygaena,170,M,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00417,3.03,23899.91117,23.89991117
+03/01/2024,11:16,Shortfin Mako Shark,Isurus oxyrinchus,121,M,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.093585714,2.891142857,98364.77565,98.36477565
+13/01/2024,15:40,Dusky Whaler,Carcharhinus obscurus,199,M,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,90635.73209,90.63573209
+20/01/2024,12:28,Dusky Whaler,Carcharhinus obscurus,141,F,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,31471.91563,31.47191563
+21/01/2024,15:09,Shortfin Mako Shark,Isurus oxyrinchus,119,M,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.093585714,2.891142857,93737.27659,93.73727659
+12/02/2024,12:25,Dusky Whaler,Carcharhinus obscurus,108,M,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,13881.34128,13.88134128
+12/02/2024,16:47,Smooth Hammerhead,Sphyrna zygaena,167,M,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00417,3.03,22644.72039,22.64472039
+13/02/2024,09:12,Dusky Whaler,Carcharhinus obscurus,199,M,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,90635.73209,90.63573209
+15/02/2024,16:25,Dusky Whaler,Carcharhinus obscurus,187,F,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,74881.44811,74.88144811
+17/02/2024,10:41,Smooth Hammerhead,Sphyrna zygaena,174,M,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00417,3.03,25644.85674,25.64485674
+07/03/2024,14:37,Dusky Whaler,Carcharhinus obscurus,129,M,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,23951.40051,23.95140051
+12/03/2024,09:21,Dusky Whaler,Carcharhinus obscurus,152,F,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,39635.13278,39.63513278
+12/03/2024,14:58,Dusky Whaler,Carcharhinus obscurus,237,F,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,154987.9467,154.9879467
+14/03/2024,12:03,Dusky Whaler,Carcharhinus obscurus,191,F,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,79908.49291,79.90849291
+23/03/2024,09:45,Dusky Whaler,Carcharhinus obscurus,176,F,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,62164.7788,62.1647788
+23/03/2024,11:18,Dusky Whaler,Carcharhinus obscurus,151,F,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,38840.04556,38.84004556
+09/04/2024,09:47,Dusky Whaler,Carcharhinus obscurus,139,M,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,30121.4545,30.1214545
+13/04/2024,13:50,Dusky Whaler,Carcharhinus obscurus,183,F,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,70072.13465,70.07213465
+28/04/2024,09:28,Dusky Whaler,Carcharhinus obscurus,138,F,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,29461.12303,29.46112303
+29/04/2024,08:37,Smooth Hammerhead,Sphyrna zygaena,160,F,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00417,3.03,19889.30476,19.88930476
+04/05/2024,08:37,Dusky Whaler,Carcharhinus obscurus,163,F,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,49117.52196,49.11752196
+05/05/2024,08:48,Dusky Whaler,Carcharhinus obscurus,189,F,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,77367.44257,77.36744257
+24/05/2024,09:38,Dusky Whaler,Carcharhinus obscurus,141,F,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,31471.91563,31.47191563
+24/05/2024,12:34,Dusky Whaler,Carcharhinus obscurus,131,M,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,25109.80732,25.10980732
+30/05/2024,09:12,White Shark,Carcharodon carcharias,196,F,Alive,"ID, A",Sydney Basin,Central Coast North,The Entrance Beach,0.00871,3.04,80998.43204,80.99843204
+14/06/2024,09:29,Dusky Whaler,Carcharhinus obscurus,145,M,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00794,3.07,34294.16786,34.29416786
+27/06/2024,11:56,White Shark,Carcharodon carcharias,278,M,Alive,"ID, A",Sydney Basin,Central Coast North,The Entrance Beach,0.00871,3.04,234376.6457,234.3766457
+27/06/2024,12:19,Bronze Whaler,Carcharhinus brachyurus,289,F,Alive,ID,Sydney Basin,Central Coast North,The Entrance Beach,0.00468,3.1,199080.703,199.080703
+04/08/2023,NA,Bronze Whaler,Carcharhinus brachyurus,230,F,Dead,,Sydney Basin,Central Coast North,Toowoon Bay,0.00468,3.1,98084.89799,98.08489799
+05/02/2024,14:34,Dusky Whaler,Carcharhinus obscurus,185,F,Alive,ID,Sydney Basin,Central Coast North,Toowoon Bay,0.00794,3.07,72449.88636,72.44988636
+20/06/2024,08:39,Bronze Whaler,Carcharhinus brachyurus,246,F,Alive,ID,Sydney Basin,Central Coast North,Toowoon Bay,0.00468,3.1,120821.6285,120.8216285
+09/07/2023,09:31,Bronze Whaler,Carcharhinus brachyurus,213,F,Alive,ID,Sydney Basin,Central Coast South,Avoca Beach,0.00468,3.1,77307.67705,77.30767705
+17/09/2023,11:32,Bronze Whaler,Carcharhinus brachyurus,233,F,Alive,ID,Sydney Basin,Central Coast South,Avoca Beach,0.00468,3.1,102105.5169,102.1055169
+28/09/2023,13:35,Dusky Whaler,Carcharhinus obscurus,167,M,Alive,ID,Sydney Basin,Central Coast South,Avoca Beach,0.00794,3.07,52912.71777,52.91271777
+04/11/2023,16:49,Dusky Whaler,Carcharhinus obscurus,144,F,Alive,ID,Sydney Basin,Central Coast South,Avoca Beach,0.00794,3.07,33573.24758,33.57324758
+14/11/2023,12:21,Dusky Whaler,Carcharhinus obscurus,164,M,Alive,ID,Sydney Basin,Central Coast South,Avoca Beach,0.00794,3.07,50048.50578,50.04850578
+21/11/2023,06:17,Shortfin Mako Shark,Isurus oxyrinchus,157,F,Alive,ID,Sydney Basin,Central Coast South,Avoca Beach,0.093585714,2.891142857,208866.6756,208.8666756
+03/02/2024,10:29,Dusky Whaler,Carcharhinus obscurus,145,F,Alive,ID,Sydney Basin,Central Coast South,Avoca Beach,0.00794,3.07,34294.16786,34.29416786
+05/03/2024,09:25,Dusky Whaler,Carcharhinus obscurus,173,M,Alive,ID,Sydney Basin,Central Coast South,Avoca Beach,0.00794,3.07,58968.76591,58.96876591
+05/03/2024,16:56,Dusky Whaler,Carcharhinus obscurus,202,M,Alive,ID,Sydney Basin,Central Coast South,Avoca Beach,0.00794,3.07,94896.28405,94.89628405
+13/03/2024,09:07,Dusky Whaler,Carcharhinus obscurus,151,M,Alive,ID,Sydney Basin,Central Coast South,Avoca Beach,0.00794,3.07,38840.04556,38.84004556
+24/03/2024,16:49,Smooth Hammerhead,Sphyrna zygaena,138,M,Alive,ID,Sydney Basin,Central Coast South,Avoca Beach,0.00417,3.03,12704.85424,12.70485424
+25/03/2024,08:09,Dusky Whaler,Carcharhinus obscurus,151,F,Alive,ID,Sydney Basin,Central Coast South,Avoca Beach,0.00794,3.07,38840.04556,38.84004556
+05/05/2024,07:54,Dusky Whaler,Carcharhinus obscurus,145,F,Alive,ID,Sydney Basin,Central Coast South,Avoca Beach,0.00794,3.07,34294.16786,34.29416786
+07/09/2023,08:00,Bronze Whaler,Carcharhinus brachyurus,235,F,Alive,ID,Sydney Basin,Central Coast South,Copacabana Beach,0.00468,3.1,104847.0525,104.8470525
+03/02/2024,09:22,Dusky Whaler,Carcharhinus obscurus,167,M,Alive,ID,Sydney Basin,Central Coast South,Forresters Beach,0.00794,3.07,52912.71777,52.91271777
+17/02/2024,08:54,Dusky Whaler,Carcharhinus obscurus,124,M,Alive,ID,Sydney Basin,Central Coast South,Forresters Beach,0.00794,3.07,21214.12267,21.21412267
+07/04/2024,09:38,Dusky Whaler,Carcharhinus obscurus,124,F,Alive,ID,Sydney Basin,Central Coast South,Forresters Beach,0.00794,3.07,21214.12267,21.21412267
+07/04/2024,14:20,Dusky Whaler,Carcharhinus obscurus,186,F,Alive,ID,Sydney Basin,Central Coast South,Forresters Beach,0.00794,3.07,73658.90207,73.65890207
+25/08/2023,12:14,Tiger Shark,Galeocerdo cuvier,366,F,Alive,"ID, A",Sydney Basin,Central Coast South,Macmasters Beach,0.00724,3.09,603802.7964,603.8027964
+24/11/2023,14:48,Dusky Whaler,Carcharhinus obscurus,130,F,Alive,ID,Sydney Basin,Central Coast South,Macmasters Beach,0.00794,3.07,24525.99266,24.52599266
+25/12/2023,07:06,Dusky Whaler,Carcharhinus obscurus,142,F,Alive,ID,Sydney Basin,Central Coast South,Macmasters Beach,0.00794,3.07,32162.19788,32.16219788
+11/01/2024,14:03,Dusky Whaler,Carcharhinus obscurus,185,M,Alive,ID,Sydney Basin,Central Coast South,Macmasters Beach,0.00794,3.07,72449.88636,72.44988636
+24/01/2024,10:41,Dusky Whaler,Carcharhinus obscurus,157,F,Alive,ID,Sydney Basin,Central Coast South,Macmasters Beach,0.00794,3.07,43775.63306,43.77563306
+03/02/2024,09:04,Dusky Whaler,Carcharhinus obscurus,115,F,Alive,ID,Sydney Basin,Central Coast South,Macmasters Beach,0.00794,3.07,16833.05228,16.83305228
+12/02/2024,12:50,Dusky Whaler,Carcharhinus obscurus,130,F,Alive,ID,Sydney Basin,Central Coast South,Macmasters Beach,0.00794,3.07,24525.99266,24.52599266
+15/02/2024,09:29,Dusky Whaler,Carcharhinus obscurus,137,F,Alive,ID,Sydney Basin,Central Coast South,Macmasters Beach,0.00794,3.07,28810.6226,28.8106226
+05/03/2024,12:18,Dusky Whaler,Carcharhinus obscurus,156,M,Alive,ID,Sydney Basin,Central Coast South,Macmasters Beach,0.00794,3.07,42925.2684,42.9252684
+05/03/2024,15:35,Dusky Whaler,Carcharhinus obscurus,159,F,Alive,ID,Sydney Basin,Central Coast South,Macmasters Beach,0.00794,3.07,45510.29746,45.51029746
+07/04/2024,07:36,Dusky Whaler,Carcharhinus obscurus,165,F,Alive,ID,Sydney Basin,Central Coast South,Macmasters Beach,0.00794,3.07,50991.3149,50.9913149
+07/04/2024,15:03,Dusky Whaler,Carcharhinus obscurus,139,F,Alive,ID,Sydney Basin,Central Coast South,Macmasters Beach,0.00794,3.07,30121.4545,30.1214545
+18/04/2024,08:48,Dusky Whaler,Carcharhinus obscurus,169,F,Alive,ID,Sydney Basin,Central Coast South,Macmasters Beach,0.00794,3.07,54882.34829,54.88234829
+19/04/2024,09:23,Dusky Whaler,Carcharhinus obscurus,130,M,Alive,ID,Sydney Basin,Central Coast South,Macmasters Beach,0.00794,3.07,24525.99266,24.52599266
+29/04/2024,09:43,Dusky Whaler,Carcharhinus obscurus,151,M,Alive,ID,Sydney Basin,Central Coast South,Macmasters Beach,0.00794,3.07,38840.04556,38.84004556
+09/05/2024,12:21,Dusky Whaler,Carcharhinus obscurus,174,M,Alive,ID,Sydney Basin,Central Coast South,Macmasters Beach,0.00794,3.07,60021.47926,60.02147926
+22/10/2023,10:05,White Shark,Carcharodon carcharias,200,F,Alive,"ID, A",Sydney Basin,Central Coast South,North Avoca Beach,0.00871,3.04,86128.9875,86.1289875
+02/11/2023,15:46,Dusky Whaler,Carcharhinus obscurus,122,M,Alive,ID,Sydney Basin,Central Coast South,North Avoca Beach,0.00794,3.07,20181.11618,20.18111618
+07/12/2023,12:43,Dusky Whaler,Carcharhinus obscurus,129,M,Alive,ID,Sydney Basin,Central Coast South,North Avoca Beach,0.00794,3.07,23951.40051,23.95140051
+12/05/2024,NA,Tailor,Pomatomus saltatrix,49,NA,Alive,,Sydney Basin,Central Coast South,North Avoca Beach,0.015748,2.872803,1129.342769,1.129342769
+28/05/2024,NA,Dusky Whaler,Carcharhinus obscurus,138,M,Alive,ID,Sydney Basin,Central Coast South,North Avoca Beach,0.00794,3.07,29461.12303,29.46112303
+29/05/2024,14:30,Dusky Whaler,Carcharhinus obscurus,132,M,Alive,ID,Sydney Basin,Central Coast South,North Avoca Beach,0.00794,3.07,25702.9204,25.7029204
+27/07/2023,08:59,Bronze Whaler,Carcharhinus brachyurus,259,F,Alive,ID,Sydney Basin,Central Coast South,Terrigal Beach,0.00468,3.1,141734.3518,141.7343518
+25/08/2023,NA,Dusky Whaler,Carcharhinus obscurus,123,F,Alive,ID,Sydney Basin,Central Coast South,Terrigal Beach,0.00794,3.07,20693.27335,20.69327335
+06/09/2023,14:16,Bronze Whaler,Carcharhinus brachyurus,262,F,Alive,ID,Sydney Basin,Central Coast South,Terrigal Beach,0.00468,3.1,146885.8146,146.8858146
+09/10/2023,13:02,Shortfin Mako Shark,Isurus oxyrinchus,199,M,Alive,ID,Sydney Basin,Central Coast South,Terrigal Beach,0.093585714,2.891142857,414497.7819,414.4977819
+08/11/2023,10:41,Dusky Whaler,Carcharhinus obscurus,124,M,Alive,ID,Sydney Basin,Central Coast South,Terrigal Beach,0.00794,3.07,21214.12267,21.21412267
+18/01/2024,NA,Tiger Shark,Galeocerdo cuvier,149,F,Alive,"ID, A",Sydney Basin,Central Coast South,Terrigal Beach,0.00724,3.09,37573.71489,37.57371489
+03/02/2024,11:11,Dusky Whaler,Carcharhinus obscurus,165,M,Alive,ID,Sydney Basin,Central Coast South,Terrigal Beach,0.00794,3.07,50991.3149,50.9913149
+13/04/2024,13:38,Dusky Whaler,Carcharhinus obscurus,179,F,Alive,ID,Sydney Basin,Central Coast South,Terrigal Beach,0.00794,3.07,65475.57296,65.47557296
+19/04/2024,12:43,Dusky Whaler,Carcharhinus obscurus,133,M,Alive,ID,Sydney Basin,Central Coast South,Terrigal Beach,0.00794,3.07,26305.40788,26.30540788
+30/05/2024,12:53,Dusky Whaler,Carcharhinus obscurus,151,F,Alive,ID,Sydney Basin,Central Coast South,Terrigal Beach,0.00794,3.07,38840.04556,38.84004556
+20/06/2024,09:18,Dusky Whaler,Carcharhinus obscurus,130,M,Alive,ID,Sydney Basin,Central Coast South,Terrigal Beach,0.00794,3.07,24525.99266,24.52599266
+11/07/2023,11:13,Dusky Whaler,Carcharhinus obscurus,138,F,Alive,ID,Sydney Basin,Central Coast South,Wamberal Beach,0.00794,3.07,29461.12303,29.46112303
+30/08/2023,08:13,Shortfin Mako Shark,Isurus oxyrinchus,148,M,Alive,ID,Sydney Basin,Central Coast South,Wamberal Beach,0.093585714,2.891142857,176094.672,176.094672
+01/11/2023,10:16,Dusky Whaler,Carcharhinus obscurus,106,M,Alive,ID,Sydney Basin,Central Coast South,Wamberal Beach,0.00794,3.07,13107.1874,13.1071874
+03/11/2023,13:27,Dusky Whaler,Carcharhinus obscurus,155,M,Alive,ID,Sydney Basin,Central Coast South,Wamberal Beach,0.00794,3.07,42086.11289,42.08611289
+07/11/2023,07:24,Dusky Whaler,Carcharhinus obscurus,148,F,Alive,ID,Sydney Basin,Central Coast South,Wamberal Beach,0.00794,3.07,36519.42818,36.51942818
+10/11/2023,13:21,Shortfin Mako Shark,Isurus oxyrinchus,148,M,Alive,ID,Sydney Basin,Central Coast South,Wamberal Beach,0.093585714,2.891142857,176094.672,176.094672
+20/11/2023,13:41,Dusky Whaler,Carcharhinus obscurus,132,F,Alive,ID,Sydney Basin,Central Coast South,Wamberal Beach,0.00794,3.07,25702.9204,25.7029204
+30/11/2023,10:39,Dusky Whaler,Carcharhinus obscurus,119,F,Alive,ID,Sydney Basin,Central Coast South,Wamberal Beach,0.00794,3.07,18696.04195,18.69604195
+24/12/2023,07:50,Dusky Whaler,Carcharhinus obscurus,127,F,Alive,ID,Sydney Basin,Central Coast South,Wamberal Beach,0.00794,3.07,22829.58021,22.82958021
+03/01/2024,10:36,Dusky Whaler,Carcharhinus obscurus,123,F,Alive,ID,Sydney Basin,Central Coast South,Wamberal Beach,0.00794,3.07,20693.27335,20.69327335
+09/05/2024,12:39,Dusky Whaler,Carcharhinus obscurus,151,F,Alive,ID,Sydney Basin,Central Coast South,Wamberal Beach,0.00794,3.07,38840.04556,38.84004556
+27/05/2024,08:29,Dusky Whaler,Carcharhinus obscurus,130,M,Alive,ID,Sydney Basin,Central Coast South,Wamberal Beach,0.00794,3.07,24525.99266,24.52599266
+18/06/2024,NA,Dusky Whaler,Carcharhinus obscurus,NA,NA,Dead,,Sydney Basin,Central Coast South,Wamberal Beach,0.00794,3.07,NA,NA
+18/06/2024,NA,Bull Shark,Carcharhinus leucas,300,NA,Alive,,Sydney Basin,Central Coast South,Wamberal Beach,0.0175,2.84,189697.8515,189.6978515
+03/07/2023,13:55,Scalloped Hammerhead,Sphyrna lewini,256,F,Alive,ID,NSW North Coast,Coffs Harbour,Boambee Beach,0.003605,3.132793,126305.5908,126.3055908
+11/07/2023,08:26,Dusky Whaler,Carcharhinus obscurus,131,F,Alive,ID,NSW North Coast,Coffs Harbour,Boambee Beach,0.00794,3.07,25109.80732,25.10980732
+11/07/2023,15:37,White Shark,Carcharodon carcharias,222,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Boambee Beach,0.00871,3.04,118285.4148,118.2854148
+14/07/2023,12:56,White Shark,Carcharodon carcharias,192,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Boambee Beach,0.00871,3.04,76077.08966,76.07708966
+25/07/2023,10:36,Shortfin Mako Shark,Isurus oxyrinchus,152,F,Alive,ID,NSW North Coast,Coffs Harbour,Boambee Beach,0.093585714,2.891142857,190209.0008,190.2090008
+29/07/2023,12:10,White Shark,Carcharodon carcharias,199,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Boambee Beach,0.00871,3.04,84826.49203,84.82649203
+06/08/2023,13:30,Bronze Whaler,Carcharhinus brachyurus,275,F,Alive,ID,NSW North Coast,Coffs Harbour,Boambee Beach,0.00468,3.1,170677.8659,170.6778659
+12/08/2023,12:49,Bronze Whaler,Carcharhinus brachyurus,272,F,Alive,ID,NSW North Coast,Coffs Harbour,Boambee Beach,0.00468,3.1,164971.7022,164.9717022
+30/08/2023,14:38,Bronze Whaler,Carcharhinus brachyurus,269,M,Alive,ID,NSW North Coast,Coffs Harbour,Boambee Beach,0.00468,3.1,159396.1844,159.3961844
+05/09/2023,10:34,White Shark,Carcharodon carcharias,284,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Boambee Beach,0.00871,3.04,250095.518,250.095518
+21/09/2023,08:39,White Shark,Carcharodon carcharias,331,M,Alive,"ID, A",NSW North Coast,Coffs Harbour,Boambee Beach,0.00871,3.04,398377.9166,398.3779166
+23/09/2023,13:21,White Shark,Carcharodon carcharias,259,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Boambee Beach,0.00871,3.04,188994.6184,188.9946184
+24/09/2023,11:10,White Shark,Carcharodon carcharias,317,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Boambee Beach,0.00871,3.04,349331.9532,349.3319532
+26/09/2023,12:38,Bronze Whaler,Carcharhinus brachyurus,273,M,Alive,ID,NSW North Coast,Coffs Harbour,Boambee Beach,0.00468,3.1,166859.1623,166.8591623
+19/10/2023,13:13,White Shark,Carcharodon carcharias,348,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Boambee Beach,0.00871,3.04,463894.3217,463.8943217
+29/10/2023,14:30,Bronze Whaler,Carcharhinus brachyurus,282,M,Alive,ID,NSW North Coast,Coffs Harbour,Boambee Beach,0.00468,3.1,184509.2268,184.5092268
+03/12/2023,17:50,Dusky Whaler,Carcharhinus obscurus,160,F,Alive,ID,NSW North Coast,Coffs Harbour,Boambee Beach,0.00794,3.07,46394.7511,46.3947511
+02/01/2024,09:03,Tiger Shark,Galeocerdo cuvier,290,M,Alive,"ID, A",NSW North Coast,Coffs Harbour,Boambee Beach,0.00724,3.09,294136.1338,294.1361338
+10/02/2024,10:23,Tiger Shark,Galeocerdo cuvier,83,NA,Dead,,NSW North Coast,Coffs Harbour,Boambee Beach,0.00724,3.09,6161.548504,6.161548504
+27/02/2024,08:26,Tiger Shark,Galeocerdo cuvier,207,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Boambee Beach,0.00724,3.09,103773.6121,103.7736121
+27/04/2024,09:35,Scalloped Hammerhead,Sphyrna lewini,157,F,Alive,ID,NSW North Coast,Coffs Harbour,Boambee Beach,0.003605,3.132793,27302.62027,27.30262027
+23/05/2024,11:09,Greynurse Shark,Carcharias taurus,263,F,Alive,ID,NSW North Coast,Coffs Harbour,Boambee Beach,0.0107,3.03,230064.5452,230.0645452
+08/06/2024,11:01,Tiger Shark,Galeocerdo cuvier,282,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Boambee Beach,0.00724,3.09,269779.1058,269.7791058
+10/06/2024,12:18,Tiger Shark,Galeocerdo cuvier,269,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Boambee Beach,0.00724,3.09,233170.2355,233.1702355
+07/11/2023,13:44,White Shark,Carcharodon carcharias,221,M,Alive,"ID, A",NSW North Coast,Coffs Harbour,Boambee Beach,0.00871,3.04,116673.0811,116.6730811
+19/08/2023,08:34,Bronze Whaler,Carcharhinus brachyurus,295,F,Alive,ID,NSW North Coast,Coffs Harbour,Boambee Headland,0.00468,3.1,212174.9471,212.1749471
+29/08/2023,08:40,Bronze Whaler,Carcharhinus brachyurus,288,F,Alive,ID,NSW North Coast,Coffs Harbour,Boambee Headland,0.00468,3.1,196952.984,196.952984
+19/10/2023,08:25,Smooth Hammerhead,Sphyrna zygaena,161,F,Dead,,NSW North Coast,Coffs Harbour,Boambee Headland,0.00417,3.03,20268.35299,20.26835299
+24/06/2024,09:52,Tiger Shark,Galeocerdo cuvier,199,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Boambee Headland,0.00724,3.09,91874.41194,91.87441194
+06/07/2023,08:57,Dusky Whaler,Carcharhinus obscurus,135,F,Alive,ID,NSW North Coast,Coffs Harbour,Diggers Beach,0.00794,3.07,27538.81013,27.53881013
+09/07/2023,10:25,Common Blacktip,Carcharhinus limbatus,270,F,Alive,ID,NSW North Coast,Coffs Harbour,Diggers Beach,0.022941,2.881574,232684.231,232.684231
+14/07/2023,09:06,Bronze Whaler,Carcharhinus brachyurus,247,NA,Alive,ID,NSW North Coast,Coffs Harbour,Diggers Beach,0.00468,3.1,122350.6858,122.3506858
+04/08/2023,13:51,Dusky Whaler,Carcharhinus obscurus,144,F,Alive,ID,NSW North Coast,Coffs Harbour,Diggers Beach,0.00794,3.07,33573.24758,33.57324758
+23/08/2023,16:03,White Shark,Carcharodon carcharias,173,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Diggers Beach,0.00871,3.04,55421.50416,55.42150416
+24/08/2023,10:14,Dusky Whaler,Carcharhinus obscurus,144,F,Alive,ID,NSW North Coast,Coffs Harbour,Diggers Beach,0.00794,3.07,33573.24758,33.57324758
+01/09/2023,08:34,Bronze Whaler,Carcharhinus brachyurus,277,F,Alive,ID,NSW North Coast,Coffs Harbour,Diggers Beach,0.00468,3.1,174555.3391,174.5553391
+11/09/2023,16:09,Bronze Whaler,Carcharhinus brachyurus,261,M,Alive,ID,NSW North Coast,Coffs Harbour,Diggers Beach,0.00468,3.1,145154.8081,145.1548081
+15/09/2023,07:47,White Shark,Carcharodon carcharias,203,M,Alive,"ID, A",NSW North Coast,Coffs Harbour,Diggers Beach,0.00871,3.04,90116.87232,90.11687232
+23/09/2023,15:12,White Shark,Carcharodon carcharias,289,M,Alive,"ID, A",NSW North Coast,Coffs Harbour,Diggers Beach,0.00871,3.04,263722.7508,263.7227508
+25/09/2023,09:49,Bronze Whaler,Carcharhinus brachyurus,269,M,Alive,ID,NSW North Coast,Coffs Harbour,Diggers Beach,0.00468,3.1,159396.1844,159.3961844
+28/09/2023,15:40,Scalloped Hammerhead,Sphyrna lewini,195,M,Alive,ID,NSW North Coast,Coffs Harbour,Diggers Beach,0.003605,3.132793,53840.57251,53.84057251
+02/10/2023,10:36,White Shark,Carcharodon carcharias,321,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Diggers Beach,0.00871,3.04,362905.4192,362.9054192
+05/10/2023,13:52,Bronze Whaler,Carcharhinus brachyurus,273,M,Alive,ID,NSW North Coast,Coffs Harbour,Diggers Beach,0.00468,3.1,166859.1623,166.8591623
+15/10/2023,07:24,Greynurse Shark,Carcharias taurus,276,F,Alive,ID,NSW North Coast,Coffs Harbour,Diggers Beach,0.0107,3.03,266279.8455,266.2798455
+23/10/2023,12:41,Bronze Whaler,Carcharhinus brachyurus,273,F,Alive,ID,NSW North Coast,Coffs Harbour,Diggers Beach,0.00468,3.1,166859.1623,166.8591623
+22/02/2024,18:22,Common Blacktip,Carcharhinus limbatus,146,F,Alive,ID,NSW North Coast,Coffs Harbour,Diggers Beach,0.022941,2.881574,39569.01696,39.56901696
+30/06/2024,08:46,Tiger Shark,Galeocerdo cuvier,172,M,Alive,"ID, A",NSW North Coast,Coffs Harbour,Diggers Beach,0.00724,3.09,58549.26765,58.54926765
+15/07/2023,08:15,Smooth Hammerhead,Sphyrna zygaena,130,NA,Alive,,NSW North Coast,Coffs Harbour,Park Beach,0.00417,3.03,10601.91731,10.60191731
+19/08/2023,14:23,White Shark,Carcharodon carcharias,239,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Park Beach,0.00871,3.04,148029.3301,148.0293301
+29/08/2023,14:50,White Shark,Carcharodon carcharias,195,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Park Beach,0.00871,3.04,79748.65617,79.74865617
+16/09/2023,11:46,White Shark,Carcharodon carcharias,207,M,Alive,"ID, A",NSW North Coast,Coffs Harbour,Park Beach,0.00871,3.04,95624.24191,95.62424191
+17/09/2023,09:24,Greynurse Shark,Carcharias taurus,295,F,Alive,ID,NSW North Coast,Coffs Harbour,Park Beach,0.0107,3.03,325795.0534,325.7950534
+26/09/2023,14:56,White Shark,Carcharodon carcharias,248,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Park Beach,0.00871,3.04,165634.6768,165.6346768
+27/09/2023,10:58,White Shark,Carcharodon carcharias,239,M,Alive,"ID, A",NSW North Coast,Coffs Harbour,Park Beach,0.00871,3.04,148029.3301,148.0293301
+28/09/2023,09:12,Smooth Hammerhead,Sphyrna zygaena,159,F,Alive,ID,NSW North Coast,Coffs Harbour,Park Beach,0.00417,3.03,19515.03532,19.51503532
+23/10/2023,10:36,Smooth Hammerhead,Sphyrna zygaena,187,F,Alive,ID,NSW North Coast,Coffs Harbour,Park Beach,0.00417,3.03,31901.86867,31.90186867
+07/11/2023,12:40,Dusky Whaler,Carcharhinus obscurus,114,M,Alive,ID,NSW North Coast,Coffs Harbour,Park Beach,0.00794,3.07,16387.71476,16.38771476
+18/11/2023,14:34,Dusky Whaler,Carcharhinus obscurus,114,M,Alive,ID,NSW North Coast,Coffs Harbour,Park Beach,0.00794,3.07,16387.71476,16.38771476
+10/05/2024,15:31,White Shark,Carcharodon carcharias,263,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Park Beach,0.00871,3.04,198008.4073,198.0084073
+13/05/2024,12:33,White Shark,Carcharodon carcharias,272,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Park Beach,0.00871,3.04,219334.8405,219.3348405
+16/05/2024,13:55,Greynurse Shark,Carcharias taurus,271,F,Alive,ID,NSW North Coast,Coffs Harbour,Park Beach,0.0107,3.03,251930.4886,251.9304886
+02/06/2024,12:52,White Shark,Carcharodon carcharias,229,M,Alive,"ID, A",NSW North Coast,Coffs Harbour,Park Beach,0.00871,3.04,129992.4177,129.9924177
+03/06/2024,12:11,Greynurse Shark,Carcharias taurus,270,F,Alive,ID,NSW North Coast,Coffs Harbour,Park Beach,0.0107,3.03,249124.2379,249.1242379
+26/06/2024,13:20,Greynurse Shark,Carcharias taurus,264,F,Alive,ID,NSW North Coast,Coffs Harbour,Park Beach,0.0107,3.03,232725.3414,232.7253414
+04/08/2023,10:01,Dusky Whaler,Carcharhinus obscurus,159,F,Alive,ID,NSW North Coast,Coffs Harbour,Sawtell Beach,0.00794,3.07,45510.29746,45.51029746
+12/09/2023,15:11,White Shark,Carcharodon carcharias,258,M,Alive,"ID, A",NSW North Coast,Coffs Harbour,Sawtell Beach,0.00871,3.04,186785.0277,186.7850277
+13/09/2023,15:00,Dusky Whaler,Carcharhinus obscurus,146,F,Alive,ID,NSW North Coast,Coffs Harbour,Sawtell Beach,0.00794,3.07,35025.45371,35.02545371
+24/09/2023,09:43,Dusky Whaler,Carcharhinus obscurus,202,M,Alive,ID,NSW North Coast,Coffs Harbour,Sawtell Beach,0.00794,3.07,94896.28405,94.89628405
+19/10/2023,11:04,Dusky Whaler,Carcharhinus obscurus,139,F,Alive,ID,NSW North Coast,Coffs Harbour,Sawtell Beach,0.00794,3.07,30121.4545,30.1214545
+02/11/2023,12:44,Dusky Whaler,Carcharhinus obscurus,127,M,Alive,ID,NSW North Coast,Coffs Harbour,Sawtell Beach,0.00794,3.07,22829.58021,22.82958021
+14/02/2024,13:20,Common Blacktip,Carcharhinus limbatus,167,F,Alive,ID,NSW North Coast,Coffs Harbour,Sawtell Beach,0.022941,2.881574,58281.98537,58.28198537
+13/05/2024,11:00,Tiger Shark,Galeocerdo cuvier,222,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Sawtell Beach,0.00724,3.09,128815.8363,128.8158363
+08/06/2024,14:33,Tiger Shark,Galeocerdo cuvier,170,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Sawtell Beach,0.00724,3.09,56471.03314,56.47103314
+11/06/2024,11:55,Tiger Shark,Galeocerdo cuvier,309,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Sawtell Beach,0.00724,3.09,357857.6187,357.8576187
+29/06/2024,09:51,Tiger Shark,Galeocerdo cuvier,231,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Sawtell Beach,0.00724,3.09,145646.3429,145.6463429
+07/07/2023,08:19,Dusky Whaler,Carcharhinus obscurus,174,F,Alive,ID,NSW North Coast,Coffs Harbour,Sawtell Headland,0.00794,3.07,60021.47926,60.02147926
+20/08/2023,09:12,Bronze Whaler,Carcharhinus brachyurus,290,F,Alive,ID,NSW North Coast,Coffs Harbour,Sawtell Headland,0.00468,3.1,201223.9392,201.2239392
+06/09/2023,13:30,Tiger Shark,Galeocerdo cuvier,231,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Sawtell Headland,0.00724,3.09,145646.3429,145.6463429
+09/09/2023,11:08,White Shark,Carcharodon carcharias,257,M,Alive,"ID, A",NSW North Coast,Coffs Harbour,Sawtell Headland,0.00871,3.04,184592.8393,184.5928393
+10/09/2023,08:29,White Shark,Carcharodon carcharias,222,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Sawtell Headland,0.00871,3.04,118285.4148,118.2854148
+10/09/2023,13:04,White Shark,Carcharodon carcharias,209,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Sawtell Headland,0.00871,3.04,98460.6877,98.4606877
+16/10/2023,11:53,Smooth Hammerhead,Sphyrna zygaena,194,F,Alive,ID,NSW North Coast,Coffs Harbour,Sawtell Headland,0.00417,3.03,35659.50388,35.65950388
+20/12/2023,07:02,White Shark,Carcharodon carcharias,205,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Sawtell Headland,0.00871,3.04,92843.15551,92.84315551
+20/12/2023,09:18,White Shark,Carcharodon carcharias,266,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Sawtell Headland,0.00871,3.04,204954.9116,204.9549116
+21/01/2024,10:37,White Shark,Carcharodon carcharias,319,M,Alive,"ID, A",NSW North Coast,Coffs Harbour,Sawtell Headland,0.00871,3.04,356075.2858,356.0752858
+16/05/2024,11:18,Tiger Shark,Galeocerdo cuvier,294,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Sawtell Headland,0.00724,3.09,306854.02,306.85402
+25/05/2024,12:47,Tiger Shark,Galeocerdo cuvier,151,M,Alive,"ID, A",NSW North Coast,Coffs Harbour,Sawtell Headland,0.00724,3.09,39154.1079,39.1541079
+29/06/2024,10:18,Tiger Shark,Galeocerdo cuvier,384,F,Alive,"ID, A",NSW North Coast,Coffs Harbour,Sawtell Headland,0.00724,3.09,700361.1538,700.3611538
+17/09/2023,10:45,Bronze Whaler,Carcharhinus brachyurus,228,F,Alive,ID,South East Corner,Eurobodalla,Barlings Beach,0.00468,3.1,95464.93447,95.46493447
+01/02/2024,10:02,Tiger Shark,Galeocerdo cuvier,329,F,Alive,"ID, A",South East Corner,Eurobodalla,Barlings Beach,0.00724,3.09,434384.0707,434.3840707
+15/05/2024,14:07,Bronze Whaler,Carcharhinus brachyurus,266,M,Alive,ID,South East Corner,Eurobodalla,Barlings Beach,0.00468,3.1,153949.7283,153.9497283
+20/05/2024,11:37,White Shark,Carcharodon carcharias,225,F,Alive,"ID, A",South East Corner,Eurobodalla,Barlings Beach,0.00871,3.04,123212.0008,123.2120008
+22/05/2024,10:55,White Shark,Carcharodon carcharias,183,F,Alive,"ID, A",South East Corner,Eurobodalla,Barlings Beach,0.00871,3.04,65746.02004,65.74602004
+24/08/2023,13:01,White Shark,Carcharodon carcharias,192,F,Alive,"ID, A",South East Corner,Eurobodalla,Broulee Beach,0.00871,3.04,76077.08966,76.07708966
+11/09/2023,14:26,Bronze Whaler,Carcharhinus brachyurus,209,M,Alive,ID,South East Corner,Eurobodalla,Broulee Beach,0.00468,3.1,72895.26851,72.89526851
+14/09/2023,15:19,White Shark,Carcharodon carcharias,222,M,Alive,"ID, A",South East Corner,Eurobodalla,Broulee Beach,0.00871,3.04,118285.4148,118.2854148
+07/10/2023,13:26,Bronze Whaler,Carcharhinus brachyurus,205,F,Alive,ID,South East Corner,Eurobodalla,Broulee Beach,0.00468,3.1,68656.68375,68.65668375
+09/11/2023,14:24,Bronze Whaler,Carcharhinus brachyurus,284,F,Alive,ID,South East Corner,Eurobodalla,Broulee Beach,0.00468,3.1,188596.0998,188.5960998
+15/12/2023,NA,Bronze Whaler,Carcharhinus brachyurus,188,F,Alive,ID,South East Corner,Eurobodalla,Broulee Beach,0.00468,3.1,52497.08461,52.49708461
+21/01/2024,09:03,Dusky Whaler,Carcharhinus obscurus,252,M,Alive,ID,South East Corner,Eurobodalla,Broulee Beach,0.00794,3.07,187119.9801,187.1199801
+31/01/2024,09:27,Shortfin Mako Shark,Isurus oxyrinchus,111,M,Alive,ID,South East Corner,Eurobodalla,Broulee Beach,0.093585714,2.891142857,76653.23358,76.65323358
+15/02/2024,13:23,Smooth Hammerhead,Sphyrna zygaena,170,F,Alive,ID,South East Corner,Eurobodalla,Broulee Beach,0.00417,3.03,23899.91117,23.89991117
+13/03/2024,08:02,Smooth Hammerhead,Sphyrna zygaena,149,F,Alive,ID,South East Corner,Eurobodalla,Broulee Beach,0.00417,3.03,16028.4102,16.0284102
+01/05/2024,09:09,White Shark,Carcharodon carcharias,182,F,Alive,"ID, A",South East Corner,Eurobodalla,Broulee Beach,0.00871,3.04,64659.92172,64.65992172
+19/06/2024,09:15,Smooth Hammerhead,Sphyrna zygaena,286,F,Alive,ID,South East Corner,Eurobodalla,Broulee Beach,0.00417,3.03,115591.2966,115.5912966
+07/10/2023,09:50,Bronze Whaler,Carcharhinus brachyurus,225,F,Alive,ID,South East Corner,Eurobodalla,Burrewarra Point,0.00468,3.1,91624.50876,91.62450876
+01/11/2023,NA,Broadnose shark,Notorynchus cepedianus,114,M,Alive,ID,South East Corner,Eurobodalla,Burrewarra Point,0.00668,3,9896.71392,9.89671392
+14/11/2023,16:29,Bronze Whaler,Carcharhinus brachyurus,205,F,Alive,ID,South East Corner,Eurobodalla,Burrewarra Point,0.00468,3.1,68656.68375,68.65668375
+14/04/2024,NA,Dusky Whaler,Carcharhinus obscurus,97,F,Alive,ID,South East Corner,Eurobodalla,Burrewarra Point,0.00794,3.07,9981.819829,9.981819829
+05/06/2024,10:29,Bronze Whaler,Carcharhinus brachyurus,271,F,Alive,ID,South East Corner,Eurobodalla,Burrewarra Point,0.00468,3.1,163098.7583,163.0987583
+28/06/2024,11:19,Smooth Hammerhead,Sphyrna zygaena,145,M,Alive,ID,South East Corner,Eurobodalla,Burrewarra Point,0.00417,3.03,14759.82138,14.75982138
+17/08/2023,08:01,Bronze Whaler,Carcharhinus brachyurus,268,F,Alive,ID,South East Corner,Eurobodalla,Garden Bay Beach,0.00468,3.1,157566.437,157.566437
+24/09/2023,11:55,Bronze Whaler,Carcharhinus brachyurus,263,F,Alive,ID,South East Corner,Eurobodalla,Garden Bay Beach,0.00468,3.1,148630.7514,148.6307514
+10/10/2023,11:17,Bronze Whaler,Carcharhinus brachyurus,249,M,Alive,ID,South East Corner,Eurobodalla,Garden Bay Beach,0.00468,3.1,125448.0252,125.4480252
+01/11/2023,11:10,Bronze Whaler,Carcharhinus brachyurus,258,F,Alive,ID,South East Corner,Eurobodalla,Garden Bay Beach,0.00468,3.1,140044.7851,140.0447851
+03/05/2024,12:45,Bronze Whaler,Carcharhinus brachyurus,259,M,Alive,ID,South East Corner,Eurobodalla,Garden Bay Beach,0.00468,3.1,141734.3518,141.7343518
+26/06/2024,08:09,School Shark,Galeorhinus galeus,171,F,Alive,ID,South East Corner,Eurobodalla,Garden Bay Beach,0.01005,2.951686667,39198.63171,39.19863171
+23/09/2023,12:12,Bronze Whaler,Carcharhinus brachyurus,271,M,Alive,ID,South East Corner,Eurobodalla,Lilli Pilli Beach,0.00468,3.1,163098.7583,163.0987583
+24/09/2023,08:28,Bronze Whaler,Carcharhinus brachyurus,248,F,Alive,ID,South East Corner,Eurobodalla,Lilli Pilli Beach,0.00468,3.1,123892.7987,123.8927987
+22/08/2023,07:37,Bronze Whaler,Carcharhinus brachyurus,267,M,Alive,ID,South East Corner,Eurobodalla,Malua Bay Beach,0.00468,3.1,155750.9712,155.7509712
+27/09/2023,06:52,Bronze Whaler,Carcharhinus brachyurus,252,F,Alive,ID,South East Corner,Eurobodalla,Malua Bay Beach,0.00468,3.1,130192.9685,130.1929685
+17/04/2024,09:03,Bronze Whaler,Carcharhinus brachyurus,272,F,Alive,ID,South East Corner,Eurobodalla,Malua Bay Beach,0.00468,3.1,164971.7022,164.9717022
+16/09/2023,NA,Shortfin Mako Shark,Isurus oxyrinchus,189,M,Alive,ID,South East Corner,Eurobodalla,McKenzies Beach,0.093585714,2.891142857,357096.706,357.096706
+29/10/2023,12:53,White Shark,Carcharodon carcharias,201,M,Alive,"ID, A",South East Corner,Eurobodalla,McKenzies Beach,0.00871,3.04,87444.8364,87.4448364
+14/11/2023,10:33,White Shark,Carcharodon carcharias,326,M,Alive,"ID, A",South East Corner,Eurobodalla,McKenzies Beach,0.00871,3.04,380364.2219,380.3642219
+16/01/2024,07:43,Smooth Hammerhead,Sphyrna zygaena,189,M,Alive,ID,South East Corner,Eurobodalla,McKenzies Beach,0.00417,3.03,32946.95795,32.94695795
+23/01/2024,12:49,Dusky Whaler,Carcharhinus obscurus,198,M,Alive,ID,South East Corner,Eurobodalla,McKenzies Beach,0.00794,3.07,89244.74162,89.24474162
+02/02/2024,10:16,Bronze Whaler,Carcharhinus brachyurus,269,M,Alive,ID,South East Corner,Eurobodalla,McKenzies Beach,0.00468,3.1,159396.1844,159.3961844
+09/06/2024,13:15,Bronze Whaler,Carcharhinus brachyurus,221,F,Alive,ID,South East Corner,Eurobodalla,McKenzies Beach,0.00468,3.1,86668.624,86.668624
+02/08/2023,09:35,White Shark,Carcharodon carcharias,284,M,Alive,"ID, A",South East Corner,Eurobodalla,Rosedale Beach,0.00871,3.04,250095.518,250.095518
+13/09/2023,10:08,Bronze Whaler,Carcharhinus brachyurus,280,NA,Alive,,South East Corner,Eurobodalla,Rosedale Beach,0.00468,3.1,180482.771,180.482771
+16/09/2023,12:10,White Shark,Carcharodon carcharias,224,F,Alive,"ID, A",South East Corner,Eurobodalla,Rosedale Beach,0.00871,3.04,121554.8049,121.5548049
+23/09/2023,08:27,Bronze Whaler,Carcharhinus brachyurus,282,F,Alive,ID,South East Corner,Eurobodalla,Rosedale Beach,0.00468,3.1,184509.2268,184.5092268
+27/09/2023,15:30,Bronze Whaler,Carcharhinus brachyurus,261,M,Alive,ID,South East Corner,Eurobodalla,Rosedale Beach,0.00468,3.1,145154.8081,145.1548081
+07/12/2023,12:01,Smooth Hammerhead,Sphyrna zygaena,271,F,Alive,ID,South East Corner,Eurobodalla,Rosedale Beach,0.00417,3.03,98182.25586,98.18225586
+26/12/2023,08:23,Dusky Whaler,Carcharhinus obscurus,205,M,Alive,ID,South East Corner,Eurobodalla,Rosedale Beach,0.00794,3.07,99289.85029,99.28985029
+02/02/2024,08:25,Dusky Whaler,Carcharhinus obscurus,195,F,Alive,ID,South East Corner,Eurobodalla,Rosedale Beach,0.00794,3.07,85158.25612,85.15825612
+03/02/2024,10:13,Dusky Whaler,Carcharhinus obscurus,205,F,Alive,ID,South East Corner,Eurobodalla,Rosedale Beach,0.00794,3.07,99289.85029,99.28985029
+03/03/2024,10:05,Bronze Whaler,Carcharhinus brachyurus,252,M,Alive,ID,South East Corner,Eurobodalla,Rosedale Beach,0.00468,3.1,130192.9685,130.1929685
+21/03/2024,11:06,Bronze Whaler,Carcharhinus brachyurus,270,M,Alive,ID,South East Corner,Eurobodalla,Rosedale Beach,0.00468,3.1,161240.2719,161.2402719
+08/04/2024,11:30,Dusky Whaler,Carcharhinus obscurus,152,M,Alive,ID,South East Corner,Eurobodalla,Rosedale Beach,0.00794,3.07,39635.13278,39.63513278
+16/05/2024,15:19,Bronze Whaler,Carcharhinus brachyurus,238,F,Alive,ID,South East Corner,Eurobodalla,Rosedale Beach,0.00468,3.1,109052.1971,109.0521971
+14/06/2024,11:43,Shortfin Mako Shark,Isurus oxyrinchus,252,F,Alive,ID,South East Corner,Eurobodalla,Rosedale Beach,0.093585714,2.891142857,820354.5289,820.3545289
+29/06/2024,11:42,Shortfin Mako Shark,Isurus oxyrinchus,269,F,Alive,ID,South East Corner,Eurobodalla,Rosedale Beach,0.093585714,2.891142857,990764.6628,990.7646628
+05/07/2023,10:17,Bronze Whaler,Carcharhinus brachyurus,226,F,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00468,3.1,92892.7916,92.8927916
+26/07/2023,07:58,Bronze Whaler,Carcharhinus brachyurus,274,F,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00468,3.1,168761.1973,168.7611973
+16/09/2023,10:51,Bronze Whaler,Carcharhinus brachyurus,278,F,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00468,3.1,176516.2613,176.5162613
+16/09/2023,16:54,Bronze Whaler,Carcharhinus brachyurus,202,F,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00468,3.1,65589.61752,65.58961752
+22/09/2023,12:25,Bronze Whaler,Carcharhinus brachyurus,267,F,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00468,3.1,155750.9712,155.7509712
+14/10/2023,08:55,Bronze Whaler,Carcharhinus brachyurus,244,F,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00468,3.1,117802.4478,117.8024478
+23/10/2023,17:12,Bronze Whaler,Carcharhinus brachyurus,257,F,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00468,3.1,138368.915,138.368915
+02/11/2023,15:38,Bronze Whaler,Carcharhinus brachyurus,224,F,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00468,3.1,90368.00816,90.36800816
+05/11/2023,11:29,Bronze Whaler,Carcharhinus brachyurus,228,F,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00468,3.1,95464.93447,95.46493447
+10/11/2023,09:13,Bronze Whaler,Carcharhinus brachyurus,253,M,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00468,3.1,131801.2317,131.8012317
+05/01/2024,12:03,Dusky Whaler,Carcharhinus obscurus,252,M,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00794,3.07,187119.9801,187.1199801
+14/01/2024,09:22,Smooth Hammerhead,Sphyrna zygaena,172,F,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00417,3.03,24762.08723,24.76208723
+23/02/2024,08:32,Smooth Hammerhead,Sphyrna zygaena,142,M,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00417,3.03,13853.82631,13.85382631
+26/03/2024,08:48,Tiger Shark,Galeocerdo cuvier,188,M,Alive,"ID, A",South East Corner,Eurobodalla,Surf Beach,0.00724,3.09,77070.17062,77.07017062
+08/04/2024,09:47,Dusky Whaler,Carcharhinus obscurus,226,M,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00794,3.07,133947.1294,133.9471294
+08/04/2024,11:25,Dusky Whaler,Carcharhinus obscurus,337,F,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00794,3.07,456713.9722,456.7139722
+14/05/2024,13:52,Bronze Whaler,Carcharhinus brachyurus,271,F,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00468,3.1,163098.7583,163.0987583
+15/05/2024,12:30,Dusky Whaler,Carcharhinus obscurus,211,F,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00794,3.07,108484.4871,108.4844871
+16/05/2024,10:19,Bronze Whaler,Carcharhinus brachyurus,271,F,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00468,3.1,163098.7583,163.0987583
+04/06/2024,NA,Dusky Whaler,Carcharhinus obscurus,100,M,Alive,ID,South East Corner,Eurobodalla,Surf Beach,0.00794,3.07,10960.25106,10.96025106
+13/07/2023,13:18,White Shark,Carcharodon carcharias,211,M,Alive,"ID, A",NSW North Coast,Evans Head,Airforce Beach,0.00871,3.04,101353.0492,101.3530492
+15/07/2023,15:29,White Shark,Carcharodon carcharias,265,M,Alive,"ID, A",NSW North Coast,Evans Head,Airforce Beach,0.00871,3.04,202621.54,202.62154
+30/07/2023,15:11,White Shark,Carcharodon carcharias,245,M,Alive,"ID, A",NSW North Coast,Evans Head,Airforce Beach,0.00871,3.04,159618.4361,159.6184361
+11/08/2023,14:22,Dusky Whaler,Carcharhinus obscurus,355,F,Alive,"ID, A",NSW North Coast,Evans Head,Airforce Beach,0.00794,3.07,535823.2402,535.8232402
+12/08/2023,09:08,White Shark,Carcharodon carcharias,249,F,Alive,"ID, A",NSW North Coast,Evans Head,Airforce Beach,0.00871,3.04,167673.3997,167.6733997
+21/08/2023,15:00,White Shark,Carcharodon carcharias,233,F,Alive,"ID, A",NSW North Coast,Evans Head,Airforce Beach,0.00871,3.04,137018.7985,137.0187985
+31/08/2023,15:27,White Shark,Carcharodon carcharias,225,F,Alive,"ID, A",NSW North Coast,Evans Head,Airforce Beach,0.00871,3.04,123212.0008,123.2120008
+21/10/2023,07:26,White Shark,Carcharodon carcharias,221,M,Alive,"ID, A",NSW North Coast,Evans Head,Airforce Beach,0.00871,3.04,116673.0811,116.6730811
+02/11/2023,08:22,White Shark,Carcharodon carcharias,278,F,Alive,"ID, A",NSW North Coast,Evans Head,Airforce Beach,0.00871,3.04,234376.6457,234.3766457
+14/11/2023,10:19,White Shark,Carcharodon carcharias,269,F,Alive,"ID, A",NSW North Coast,Evans Head,Airforce Beach,0.00871,3.04,212063.0905,212.0630905
+08/12/2023,NA,Common Blacktip,Carcharhinus limbatus,137,M,Dead,,NSW North Coast,Evans Head,Airforce Beach,0.022941,2.881574,32940.54471,32.94054471
+22/01/2024,10:51,Common Blacktip,Carcharhinus limbatus,129,NA,Dead,,NSW North Coast,Evans Head,Airforce Beach,0.022941,2.881574,27697.00305,27.69700305
+15/02/2024,08:33,Common Blacktip,Carcharhinus limbatus,161,F,Alive,ID,NSW North Coast,Evans Head,Airforce Beach,0.022941,2.881574,52449.86948,52.44986948
+22/02/2024,12:50,Common Blacktip,Carcharhinus limbatus,140,M,Alive,ID,NSW North Coast,Evans Head,Airforce Beach,0.022941,2.881574,35062.19439,35.06219439
+03/04/2024,14:10,Common Blacktip,Carcharhinus limbatus,149,M,Alive,ID,NSW North Coast,Evans Head,Airforce Beach,0.022941,2.881574,41957.4797,41.9574797
+14/04/2024,13:16,Great Hammerhead,Sphyrna mokarran,313,M,Alive,ID,NSW North Coast,Evans Head,Airforce Beach,0.00224,3.1,122021.2486,122.0212486
+30/04/2024,14:15,Sandbar Whaler,Carcharhinus plumbeus,230,F,Alive,,NSW North Coast,Evans Head,Airforce Beach,0.00639,3.012,82989.87305,82.98987305
+29/05/2024,12:24,Tiger Shark,Galeocerdo cuvier,233,F,Alive,"ID, A",NSW North Coast,Evans Head,Airforce Beach,0.00724,3.09,149578.2205,149.5782205
+14/07/2023,11:29,White Shark,Carcharodon carcharias,199,M,Alive,"ID, A",NSW North Coast,Evans Head,Joggly Point,0.00871,3.04,84826.49203,84.82649203
+15/07/2023,08:01,White Shark,Carcharodon carcharias,204,F,Alive,"ID, A",NSW North Coast,Evans Head,Joggly Point,0.00871,3.04,91473.19826,91.47319826
+21/08/2023,15:27,White Shark,Carcharodon carcharias,251,M,Alive,"ID, A",NSW North Coast,Evans Head,Joggly Point,0.00871,3.04,171801.2298,171.8012298
+05/09/2023,08:38,White Shark,Carcharodon carcharias,244,M,Alive,"ID, A",NSW North Coast,Evans Head,Joggly Point,0.00871,3.04,157646.0985,157.6460985
+05/09/2023,14:54,White Shark,Carcharodon carcharias,167,F,Alive,"ID, A",NSW North Coast,Evans Head,Joggly Point,0.00871,3.04,49782.44554,49.78244554
+09/09/2023,11:22,White Shark,Carcharodon carcharias,216,F,Alive,"ID, A",NSW North Coast,Evans Head,Joggly Point,0.00871,3.04,108832.2376,108.8322376
+09/09/2023,NA,White Shark,Carcharodon carcharias,234,M,Alive,"ID, A",NSW North Coast,Evans Head,Joggly Point,0.00871,3.04,138814.3493,138.8143493
+13/09/2023,12:40,White Shark,Carcharodon carcharias,186,F,Alive,"ID, A",NSW North Coast,Evans Head,Joggly Point,0.00871,3.04,69077.64218,69.07764218
+05/10/2023,07:26,White Shark,Carcharodon carcharias,236,M,Alive,"ID, A",NSW North Coast,Evans Head,Joggly Point,0.00871,3.04,142452.6865,142.4526865
+03/11/2023,12:43,Scalloped Hammerhead,Sphyrna lewini,162,M,Alive,ID,NSW North Coast,Evans Head,Joggly Point,0.003605,3.132793,30120.24083,30.12024083
+09/11/2023,NA,Loggerhead Turtle,,80,NA,Alive,,NSW North Coast,Evans Head,Joggly Point,NA,NA,NA,NA
+28/11/2023,15:54,White Shark,Carcharodon carcharias,222,F,Alive,"ID, A",NSW North Coast,Evans Head,Joggly Point,0.00871,3.04,118285.4148,118.2854148
+30/11/2023,09:09,White Shark,Carcharodon carcharias,242,F,Alive,"ID, A",NSW North Coast,Evans Head,Joggly Point,0.00871,3.04,153750.6171,153.7506171
+19/01/2024,15:31,Common Blacktip,Carcharhinus limbatus,136,F,Alive,ID,NSW North Coast,Evans Head,Joggly Point,0.022941,2.881574,32252.44113,32.25244113
+18/02/2024,18:08,Common Blacktip,Carcharhinus limbatus,141,M,Alive,ID,NSW North Coast,Evans Head,Joggly Point,0.022941,2.881574,35788.72777,35.78872777
+28/02/2024,NA,Loggerhead Turtle,,85,NA,Alive,,NSW North Coast,Evans Head,Joggly Point,NA,NA,NA,NA
+22/03/2024,10:10,Tiger Shark,Galeocerdo cuvier,209,F,Alive,"ID, A",NSW North Coast,Evans Head,Joggly Point,0.00724,3.09,106903.1717,106.9031717
+25/06/2024,11:02,Tiger Shark,Galeocerdo cuvier,303,F,Alive,"ID, A",NSW North Coast,Evans Head,Joggly Point,0.00724,3.09,336818.7721,336.8187721
+27/07/2023,07:20,White Shark,Carcharodon carcharias,229,F,Alive,"ID, A",NSW North Coast,Evans Head,Main Beachline,0.00871,3.04,129992.4177,129.9924177
+01/08/2023,14:03,White Shark,Carcharodon carcharias,186,M,Alive,"ID, A",NSW North Coast,Evans Head,Main Beachline,0.00871,3.04,69077.64218,69.07764218
+03/08/2023,15:12,White Shark,Carcharodon carcharias,281,M,Alive,"ID, A",NSW North Coast,Evans Head,Main Beachline,0.00871,3.04,242150.4985,242.1504985
+06/08/2023,09:40,White Shark,Carcharodon carcharias,210,F,Alive,"ID, A",NSW North Coast,Evans Head,Main Beachline,0.00871,3.04,99899.84422,99.89984422
+11/08/2023,14:54,White Shark,Carcharodon carcharias,181,F,Alive,"ID, A",NSW North Coast,Evans Head,Main Beachline,0.00871,3.04,63585.92927,63.58592927
+20/08/2023,09:42,Greynurse Shark,Carcharias taurus,290,F,Alive,ID,NSW North Coast,Evans Head,Main Beachline,0.0107,3.03,309349.7086,309.3497086
+24/09/2023,08:49,Tiger Shark,Galeocerdo cuvier,194,F,Alive,"ID, A",NSW North Coast,Evans Head,Main Beachline,0.00724,3.09,84927.02514,84.92702514
+25/09/2023,14:28,White Shark,Carcharodon carcharias,223,F,Alive,"ID, A",NSW North Coast,Evans Head,Main Beachline,0.00871,3.04,119912.6329,119.9126329
+31/10/2023,07:35,Sandbar Whaler,Carcharhinus plumbeus,144,M,Alive,ID,NSW North Coast,Evans Head,Main Beachline,0.00639,3.012,20252.96837,20.25296837
+02/11/2023,07:40,Sandbar Whaler,Carcharhinus plumbeus,132,M,Alive,ID,NSW North Coast,Evans Head,Main Beachline,0.00639,3.012,15583.66268,15.58366268
+02/11/2023,NA,Sandbar Whaler,Carcharhinus plumbeus,107,M,Alive,ID,NSW North Coast,Evans Head,Main Beachline,0.00639,3.012,8279.513079,8.279513079
+03/11/2023,NA,Sandbar Whaler,Carcharhinus plumbeus,122,M,Alive,,NSW North Coast,Evans Head,Main Beachline,0.00639,3.012,12291.83348,12.29183348
+11/11/2023,NA,White Shark,Carcharodon carcharias,265,M,Alive,"ID, A",NSW North Coast,Evans Head,Main Beachline,0.00871,3.04,202621.54,202.62154
+25/12/2023,07:58,White Shark,Carcharodon carcharias,271,M,Alive,"ID, A",NSW North Coast,Evans Head,Main Beachline,0.00871,3.04,216892.6321,216.8926321
+22/02/2024,NA,Common Blacktip,Carcharhinus limbatus,130,M,Dead,,NSW North Coast,Evans Head,Main Beachline,0.022941,2.881574,28320.21502,28.32021502
+24/02/2024,NA,Common Blacktip,Carcharhinus limbatus,NA,NA,Dead,,NSW North Coast,Evans Head,Main Beachline,0.022941,2.881574,NA,NA
+27/02/2024,15:31,Tiger Shark,Galeocerdo cuvier,289,F,Alive,"ID, A",NSW North Coast,Evans Head,Main Beachline,0.00724,3.09,291013.3419,291.0133419
+29/04/2024,15:47,White Shark,Carcharodon carcharias,335,F,Alive,"ID, A",NSW North Coast,Evans Head,Main Beachline,0.00871,3.04,413194.3443,413.1943443
+13/06/2024,09:22,White Shark,Carcharodon carcharias,260,F,Alive,"ID, A",NSW North Coast,Evans Head,Main Beachline,0.00871,3.04,191221.6815,191.2216815
+19/06/2024,NA,White Shark,Carcharodon carcharias,291,M,Alive,"ID, A",NSW North Coast,Evans Head,Main Beachline,0.00871,3.04,269310.2242,269.3102242
+24/09/2023,08:09,Greynurse Shark,Carcharias taurus,249,F,Alive,ID,NSW North Coast,Evans Head,Main Beach,0.0107,3.03,194925.1151,194.9251151
+11/10/2023,10:42,White Shark,Carcharodon carcharias,219,M,Alive,"ID, A",NSW North Coast,Evans Head,Main Beach,0.00871,3.04,113492.7878,113.4927878
+04/12/2023,10:15,Greynurse Shark,Carcharias taurus,246,F,Alive,ID,NSW North Coast,Evans Head,Main Beach,0.0107,3.03,187895.8345,187.8958345
+28/02/2024,NA,Common Blacktip,Carcharhinus limbatus,164,M,Dead,,NSW North Coast,Evans Head,Main Beach,0.022941,2.881574,55315.74826,55.31574826
+11/04/2024,08:51,White Shark,Carcharodon carcharias,316,M,Alive,"ID, A",NSW North Coast,Evans Head,Main Beach,0.00871,3.04,345992.6604,345.9926604
+25/06/2024,11:34,Tiger Shark,Galeocerdo cuvier,309,F,Alive,"ID, A",NSW North Coast,Evans Head,Main Beach,0.00724,3.09,357857.6187,357.8576187
+07/07/2023,09:12,Greynurse Shark,Carcharias taurus,253,F,Alive,ID,NSW North Coast,Evans Head,Shark Bay,0.0107,3.03,204568.5924,204.5685924
+16/11/2023,09:34,Greynurse Shark,Carcharias taurus,264,F,Alive,ID,NSW North Coast,Evans Head,Shark Bay,0.0107,3.03,232725.3414,232.7253414
+28/01/2024,08:53,Lemon Shark,Negaprion acutidens,224,M,Alive,ID,NSW North Coast,Evans Head,Shark Bay,0.00254,3.16,67860.5624,67.8605624
+25/07/2023,10:41,Bronze Whaler,Carcharhinus brachyurus,244,F,Alive,ID,NSW North Coast,Forster,Burgess Beach,0.00468,3.1,117802.4478,117.8024478
+28/07/2023,09:10,White Shark,Carcharodon carcharias,246,M,Alive,"ID, A",NSW North Coast,Forster,Burgess Beach,0.00871,3.04,161607.2651,161.6072651
+01/08/2023,13:49,Shortfin Mako Shark,Isurus oxyrinchus,240,F,Alive,ID,NSW North Coast,Forster,Burgess Beach,0.093585714,2.891142857,712426.8673,712.4268673
+20/01/2024,13:21,White Shark,Carcharodon carcharias,260,NA,Alive,,NSW North Coast,Forster,Burgess Beach,0.00871,3.04,191221.6815,191.2216815
+09/07/2023,12:09,White Shark,Carcharodon carcharias,264,F,Alive,"ID, A",NSW North Coast,Forster,Main Beach,0.00871,3.04,200306.0619,200.3060619
+09/07/2023,NA,White Shark,Carcharodon carcharias,225,F,Alive,"ID, A",NSW North Coast,Forster,Main Beach,0.00871,3.04,123212.0008,123.2120008
+05/09/2023,09:46,White Shark,Carcharodon carcharias,302,F,Alive,"ID, A",NSW North Coast,Forster,Main Beach,0.00871,3.04,301466.6407,301.4666407
+05/09/2023,15:02,White Shark,Carcharodon carcharias,210,F,Alive,"ID, A",NSW North Coast,Forster,Main Beach,0.00871,3.04,99899.84422,99.89984422
+10/09/2023,09:31,White Shark,Carcharodon carcharias,225,M,Alive,"ID, A",NSW North Coast,Forster,Main Beach,0.00871,3.04,123212.0008,123.2120008
+10/09/2023,14:52,White Shark,Carcharodon carcharias,251,F,Alive,"ID, A",NSW North Coast,Forster,Main Beach,0.00871,3.04,171801.2298,171.8012298
+14/09/2023,14:07,White Shark,Carcharodon carcharias,172,F,Alive,"ID, A",NSW North Coast,Forster,Main Beach,0.00871,3.04,54453.35384,54.45335384
+23/09/2023,12:35,White Shark,Carcharodon carcharias,223,F,Alive,"ID, A",NSW North Coast,Forster,Main Beach,0.00871,3.04,119912.6329,119.9126329
+28/09/2023,10:35,White Shark,Carcharodon carcharias,267,M,Alive,"ID, A",NSW North Coast,Forster,Main Beach,0.00871,3.04,207306.2471,207.3062471
+09/10/2023,06:57,White Shark,Carcharodon carcharias,212,M,Alive,"ID, A",NSW North Coast,Forster,Main Beach,0.00871,3.04,102820.3723,102.8203723
+13/11/2023,11:21,Bronze Whaler,Carcharhinus brachyurus,268,F,Alive,ID,NSW North Coast,Forster,Main Beach,0.00468,3.1,157566.437,157.566437
+23/11/2023,11:14,White Shark,Carcharodon carcharias,244,F,Alive,"ID, A",NSW North Coast,Forster,Main Beach,0.00871,3.04,157646.0985,157.6460985
+03/04/2024,09:00,Greynurse Shark,Carcharias taurus,284,F,Alive,ID,NSW North Coast,Forster,Main Beach,0.0107,3.03,290361.0432,290.3610432
+03/07/2023,08:57,White Shark,Carcharodon carcharias,228,M,Alive,"ID, A",NSW North Coast,Forster,One Mile Beach,0.00871,3.04,128274.4289,128.2744289
+15/07/2023,07:36,White Shark,Carcharodon carcharias,232,M,Alive,"ID, A",NSW North Coast,Forster,One Mile Beach,0.00871,3.04,135238.8998,135.2388998
+17/07/2023,11:02,White Shark,Carcharodon carcharias,201,F,Alive,"ID, A",NSW North Coast,Forster,One Mile Beach,0.00871,3.04,87444.8364,87.4448364
+21/08/2023,10:07,White Shark,Carcharodon carcharias,252,M,Alive,"ID, A",NSW North Coast,Forster,One Mile Beach,0.00871,3.04,173890.4771,173.8904771
+11/09/2023,13:46,Bronze Whaler,Carcharhinus brachyurus,272,F,Alive,ID,NSW North Coast,Forster,One Mile Beach,0.00468,3.1,164971.7022,164.9717022
+22/09/2023,10:50,Bronze Whaler,Carcharhinus brachyurus,265,F,Alive,ID,NSW North Coast,Forster,One Mile Beach,0.00468,3.1,152162.6497,152.1626497
+28/09/2023,15:19,White Shark,Carcharodon carcharias,238,F,Alive,"ID, A",NSW North Coast,Forster,One Mile Beach,0.00871,3.04,146154.4707,146.1544707
+19/10/2023,14:18,Tiger Shark,Galeocerdo cuvier,326,M,Alive,"ID, A",NSW North Coast,Forster,One Mile Beach,0.00724,3.09,422260.9791,422.2609791
+03/11/2023,12:29,White Shark,Carcharodon carcharias,301,M,Alive,"ID, A",NSW North Coast,Forster,One Mile Beach,0.00871,3.04,298442.2473,298.4422473
+04/11/2023,NA,White Shark,Carcharodon carcharias,279,M,Alive,"ID, A",NSW North Coast,Forster,One Mile Beach,0.00871,3.04,236949.0288,236.9490288
+26/11/2023,12:36,Bronze Whaler,Carcharhinus brachyurus,273,F,Alive,ID,NSW North Coast,Forster,One Mile Beach,0.00468,3.1,166859.1623,166.8591623
+18/12/2023,15:00,Loggerhead Turtle,,NA,NA,Alive,,NSW North Coast,Forster,One Mile Beach,NA,NA,NA,NA
+30/01/2024,07:35,Common Blacktip,Carcharhinus limbatus,191,M,Alive,ID,NSW North Coast,Forster,One Mile Beach,0.022941,2.881574,85818.07906,85.81807906
+12/02/2024,15:12,Tiger Shark,Galeocerdo cuvier,197,F,Alive,"ID, A",NSW North Coast,Forster,One Mile Beach,0.00724,3.09,89051.0829,89.0510829
+08/04/2024,13:48,Spinner Shark,Carcharhinus brevipinna,122,M,Alive,ID,NSW North Coast,Forster,One Mile Beach,0.003619,3.088491,10052.91806,10.05291806
+15/05/2024,12:51,White Shark,Carcharodon carcharias,293,F,Alive,"ID, A",NSW North Coast,Forster,One Mile Beach,0.00871,3.04,274976.5893,274.9765893
+22/07/2023,NA,White Shark,Carcharodon carcharias,251,M,Alive,"ID, A",NSW North Coast,Forster,Pebbly Beach,0.00871,3.04,171801.2298,171.8012298
+13/11/2023,09:54,White Shark,Carcharodon carcharias,263,M,Alive,"ID, A",NSW North Coast,Forster,Pebbly Beach,0.00871,3.04,198008.4073,198.0084073
+22/11/2023,09:30,White Shark,Carcharodon carcharias,229,M,Alive,"ID, A",NSW North Coast,Forster,Pebbly Beach,0.00871,3.04,129992.4177,129.9924177
+07/12/2023,09:47,White Shark,Carcharodon carcharias,306,F,Alive,"ID, A",NSW North Coast,Forster,Pebbly Beach,0.00871,3.04,313769.9088,313.7699088
+29/06/2024,NA,White Shark,Carcharodon carcharias,199,F,Alive,"ID, A",NSW North Coast,Forster,Pebbly Beach,0.00871,3.04,84826.49203,84.82649203
+01/07/2023,09:26,White Shark,Carcharodon carcharias,267,M,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,207306.2471,207.3062471
+09/07/2023,10:10,White Shark,Carcharodon carcharias,218,F,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,111924.6888,111.9246888
+09/07/2023,12:01,White Shark,Carcharodon carcharias,260,F,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,191221.6815,191.2216815
+19/07/2023,10:55,White Shark,Carcharodon carcharias,250,M,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,169728.894,169.728894
+12/08/2023,11:24,Bronze Whaler,Carcharhinus brachyurus,256,F,Alive,ID,NSW North Coast,Forster,Tuncurry Beach,0.00468,3.1,136706.6829,136.7066829
+17/08/2023,09:28,White Shark,Carcharodon carcharias,198,F,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,83537.28058,83.53728058
+05/09/2023,13:47,White Shark,Carcharodon carcharias,264,F,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,200306.0619,200.3060619
+12/09/2023,08:29,Bronze Whaler,Carcharhinus brachyurus,297,F,Alive,ID,NSW North Coast,Forster,Tuncurry Beach,0.00468,3.1,216666.0401,216.6660401
+16/09/2023,10:06,White Shark,Carcharodon carcharias,221,F,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,116673.0811,116.6730811
+22/09/2023,12:20,White Shark,Carcharodon carcharias,263,F,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,198008.4073,198.0084073
+24/09/2023,12:19,White Shark,Carcharodon carcharias,250,M,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,169728.894,169.728894
+15/10/2023,10:54,White Shark,Carcharodon carcharias,236,F,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,142452.6865,142.4526865
+19/10/2023,08:00,White Shark,Carcharodon carcharias,254,F,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,178119.9865,178.1199865
+31/10/2023,14:26,White Shark,Carcharodon carcharias,334,F,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,409456.1647,409.4561647
+22/11/2023,14:55,White Shark,Carcharodon carcharias,315,F,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,342674.8557,342.6748557
+27/11/2023,14:04,Bronze Whaler,Carcharhinus brachyurus,270,F,Alive,,NSW North Coast,Forster,Tuncurry Beach,0.00468,3.1,161240.2719,161.2402719
+15/12/2023,NA,White Shark,Carcharodon carcharias,275,F,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,226772.0595,226.7720595
+06/01/2024,06:55,White Shark,Carcharodon carcharias,263,F,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,198008.4073,198.0084073
+30/01/2024,14:43,Common Blacktip,Carcharhinus limbatus,213,M,Alive,ID,NSW North Coast,Forster,Tuncurry Beach,0.022941,2.881574,117492.5886,117.4925886
+07/03/2024,09:13,Bull Shark,Carcharhinus leucas,227,F,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.0175,2.84,85931.32001,85.93132001
+04/04/2024,10:54,Tiger Shark,Galeocerdo cuvier,169,M,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00724,3.09,55450.8852,55.4508852
+09/05/2024,14:26,White Shark,Carcharodon carcharias,247,M,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,163612.6553,163.6126553
+30/05/2024,08:18,White Shark,Carcharodon carcharias,262,F,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,195728.5058,195.7285058
+11/06/2024,10:00,White Shark,Carcharodon carcharias,283,F,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,247428.0423,247.4280423
+17/06/2024,08:46,White Shark,Carcharodon carcharias,252,M,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,173890.4771,173.8904771
+25/06/2024,11:37,White Shark,Carcharodon carcharias,223,M,Alive,"ID, A",NSW North Coast,Forster,Tuncurry Beach,0.00871,3.04,119912.6329,119.9126329
+13/10/2023,NA,Shortfin Mako Shark,Isurus oxyrinchus,109,F,Alive,ID,Sydney Basin,Kiama,Bombo Beach,0.093585714,2.891142857,72727.82938,72.72782938
+21/11/2023,12:24,Smooth Hammerhead,Sphyrna zygaena,143,F,Alive,ID,Sydney Basin,Kiama,Bombo Beach,0.00417,3.03,14151.55777,14.15155777
+29/12/2023,09:03,Shortfin Mako Shark,Isurus oxyrinchus,99,F,Alive,ID,Sydney Basin,Kiama,Bombo Beach,0.093585714,2.891142857,55065.04491,55.06504491
+30/01/2024,08:29,Tiger Shark,Galeocerdo cuvier,233,F,Alive,"ID, A",Sydney Basin,Kiama,Bombo Beach,0.00724,3.09,149578.2205,149.5782205
+27/02/2024,11:41,Tiger Shark,Galeocerdo cuvier,198,M,Alive,"ID, A",Sydney Basin,Kiama,Bombo Beach,0.00724,3.09,90455.29704,90.45529704
+27/08/2023,11:06,Shortfin Mako Shark,Isurus oxyrinchus,316,M,Alive,ID,Sydney Basin,Kiama,Easts Beach,0.093585714,2.891142857,1578199.907,1578.199907
+23/09/2023,13:57,Bronze Whaler,Carcharhinus brachyurus,294,F,Alive,ID,Sydney Basin,Kiama,Easts Beach,0.00468,3.1,209953.2382,209.9532382
+23/10/2023,10:30,Bronze Whaler,Carcharhinus brachyurus,202,M,Alive,ID,Sydney Basin,Kiama,Easts Beach,0.00468,3.1,65589.61752,65.58961752
+14/11/2023,10:30,Shortfin Mako Shark,Isurus oxyrinchus,147,F,Alive,ID,Sydney Basin,Kiama,Easts Beach,0.093585714,2.891142857,172676.6406,172.6766406
+22/11/2023,08:13,Shortfin Mako Shark,Isurus oxyrinchus,138,M,Alive,ID,Sydney Basin,Kiama,Easts Beach,0.093585714,2.891142857,143848.6185,143.8486185
+01/12/2023,11:12,Smooth Hammerhead,Sphyrna zygaena,210,NA,Alive,,Sydney Basin,Kiama,Easts Beach,0.00417,3.03,45337.8079,45.3378079
+16/11/2023,09:54,Smooth Hammerhead,Sphyrna zygaena,171,F,Alive,ID,Sydney Basin,Kiama,Jones Beach,0.00417,3.03,24328.44043,24.32844043
+18/01/2024,11:23,Bronze Whaler,Carcharhinus brachyurus,249,M,Alive,ID,Sydney Basin,Kiama,Minnamurra Beach,0.00468,3.1,125448.0252,125.4480252
+07/05/2024,13:30,White Shark,Carcharodon carcharias,276,F,Alive,"ID, A",Sydney Basin,Kiama,Minnamurra Beach,0.00871,3.04,229288.2314,229.2882314
+04/07/2023,10:57,Tiger Shark,Galeocerdo cuvier,357,F,Alive,"ID, A",Sydney Basin,Kiama,Werri Beach,0.00724,3.09,559092.0978,559.0920978
+26/07/2023,15:18,Bronze Whaler,Carcharhinus brachyurus,301,F,Alive,ID,Sydney Basin,Kiama,Werri Beach,0.00468,3.1,225840.5846,225.8405846
+25/08/2023,09:29,Bronze Whaler,Carcharhinus brachyurus,257,F,Alive,ID,Sydney Basin,Kiama,Werri Beach,0.00468,3.1,138368.915,138.368915
+13/09/2023,14:59,Bronze Whaler,Carcharhinus brachyurus,228,F,Alive,ID,Sydney Basin,Kiama,Werri Beach,0.00468,3.1,95464.93447,95.46493447
+16/09/2023,08:43,Bronze Whaler,Carcharhinus brachyurus,218,M,Alive,ID,Sydney Basin,Kiama,Werri Beach,0.00468,3.1,83073.20829,83.07320829
+16/09/2023,11:52,Bronze Whaler,Carcharhinus brachyurus,262,M,Alive,ID,Sydney Basin,Kiama,Werri Beach,0.00468,3.1,146885.8146,146.8858146
+23/12/2023,08:49,Smooth Hammerhead,Sphyrna zygaena,256,F,Alive,ID,Sydney Basin,Kiama,Werri Beach,0.00417,3.03,82623.41663,82.62341663
+23/01/2024,09:28,Smooth Hammerhead,Sphyrna zygaena,161,F,Alive,ID,Sydney Basin,Kiama,Werri Beach,0.00417,3.03,20268.35299,20.26835299
+11/02/2024,10:55,Dusky Whaler,Carcharhinus obscurus,134,F,Dead,,Sydney Basin,Kiama,Werri Beach,0.00794,3.07,26917.34577,26.91734577
+25/04/2024,09:28,Dusky Whaler,Carcharhinus obscurus,90,NA,Alive,,Sydney Basin,Kiama,Werri Beach,0.00794,3.07,7931.311489,7.931311489
+29/06/2024,08:12,Tiger Shark,Galeocerdo cuvier,251,F,Alive,"ID, A",NSW North Coast,Kingscliff,Cabarita Beach,0.00724,3.09,188247.9977,188.2479977
+13/08/2023,08:24,Tiger Shark,Galeocerdo cuvier,351,F,Alive,"ID, A",NSW North Coast,Kingscliff,Cabarita Beach,0.00724,3.09,530563.728,530.563728
+17/09/2023,14:27,Tiger Shark,Galeocerdo cuvier,261,M,Alive,"ID, A",NSW North Coast,Kingscliff,Cabarita Beach,0.00724,3.09,212401.5755,212.4015755
+30/09/2023,08:27,Dusky Whaler,Carcharhinus obscurus,304,M,Alive,ID,NSW North Coast,Kingscliff,Cabarita Beach,0.00794,3.07,332845.2811,332.8452811
+17/05/2024,08:23,White Shark,Carcharodon carcharias,341,M,Alive,"ID, A",NSW North Coast,Kingscliff,Cabarita Beach,0.00871,3.04,436105.4029,436.1054029
+29/05/2024,08:15,Shortfin Mako Shark,Isurus oxyrinchus,319,F,Alive,ID,NSW North Coast,Kingscliff,Cabarita Beach,0.093585714,2.891142857,1621907.599,1621.907599
+17/09/2023,11:33,Tiger Shark,Galeocerdo cuvier,256,F,Alive,"ID, A",NSW North Coast,Kingscliff,Kingscliff Beach,0.00724,3.09,200078.3324,200.0783324
+30/06/2024,14:23,Tiger Shark,Galeocerdo cuvier,316,F,Alive,"ID, A",NSW North Coast,Kingscliff,Kingscliff Beach,0.00724,3.09,383505.5484,383.5055484
+03/02/2024,14:41,Tiger Shark,Galeocerdo cuvier,218,F,Alive,"ID, A",NSW North Coast,Kingscliff,South Kingscliff Beach,0.00724,3.09,121778.0825,121.7780825
+20/06/2024,15:37,Tiger Shark,Galeocerdo cuvier,243,M,Alive,"ID, A",NSW North Coast,Kingscliff,South Kingscliff Beach,0.00724,3.09,170318.5502,170.3185502
+03/08/2023,10:34,White Shark,Carcharodon carcharias,190,M,Alive,"ID, A",Sydney Basin,Lake Macquarie,Blacksmiths Beach,0.00871,3.04,73693.48617,73.69348617
+14/08/2023,NA,Dusky Whaler,Carcharhinus obscurus,126,M,Alive,ID,Sydney Basin,Lake Macquarie,Blacksmiths Beach,0.00794,3.07,22282.20041,22.28220041
+05/10/2023,NA,Dusky Whaler,Carcharhinus obscurus,131,F,Alive,ID,Sydney Basin,Lake Macquarie,Blacksmiths Beach,0.00794,3.07,25109.80732,25.10980732
+14/10/2023,12:10,Greynurse Shark,Carcharias taurus,256,F,Alive,ID,Sydney Basin,Lake Macquarie,Blacksmiths Beach,0.0107,3.03,212007.328,212.007328
+06/11/2023,09:18,Unidentified Whaler,Carcharhinus,300,NA,Alive,,Sydney Basin,Lake Macquarie,Blacksmiths Beach,0.005897,3.117753,311661.6396,311.6616396
+20/01/2024,NA,Common Blacktip,Carcharhinus limbatus,129,M,Dead,,Sydney Basin,Lake Macquarie,Blacksmiths Beach,0.022941,2.881574,27697.00305,27.69700305
+21/01/2024,NA,Dusky Whaler,Carcharhinus obscurus,116,M,Alive,ID,Sydney Basin,Lake Macquarie,Blacksmiths Beach,0.00794,3.07,17286.47846,17.28647846
+05/03/2024,NA,Dusky Whaler,Carcharhinus obscurus,113,F,Dead,,Sydney Basin,Lake Macquarie,Blacksmiths Beach,0.00794,3.07,15950.39064,15.95039064
+07/03/2024,NA,Dusky Whaler,Carcharhinus obscurus,125,F,Alive,ID,Sydney Basin,Lake Macquarie,Blacksmiths Beach,0.00794,3.07,21743.7398,21.7437398
+26/03/2024,12:43,Tiger Shark,Galeocerdo cuvier,159,F,Alive,"ID, A",Sydney Basin,Lake Macquarie,Blacksmiths Beach,0.00724,3.09,45925.68898,45.92568898
+26/06/2024,13:35,Dusky Whaler,Carcharhinus obscurus,203,NA,Dead,,Sydney Basin,Lake Macquarie,Blacksmiths Beach,0.00794,3.07,96345.92237,96.34592237
+14/08/2023,09:03,White Shark,Carcharodon carcharias,208,F,Alive,"ID, A",Sydney Basin,Lake Macquarie,Caves Beach,0.00871,3.04,97035.51012,97.03551012
+09/09/2023,08:06,Bronze Whaler,Carcharhinus brachyurus,288,F,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00468,3.1,196952.984,196.952984
+24/09/2023,11:11,Dusky Whaler,Carcharhinus obscurus,125,F,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,21743.7398,21.7437398
+24/09/2023,NA,Dusky Whaler,Carcharhinus obscurus,113,F,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,15950.39064,15.95039064
+29/09/2023,11:24,Dusky Whaler,Carcharhinus obscurus,123,F,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,20693.27335,20.69327335
+02/11/2023,08:22,Dusky Whaler,Carcharhinus obscurus,166,F,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,51946.0265,51.9460265
+06/11/2023,15:21,Dusky Whaler,Carcharhinus obscurus,112,F,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,15521.00476,15.52100476
+08/11/2023,07:57,Dusky Whaler,Carcharhinus obscurus,120,M,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,19182.57601,19.18257601
+11/01/2024,10:44,Dusky Whaler,Carcharhinus obscurus,138,M,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,29461.12303,29.46112303
+12/01/2024,08:36,Dusky Whaler,Carcharhinus obscurus,123,M,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,20693.27335,20.69327335
+13/01/2024,12:21,Dusky Whaler,Carcharhinus obscurus,123,M,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,20693.27335,20.69327335
+13/01/2024,15:30,Dusky Whaler,Carcharhinus obscurus,129,M,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,23951.40051,23.95140051
+21/01/2024,11:13,Dusky Whaler,Carcharhinus obscurus,102,F,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,11647.24014,11.64724014
+21/01/2024,12:36,Dusky Whaler,Carcharhinus obscurus,134,F,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,26917.34577,26.91734577
+24/01/2024,NA,Dusky Whaler,Carcharhinus obscurus,117,M,Dead,,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,17748.06857,17.74806857
+27/01/2024,07:52,Dusky Whaler,Carcharhinus obscurus,122,M,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,20181.11618,20.18111618
+28/01/2024,NA,Dusky Whaler,Carcharhinus obscurus,114,F,Dead,,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,16387.71476,16.38771476
+01/02/2024,NA,Tiger Shark,Galeocerdo cuvier,145,F,Alive,"ID, A",Sydney Basin,Lake Macquarie,Caves Beach,0.00724,3.09,34543.44864,34.54344864
+02/02/2024,NA,Dusky Whaler,Carcharhinus obscurus,109,M,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,14279.72524,14.27972524
+12/02/2024,08:26,Dusky Whaler,Carcharhinus obscurus,129,M,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,23951.40051,23.95140051
+14/02/2024,NA,Dusky Whaler,Carcharhinus obscurus,113,F,Alive,,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,15950.39064,15.95039064
+15/02/2024,09:09,Dusky Whaler,Carcharhinus obscurus,119,F,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,18696.04195,18.69604195
+16/02/2024,10:19,Dusky Whaler,Carcharhinus obscurus,119,F,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,18696.04195,18.69604195
+23/02/2024,08:18,Dusky Whaler,Carcharhinus obscurus,109,M,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,14279.72524,14.27972524
+05/03/2024,09:24,Dusky Whaler,Carcharhinus obscurus,124,M,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,21214.12267,21.21412267
+13/03/2024,08:38,Dusky Whaler,Carcharhinus obscurus,140,M,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,30791.69327,30.79169327
+24/03/2024,16:47,Dusky Whaler,Carcharhinus obscurus,139,M,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,30121.4545,30.1214545
+02/04/2024,NA,Dusky Whaler,Carcharhinus obscurus,125,F,Dead,,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,21743.7398,21.7437398
+19/04/2024,14:41,Dusky Whaler,Carcharhinus obscurus,132,M,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,25702.9204,25.7029204
+19/04/2024,NA,Dusky Whaler,Carcharhinus obscurus,120,M,Dead,,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,19182.57601,19.18257601
+22/04/2024,NA,Dusky Whaler,Carcharhinus obscurus,95,M,Alive,ID,Sydney Basin,Lake Macquarie,Caves Beach,0.00794,3.07,9363.365375,9.363365375
+24/06/2024,13:45,White Shark,Carcharodon carcharias,229,M,Alive,"ID, A",Sydney Basin,Lake Macquarie,Caves Beach,0.00871,3.04,129992.4177,129.9924177
+10/07/2023,13:03,Bronze Whaler,Carcharhinus brachyurus,179,M,Alive,ID,Sydney Basin,Lake Macquarie,Frazer Beach,0.00468,3.1,45091.03968,45.09103968
+10/07/2023,13:22,White Shark,Carcharodon carcharias,370,F,Alive,"ID, A",Sydney Basin,Lake Macquarie,Frazer Beach,0.00871,3.04,558922.2468,558.9222468
+04/09/2023,08:56,Bronze Whaler,Carcharhinus brachyurus,255,F,Alive,ID,Sydney Basin,Lake Macquarie,Frazer Beach,0.00468,3.1,135058.0305,135.0580305
+11/10/2023,NA,Dusky Whaler,Carcharhinus obscurus,118,M,Alive,ID,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,18217.89794,18.21789794
+16/11/2023,09:59,Dusky Whaler,Carcharhinus obscurus,118,M,Alive,ID,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,18217.89794,18.21789794
+21/11/2023,07:14,Dusky Whaler,Carcharhinus obscurus,152,F,Alive,ID,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,39635.13278,39.63513278
+15/12/2023,16:08,Smooth Hammerhead,Sphyrna zygaena,170,F,Alive,ID,Sydney Basin,Lake Macquarie,Frazer Beach,0.00417,3.03,23899.91117,23.89991117
+26/12/2023,10:37,Smooth Hammerhead,Sphyrna zygaena,164,M,Alive,ID,Sydney Basin,Lake Macquarie,Frazer Beach,0.00417,3.03,21434.47815,21.43447815
+03/01/2024,08:23,Dusky Whaler,Carcharhinus obscurus,119,M,Alive,ID,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,18696.04195,18.69604195
+12/01/2024,14:09,Dusky Whaler,Carcharhinus obscurus,127,M,Alive,ID,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,22829.58021,22.82958021
+20/01/2024,07:53,Dusky Whaler,Carcharhinus obscurus,166,M,Alive,ID,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,51946.0265,51.9460265
+05/02/2024,NA,Dusky Whaler,Carcharhinus obscurus,125,M,Dead,,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,21743.7398,21.7437398
+13/02/2024,09:25,Dusky Whaler,Carcharhinus obscurus,203,M,Alive,ID,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,96345.92237,96.34592237
+14/02/2024,11:32,Dusky Whaler,Carcharhinus obscurus,123,M,Alive,ID,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,20693.27335,20.69327335
+16/02/2024,12:09,Dusky Whaler,Carcharhinus obscurus,120,NA,Alive,,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,19182.57601,19.18257601
+18/02/2024,14:34,Dusky Whaler,Carcharhinus obscurus,122,F,Alive,ID,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,20181.11618,20.18111618
+19/02/2024,NA,Dusky Whaler,Carcharhinus obscurus,121,F,Alive,,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,19677.57559,19.67757559
+05/03/2024,16:03,Dusky Whaler,Carcharhinus obscurus,130,M,Alive,ID,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,24525.99266,24.52599266
+13/03/2024,12:43,Dusky Whaler,Carcharhinus obscurus,110,F,Alive,ID,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,14685.74713,14.68574713
+12/04/2024,14:50,Dusky Whaler,Carcharhinus obscurus,155,F,Alive,ID,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,42086.11289,42.08611289
+22/05/2024,NA,Dusky Whaler,Carcharhinus obscurus,143,M,Dead,,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,32862.6164,32.8626164
+24/05/2024,NA,Dusky Whaler,Carcharhinus obscurus,146,F,Dead,,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,35025.45371,35.02545371
+28/06/2024,NA,Dusky Whaler,Carcharhinus obscurus,152,M,Alive,ID,Sydney Basin,Lake Macquarie,Frazer Beach,0.00794,3.07,39635.13278,39.63513278
+16/09/2023,07:47,Bronze Whaler,Carcharhinus brachyurus,297,F,Alive,ID,Sydney Basin,Lake Macquarie,Ghosties Beach,0.00468,3.1,216666.0401,216.6660401
+20/01/2024,08:03,Dusky Whaler,Carcharhinus obscurus,157,M,Alive,ID,Sydney Basin,Lake Macquarie,Ghosties Beach,0.00794,3.07,43775.63306,43.77563306
+17/02/2024,07:37,Dusky Whaler,Carcharhinus obscurus,125,F,Alive,ID,Sydney Basin,Lake Macquarie,Ghosties Beach,0.00794,3.07,21743.7398,21.7437398
+07/03/2024,07:29,Dusky Whaler,Carcharhinus obscurus,154,M,Alive,ID,Sydney Basin,Lake Macquarie,Ghosties Beach,0.00794,3.07,41258.08967,41.25808967
+13/09/2023,10:25,Black Ray,Bathytoshia lata,220,NA,Alive,,Sydney Basin,Lake Macquarie,Hams Beach,0.00646,3.06,95070.53138,95.07053138
+24/09/2023,06:48,Dusky Whaler,Carcharhinus obscurus,118,F,Alive,ID,Sydney Basin,Lake Macquarie,Hams Beach,0.00794,3.07,18217.89794,18.21789794
+24/09/2023,NA,Snapper,Pagrus auratus,52,NA,Dead,,Sydney Basin,Lake Macquarie,Hams Beach,0.03852,2.810057143,2557.135441,2.557135441
+27/09/2023,NA,Dusky Whaler,Carcharhinus obscurus,105,F,Dead,,Sydney Basin,Lake Macquarie,Hams Beach,0.00794,3.07,12731.26771,12.73126771
+29/09/2023,NA,Dusky Whaler,Carcharhinus obscurus,109,F,Alive,ID,Sydney Basin,Lake Macquarie,Hams Beach,0.00794,3.07,14279.72524,14.27972524
+16/10/2023,NA,Snapper,Pagrus auratus,42,NA,Dead,,Sydney Basin,Lake Macquarie,Hams Beach,0.03852,2.810057143,1403.167579,1.403167579
+11/11/2023,NA,Dusky Whaler,Carcharhinus obscurus,126,F,Dead,,Sydney Basin,Lake Macquarie,Hams Beach,0.00794,3.07,22282.20041,22.28220041
+21/11/2023,NA,Dusky Whaler,Carcharhinus obscurus,121,F,Dead,,Sydney Basin,Lake Macquarie,Hams Beach,0.00794,3.07,19677.57559,19.67757559
+23/03/2024,NA,Snapper,Pagrus auratus,62,NA,Dead,,Sydney Basin,Lake Macquarie,Hams Beach,0.03852,2.810057143,4191.88489,4.19188489
+26/03/2024,NA,Snapper,Pagrus auratus,57,NA,Dead,,Sydney Basin,Lake Macquarie,Hams Beach,0.03852,2.810057143,3309.74823,3.30974823
+29/03/2024,NA,Dusky Whaler,Carcharhinus obscurus,113,M,Dead,,Sydney Basin,Lake Macquarie,Hams Beach,0.00794,3.07,15950.39064,15.95039064
+05/09/2023,09:31,Dusky Whaler,Carcharhinus obscurus,144,M,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,33573.24758,33.57324758
+18/09/2023,NA,Dusky Whaler,Carcharhinus obscurus,112,M,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,15521.00476,15.52100476
+21/09/2023,09:18,Shortfin Mako Shark,Isurus oxyrinchus,145,M,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.093585714,2.891142857,165971.386,165.971386
+23/09/2023,14:00,White Shark,Carcharodon carcharias,208,F,Alive,"ID, A",Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00871,3.04,97035.51012,97.03551012
+09/10/2023,13:19,Dusky Whaler,Carcharhinus obscurus,106,F,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,13107.1874,13.1071874
+23/10/2023,NA,Dusky Whaler,Carcharhinus obscurus,109,M,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,14279.72524,14.27972524
+03/11/2023,15:24,Bronze Whaler,Carcharhinus brachyurus,243,F,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00468,3.1,116312.2083,116.3122083
+07/11/2023,08:11,Dusky Whaler,Carcharhinus obscurus,88,F,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,7402.566303,7.402566303
+25/12/2023,07:09,Dusky Whaler,Carcharhinus obscurus,129,F,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,23951.40051,23.95140051
+18/01/2024,11:32,Dusky Whaler,Carcharhinus obscurus,112,M,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,15521.00476,15.52100476
+19/01/2024,17:09,Dusky Whaler,Carcharhinus obscurus,129,M,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,23951.40051,23.95140051
+20/01/2024,11:10,Tiger Shark,Galeocerdo cuvier,144,M,Alive,"ID, A",Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00724,3.09,33812.60778,33.81260778
+26/01/2024,12:42,Dusky Whaler,Carcharhinus obscurus,142,F,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,32162.19788,32.16219788
+27/01/2024,10:08,Smooth Hammerhead,Sphyrna zygaena,166,M,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00417,3.03,22236.3531,22.2363531
+30/01/2024,12:17,Tiger Shark,Galeocerdo cuvier,144,M,Alive,"ID, A",Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00724,3.09,33812.60778,33.81260778
+09/02/2024,12:21,Dusky Whaler,Carcharhinus obscurus,126,M,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,22282.20041,22.28220041
+15/02/2024,11:48,Dusky Whaler,Carcharhinus obscurus,128,M,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,23385.95498,23.38595498
+05/03/2024,16:50,Dusky Whaler,Carcharhinus obscurus,119,M,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,18696.04195,18.69604195
+06/03/2024,13:45,Dusky Whaler,Carcharhinus obscurus,130,F,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,24525.99266,24.52599266
+13/03/2024,14:32,Dusky Whaler,Carcharhinus obscurus,123,M,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,20693.27335,20.69327335
+14/03/2024,09:10,Dusky Whaler,Carcharhinus obscurus,127,F,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,22829.58021,22.82958021
+18/03/2024,12:34,Dusky Whaler,Carcharhinus obscurus,139,M,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,30121.4545,30.1214545
+14/05/2024,09:16,Dusky Whaler,Carcharhinus obscurus,133,M,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,26305.40788,26.30540788
+30/05/2024,NA,Dusky Whaler,Carcharhinus obscurus,127,F,Alive,ID,Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00794,3.07,22829.58021,22.82958021
+07/06/2024,10:41,Tiger Shark,Galeocerdo cuvier,323,F,Alive,"ID, A",Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00724,3.09,410368.8245,410.3688245
+29/06/2024,11:53,White Shark,Carcharodon carcharias,242,M,Alive,"ID, A",Sydney Basin,Lake Macquarie,Middle Camp Beach,0.00871,3.04,153750.6171,153.7506171
+11/07/2023,11:57,Bronze Whaler,Carcharhinus brachyurus,254,M,Alive,ID,Sydney Basin,Lake Macquarie,Moonee Beach,0.00468,3.1,133422.8996,133.4228996
+13/07/2023,08:04,White Shark,Carcharodon carcharias,180,NA,Alive,,Sydney Basin,Lake Macquarie,Moonee Beach,0.00871,3.04,62523.97353,62.52397353
+18/09/2023,09:37,Dusky Whaler,Carcharhinus obscurus,129,M,Alive,ID,Sydney Basin,Lake Macquarie,Moonee Beach,0.00794,3.07,23951.40051,23.95140051
+11/01/2024,15:36,Dusky Whaler,Carcharhinus obscurus,134,M,Alive,ID,Sydney Basin,Lake Macquarie,Moonee Beach,0.00794,3.07,26917.34577,26.91734577
+18/01/2024,09:44,Dusky Whaler,Carcharhinus obscurus,123,M,Alive,ID,Sydney Basin,Lake Macquarie,Moonee Beach,0.00794,3.07,20693.27335,20.69327335
+28/01/2024,11:36,Dusky Whaler,Carcharhinus obscurus,126,M,Alive,ID,Sydney Basin,Lake Macquarie,Moonee Beach,0.00794,3.07,22282.20041,22.28220041
+01/02/2024,17:00,Smooth Hammerhead,Sphyrna zygaena,174,M,Alive,ID,Sydney Basin,Lake Macquarie,Moonee Beach,0.00417,3.03,25644.85674,25.64485674
+19/02/2024,10:28,Dusky Whaler,Carcharhinus obscurus,126,F,Alive,ID,Sydney Basin,Lake Macquarie,Moonee Beach,0.00794,3.07,22282.20041,22.28220041
+27/02/2024,10:44,Dusky Whaler,Carcharhinus obscurus,123,M,Alive,ID,Sydney Basin,Lake Macquarie,Moonee Beach,0.00794,3.07,20693.27335,20.69327335
+06/03/2024,08:18,Dusky Whaler,Carcharhinus obscurus,136,F,Alive,ID,Sydney Basin,Lake Macquarie,Moonee Beach,0.00794,3.07,28169.87703,28.16987703
+06/03/2024,09:48,Dusky Whaler,Carcharhinus obscurus,152,M,Alive,ID,Sydney Basin,Lake Macquarie,Moonee Beach,0.00794,3.07,39635.13278,39.63513278
+20/03/2024,12:05,Dusky Whaler,Carcharhinus obscurus,141,F,Alive,ID,Sydney Basin,Lake Macquarie,Moonee Beach,0.00794,3.07,31471.91563,31.47191563
+23/04/2024,09:13,Dusky Whaler,Carcharhinus obscurus,125,F,Alive,ID,Sydney Basin,Lake Macquarie,Moonee Beach,0.00794,3.07,21743.7398,21.7437398
+29/04/2024,09:59,Dusky Whaler,Carcharhinus obscurus,139,M,Alive,ID,Sydney Basin,Lake Macquarie,Moonee Beach,0.00794,3.07,30121.4545,30.1214545
+09/06/2024,11:00,White Shark,Carcharodon carcharias,233,M,Alive,"ID, A",Sydney Basin,Lake Macquarie,Moonee Beach,0.00871,3.04,137018.7985,137.0187985
+25/06/2024,NA,Dusky Whaler,Carcharhinus obscurus,139,M,Alive,ID,Sydney Basin,Lake Macquarie,Moonee Beach,0.00794,3.07,30121.4545,30.1214545
+22/03/2024,10:21,Tiger Shark,Galeocerdo cuvier,406,F,Alive,"ID, A",Sydney Basin,Manly,Curl Curl Beach,0.00724,3.09,831924.6831,831.9246831
+29/04/2024,NA,Tiger Shark,Galeocerdo cuvier,221,F,Alive,"ID, A",Sydney Basin,Manly,Curl Curl Beach,0.00724,3.09,127031.2852,127.0312852
+22/02/2024,10:51,Dusky Whaler,Carcharhinus obscurus,126,M,Alive,ID,Sydney Basin,Manly,Dee Why Beach,0.00794,3.07,22282.20041,22.28220041
+22/02/2024,12:36,Dusky Whaler,Carcharhinus obscurus,137,F,Alive,ID,Sydney Basin,Manly,Dee Why Beach,0.00794,3.07,28810.6226,28.8106226
+06/03/2024,07:20,Dusky Whaler,Carcharhinus obscurus,152,F,Alive,ID,Sydney Basin,Manly,Dee Why Beach,0.00794,3.07,39635.13278,39.63513278
+06/03/2024,10:57,Dusky Whaler,Carcharhinus obscurus,124,M,Alive,ID,Sydney Basin,Manly,Dee Why Beach,0.00794,3.07,21214.12267,21.21412267
+22/03/2024,13:55,Dusky Whaler,Carcharhinus obscurus,136,F,Alive,ID,Sydney Basin,Manly,Dee Why Beach,0.00794,3.07,28169.87703,28.16987703
+27/05/2024,NA,Dusky Whaler,Carcharhinus obscurus,128,F,Alive,ID,Sydney Basin,Manly,Dee Why Beach,0.00794,3.07,23385.95498,23.38595498
+11/06/2024,07:49,Smooth Hammerhead,Sphyrna zygaena,166,F,Alive,ID,Sydney Basin,Manly,Dee Why Beach,0.00417,3.03,22236.3531,22.2363531
+10/10/2023,07:11,Dusky Whaler,Carcharhinus obscurus,140,F,Alive,ID,Sydney Basin,Manly,Fairy Bower Beach,0.00794,3.07,30791.69327,30.79169327
+28/06/2024,07:17,Bronze Whaler,Carcharhinus brachyurus,313,F,Alive,ID,Sydney Basin,Manly,Freshwater Beach,0.00468,3.1,254937.2516,254.9372516
+20/08/2023,10:45,Bronze Whaler,Carcharhinus brachyurus,293,F,Alive,ID,Sydney Basin,Manly,Long Reef Beach,0.00468,3.1,207747.3421,207.7473421
+12/10/2023,10:22,Dusky Whaler,Carcharhinus obscurus,132,F,Alive,ID,Sydney Basin,Manly,Manly Beach,0.00794,3.07,25702.9204,25.7029204
+24/12/2023,07:56,Smooth Hammerhead,Sphyrna zygaena,191,F,Alive,ID,Sydney Basin,Manly,Narrabeen Beach,0.00417,3.03,34014.74016,34.01474016
+28/09/2023,10:39,Tiger Shark,Galeocerdo cuvier,380,F,Alive,"ID, A",Sydney Basin,Manly,North Curl Curl Beach,0.00724,3.09,678062.7392,678.0627392
+08/04/2024,08:29,Dusky Whaler,Carcharhinus obscurus,131,M,Alive,ID,Sydney Basin,Manly,North Curl Curl Beach,0.00794,3.07,25109.80732,25.10980732
+09/05/2024,07:24,Dusky Whaler,Carcharhinus obscurus,131,M,Alive,ID,Sydney Basin,Manly,North Curl Curl Beach,0.00794,3.07,25109.80732,25.10980732
+23/02/2024,08:34,Dusky Whaler,Carcharhinus obscurus,131,F,Alive,ID,Sydney Basin,Manly,North Steyne Beach,0.00794,3.07,25109.80732,25.10980732
+07/04/2024,NA,Dusky Whaler,Carcharhinus obscurus,132,M,Alive,ID,Sydney Basin,Manly,North Steyne Beach,0.00794,3.07,25702.9204,25.7029204
+24/04/2024,NA,Tiger Shark,Galeocerdo cuvier,173,F,Alive,"ID, A",Sydney Basin,Manly,North Steyne Beach,0.00724,3.09,59607.51611,59.60751611
+05/05/2024,10:22,Dusky Whaler,Carcharhinus obscurus,142,F,Alive,ID,Sydney Basin,Manly,North Steyne Beach,0.00794,3.07,32162.19788,32.16219788
+18/02/2024,17:29,Dusky Whaler,Carcharhinus obscurus,148,M,Alive,ID,Sydney Basin,Manly,Queenscliff Beach,0.00794,3.07,36519.42818,36.51942818
+26/02/2024,07:57,Dusky Whaler,Carcharhinus obscurus,128,M,Alive,ID,Sydney Basin,Manly,Queenscliff Beach,0.00794,3.07,23385.95498,23.38595498
+08/04/2024,07:11,Dusky Whaler,Carcharhinus obscurus,158,F,Alive,ID,Sydney Basin,Manly,Queenscliff Beach,0.00794,3.07,44637.28377,44.63728377
+05/05/2024,NA,Dusky Whaler,Carcharhinus obscurus,132,M,Alive,ID,Sydney Basin,Manly,Queenscliff Beach,0.00794,3.07,25702.9204,25.7029204
+22/02/2024,14:20,Tiger Shark,Galeocerdo cuvier,272,F,Alive,"ID, A",Sydney Basin,Manly,South Curl Curl Beach,0.00724,3.09,241299.532,241.299532
+24/03/2024,NA,Dusky Whaler,Carcharhinus obscurus,130,NA,Alive,,Sydney Basin,Manly,South Curl Curl Beach,0.00794,3.07,24525.99266,24.52599266
+30/05/2024,NA,Dusky Whaler,Carcharhinus obscurus,128,M,Alive,ID,Sydney Basin,Manly,South Curl Curl Beach,0.00794,3.07,23385.95498,23.38595498
+17/04/2024,09:48,Dusky Whaler,Carcharhinus obscurus,160,M,Alive,ID,Sydney Basin,Manly,South Narrabeen Beach,0.00794,3.07,46394.7511,46.3947511
+23/12/2023,11:35,Dusky Whaler,Carcharhinus obscurus,119,M,Alive,ID,Sydney Basin,Manly,Turimetta Beach,0.00794,3.07,18696.04195,18.69604195
+09/03/2024,11:18,Dusky Whaler,Carcharhinus obscurus,129,M,Alive,ID,Sydney Basin,Manly,Turimetta Beach,0.00794,3.07,23951.40051,23.95140051
+19/04/2024,08:08,Dusky Whaler,Carcharhinus obscurus,164,M,Alive,ID,Sydney Basin,Manly,Turimetta Beach,0.00794,3.07,50048.50578,50.04850578
+09/05/2024,10:11,Dusky Whaler,Carcharhinus obscurus,139,M,Alive,ID,Sydney Basin,Manly,Turimetta Beach,0.00794,3.07,30121.4545,30.1214545
+09/01/2024,12:40,Tiger Shark,Galeocerdo cuvier,310,F,Alive,"ID, A",Sydney Basin,Manly,Curl Curl,0.00724,3.09,361448.3114,361.4483114
+09/01/2024,07:19,Tiger Shark,Galeocerdo cuvier,195,F,Alive,"ID, A",Sydney Basin,Manly,North Curl Curl Beach,0.00724,3.09,86287.0289,86.2870289
+26/08/2023,12:13,White Shark,Carcharodon carcharias,256,M,Alive,"ID, A",South East Corner,Merimbula,Main Beach,0.00871,3.04,182417.9831,182.4179831
+18/02/2024,07:57,Tiger Shark,Galeocerdo cuvier,215,M,Alive,"ID, A",South East Corner,Merimbula,Main Beach,0.00724,3.09,116673.8173,116.6738173
+25/03/2024,09:19,White Shark,Carcharodon carcharias,257,M,Alive,"ID, A",South East Corner,Merimbula,Main Beach,0.00871,3.04,184592.8393,184.5928393
+16/05/2024,09:28,White Shark,Carcharodon carcharias,171,M,Alive,"ID, A",South East Corner,Merimbula,Main Beach,0.00871,3.04,53496.61841,53.49661841
+18/05/2024,07:01,White Shark,Carcharodon carcharias,148,M,Alive,"ID, A",South East Corner,Merimbula,Main Beach,0.00871,3.04,34483.69298,34.48369298
+27/05/2024,12:29,White Shark,Carcharodon carcharias,305,F,Alive,"ID, A",South East Corner,Merimbula,Main Beach,0.00871,3.04,310663.0964,310.6630964
+15/06/2024,08:49,White Shark,Carcharodon carcharias,149,F,Alive,"ID, A",South East Corner,Merimbula,Main Beach,0.00871,3.04,35196.89973,35.19689973
+28/06/2024,14:39,White Shark,Carcharodon carcharias,172,F,Alive,"ID, A",South East Corner,Merimbula,Main Beach,0.00871,3.04,54453.35384,54.45335384
+15/12/2023,11:14,Bronze Whaler,Carcharhinus brachyurus,269,F,Alive,ID,South East Corner,Merimbula,Middle Beach,0.00468,3.1,159396.1844,159.3961844
+30/03/2024,16:56,Tiger Shark,Galeocerdo cuvier,339,M,Alive,"ID, A",South East Corner,Merimbula,Middle Beach,0.00724,3.09,476492.0221,476.4920221
+10/04/2024,13:59,Shortfin Mako Shark,Isurus oxyrinchus,224,F,Alive,ID,South East Corner,Merimbula,Middle Beach,0.093585714,2.891142857,583596.0317,583.5960317
+09/09/2023,07:26,White Shark,Carcharodon carcharias,246,F,Alive,"ID, A",South East Corner,Merimbula,Pambula Beach,0.00871,3.04,161607.2651,161.6072651
+14/10/2023,10:47,Blue Shark,Prionace glauca,206,M,Alive,ID,South East Corner,Merimbula,Pambula Beach,0.00468,3.09,66083.88458,66.08388458
+22/10/2023,09:35,Bronze Whaler,Carcharhinus brachyurus,236,F,Alive,ID,South East Corner,Merimbula,Pambula Beach,0.00468,3.1,106236.3307,106.2363307
+23/10/2023,13:26,Bronze Whaler,Carcharhinus brachyurus,272,F,Alive,ID,South East Corner,Merimbula,Pambula Beach,0.00468,3.1,164971.7022,164.9717022
+14/12/2023,07:55,White Shark,Carcharodon carcharias,179,F,Alive,"ID, A",South East Corner,Merimbula,Pambula Beach,0.00871,3.04,61473.98534,61.47398534
+05/01/2024,08:37,Bronze Whaler,Carcharhinus brachyurus,218,F,Alive,ID,South East Corner,Merimbula,Pambula Beach,0.00468,3.1,83073.20829,83.07320829
+23/01/2024,08:16,Bronze Whaler,Carcharhinus brachyurus,214,F,Alive,ID,South East Corner,Merimbula,Pambula Beach,0.00468,3.1,78438.36825,78.43836825
+08/02/2024,10:42,Tiger Shark,Galeocerdo cuvier,330,M,Alive,"ID, A",South East Corner,Merimbula,Pambula Beach,0.00724,3.09,438476.821,438.476821
+16/04/2024,09:35,Tiger Shark,Galeocerdo cuvier,346,F,Alive,"ID, A",South East Corner,Merimbula,Pambula Beach,0.00724,3.09,507555.7024,507.5557024
+20/04/2024,11:42,Tiger Shark,Galeocerdo cuvier,363,F,Alive,"ID, A",South East Corner,Merimbula,Pambula Beach,0.00724,3.09,588640.362,588.640362
+22/04/2024,14:50,White Shark,Carcharodon carcharias,236,F,Alive,"ID, A",South East Corner,Merimbula,Pambula Beach,0.00871,3.04,142452.6865,142.4526865
+24/04/2024,10:20,Tiger Shark,Galeocerdo cuvier,371,F,Alive,"ID, A",South East Corner,Merimbula,Pambula Beach,0.00724,3.09,629656.8711,629.6568711
+25/04/2024,16:04,White Shark,Carcharodon carcharias,272,M,Alive,"ID, A",South East Corner,Merimbula,Pambula Beach,0.00871,3.04,219334.8405,219.3348405
+10/05/2024,09:12,Bronze Whaler,Carcharhinus brachyurus,282,F,Alive,ID,South East Corner,Merimbula,Pambula Beach,0.00468,3.1,184509.2268,184.5092268
+01/06/2024,10:04,White Shark,Carcharodon carcharias,198,F,Alive,"ID, A",South East Corner,Merimbula,Pambula Beach,0.00871,3.04,83537.28058,83.53728058
+14/06/2024,12:11,White Shark,Carcharodon carcharias,248,F,Alive,"ID, A",South East Corner,Merimbula,Pambula Beach,0.00871,3.04,165634.6768,165.6346768
+04/08/2023,10:57,Thresher Shark,Alopias vulpinus,276,M,Alive,ID,South East Corner,Merimbula,Short Point,0.01275,2.6895,46809.6249,46.8096249
+23/08/2023,09:29,Tiger Shark,Galeocerdo cuvier,349,F,Alive,"ID, A",South East Corner,Merimbula,Short Point,0.00724,3.09,521277.6869,521.2776869
+23/09/2023,15:50,Shortfin Mako Shark,Isurus oxyrinchus,280,F,Alive,ID,South East Corner,Merimbula,Short Point,0.093585714,2.891142857,1112482.075,1112.482075
+25/09/2023,11:49,Bronze Whaler,Carcharhinus brachyurus,296,F,Alive,ID,South East Corner,Merimbula,Short Point,0.00468,3.1,214412.528,214.412528
+21/11/2023,11:31,Bronze Whaler,Carcharhinus brachyurus,204,M,Alive,ID,South East Corner,Merimbula,Short Point,0.00468,3.1,67623.76895,67.62376895
+07/02/2024,09:35,Smooth Hammerhead,Sphyrna zygaena,164,F,Alive,ID,South East Corner,Merimbula,Short Point,0.00417,3.03,21434.47815,21.43447815
+14/02/2024,08:53,Bronze Whaler,Carcharhinus brachyurus,265,M,Alive,ID,South East Corner,Merimbula,Short Point,0.00468,3.1,152162.6497,152.1626497
+22/02/2024,NA,Shortfin Mako Shark,Isurus oxyrinchus,120,F,Dead,,South East Corner,Merimbula,Short Point,0.093585714,2.891142857,96032.79469,96.03279469
+06/03/2024,09:15,Black Marlin,Istiompax indica,297,NA,Alive,ID,South East Corner,Merimbula,Short Point,0.003305,2.814,30026.73507,30.02673507
+13/04/2024,12:00,White Shark,Carcharodon carcharias,149,M,Alive,"ID, A",South East Corner,Merimbula,Short Point,0.00871,3.04,35196.89973,35.19689973
+17/05/2024,13:23,Bronze Whaler,Carcharhinus brachyurus,286,M,Alive,ID,South East Corner,Merimbula,Short Point,0.00468,3.1,192743.8616,192.7438616
+27/06/2024,09:50,White Shark,Carcharodon carcharias,181,F,Alive,"ID, A",South East Corner,Merimbula,Short Point,0.00871,3.04,63585.92927,63.58592927
+09/09/2023,10:18,Bronze Whaler,Carcharhinus brachyurus,216,F,Alive,ID,South East Corner,Merimbula,Tura Beach,0.00468,3.1,80733.25852,80.73325852
+09/10/2023,08:18,Shortfin Mako Shark,Isurus oxyrinchus,252,F,Alive,ID,South East Corner,Merimbula,Tura Beach,0.093585714,2.891142857,820354.5289,820.3545289
+10/10/2023,11:08,Bronze Whaler,Carcharhinus brachyurus,246,F,Alive,ID,South East Corner,Merimbula,Tura Beach,0.00468,3.1,120821.6285,120.8216285
+11/10/2023,11:02,Shortfin Mako Shark,Isurus oxyrinchus,201,M,Alive,ID,South East Corner,Merimbula,Tura Beach,0.093585714,2.891142857,426656.5226,426.6565226
+09/11/2023,09:28,Bronze Whaler,Carcharhinus brachyurus,277,F,Alive,ID,South East Corner,Merimbula,Tura Beach,0.00468,3.1,174555.3391,174.5553391
+28/12/2023,16:36,White Shark,Carcharodon carcharias,178,M,Alive,"ID, A",South East Corner,Merimbula,Tura Beach,0.00871,3.04,60435.89556,60.43589556
+02/02/2024,07:42,Bronze Whaler,Carcharhinus brachyurus,208,M,Alive,ID,South East Corner,Merimbula,Tura Beach,0.00468,3.1,71819.46927,71.81946927
+26/03/2024,12:11,Dusky Whaler,Carcharhinus obscurus,194,M,Alive,ID,South East Corner,Merimbula,Tura Beach,0.00794,3.07,83824.66246,83.82466246
+31/03/2024,11:00,Tiger Shark,Galeocerdo cuvier,168,M,Alive,"ID, A",South East Corner,Merimbula,Tura Beach,0.00724,3.09,54443.27559,54.44327559
+27/05/2024,10:50,White Shark,Carcharodon carcharias,152,F,Alive,"ID, A",South East Corner,Merimbula,Tura Beach,0.00871,3.04,37395.7857,37.3957857
+09/05/2024,08:16,Spinner Shark,Carcharhinus brevipinna,126,M,Alive,ID,Sydney Basin,Newcastle,Bar Beach,0.003619,3.088491,11106.16467,11.10616467
+21/01/2024,07:24,Dusky Whaler,Carcharhinus obscurus,124,F,Alive,ID,Sydney Basin,Newcastle,Dudley Beach,0.00794,3.07,21214.12267,21.21412267
+28/01/2024,15:15,Shortfin Mako Shark,Isurus oxyrinchus,119,F,Alive,ID,Sydney Basin,Newcastle,Dudley Beach,0.093585714,2.891142857,93737.27659,93.73727659
+17/02/2024,13:34,Smooth Hammerhead,Sphyrna zygaena,154,F,Alive,ID,Sydney Basin,Newcastle,Dudley Beach,0.00417,3.03,17714.29363,17.71429363
+25/05/2024,10:00,White Shark,Carcharodon carcharias,227,F,Alive,"ID, A",Sydney Basin,Newcastle,Dudley Beach,0.00871,3.04,126571.743,126.571743
+29/10/2023,NA,Smooth Hammerhead,Sphyrna zygaena,134,F,Alive,ID,Sydney Basin,Newcastle,Glenrock Reserve,0.00417,3.03,11621.53766,11.62153766
+15/12/2023,07:54,Dusky Whaler,Carcharhinus obscurus,129,F,Alive,ID,Sydney Basin,Newcastle,Glenrock Reserve,0.00794,3.07,23951.40051,23.95140051
+06/02/2024,NA,Dusky Whaler,Carcharhinus obscurus,97,M,Alive,ID,Sydney Basin,Newcastle,Merewether Beach,0.00794,3.07,9981.819829,9.981819829
+21/06/2024,NA,Dusky Whaler,Carcharhinus obscurus,115,F,Alive,ID,Sydney Basin,Newcastle,Merewether Beach,0.00794,3.07,16833.05228,16.83305228
+23/11/2023,06:29,Smooth Hammerhead,Sphyrna zygaena,155,M,Alive,ID,Sydney Basin,Newcastle,Newcastle Beach,0.00417,3.03,18065.13038,18.06513038
+14/02/2024,11:49,Dusky Whaler,Carcharhinus obscurus,116,F,Alive,ID,Sydney Basin,Newcastle,Newcastle Beach,0.00794,3.07,17286.47846,17.28647846
+06/03/2024,15:23,Dusky Whaler,Carcharhinus obscurus,128,F,Alive,ID,Sydney Basin,Newcastle,Newcastle Beach,0.00794,3.07,23385.95498,23.38595498
+07/03/2024,14:36,Dusky Whaler,Carcharhinus obscurus,104,M,Alive,ID,Sydney Basin,Newcastle,Newcastle Beach,0.00794,3.07,12362.68644,12.36268644
+23/03/2024,15:00,Dusky Whaler,Carcharhinus obscurus,115,F,Alive,ID,Sydney Basin,Newcastle,Newcastle Beach,0.00794,3.07,16833.05228,16.83305228
+25/03/2024,10:44,Smooth Hammerhead,Sphyrna zygaena,129,F,Alive,ID,Sydney Basin,Newcastle,Newcastle Beach,0.00417,3.03,10356.73531,10.35673531
+08/05/2024,14:14,Dusky Whaler,Carcharhinus obscurus,116,F,Alive,ID,Sydney Basin,Newcastle,Newcastle Beach,0.00794,3.07,17286.47846,17.28647846
+31/05/2024,12:08,Dusky Whaler,Carcharhinus obscurus,136,F,Alive,ID,Sydney Basin,Newcastle,Newcastle Beach,0.00794,3.07,28169.87703,28.16987703
+30/05/2024,12:51,White Shark,Carcharodon carcharias,233,M,Alive,"ID, A",Sydney Basin,Newcastle,Nobbys Beach,0.00871,3.04,137018.7985,137.0187985
+08/01/2024,09:40,Tiger Shark,Galeocerdo cuvier,187,F,Alive,"ID, A",Sydney Basin,Newcastle,Redhead Beach,0.00724,3.09,75810.45975,75.81045975
+15/04/2024,NA,Dusky Whaler,Carcharhinus obscurus,116,M,Alive,ID,Sydney Basin,Newcastle,Redhead Beach,0.00794,3.07,17286.47846,17.28647846
+29/04/2024,NA,Dusky Whaler,Carcharhinus obscurus,134,M,Alive,ID,Sydney Basin,Newcastle,Redhead Beach,0.00794,3.07,26917.34577,26.91734577
+17/05/2024,08:50,White Shark,Carcharodon carcharias,221,F,Alive,"ID, A",Sydney Basin,Newcastle,Redhead Beach,0.00871,3.04,116673.0811,116.6730811
+14/07/2023,15:55,White Shark,Carcharodon carcharias,206,M,Alive,"ID, A",Sydney Basin,Newcastle,Stockton Beach,0.00871,3.04,94226.81355,94.22681355
+25/07/2023,15:45,White Shark,Carcharodon carcharias,209,M,Alive,"ID, A",Sydney Basin,Newcastle,Stockton Beach,0.00871,3.04,98460.6877,98.4606877
+08/01/2024,07:12,Dusky Whaler,Carcharhinus obscurus,125,F,Alive,ID,Sydney Basin,Newcastle,Stockton Beach,0.00794,3.07,21743.7398,21.7437398
+08/01/2024,NA,Dusky Whaler,Carcharhinus obscurus,124,M,Alive,ID,Sydney Basin,Newcastle,Stockton Beach,0.00794,3.07,21214.12267,21.21412267
+26/01/2024,NA,Dusky Whaler,Carcharhinus obscurus,114,F,Alive,ID,Sydney Basin,Newcastle,Stockton Beach,0.00794,3.07,16387.71476,16.38771476
+06/03/2024,14:59,Dusky Whaler,Carcharhinus obscurus,126,F,Alive,ID,Sydney Basin,Newcastle,Stockton Beach,0.00794,3.07,22282.20041,22.28220041
+26/05/2024,12:21,White Shark,Carcharodon carcharias,248,F,Alive,"ID, A",Sydney Basin,Newcastle,Stockton Beach,0.00871,3.04,165634.6768,165.6346768
+30/05/2024,07:07,White Shark,Carcharodon carcharias,202,M,Alive,"ID, A",Sydney Basin,Newcastle,Stockton Beach,0.00871,3.04,88774.10819,88.77410819
+29/06/2024,07:00,White Shark,Carcharodon carcharias,203,F,Alive,"ID, A",Sydney Basin,Newcastle,Stockton Beach,0.00871,3.04,90116.87232,90.11687232
+10/07/2023,08:02,White Shark,Carcharodon carcharias,285,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Flynns Beach,0.00871,3.04,252782.2234,252.7822234
+28/07/2023,11:09,Bronze Whaler,Carcharhinus brachyurus,249,M,Alive,ID,NSW North Coast,Port Macquarie,Flynns Beach,0.00468,3.1,125448.0252,125.4480252
+21/08/2023,11:19,White Shark,Carcharodon carcharias,180,NA,Alive,,NSW North Coast,Port Macquarie,Flynns Beach,0.00871,3.04,62523.97353,62.52397353
+22/08/2023,15:06,Bronze Whaler,Carcharhinus brachyurus,281,F,Alive,ID,NSW North Coast,Port Macquarie,Flynns Beach,0.00468,3.1,182488.4762,182.4884762
+19/10/2023,09:47,Tiger Shark,Galeocerdo cuvier,180,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Flynns Beach,0.00724,3.09,67379.93799,67.37993799
+29/06/2024,09:47,White Shark,Carcharodon carcharias,281,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Flynns Beach,0.00871,3.04,242150.4985,242.1504985
+06/07/2023,12:17,Tiger Shark,Galeocerdo cuvier,376,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00724,3.09,656249.5325,656.2495325
+07/07/2023,13:22,White Shark,Carcharodon carcharias,257,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,184592.8393,184.5928393
+11/07/2023,09:56,White Shark,Carcharodon carcharias,227,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,126571.743,126.571743
+15/07/2023,11:02,Bronze Whaler,Carcharhinus brachyurus,249,M,Alive,ID,NSW North Coast,Port Macquarie,Lighthouse Beach,0.00468,3.1,125448.0252,125.4480252
+25/07/2023,11:55,Tiger Shark,Galeocerdo cuvier,162,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00724,3.09,48656.39866,48.65639866
+05/08/2023,08:12,White Shark,Carcharodon carcharias,268,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,209675.6166,209.6756166
+08/08/2023,11:32,White Shark,Carcharodon carcharias,263,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,198008.4073,198.0084073
+09/08/2023,10:32,White Shark,Carcharodon carcharias,208,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,97035.51012,97.03551012
+14/08/2023,08:04,White Shark,Carcharodon carcharias,198,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,83537.28058,83.53728058
+17/08/2023,14:16,Bronze Whaler,Carcharhinus brachyurus,263,M,Alive,ID,NSW North Coast,Port Macquarie,Lighthouse Beach,0.00468,3.1,148630.7514,148.6307514
+18/08/2023,10:52,White Shark,Carcharodon carcharias,245,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,159618.4361,159.6184361
+23/08/2023,10:24,White Shark,Carcharodon carcharias,203,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,90116.87232,90.11687232
+24/08/2023,11:02,White Shark,Carcharodon carcharias,259,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,188994.6184,188.9946184
+25/08/2023,10:39,Bronze Whaler,Carcharhinus brachyurus,267,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00468,3.1,155750.9712,155.7509712
+29/08/2023,10:30,White Shark,Carcharodon carcharias,303,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,304511.533,304.511533
+31/08/2023,NA,Dusky Whaler,Carcharhinus obscurus,191,M,Dead,,NSW North Coast,Port Macquarie,Lighthouse Beach,0.00794,3.07,79908.49291,79.90849291
+06/09/2023,13:22,White Shark,Carcharodon carcharias,202,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,88774.10819,88.77410819
+13/09/2023,09:35,White Shark,Carcharodon carcharias,234,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,138814.3493,138.8143493
+18/09/2023,09:49,White Shark,Carcharodon carcharias,284,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,250095.518,250.095518
+23/09/2023,11:47,White Shark,Carcharodon carcharias,280,NA,Alive,,NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,239540.2896,239.5402896
+23/09/2023,14:27,Bronze Whaler,Carcharhinus brachyurus,297,M,Alive,ID,NSW North Coast,Port Macquarie,Lighthouse Beach,0.00468,3.1,216666.0401,216.6660401
+26/09/2023,10:13,White Shark,Carcharodon carcharias,251,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,171801.2298,171.8012298
+30/09/2023,11:18,Shortfin Mako Shark,Isurus oxyrinchus,99,F,Alive,ID,NSW North Coast,Port Macquarie,Lighthouse Beach,0.093585714,2.891142857,55065.04491,55.06504491
+30/09/2023,NA,Shortfin Mako Shark,Isurus oxyrinchus,104,F,Alive,ID,NSW North Coast,Port Macquarie,Lighthouse Beach,0.093585714,2.891142857,63495.22858,63.49522858
+05/10/2023,14:29,Bronze Whaler,Carcharhinus brachyurus,288,M,Alive,ID,NSW North Coast,Port Macquarie,Lighthouse Beach,0.00468,3.1,196952.984,196.952984
+08/10/2023,11:28,White Shark,Carcharodon carcharias,271,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,216892.6321,216.8926321
+16/10/2023,10:26,Bronze Whaler,Carcharhinus brachyurus,280,M,Alive,ID,NSW North Coast,Port Macquarie,Lighthouse Beach,0.00468,3.1,180482.771,180.482771
+20/10/2023,08:01,White Shark,Carcharodon carcharias,262,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,195728.5058,195.7285058
+23/10/2023,09:44,Smooth Hammerhead,Sphyrna zygaena,153,M,Alive,ID,NSW North Coast,Port Macquarie,Lighthouse Beach,0.00417,3.03,17368.05119,17.36805119
+03/11/2023,11:08,White Shark,Carcharodon carcharias,243,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,155690.1822,155.6901822
+04/11/2023,11:18,Dusky Whaler,Carcharhinus obscurus,156,M,Alive,ID,NSW North Coast,Port Macquarie,Lighthouse Beach,0.00794,3.07,42925.2684,42.9252684
+05/12/2023,09:36,White Shark,Carcharodon carcharias,233,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,137018.7985,137.0187985
+12/12/2023,15:51,White Shark,Carcharodon carcharias,286,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,255488.2289,255.4882289
+17/12/2023,12:11,Smooth Hammerhead,Sphyrna zygaena,172,M,Alive,ID,NSW North Coast,Port Macquarie,Lighthouse Beach,0.00417,3.03,24762.08723,24.76208723
+02/01/2024,11:31,Bronze Whaler,Carcharhinus brachyurus,282,F,Alive,ID,NSW North Coast,Port Macquarie,Lighthouse Beach,0.00468,3.1,184509.2268,184.5092268
+10/01/2024,07:00,Scalloped Hammerhead,Sphyrna lewini,239,F,Alive,ID,NSW North Coast,Port Macquarie,Lighthouse Beach,0.003605,3.132793,101843.5582,101.8435582
+31/01/2024,10:11,Tiger Shark,Galeocerdo cuvier,239,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00724,3.09,161803.5628,161.8035628
+09/03/2024,08:43,White Shark,Carcharodon carcharias,331,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,398377.9166,398.3779166
+27/03/2024,13:55,White Shark,Carcharodon carcharias,265,NA,Alive,,NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,202621.54,202.62154
+05/05/2024,14:57,Smooth Hammerhead,Sphyrna zygaena,NA,NA,Alive,,NSW North Coast,Port Macquarie,Lighthouse Beach,0.00417,3.03,NA,NA
+08/05/2024,09:45,White Shark,Carcharodon carcharias,307,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,316897.5025,316.8975025
+09/06/2024,08:34,White Shark,Carcharodon carcharias,331,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Lighthouse Beach,0.00871,3.04,398377.9166,398.3779166
+25/09/2023,08:45,Bronze Whaler,Carcharhinus brachyurus,268,F,Alive,ID,NSW North Coast,Port Macquarie,Miners Beach,0.00468,3.1,157566.437,157.566437
+13/08/2023,13:16,White Shark,Carcharodon carcharias,269,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Nobbys Beach,0.00871,3.04,212063.0905,212.0630905
+27/02/2024,10:43,Tiger Shark,Galeocerdo cuvier,196,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Nobbys Beach,0.00724,3.09,87661.68751,87.66168751
+28/05/2024,09:44,Tiger Shark,Galeocerdo cuvier,264,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Nobbys Beach,0.00724,3.09,220036.4858,220.0364858
+31/07/2023,08:34,White Shark,Carcharodon carcharias,181,M,Alive,"ID, A",NSW North Coast,Port Macquarie,North Shore Beach,0.00871,3.04,63585.92927,63.58592927
+03/08/2023,09:14,Greynurse Shark,Carcharias taurus,266,F,Alive,ID,NSW North Coast,Port Macquarie,North Shore Beach,0.0107,3.03,238108.6302,238.1086302
+20/08/2023,12:31,White Shark,Carcharodon carcharias,296,F,Alive,"ID, A",NSW North Coast,Port Macquarie,North Shore Beach,0.00871,3.04,283625.2924,283.6252924
+24/08/2023,10:59,White Shark,Carcharodon carcharias,196,M,Alive,"ID, A",NSW North Coast,Port Macquarie,North Shore Beach,0.00871,3.04,80998.43204,80.99843204
+24/08/2023,12:25,White Shark,Carcharodon carcharias,168,F,Alive,"ID, A",NSW North Coast,Port Macquarie,North Shore Beach,0.00871,3.04,50694.21139,50.69421139
+26/08/2023,11:40,White Shark,Carcharodon carcharias,169,M,Alive,"ID, A",NSW North Coast,Port Macquarie,North Shore Beach,0.00871,3.04,51617.11617,51.61711617
+27/08/2023,13:44,Bronze Whaler,Carcharhinus brachyurus,251,M,Alive,ID,NSW North Coast,Port Macquarie,North Shore Beach,0.00468,3.1,128598.0519,128.5980519
+28/08/2023,12:37,Greynurse Shark,Carcharias taurus,275,F,Alive,ID,NSW North Coast,Port Macquarie,North Shore Beach,0.0107,3.03,263367.2931,263.3672931
+30/08/2023,08:03,Greynurse Shark,Carcharias taurus,244,F,Alive,ID,NSW North Coast,Port Macquarie,North Shore Beach,0.0107,3.03,183305.2702,183.3052702
+06/09/2023,12:13,White Shark,Carcharodon carcharias,161,F,Alive,"ID, A",NSW North Coast,Port Macquarie,North Shore Beach,0.00871,3.04,44541.90816,44.54190816
+17/09/2023,08:14,Greynurse Shark,Carcharias taurus,284,F,Alive,ID,NSW North Coast,Port Macquarie,North Shore Beach,0.0107,3.03,290361.0432,290.3610432
+18/09/2023,12:24,Bronze Whaler,Carcharhinus brachyurus,278,M,Alive,ID,NSW North Coast,Port Macquarie,North Shore Beach,0.00468,3.1,176516.2613,176.5162613
+23/09/2023,13:01,White Shark,Carcharodon carcharias,246,F,Alive,"ID, A",NSW North Coast,Port Macquarie,North Shore Beach,0.00871,3.04,161607.2651,161.6072651
+26/09/2023,14:03,White Shark,Carcharodon carcharias,225,M,Alive,"ID, A",NSW North Coast,Port Macquarie,North Shore Beach,0.00871,3.04,123212.0008,123.2120008
+23/10/2023,08:19,Greynurse Shark,Carcharias taurus,279,F,Alive,ID,NSW North Coast,Port Macquarie,North Shore Beach,0.0107,3.03,275146.83,275.14683
+23/10/2023,10:52,White Shark,Carcharodon carcharias,275,F,Alive,"ID, A",NSW North Coast,Port Macquarie,North Shore Beach,0.00871,3.04,226772.0595,226.7720595
+04/12/2023,13:05,Smooth Hammerhead,Sphyrna zygaena,130,NA,Alive,,NSW North Coast,Port Macquarie,North Shore Beach,0.00417,3.03,10601.91731,10.60191731
+12/12/2023,07:18,Greynurse Shark,Carcharias taurus,275,F,Alive,ID,NSW North Coast,Port Macquarie,North Shore Beach,0.0107,3.03,263367.2931,263.3672931
+15/12/2023,06:27,White Shark,Carcharodon carcharias,317,M,Alive,"ID, A",NSW North Coast,Port Macquarie,North Shore Beach,0.00871,3.04,349331.9532,349.3319532
+25/12/2023,11:38,Great Hammerhead,Sphyrna mokarran,269,F,Alive,ID,NSW North Coast,Port Macquarie,North Shore Beach,0.00224,3.1,76292.19082,76.29219082
+29/12/2023,NA,Tiger Shark,Galeocerdo cuvier,149,F,Alive,"ID, A",NSW North Coast,Port Macquarie,North Shore Beach,0.00724,3.09,37573.71489,37.57371489
+01/02/2024,14:08,White Shark,Carcharodon carcharias,173,M,Alive,"ID, A",NSW North Coast,Port Macquarie,North Shore Beach,0.00871,3.04,55421.50416,55.42150416
+25/03/2024,12:12,White Shark,Carcharodon carcharias,289,F,Alive,"ID, A",NSW North Coast,Port Macquarie,North Shore Beach,0.00871,3.04,263722.7508,263.7227508
+16/05/2024,10:06,Greynurse Shark,Carcharias taurus,275,F,Alive,ID,NSW North Coast,Port Macquarie,North Shore Beach,0.0107,3.03,263367.2931,263.3672931
+07/06/2024,07:53,White Shark,Carcharodon carcharias,276,F,Alive,"ID, A",NSW North Coast,Port Macquarie,North Shore Beach,0.00871,3.04,229288.2314,229.2882314
+27/06/2024,10:07,White Shark,Carcharodon carcharias,236,M,Alive,"ID, A",NSW North Coast,Port Macquarie,North Shore Beach,0.00871,3.04,142452.6865,142.4526865
+13/09/2023,12:22,White Shark,Carcharodon carcharias,203,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Oxley Beach,0.00871,3.04,90116.87232,90.11687232
+17/09/2023,11:20,White Shark,Carcharodon carcharias,278,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Oxley Beach,0.00871,3.04,234376.6457,234.3766457
+06/10/2023,12:41,Greynurse Shark,Carcharias taurus,281,F,Alive,ID,NSW North Coast,Port Macquarie,Oxley Beach,0.0107,3.03,281166.728,281.166728
+09/10/2023,14:02,Bronze Whaler,Carcharhinus brachyurus,272,F,Alive,ID,NSW North Coast,Port Macquarie,Oxley Beach,0.00468,3.1,164971.7022,164.9717022
+29/04/2024,NA,Greynurse Shark,Carcharias taurus,270,F,Alive,ID,NSW North Coast,Port Macquarie,Oxley Beach,0.0107,3.03,249124.2379,249.1242379
+17/07/2023,11:38,White Shark,Carcharodon carcharias,349,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Rocky Beach,0.00871,3.04,467958.6215,467.9586215
+05/08/2023,13:36,White Shark,Carcharodon carcharias,254,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Rocky Beach,0.00871,3.04,178119.9865,178.1199865
+02/11/2023,NA,Dusky Whaler,Carcharhinus obscurus,122,M,Alive,ID,NSW North Coast,Port Macquarie,Rocky Beach,0.00794,3.07,20181.11618,20.18111618
+05/07/2023,09:27,White Shark,Carcharodon carcharias,166,F,Alive,"ID, A",NSW North Coast,Port Macquarie,Shelly Beach,0.00871,3.04,48881.74967,48.88174967
+22/08/2023,10:28,White Shark,Carcharodon carcharias,228,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Shelly Beach,0.00871,3.04,128274.4289,128.2744289
+15/10/2023,10:51,White Shark,Carcharodon carcharias,174,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Shelly Beach,0.00871,3.04,56401.13839,56.40113839
+25/11/2023,09:04,Smooth Hammerhead,Sphyrna zygaena,165,M,Alive,ID,NSW North Coast,Port Macquarie,Shelly Beach,0.00417,3.03,21832.94928,21.83294928
+12/12/2023,12:01,Smooth Hammerhead,Sphyrna zygaena,176,M,Alive,ID,NSW North Coast,Port Macquarie,Shelly Beach,0.00417,3.03,26548.46639,26.54846639
+16/12/2023,NA,White Shark,Carcharodon carcharias,277,M,Alive,"ID, A",NSW North Coast,Port Macquarie,Shelly Beach,0.00871,3.04,231823.0701,231.8230701
+17/12/2023,10:34,Smooth Hammerhead,Sphyrna zygaena,176,M,Alive,ID,NSW North Coast,Port Macquarie,Shelly Beach,0.00417,3.03,26548.46639,26.54846639
+05/05/2024,10:29,Smooth Hammerhead,Sphyrna zygaena,163,M,Alive,ID,NSW North Coast,Port Macquarie,Shelly Beach,0.00417,3.03,21040.90891,21.04090891
+06/06/2024,13:31,Smooth Hammerhead,Sphyrna zygaena,153,M,Alive,,NSW North Coast,Port Macquarie,Shelly Beach,0.00417,3.03,17368.05119,17.36805119
+18/07/2023,NA,Tiger Shark,Galeocerdo cuvier,165,F,Alive,"ID, A",Sydney Basin,Shellharbour,Killalea Beach,0.00724,3.09,51494.86854,51.49486854
+20/08/2023,07:45,Bronze Whaler,Carcharhinus brachyurus,275,F,Alive,ID,Sydney Basin,Shellharbour,Perkins Beach,0.00468,3.1,170677.8659,170.6778659
+25/08/2023,13:18,Bronze Whaler,Carcharhinus brachyurus,281,F,Alive,ID,Sydney Basin,Shellharbour,Perkins Beach,0.00468,3.1,182488.4762,182.4884762
+12/09/2023,10:55,White Shark,Carcharodon carcharias,234,F,Alive,"ID, A",Sydney Basin,Shellharbour,Perkins Beach,0.00871,3.04,138814.3493,138.8143493
+03/03/2024,10:51,White Shark,Carcharodon carcharias,259,F,Alive,"ID, A",Sydney Basin,Shellharbour,Perkins Beach,0.00871,3.04,188994.6184,188.9946184
+22/05/2024,14:18,White Shark,Carcharodon carcharias,182,F,Alive,"ID, A",Sydney Basin,Shellharbour,Perkins Beach,0.00871,3.04,64659.92172,64.65992172
+10/06/2024,NA,Dusky Whaler,Carcharhinus obscurus,99,F,Dead,,Sydney Basin,Shellharbour,Perkins Beach,0.00794,3.07,10627.2415,10.6272415
+06/11/2023,NA,Tiger Shark,Galeocerdo cuvier,152,M,Alive,"ID, A",Sydney Basin,Shellharbour,Port Kembla Beach,0.00724,3.09,39960.89927,39.96089927
+08/11/2023,NA,Shortfin Mako Shark,Isurus oxyrinchus,116,M,Alive,ID,Sydney Basin,Shellharbour,Port Kembla Beach,0.093585714,2.891142857,87066.78915,87.06678915
+09/11/2023,12:22,Shortfin Mako Shark,Isurus oxyrinchus,134,M,Alive,ID,Sydney Basin,Shellharbour,Port Kembla Beach,0.093585714,2.891142857,132121.472,132.121472
+10/01/2024,15:09,Shortfin Mako Shark,Isurus oxyrinchus,120,NA,Alive,,Sydney Basin,Shellharbour,Port Kembla Beach,0.093585714,2.891142857,96032.79469,96.03279469
+18/01/2024,09:06,Tiger Shark,Galeocerdo cuvier,249,F,Alive,"ID, A",Sydney Basin,Shellharbour,Port Kembla Beach,0.00724,3.09,183651.5291,183.6515291
+21/02/2024,14:20,Tiger Shark,Galeocerdo cuvier,271,M,Alive,"ID, A",Sydney Basin,Shellharbour,Port Kembla Beach,0.00724,3.09,238568.8159,238.5688159
+02/05/2024,10:31,Shortfin Mako Shark,Isurus oxyrinchus,122,F,Alive,ID,Sydney Basin,Shellharbour,Port Kembla Beach,0.093585714,2.891142857,100733.4901,100.7334901
+27/06/2024,10:04,Tiger Shark,Galeocerdo cuvier,194,F,Alive,"ID, A",Sydney Basin,Shellharbour,Port Kembla Beach,0.00724,3.09,84927.02514,84.92702514
+23/05/2024,NA,Snapper,Pagrus auratus,60,NA,Dead,,Sydney Basin,Shellharbour,South Beach,0.03852,2.810057143,3822.899673,3.822899673
+11/08/2023,13:23,Bronze Whaler,Carcharhinus brachyurus,278,F,Alive,ID,Sydney Basin,Shellharbour,Warilla Beach,0.00468,3.1,176516.2613,176.5162613
+30/08/2023,07:10,Smooth Hammerhead,Sphyrna zygaena,159,F,Alive,ID,Sydney Basin,Shellharbour,Warilla Beach,0.00417,3.03,19515.03532,19.51503532
+12/11/2023,07:25,Smooth Hammerhead,Sphyrna zygaena,157,M,Alive,ID,Sydney Basin,Shellharbour,Warilla Beach,0.00417,3.03,18780.70979,18.78070979
+26/05/2024,11:57,Tiger Shark,Galeocerdo cuvier,272,F,Alive,"ID, A",Sydney Basin,Shellharbour,Warilla Beach,0.00724,3.09,241299.532,241.299532
+23/06/2024,10:51,Bronze Whaler,Carcharhinus brachyurus,255,F,Alive,ID,Sydney Basin,Shellharbour,Warilla Beach,0.00468,3.1,135058.0305,135.0580305
+21/11/2023,18:20,Dusky Whaler,Carcharhinus obscurus,125,M,Dead,,Sydney Basin,Sutherland,Oak Park Beach,0.00794,3.07,21743.7398,21.7437398
+29/08/2023,14:27,Bronze Whaler,Carcharhinus brachyurus,277,F,Alive,ID,Sydney Basin,Sutherland,Shark Island,0.00468,3.1,174555.3391,174.5553391
+20/11/2023,10:13,Dusky Whaler,Carcharhinus obscurus,114,M,Alive,ID,Sydney Basin,Sutherland,Shark Island,0.00794,3.07,16387.71476,16.38771476
+18/01/2024,NA,Dusky Whaler,Carcharhinus obscurus,125,M,Dead,,Sydney Basin,Sutherland,Shark Island,0.00794,3.07,21743.7398,21.7437398
+19/01/2024,13:00,Dusky Whaler,Carcharhinus obscurus,123,M,Alive,ID,Sydney Basin,Sutherland,Shark Island,0.00794,3.07,20693.27335,20.69327335
+27/02/2024,NA,Dusky Whaler,Carcharhinus obscurus,120,NA,Alive,,Sydney Basin,Sutherland,Shark Island,0.00794,3.07,19182.57601,19.18257601
+07/11/2023,17:43,Shortfin Mako Shark,Isurus oxyrinchus,116,M,Alive,ID,Sydney Basin,Sutherland,South Cronulla Beach,0.093585714,2.891142857,87066.78915,87.06678915
+24/12/2023,14:16,Dusky Whaler,Carcharhinus obscurus,104,M,Alive,ID,Sydney Basin,Sutherland,South Cronulla Beach,0.00794,3.07,12362.68644,12.36268644
+26/12/2023,07:21,Dusky Whaler,Carcharhinus obscurus,121,M,Alive,ID,Sydney Basin,Sutherland,South Cronulla Beach,0.00794,3.07,19677.57559,19.67757559
+31/12/2023,12:50,Dusky Whaler,Carcharhinus obscurus,121,M,Alive,ID,Sydney Basin,Sutherland,South Cronulla Beach,0.00794,3.07,19677.57559,19.67757559
+03/01/2024,NA,Dusky Whaler,Carcharhinus obscurus,102,M,Alive,ID,Sydney Basin,Sutherland,South Cronulla Beach,0.00794,3.07,11647.24014,11.64724014
+03/02/2024,11:18,Dusky Whaler,Carcharhinus obscurus,123,M,Alive,ID,Sydney Basin,Sutherland,South Cronulla Beach,0.00794,3.07,20693.27335,20.69327335
+29/02/2024,NA,Dusky Whaler,Carcharhinus obscurus,114,M,Alive,ID,Sydney Basin,Sutherland,South Cronulla Beach,0.00794,3.07,16387.71476,16.38771476
+19/04/2024,09:23,Smooth Hammerhead,Sphyrna zygaena,148,F,Alive,ID,Sydney Basin,Sutherland,South Cronulla Beach,0.00417,3.03,15704.67859,15.70467859
+30/07/2023,09:34,White Shark,Carcharodon carcharias,200,NA,Alive,,Sydney Basin,Sutherland,Wanda Beach,0.00871,3.04,86128.9875,86.1289875
+06/11/2023,09:50,Tiger Shark,Galeocerdo cuvier,318,F,Alive,"ID, A",Sydney Basin,Sutherland,Wanda Beach,0.00724,3.09,391055.4717,391.0554717
+08/11/2023,13:20,Shortfin Mako Shark,Isurus oxyrinchus,151,F,Alive,ID,Sydney Basin,Sutherland,Wanda Beach,0.093585714,2.891142857,186613.5594,186.6135594
+28/12/2023,17:05,Dusky Whaler,Carcharhinus obscurus,120,F,Alive,ID,Sydney Basin,Sutherland,Wanda Beach,0.00794,3.07,19182.57601,19.18257601
+25/04/2024,NA,Dusky Whaler,Carcharhinus obscurus,120,M,Dead,,Sydney Basin,Sutherland,Wanda Beach,0.00794,3.07,19182.57601,19.18257601
+29/04/2024,12:10,Shortfin Mako Shark,Isurus oxyrinchus,140,M,Alive,ID,Sydney Basin,Sutherland,Wanda Beach,0.093585714,2.891142857,149958.9187,149.9589187
+10/05/2024,NA,Tailor,Pomatomus saltatrix,37,NA,Dead,,Sydney Basin,Sutherland,Wanda Beach,0.015748,2.872803,503.9181763,0.503918176
+29/08/2023,08:31,Seal,,200,NA,Alive,,Sydney Basin,Sydney East,Bondi Beach,NA,NA,NA,NA
+01/12/2023,06:20,Smooth Hammerhead,Sphyrna zygaena,158,F,Alive,ID,Sydney Basin,Sydney East,Bondi Beach,0.00417,3.03,19145.51392,19.14551392
+14/03/2024,15:25,Dusky Whaler,Carcharhinus obscurus,183,F,Alive,ID,Sydney Basin,Sydney East,Bondi Beach,0.00794,3.07,70072.13465,70.07213465
+22/03/2024,08:33,Dusky Whaler,Carcharhinus obscurus,121,F,Alive,ID,Sydney Basin,Sydney East,Bondi Beach,0.00794,3.07,19677.57559,19.67757559
+14/04/2024,06:48,Smooth Hammerhead,Sphyrna zygaena,156,F,Alive,ID,Sydney Basin,Sydney East,Bondi Beach,0.00417,3.03,18420.59219,18.42059219
+23/04/2024,13:49,Dusky Whaler,Carcharhinus obscurus,167,M,Alive,ID,Sydney Basin,Sydney East,Bondi Beach,0.00794,3.07,52912.71777,52.91271777
+24/06/2024,11:25,White Shark,Carcharodon carcharias,193,F,Alive,"ID, A",Sydney Basin,Sydney East,Bondi Beach,0.00871,3.04,77288.05433,77.28805433
+06/11/2023,09:54,Smooth Hammerhead,Sphyrna zygaena,189,F,Alive,ID,Sydney Basin,Sydney East,Bronte Beach,0.00417,3.03,32946.95795,32.94695795
+01/03/2024,08:40,Dusky Whaler,Carcharhinus obscurus,128,F,Alive,ID,Sydney Basin,Sydney East,Bronte Beach,0.00794,3.07,23385.95498,23.38595498
+18/04/2024,07:06,Dusky Whaler,Carcharhinus obscurus,148,F,Alive,ID,Sydney Basin,Sydney East,Clovelly Beach,0.00794,3.07,36519.42818,36.51942818
+18/04/2024,12:25,Dusky Whaler,Carcharhinus obscurus,138,F,Alive,ID,Sydney Basin,Sydney East,Clovelly Beach,0.00794,3.07,29461.12303,29.46112303
+24/10/2023,11:15,Dusky Whaler,Carcharhinus obscurus,131,M,Alive,ID,Sydney Basin,Sydney East,Coogee Beach,0.00794,3.07,25109.80732,25.10980732
+14/03/2024,NA,Dusky Whaler,Carcharhinus obscurus,129,M,Alive,ID,Sydney Basin,Sydney East,Coogee Beach,0.00794,3.07,23951.40051,23.95140051
+12/04/2024,07:18,Dusky Whaler,Carcharhinus obscurus,131,M,Alive,ID,Sydney Basin,Sydney East,Coogee Beach,0.00794,3.07,25109.80732,25.10980732
+18/04/2024,06:36,Dusky Whaler,Carcharhinus obscurus,125,F,Alive,ID,Sydney Basin,Sydney East,Coogee Beach,0.00794,3.07,21743.7398,21.7437398
+12/05/2024,07:39,Dusky Whaler,Carcharhinus obscurus,148,F,Alive,ID,Sydney Basin,Sydney East,Coogee Beach,0.00794,3.07,36519.42818,36.51942818
+06/06/2024,08:36,Tiger Shark,Galeocerdo cuvier,375,F,Alive,"ID, A",Sydney Basin,Sydney East,Coogee Beach,0.00724,3.09,650871.3923,650.8713923
+23/04/2024,08:11,Dusky Whaler,Carcharhinus obscurus,142,F,Alive,ID,Sydney Basin,Sydney East,Malabar Beach,0.00794,3.07,32162.19788,32.16219788
+19/10/2023,14:22,Dusky Whaler,Carcharhinus obscurus,156,F,Alive,ID,Sydney Basin,Sydney East,Maroubra Beach,0.00794,3.07,42925.2684,42.9252684
+20/01/2024,08:27,Tiger Shark,Galeocerdo cuvier,195,M,Alive,"ID, A",Sydney Basin,Sydney East,Maroubra Beach,0.00724,3.09,86287.0289,86.2870289
+23/02/2024,12:54,Dusky Whaler,Carcharhinus obscurus,159,F,Alive,ID,Sydney Basin,Sydney East,Maroubra Beach,0.00794,3.07,45510.29746,45.51029746
+26/02/2024,11:20,Tiger Shark,Galeocerdo cuvier,245,F,Alive,"ID, A",Sydney Basin,Sydney East,Maroubra Beach,0.00724,3.09,174687.4748,174.6874748
+24/03/2024,08:01,Tiger Shark,Galeocerdo cuvier,274,M,Alive,"ID, A",Sydney Basin,Sydney East,Maroubra Beach,0.00724,3.09,246824.2382,246.8242382
+25/03/2024,09:39,Tiger Shark,Galeocerdo cuvier,300,NA,Alive,,Sydney Basin,Sydney East,Maroubra Beach,0.00724,3.09,326620.3526,326.6203526
+05/06/2024,08:55,Smooth Hammerhead,Sphyrna zygaena,186,F,Alive,ID,Sydney Basin,Sydney East,Maroubra Beach,0.00417,3.03,31387.75658,31.38775658
+25/07/2023,14:10,Bronze Whaler,Carcharhinus brachyurus,285,F,Alive,ID,Sydney Basin,Sydney East,Tamarama Beach,0.00468,3.1,190662.3401,190.6623401
+29/09/2023,14:16,Bronze Whaler,Carcharhinus brachyurus,247,M,Alive,ID,Sydney Basin,Sydney East,Tamarama Beach,0.00468,3.1,122350.6858,122.3506858
+09/11/2023,08:50,Shortfin Mako Shark,Isurus oxyrinchus,169,F,Alive,ID,Sydney Basin,Sydney East,Tamarama Beach,0.093585714,2.891142857,258433.1921,258.4331921
+09/03/2024,07:45,Smooth Hammerhead,Sphyrna zygaena,181,F,Alive,ID,Sydney Basin,Sydney East,Tamarama Beach,0.00417,3.03,28900.28575,28.90028575
+09/03/2024,16:13,Dusky Whaler,Carcharhinus obscurus,131,F,Alive,ID,Sydney Basin,Sydney East,Tamarama Beach,0.00794,3.07,25109.80732,25.10980732
+10/03/2024,10:56,Dusky Whaler,Carcharhinus obscurus,102,M,Alive,ID,Sydney Basin,Sydney East,Tamarama Beach,0.00794,3.07,11647.24014,11.64724014
+24/03/2024,09:53,Dusky Whaler,Carcharhinus obscurus,131,F,Alive,ID,Sydney Basin,Sydney East,Tamarama Beach,0.00794,3.07,25109.80732,25.10980732
+18/04/2024,08:19,Tiger Shark,Galeocerdo cuvier,166,F,Alive,"ID, A",Sydney Basin,Sydney East,Tamarama Beach,0.00724,3.09,52465.34805,52.46534805
+24/05/2024,11:06,Tiger Shark,Galeocerdo cuvier,270,F,Alive,"ID, A",Sydney Basin,Sydney East,Tamarama Beach,0.00724,3.09,235859.0785,235.8590785
+25/06/2024,11:10,Tiger Shark,Galeocerdo cuvier,277,F,Alive,"ID, A",Sydney Basin,Sydney East,Tamarama Beach,0.00724,3.09,255270.749,255.270749
+03/02/2024,08:17,Dusky Whaler,Carcharhinus obscurus,128,M,Alive,ID,Sydney Basin,Wollongong,Bellambi Beach,0.00794,3.07,23385.95498,23.38595498
+27/07/2023,10:16,Unidentified Whaler,Carcharhinus,260,NA,Alive,,Sydney Basin,Wollongong,Bulli Beach,0.005897,3.117753,199490.1828,199.4901828
+30/11/2023,18:07,Black Ray,Bathytoshia lata,155,F,Alive,,Sydney Basin,Wollongong,Bulli Beach,0.00646,3.06,32557.23501,32.55723501
+31/01/2024,NA,Dusky Whaler,Carcharhinus obscurus,133,F,Dead,,Sydney Basin,Wollongong,Bulli Beach,0.00794,3.07,26305.40788,26.30540788
+03/03/2024,NA,Dusky Whaler,Carcharhinus obscurus,134,M,Alive,ID,Sydney Basin,Wollongong,Bulli Beach,0.00794,3.07,26917.34577,26.91734577
+13/04/2024,NA,Dusky Whaler,Carcharhinus obscurus,106,M,Alive,ID,Sydney Basin,Wollongong,Bulli Beach,0.00794,3.07,13107.1874,13.1071874
+08/08/2023,09:35,Bronze Whaler,Carcharhinus brachyurus,268,F,Alive,ID,Sydney Basin,Wollongong,Coledale Beach,0.00468,3.1,157566.437,157.566437
+25/08/2023,09:59,White Shark,Carcharodon carcharias,170,F,Alive,"ID, A",Sydney Basin,Wollongong,Corrimal Beach,0.00871,3.04,52551.22885,52.55122885
+13/10/2023,08:08,Bronze Whaler,Carcharhinus brachyurus,229,F,Alive,ID,Sydney Basin,Wollongong,Corrimal Beach,0.00468,3.1,96768.9098,96.7689098
+23/10/2023,06:55,Dusky Whaler,Carcharhinus obscurus,143,M,Alive,ID,Sydney Basin,Wollongong,Corrimal Beach,0.00794,3.07,32862.6164,32.8626164
+28/12/2023,11:29,Dusky Whaler,Carcharhinus obscurus,127,F,Alive,ID,Sydney Basin,Wollongong,Corrimal Beach,0.00794,3.07,22829.58021,22.82958021
+18/01/2024,11:28,Dusky Whaler,Carcharhinus obscurus,149,M,Alive,ID,Sydney Basin,Wollongong,Corrimal Beach,0.00794,3.07,37282.26993,37.28226993
+16/04/2024,NA,Dusky Whaler,Carcharhinus obscurus,120,F,Alive,ID,Sydney Basin,Wollongong,Corrimal Beach,0.00794,3.07,19182.57601,19.18257601
+22/05/2024,11:56,Bronze Whaler,Carcharhinus brachyurus,244,F,Alive,ID,Sydney Basin,Wollongong,Corrimal Beach,0.00468,3.1,117802.4478,117.8024478
+04/06/2024,11:54,Bronze Whaler,Carcharhinus brachyurus,250,F,Alive,,Sydney Basin,Wollongong,Corrimal Beach,0.00468,3.1,127016.4235,127.0164235
+13/09/2023,15:11,Black Ray,Bathytoshia lata,150,NA,Alive,,Sydney Basin,Wollongong,Little Austinmer Beach,0.00646,3.06,29449.08264,29.44908264
+15/10/2023,07:02,Dusky Whaler,Carcharhinus obscurus,119,F,Alive,ID,Sydney Basin,Wollongong,Little Austinmer Beach,0.00794,3.07,18696.04195,18.69604195
+05/02/2024,NA,Dusky Whaler,Carcharhinus obscurus,110,F,Dead,,Sydney Basin,Wollongong,Little Austinmer Beach,0.00794,3.07,14685.74713,14.68574713
+03/03/2024,07:47,Smooth Hammerhead,Sphyrna zygaena,144,M,Alive,ID,Sydney Basin,Wollongong,Puckeys Beach,0.00417,3.03,14453.5459,14.4535459
+14/03/2024,07:24,Smooth Hammerhead,Sphyrna zygaena,163,M,Alive,ID,Sydney Basin,Wollongong,Puckeys Beach,0.00417,3.03,21040.90891,21.04090891
+10/06/2024,09:26,Dusky Whaler,Carcharhinus obscurus,251,F,Alive,ID,Sydney Basin,Wollongong,Puckeys Beach,0.00794,3.07,184849.7329,184.8497329
+08/10/2023,08:29,Black Ray,Bathytoshia lata,130,M,Alive,,Sydney Basin,Wollongong,Sandon Point Beach,0.00646,3.06,19006.36985,19.00636985
+04/08/2023,08:11,Bronze Whaler,Carcharhinus brachyurus,281,F,Alive,ID,Sydney Basin,Wollongong,Sharky Beach,0.00468,3.1,182488.4762,182.4884762
+12/04/2024,08:15,Dusky Whaler,Carcharhinus obscurus,134,F,Alive,ID,Sydney Basin,Wollongong,Sharky Beach,0.00794,3.07,26917.34577,26.91734577
+08/04/2024,07:14,Dusky Whaler,Carcharhinus obscurus,138,F,Alive,ID,Sydney Basin,Wollongong,Thirroul Beach,0.00794,3.07,29461.12303,29.46112303
+09/05/2024,08:26,Dusky Whaler,Carcharhinus obscurus,129,M,Alive,ID,Sydney Basin,Wollongong,Thirroul Beach,0.00794,3.07,23951.40051,23.95140051
+09/07/2023,13:41,Dusky Whaler,Carcharhinus obscurus,285,M,Alive,ID,Sydney Basin,Wollongong,Wollongong Beach,0.00794,3.07,273019.8493,273.0198493
+27/08/2023,NA,Shortfin Mako Shark,Isurus oxyrinchus,102,F,Alive,ID,Sydney Basin,Wollongong,Wollongong Beach,0.093585714,2.891142857,60028.79131,60.02879131
+08/09/2023,08:47,Bronze Whaler,Carcharhinus brachyurus,285,F,Alive,ID,Sydney Basin,Wollongong,Wollongong Beach,0.00468,3.1,190662.3401,190.6623401
+30/12/2023,16:35,Snapper,Pagrus auratus,52,NA,Dead,,Sydney Basin,Wollongong,Wollongong Beach,0.03852,2.810057143,2557.135441,2.557135441
+26/01/2024,07:22,Smooth Hammerhead,Sphyrna zygaena,217,F,Alive,ID,Sydney Basin,Wollongong,Wollongong Beach,0.00417,3.03,50073.62684,50.07362684
+12/09/2023,11:23,White Shark,Carcharodon carcharias,245,F,Alive,"ID, A",NSW North Coast,Yamba,Angourie Backbeach,0.00871,3.04,159618.4361,159.6184361
+14/09/2023,08:10,White Shark,Carcharodon carcharias,201,F,Alive,"ID, A",NSW North Coast,Yamba,Angourie Backbeach,0.00871,3.04,87444.8364,87.4448364
+23/02/2024,09:26,Sandbar Whaler,Carcharhinus plumbeus,106,M,Alive,ID,NSW North Coast,Yamba,Angourie Backbeach,0.00639,3.012,8048.632988,8.048632988
+06/03/2024,17:15,Manta Ray,Mobula alfredi,250,NA,Alive,,NSW North Coast,Yamba,Angourie Backbeach,0.01,3.04,194866.6981,194.8666981
+08/04/2024,10:06,Common Blacktip,Carcharhinus limbatus,146,M,Alive,ID,NSW North Coast,Yamba,Angourie Backbeach,0.022941,2.881574,39569.01696,39.56901696
+31/05/2024,08:43,Sandbar Whaler,Carcharhinus plumbeus,135,M,Alive,ID,NSW North Coast,Yamba,Angourie Backbeach,0.00639,3.012,16675.01253,16.67501253
+07/06/2024,13:24,White Shark,Carcharodon carcharias,268,F,Alive,"ID, A",NSW North Coast,Yamba,Angourie Backbeach,0.00871,3.04,209675.6166,209.6756166
+27/06/2024,11:53,White Shark,Carcharodon carcharias,279,M,Alive,"ID, A",NSW North Coast,Yamba,Angourie Backbeach,0.00871,3.04,236949.0288,236.9490288
+17/07/2023,10:18,White Shark,Carcharodon carcharias,244,M,Alive,"ID, A",NSW North Coast,Yamba,Angourie Point,0.00871,3.04,157646.0985,157.6460985
+27/07/2023,09:03,Tiger Shark,Galeocerdo cuvier,322,F,Alive,"ID, A",NSW North Coast,Yamba,Angourie Point,0.00724,3.09,406455.692,406.455692
+28/07/2023,09:32,Tiger Shark,Galeocerdo cuvier,344,F,Alive,"ID, A",NSW North Coast,Yamba,Angourie Point,0.00724,3.09,498544.7575,498.5447575
+24/08/2023,09:52,White Shark,Carcharodon carcharias,211,M,Alive,"ID, A",NSW North Coast,Yamba,Angourie Point,0.00871,3.04,101353.0492,101.3530492
+02/09/2023,08:55,Smooth Hammerhead,Sphyrna zygaena,170,F,Alive,ID,NSW North Coast,Yamba,Angourie Point,0.00417,3.03,23899.91117,23.89991117
+14/09/2023,13:04,White Shark,Carcharodon carcharias,254,F,Alive,"ID, A",NSW North Coast,Yamba,Angourie Point,0.00871,3.04,178119.9865,178.1199865
+17/09/2023,09:20,White Shark,Carcharodon carcharias,254,M,Alive,"ID, A",NSW North Coast,Yamba,Angourie Point,0.00871,3.04,178119.9865,178.1199865
+28/09/2023,11:48,White Shark,Carcharodon carcharias,235,F,Alive,"ID, A",NSW North Coast,Yamba,Angourie Point,0.00871,3.04,140625.622,140.625622
+21/12/2023,07:01,Smooth Hammerhead,Sphyrna zygaena,162,M,Alive,ID,NSW North Coast,Yamba,Angourie Point,0.00417,3.03,20652.21079,20.65221079
+31/12/2023,12:17,Manta Ray,Mobula alfredi,350,NA,Alive,,NSW North Coast,Yamba,Angourie Point,0.01,3.04,541959.5267,541.9595267
+01/02/2024,14:44,Bull Shark,Carcharhinus leucas,197,M,Alive,"ID, A",NSW North Coast,Yamba,Angourie Point,0.0175,2.84,57454.24619,57.45424619
+27/02/2024,11:45,Great Hammerhead,Sphyrna mokarran,270,F,Alive,ID,NSW North Coast,Yamba,Angourie Point,0.00224,3.1,77174.83102,77.17483102
+08/03/2024,13:32,Tiger Shark,Galeocerdo cuvier,158,F,Alive,"ID, A",NSW North Coast,Yamba,Angourie Point,0.00724,3.09,45039.02339,45.03902339
+15/04/2024,14:42,Sandbar Whaler,Carcharhinus plumbeus,128,M,Alive,ID,NSW North Coast,Yamba,Angourie Point,0.00639,3.012,14204.21662,14.20421662
+16/04/2024,09:04,Sandbar Whaler,Carcharhinus plumbeus,130,F,Alive,ID,NSW North Coast,Yamba,Angourie Point,0.00639,3.012,14883.26571,14.88326571
+18/04/2024,14:33,Sandbar Whaler,Carcharhinus plumbeus,106,F,Alive,ID,NSW North Coast,Yamba,Angourie Point,0.00639,3.012,8048.632988,8.048632988
+24/05/2024,09:50,Sandbar Whaler,Carcharhinus plumbeus,142,F,Alive,ID,NSW North Coast,Yamba,Angourie Point,0.00639,3.012,19417.50168,19.41750168
+25/05/2024,13:32,Sandbar Whaler,Carcharhinus plumbeus,117,F,Alive,ID,NSW North Coast,Yamba,Angourie Point,0.00639,3.012,10836.19156,10.83619156
+25/05/2024,14:38,Sandbar Whaler,Carcharhinus plumbeus,141,F,Alive,ID,NSW North Coast,Yamba,Angourie Point,0.00639,3.012,19008.54282,19.00854282
+02/06/2024,07:34,Sandbar Whaler,Carcharhinus plumbeus,144,F,Alive,ID,NSW North Coast,Yamba,Angourie Point,0.00639,3.012,20252.96837,20.25296837
+07/06/2024,09:00,Tiger Shark,Galeocerdo cuvier,330,F,Alive,"ID, A",NSW North Coast,Yamba,Angourie Point,0.00724,3.09,438476.821,438.476821
+21/06/2024,08:33,Tiger Shark,Galeocerdo cuvier,275,F,Alive,"ID, A",NSW North Coast,Yamba,Angourie Point,0.00724,3.09,249618.3971,249.6183971
+21/06/2024,12:24,Tiger Shark,Galeocerdo cuvier,280,NA,Alive,,NSW North Coast,Yamba,Angourie Point,0.00724,3.09,263910.6298,263.9106298
+06/08/2023,13:12,White Shark,Carcharodon carcharias,256,F,Alive,"ID, A",NSW North Coast,Yamba,Green Point,0.00871,3.04,182417.9831,182.4179831
+23/08/2023,13:49,White Shark,Carcharodon carcharias,243,F,Alive,"ID, A",NSW North Coast,Yamba,Green Point,0.00871,3.04,155690.1822,155.6901822
+27/08/2023,08:00,White Shark,Carcharodon carcharias,213,M,Alive,"ID, A",NSW North Coast,Yamba,Green Point,0.00871,3.04,104301.8831,104.3018831
+05/09/2023,10:39,White Shark,Carcharodon carcharias,213,F,Alive,"ID, A",NSW North Coast,Yamba,Green Point,0.00871,3.04,104301.8831,104.3018831
+10/09/2023,11:19,White Shark,Carcharodon carcharias,211,M,Alive,"ID, A",NSW North Coast,Yamba,Green Point,0.00871,3.04,101353.0492,101.3530492
+24/10/2023,08:24,White Shark,Carcharodon carcharias,216,M,Alive,"ID, A",NSW North Coast,Yamba,Green Point,0.00871,3.04,108832.2376,108.8322376
+18/11/2023,08:40,Sandbar Whaler,Carcharhinus plumbeus,127,M,Alive,ID,NSW North Coast,Yamba,Green Point,0.00639,3.012,13872.59366,13.87259366
+21/11/2023,06:49,Sandbar Whaler,Carcharhinus plumbeus,133,F,Alive,ID,NSW North Coast,Yamba,Green Point,0.00639,3.012,15941.97049,15.94197049
+23/11/2023,10:39,Sandbar Whaler,Carcharhinus plumbeus,128,F,Alive,ID,NSW North Coast,Yamba,Green Point,0.00639,3.012,14204.21662,14.20421662
+23/02/2024,10:34,Sandbar Whaler,Carcharhinus plumbeus,132,M,Alive,ID,NSW North Coast,Yamba,Green Point,0.00639,3.012,15583.66268,15.58366268
+28/05/2024,11:24,Sandbar Whaler,Carcharhinus plumbeus,148,M,Alive,ID,NSW North Coast,Yamba,Green Point,0.00639,3.012,21995.26227,21.99526227
+07/07/2023,11:29,White Shark,Carcharodon carcharias,222,F,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00871,3.04,118285.4148,118.2854148
+07/07/2023,15:24,White Shark,Carcharodon carcharias,245,M,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00871,3.04,159618.4361,159.6184361
+14/07/2023,09:09,White Shark,Carcharodon carcharias,285,F,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00871,3.04,252782.2234,252.7822234
+27/08/2023,09:09,White Shark,Carcharodon carcharias,300,NA,Alive,,NSW North Coast,Yamba,Iluka Beach,0.00871,3.04,295438.2821,295.4382821
+28/09/2023,09:12,White Shark,Carcharodon carcharias,179,F,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00871,3.04,61473.98534,61.47398534
+09/10/2023,15:34,White Shark,Carcharodon carcharias,204,F,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00871,3.04,91473.19826,91.47319826
+15/10/2023,08:43,White Shark,Carcharodon carcharias,183,F,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00871,3.04,65746.02004,65.74602004
+31/10/2023,12:58,White Shark,Carcharodon carcharias,259,M,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00871,3.04,188994.6184,188.9946184
+12/11/2023,07:17,White Shark,Carcharodon carcharias,236,F,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00871,3.04,142452.6865,142.4526865
+24/02/2024,10:52,Bull Shark,Carcharhinus leucas,164,M,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.0175,2.84,34134.58107,34.13458107
+29/02/2024,10:49,Bull Shark,Carcharhinus leucas,190,F,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.0175,2.84,51843.97296,51.84397296
+24/05/2024,13:54,Common Blacktip,Carcharhinus limbatus,145,M,Alive,ID,NSW North Coast,Yamba,Iluka Beach,0.022941,2.881574,38793.07308,38.79307308
+14/08/2023,08:23,White Shark,Carcharodon carcharias,226,F,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00871,3.04,124884.2903,124.8842903
+20/08/2023,08:20,White Shark,Carcharodon carcharias,217,F,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00871,3.04,110371.1953,110.3711953
+31/08/2023,11:38,White Shark,Carcharodon carcharias,270,F,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00871,3.04,214468.7389,214.4687389
+24/09/2023,14:43,Tiger Shark,Galeocerdo cuvier,270,F,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00724,3.09,235859.0785,235.8590785
+01/10/2023,11:52,White Shark,Carcharodon carcharias,223,F,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00871,3.04,119912.6329,119.9126329
+11/10/2023,17:04,White Shark,Carcharodon carcharias,238,F,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00871,3.04,146154.4707,146.1544707
+21/10/2023,12:28,Tiger Shark,Galeocerdo cuvier,203,F,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00724,3.09,97701.52068,97.70152068
+23/10/2023,16:33,White Shark,Carcharodon carcharias,234,M,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00871,3.04,138814.3493,138.8143493
+05/11/2023,17:25,White Shark,Carcharodon carcharias,226,F,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00871,3.04,124884.2903,124.8842903
+25/11/2023,08:19,Smooth Hammerhead,Sphyrna zygaena,171,F,Alive,ID,NSW North Coast,Yamba,Iluka Beach,0.00417,3.03,24328.44043,24.32844043
+04/12/2023,13:42,White Shark,Carcharodon carcharias,230,M,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00871,3.04,131725.7793,131.7257793
+08/01/2024,15:59,Common Blacktip,Carcharhinus limbatus,162,M,Alive,ID,NSW North Coast,Yamba,Iluka Beach,0.022941,2.881574,53394.11142,53.39411142
+14/04/2024,07:09,Sandbar Whaler,Carcharhinus plumbeus,144,M,Alive,ID,NSW North Coast,Yamba,Iluka Beach,0.00639,3.012,20252.96837,20.25296837
+14/04/2024,14:44,Sandbar Whaler,Carcharhinus plumbeus,203,F,Alive,ID,NSW North Coast,Yamba,Iluka Beach,0.00639,3.012,56974.29033,56.97429033
+10/05/2024,08:25,Sandbar Whaler,Carcharhinus plumbeus,138,F,Alive,ID,NSW North Coast,Yamba,Iluka Beach,0.00639,3.012,17816.26511,17.81626511
+10/05/2024,09:21,Sandbar Whaler,Carcharhinus plumbeus,143,M,Alive,ID,NSW North Coast,Yamba,Iluka Beach,0.00639,3.012,19832.29633,19.83229633
+28/06/2024,12:19,Tiger Shark,Galeocerdo cuvier,308,M,Alive,"ID, A",NSW North Coast,Yamba,Iluka Beach,0.00724,3.09,354291.1305,354.2911305
+27/08/2023,11:25,White Shark,Carcharodon carcharias,223,F,Alive,"ID, A",NSW North Coast,Yamba,Main Beach,0.00871,3.04,119912.6329,119.9126329
+26/09/2023,11:47,White Shark,Carcharodon carcharias,220,F,Alive,"ID, A",NSW North Coast,Yamba,Main Beach,0.00871,3.04,115075.562,115.075562
+24/10/2023,07:31,Sandbar Whaler,Carcharhinus plumbeus,122,M,Alive,ID,NSW North Coast,Yamba,Main Beach,0.00639,3.012,12291.83348,12.29183348
+14/11/2023,13:30,Greynurse Shark,Carcharias taurus,271,F,Alive,ID,NSW North Coast,Yamba,Main Beach,0.0107,3.03,251930.4886,251.9304886
+23/03/2024,15:35,Bull Shark,Carcharhinus leucas,182,M,Alive,"ID, A",NSW North Coast,Yamba,Main Beach,0.0175,2.84,45881.83625,45.88183625
+21/06/2024,08:46,Tiger Shark,Galeocerdo cuvier,290,M,Alive,"ID, A",NSW North Coast,Yamba,Main Beach,0.00724,3.09,294136.1338,294.1361338
+21/06/2024,09:41,Dusky Whaler,Carcharhinus obscurus,320,F,Alive,ID,NSW North Coast,Yamba,Main Beach,0.00794,3.07,389610.7541,389.6107541
+12/07/2023,14:07,Greynurse Shark,Carcharias taurus,270,F,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.0107,3.03,249124.2379,249.1242379
+15/07/2023,08:23,White Shark,Carcharodon carcharias,197,M,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.00871,3.04,82261.28372,82.26128372
+16/07/2023,07:54,White Shark,Carcharodon carcharias,245,M,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.00871,3.04,159618.4361,159.6184361
+28/07/2023,08:57,White Shark,Carcharodon carcharias,247,F,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.00871,3.04,163612.6553,163.6126553
+10/08/2023,07:14,White Shark,Carcharodon carcharias,215,M,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.00871,3.04,107307.7461,107.3077461
+12/08/2023,07:41,White Shark,Carcharodon carcharias,257,F,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.00871,3.04,184592.8393,184.5928393
+25/08/2023,11:42,White Shark,Carcharodon carcharias,252,M,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.00871,3.04,173890.4771,173.8904771
+28/08/2023,13:39,White Shark,Carcharodon carcharias,261,F,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.00871,3.04,193466.2872,193.4662872
+11/09/2023,07:32,White Shark,Carcharodon carcharias,232,M,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.00871,3.04,135238.8998,135.2388998
+02/10/2023,08:08,White Shark,Carcharodon carcharias,250,NA,Alive,,NSW North Coast,Yamba,Pippi Beach,0.00871,3.04,169728.894,169.728894
+05/10/2023,14:14,White Shark,Carcharodon carcharias,232,F,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.00871,3.04,135238.8998,135.2388998
+10/10/2023,13:39,White Shark,Carcharodon carcharias,218,M,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.00871,3.04,111924.6888,111.9246888
+16/10/2023,13:43,Sandbar Whaler,Carcharhinus plumbeus,110,F,Dead,,NSW North Coast,Yamba,Pippi Beach,0.00639,3.012,8998.61406,8.99861406
+21/10/2023,14:10,Scalloped Hammerhead,Sphyrna lewini,145,F,Dead,,NSW North Coast,Yamba,Pippi Beach,0.003605,3.132793,21282.55757,21.28255757
+24/10/2023,08:18,Sandbar Whaler,Carcharhinus plumbeus,117,M,Alive,ID,NSW North Coast,Yamba,Pippi Beach,0.00639,3.012,10836.19156,10.83619156
+04/12/2023,08:23,Bronze Whaler,Carcharhinus brachyurus,265,M,Alive,ID,NSW North Coast,Yamba,Pippi Beach,0.00468,3.1,152162.6497,152.1626497
+08/12/2023,14:25,Sandbar Whaler,Carcharhinus plumbeus,129,M,Alive,ID,NSW North Coast,Yamba,Pippi Beach,0.00639,3.012,14541.09345,14.54109345
+15/12/2023,NA,Tiger Shark,Galeocerdo cuvier,127,M,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.00724,3.09,22934.64721,22.93464721
+21/12/2023,10:18,White Shark,Carcharodon carcharias,249,M,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.00871,3.04,167673.3997,167.6733997
+30/12/2023,06:41,Sandbar Whaler,Carcharhinus plumbeus,134,M,Alive,ID,NSW North Coast,Yamba,Pippi Beach,0.00639,3.012,16305.73992,16.30573992
+25/01/2024,13:53,Sandbar Whaler,Carcharhinus plumbeus,113,F,Alive,ID,NSW North Coast,Yamba,Pippi Beach,0.00639,3.012,9758.276731,9.758276731
+25/01/2024,15:09,Sandbar Whaler,Carcharhinus plumbeus,140,F,Alive,ID,NSW North Coast,Yamba,Pippi Beach,0.00639,3.012,18605.37816,18.60537816
+17/02/2024,16:02,Bull Shark,Carcharhinus leucas,185,F,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.0175,2.84,48062.43362,48.06243362
+20/02/2024,11:34,Common Blacktip,Carcharhinus limbatus,138,M,Alive,ID,NSW North Coast,Yamba,Pippi Beach,0.022941,2.881574,33638.16399,33.63816399
+08/04/2024,07:44,Bull Shark,Carcharhinus leucas,230,NA,Alive,,NSW North Coast,Yamba,Pippi Beach,0.0175,2.84,89195.94334,89.19594334
+28/04/2024,07:32,White Shark,Carcharodon carcharias,270,M,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.00871,3.04,214468.7389,214.4687389
+30/04/2024,11:27,Sandbar Whaler,Carcharhinus plumbeus,124,F,Alive,ID,NSW North Coast,Yamba,Pippi Beach,0.00639,3.012,12908.83275,12.90883275
+09/05/2024,12:35,White Shark,Carcharodon carcharias,268,F,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.00871,3.04,209675.6166,209.6756166
+12/05/2024,08:33,Bull Shark,Carcharhinus leucas,170,F,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.0175,2.84,37801.84399,37.80184399
+26/05/2024,13:15,Sandbar Whaler,Carcharhinus plumbeus,110,F,Alive,ID,NSW North Coast,Yamba,Pippi Beach,0.00639,3.012,8998.61406,8.99861406
+21/06/2024,08:54,Tiger Shark,Galeocerdo cuvier,278,F,Alive,"ID, A",NSW North Coast,Yamba,Pippi Beach,0.00724,3.09,258129.1109,258.1291109
+21/06/2024,08:58,Tiger Shark,Galeocerdo cuvier,300,F,Alive,,NSW North Coast,Yamba,Pippi Beach,0.00724,3.09,326620.3526,326.6203526
+29/06/2024,08:44,Sandbar Whaler,Carcharhinus plumbeus,126,F,Alive,ID,NSW North Coast,Yamba,Pippi Beach,0.00639,3.012,13546.18305,13.54618305
+09/08/2023,13:12,White Shark,Carcharodon carcharias,232,F,Alive,"ID, A",NSW North Coast,Yamba,Spooky Beach,0.00871,3.04,135238.8998,135.2388998
+31/08/2023,14:32,White Shark,Carcharodon carcharias,238,M,Alive,"ID, A",NSW North Coast,Yamba,Spooky Beach,0.00871,3.04,146154.4707,146.1544707
+09/10/2023,09:54,Dusky Whaler,Carcharhinus obscurus,165,M,Alive,ID,NSW North Coast,Yamba,Spooky Beach,0.00794,3.07,50991.3149,50.9913149
+27/11/2023,13:21,White Shark,Carcharodon carcharias,234,F,Alive,"ID, A",NSW North Coast,Yamba,Spooky Beach,0.00871,3.04,138814.3493,138.8143493
+09/01/2024,16:12,Bull Shark,Carcharhinus leucas,246,F,Alive,"ID, A",NSW North Coast,Yamba,Spooky Beach,0.0175,2.84,107967.6759,107.9676759
+21/06/2024,09:22,Tiger Shark,Galeocerdo cuvier,330,F,Alive,"ID, A",NSW North Coast,Yamba,Spooky Beach,0.00724,3.09,438476.821,438.476821
