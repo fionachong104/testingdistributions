@@ -22,7 +22,7 @@ siteb_plot <- list()
 bplqq <- list()
 msbplqq <-list()
 
-AICdf <- data.frame(site = sites, llBPL = NA, llMSBPL = NA, lllognorm = NA, llmslognorm = NA, AICBPL = NA, AICMSBPL = NA, AIClognorm = NA, AICmslognorm = NA)
+AICdf <- data.frame(site = sites, Number = NA, llBPL = NA, llMSBPL = NA, lllognorm = NA, llmslognorm = NA, AICBPL = NA, AICMSBPL = NA, AIClognorm = NA, AICmslognorm = NA)
 
 sigmadf <- data.frame(site = sites, lognorm = NA, mslognorm = NA)
 gof <- data.frame(site = sites, MSlognormX2 = NA, MSlognormdf = NA, MSlognormP = NA, lognormX2 = NA, lognormdf = NA, lognormP = NA, MSBPLX2 = NA, MSBPLdf = NA, MSBPLP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
@@ -89,15 +89,16 @@ for(i in 1:nsites){
     geom_line(aes_(x = sitex, y = sitey.MSBPL), col = '#D95F02', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.MSlnorm), col = '#7570B3', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
-    labs(tag = LETTERS[ ((i - 1) %% 4) + 1 ]) +
+    labs(tag = LETTERS[i])+ #((i - 1) %% 4) + 1 ]) +
     annotate("text", x = 10, y = 10, label = s) +
    # annotate("text", x = 10, y = 13, label = bquote(paste(italic(sigma)[LN]==.(round(thetalnorm$sdlog[i],2))))) +
     #annotate("text", x = 10, y = 10, label = bquote(paste(italic(sigma)[MSLN]==.(round(thetaMSlnorm$par[2],2))))) +
-    annotate("text", x = 10, y = 5, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
-    annotate("text", x = 10, y = 3, label = paste("italic(b)[MSBPL]==",(round(MSPLB.bMLE.site.b[i],2))), parse = T) +
-    annotate("text", x = 10, y = 2, label = paste("n =" ,(length(sitedata$Area)))) +
+    annotate("text", x = 10, y = 4, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
+    annotate("text", x = 10, y = 2, label = paste("italic(b)[MSBPL]==",(round(MSPLB.bMLE.site.b[i],2))), parse = T) +
+    annotate("text", x = 10, y = 1, label = paste("n =" ,(length(sitedata$Area)))) +
     theme_classic() +
     theme(axis.title = element_blank())
+  AICdf$Number[i] <- length(sitedata$Area)
   AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
   AICdf$AIClognorm[i] <- lnormAIC(x)$AIClognorm
   AICdf$llBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$llBPL
@@ -115,12 +116,17 @@ bottomlabel <- grid::textGrob(expression(paste("Colony area, ", italic("x"), ~(c
 
 ggsave(
   filename = "coralsizespec.pdf", 
-  plot = marrangeGrob(grobs= siteb_plot, nrow=2, ncol=2,
+  plot = marrangeGrob(grobs= siteb_plot, nrow=5, ncol=4,
                       left = leftlabel,
                       bottom = bottomlabel,
-                      layout_matrix = rbind(c(1,2), c(3,4))), 
-  width = 15, height = 9
+                      layout_matrix = rbind(c(1,2,3,4), 
+                                            c(5,6,7,8),
+                                            c(9,10,11,12),
+                                            c(13,14,15,16),
+                                            c(17,18,19,20))), 
+  width = 15, height = 12
 )
+
 
 write.csv(AICdf,'coralAIC.csv') 
 write.csv(gof,'coralgof.csv') 

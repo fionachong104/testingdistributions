@@ -19,7 +19,7 @@ nsites <- length(sites)
 # create empty lists to store things in 
 PLB.bMLE.site.b <- numeric(nsites)
 siteb_plot <- list()
-AICdf <- data.frame(site = sites, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
+AICdf <- data.frame(site = sites, Numbers = NA, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
 sigmadf <- data.frame(site = sites, lognorm = NA)
 gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
 
@@ -67,6 +67,7 @@ for(i in 1:nsites){
     annotate("text", x = 100, y = 2, label = paste("n =" ,(length(sitedata$aboveGroundLiveBiomass_kilograms)))) +
     theme_classic() +
     theme(axis.title = element_blank())
+  AICdf$Numbers[i] <- length(sitedata$aboveGroundLiveBiomass_kilograms)
   AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
   AICdf$AIClognorm[i] <- lnormAIC(x)$AIClognorm
   AICdf$llBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.biomass, xmax = siteinput$max.biomass, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$llBPL

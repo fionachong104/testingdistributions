@@ -61,7 +61,7 @@ nsites <- length(sites)
 # create empty lists to store things in 
 PLB.bMLE.site.b <- numeric(nsites)
 siteb_plot <- list()
-AICdf <- data.frame(site = sites, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
+AICdf <- data.frame(site = sites, Number = NA, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
 sigmadf <- data.frame(site = sites, lognorm = NA)
 gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
 
@@ -100,12 +100,13 @@ for(i in 1:nsites){
                         limits = range(allfish$individual_biomass_kg))+
     geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
-    labs(tag = LETTERS[ ((i - 1) %% 4) + 1 ]) +
+    labs(tag = LETTERS[i])+ #((i - 1) %% 4) + 1 ]) +
     annotate("text", x = 0.002, y = 10, label = s) +
-    annotate("text", x = 0.002, y = 5, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
-    annotate("text", x = 0.002, y = 3, label = paste("n =" ,(length(sitedata$individual_biomass_kg)))) +
+    annotate("text", x = 0.002, y = 4, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
+    annotate("text", x = 0.002, y = 2, label = paste("n =" ,(length(sitedata$individual_biomass_kg)))) +
     theme_classic() + 
     theme(axis.title = element_blank())
+  AICdf$Number[i] <- length(sitedata$individual_biomass_kg)
   AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
   AICdf$AIClognorm[i] <- lnormAIC(x)$AIClognorm
   AICdf$llBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.biomass, xmax = siteinput$max.biomass, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$llBPL
@@ -120,12 +121,16 @@ leftlabel <- grid::textGrob(expression(paste("Number of fish with sizes", " ">="
 bottomlabel <- grid::textGrob(expression(paste("Fish biomass, ", italic("x"), ~(kg))))
 
 ggsave(
-  filename = "fishbiomass.pdf", 
-  plot = marrangeGrob(grobs= siteb_plot, nrow=2, ncol=2,
+  filename = "fisbhiomass.pdf", 
+  plot = marrangeGrob(grobs= siteb_plot, nrow=5, ncol=4,
                       left = leftlabel,
                       bottom = bottomlabel,
-                      layout_matrix = rbind(c(1,2), c(3,4))), 
-  width = 15, height = 9
+                      layout_matrix = rbind(c(1,2,3,4), 
+                                            c(5,6,7,8),
+                                            c(9,10,11,12),
+                                            c(13,14,15,16),
+                                            c(17,18,19,20))), 
+  width = 15, height = 12
 )
 
 # qqplots saved as pdf
