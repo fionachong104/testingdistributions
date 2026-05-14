@@ -95,6 +95,20 @@ mle_b = function(region, x, sum_log_x, x_min, x_max){
   return(PLB.return)
 }
 
+
+slope.conf.int = function(PLB.bMLE.b, PLB.minLL.b, input){
+  # Calculate confidence intervals. Code adopted from Edwards et al. (2017)
+  bvec = seq(PLB.bMLE.b - 0.5, PLB.bMLE.b + 0.5, 0.00001) 
+  PLB.LLvals = vector(length=length(bvec))  # negative log-likelihood for bvec
+  for(i in 1:length(bvec)){
+    PLB.LLvals[i] = negLL.PLB(bvec[i], x=input$biomass, n=length(input$biomass), xmin=input$min.biomass,
+                              xmax=input$max.biomass, sumlogx=input$sum.log.biomass)   
+  }
+  critVal = PLB.minLL.b  + qchisq(0.95,1)/2 # 1 degree of freedom, Hilborn and Mangel (1997) p162.
+  bIn95 = bvec[ PLB.LLvals < critVal ]
+  return(c(min(bIn95), max(bIn95)))
+}
+
 # negLL.PLB - negative log-likelihood function (function by Edwards et al. 2017)
 negLL.PLB = function(b, x, n, xmin, xmax, sumlogx)
 {
