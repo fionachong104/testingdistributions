@@ -4,14 +4,16 @@ library(ggplot2)
 library(gridExtra)
 library(tidyverse)
 library(moments)
+library(cowplot)
 
 source("coralsizedistfuncs.R")
 
 library(readxl)
 #fish_size_spectra_data <- read_excel("C:/Users/624225/OneDrive - hull.ac.uk/_BoxData/PhD/testingdistributions/Carvalho21_code/fish_size_spectra_data.xlsx")
-fishbiomass <- read_delim("fishbiomass_oneyear.csv")
+fishbiomass <- read.delim("C:/Users/tvkx991/OneDrive - University of Leeds/PhD/testingdistributions/testingdistributions/fishbiomass_oneyear.csv")
 axisscores <- read.csv("axisscores.csv", row.names=1)
 axisscores <- axisscores[order(axisscores$PC1), ]
+#siteorder <- read.csv("C:/Users/tvkx991/OneDrive - University of Leeds/ClimateREEFS/environmentaldata/Fiona_unique_sites.csv")
 
 #reformatting Maria's fish data
 #starting with BR2010
@@ -51,19 +53,21 @@ all_fish <- allfish%>%
     #CV = round((sd/mean_log_biomass)*100, digits = 3),  removing this as our emans a negative so quite misleading
     skewness = round(skewness(log(individual_biomass_kg)), digits = 3),
     kurtosis = round(kurtosis(log(individual_biomass_kg)), digits = 3))
-all_fish<- all_fish[match(rownames(axisscores), all_fish$Site), ] # order by PC1 scores 
-write.csv(all_fish,'fishsummarystats.csv') 
+#all_fish<- all_fish[match(rownames(axisscores), all_fish$Site), ] # order by PC1 scores 
+#write.csv(all_fish,'fishsummarystats.csv') 
 
-sites <- unique(allfish$Site) #carn vs herb
-sites <- sites[match(row.names(axisscores), sites)] #re-ordering based on increasing PC1 scores
+sites <- unique(allfish$Site) #missing three sites in the siteorder spreasheet
+sites <- sites[match(row.names(axisscores), sites)]  #re-ordering based on order on hab het data
 nsites <- length(sites)
 
 # create empty lists to store things in 
 PLB.bMLE.site.b <- numeric(nsites)
+PLB.minLL.site.b <- numeric(nsites)
+bplcoeffs <- data.frame(site = sites, bplb = NA, lnsigma = NA)
 siteb_plot <- list()
 AICdf <- data.frame(site = sites, Number = NA, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
-sigmadf <- data.frame(site = sites, lognorm = NA)
 gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
+confintervals <- data.frame(site = sites, site_b = NA, lwr_CI95 = NA, upr_CI95 = NA)
 
 for(i in 1:nsites){
   s <- sites[i]
@@ -72,13 +76,13 @@ for(i in 1:nsites){
   bML <- mle_b(Site == s, x = siteinput$biomass, sum_log_x = siteinput$sum.log.biomass,
                x_min = siteinput$min.biomass, x_max = siteinput$max.biomass)
   PLB.bMLE.site.b[i] <- bML[[1]] 
+  PLB.minLL.site.b[i] <- bML[[2]]
   thetalnorm <- estimatelognormal(x = sitedata$individual_biomass_kg)
   #goodness-of-fit test for lognormal
   lngof <- lnormgof(x = sitedata$individual_biomass_kg, mu = thetalnorm$meanlog, sigma = thetalnorm$sdlog)
   gof$lognormX2[i] <- lngof$X2
   gof$lognormdf[i] <- lngof$df
   gof$lognormP[i] <- lngof$P
-  
   #goodness-of-fit test for bounded power law
   bplgof <- BPLgof(x = sitedata$individual_biomass_kg, b = bML[[1]], xmin = min(sitedata$individual_biomass_kg), xmax = max(sitedata$individual_biomass_kg))
   gof$BPLX2[i] <- bplgof$X2
@@ -87,50 +91,91 @@ for(i in 1:nsites){
   
   x <- sitedata$individual_biomass_kg
   sitex = seq(min(sitedata$individual_biomass_kg), max(sitedata$individual_biomass_kg), length = 10000)
- #rank plot   
+ 
+  #rank plot   
   sitey.PLB <- (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
                          xmax = max(sitex))) * length(sitedata$individual_biomass_kg)
   sitey.lnorm <- plnorm(q = sitex, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog, lower.tail = FALSE, log.p = FALSE) * length(sitedata$individual_biomass_kg)
+  
+  model_df <- data.frame(
+    sitex = sitex,
+    value = c(sitey.PLB, sitey.lnorm),
+    model = rep(c("Bounded Power Law", "Log-normal"), each = length(sitex))
+  )
+  
   siteb_plot[[i]] <- ggplot() +
     geom_point(aes_(x = (sort(sitedata$individual_biomass_kg, decreasing=TRUE)), y = (1:length(sitedata$individual_biomass_kg))),
                color = "#666666", size = 2, alpha = 0.3) +
+    geom_line(
+      data = model_df,
+      aes(x = sitex, y = value, colour = model),
+      linewidth = 1
+    ) +
+    scale_colour_manual(
+      values = c("Bounded Power Law" = "black", "Log-normal" = "#1B9E77"),
+      name = "Model"
+    ) +
     scale_y_continuous(trans = 'log10', breaks = c(1,10,100,500,3000), 
                        limits = c(0.25, max(table(allfish$Site)))) +
     scale_x_continuous(trans = 'log10', breaks = c(0.0001,0.01,1,100),
                         limits = range(allfish$individual_biomass_kg))+
-    geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
-    geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
+    # geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
+    # geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
     labs(tag = LETTERS[i])+ #((i - 1) %% 4) + 1 ]) +
     annotate("text", x = 0.002, y = 10, label = s) +
-    annotate("text", x = 0.002, y = 4, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
+    annotate("text", x = 0.002, y = 4, label = paste("italic(b)[BPL]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
     annotate("text", x = 0.002, y = 2, label = paste("n =" ,(length(sitedata$individual_biomass_kg)))) +
     theme_classic() + 
-    theme(axis.title = element_blank())
+    theme(axis.title = element_blank(), legend.position = "none")
   AICdf$Number[i] <- length(sitedata$individual_biomass_kg)
   AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
   AICdf$AIClognorm[i] <- lnormAIC(x)$AIClognorm
   AICdf$llBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.biomass, xmax = siteinput$max.biomass, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$llBPL
   AICdf$AICBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.biomass, xmax = siteinput$max.biomass, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$AICBPL
-}
+  bplcoeffs$bplb[i] <- PLB.bMLE.site.b[i]
+  bplcoeffs$lnsigma[i] <- thetalnorm$sdlog
+  confintervals$site_b[i] <- round(PLB.bMLE.site.b[i],2)
+  confintervals$lwr_CI95[i] <- slope.conf.int(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[1]
+  confintervals$upr_CI95[i] <- slope.conf.int(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[2]
+  }
 
 write.csv(AICdf,'fish_AIC.csv')
 write.csv(gof, "fishgof.csv")
 
+# getting the legend from the first siteb_plot
+legend_plot <- get_legend(
+  siteb_plot[[1]] +
+    theme(legend.position = "top",
+          legend.direction = "horizontal",
+          legend.text = element_text(size = 14),
+          legend.title = element_text(size = 16))
+)
 
-leftlabel <- grid::textGrob(expression(paste("Number of fish with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
-bottomlabel <- grid::textGrob(expression(paste("Fish biomass, ", italic("x"), ~(kg))))
+# putting the plots into a 5x4 grid
+
+leftlabel <- grid::textGrob(expression(paste("Number of fish with sizes", " ">=" ", italic("x"), "    ")), rot = 90,
+                            gp = grid::gpar(fontsize = 16))
+bottomlabel <- grid::textGrob(expression(paste("Fish biomass, ", italic("x"), ~(kg))), gp = grid::gpar(fontsize = 16))
+
+panel_grid <- arrangeGrob(
+  grobs = siteb_plot,
+  nrow  = 5,
+  ncol  = 4,
+  left  = leftlabel,
+  bottom = bottomlabel
+)
+
+final_plot <- plot_grid(
+  legend_plot,
+  panel_grid,
+  ncol = 1,
+  rel_heights = c(0.05, 1)
+)
 
 ggsave(
-  filename = "fisbhiomass.pdf", 
-  plot = marrangeGrob(grobs= siteb_plot, nrow=5, ncol=4,
-                      left = leftlabel,
-                      bottom = bottomlabel,
-                      layout_matrix = rbind(c(1,2,3,4), 
-                                            c(5,6,7,8),
-                                            c(9,10,11,12),
-                                            c(13,14,15,16),
-                                            c(17,18,19,20))), 
-  width = 15, height = 12
+  filename = "fishbiomass.pdf", 
+  final_plot, 
+  width = 15, height = 13
 )
 
 # qqplots saved as pdf
