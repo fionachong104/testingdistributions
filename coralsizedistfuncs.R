@@ -109,6 +109,19 @@ slope.conf.int = function(PLB.bMLE.b, PLB.minLL.b, input){
   return(c(min(bIn95), max(bIn95)))
 }
 
+slope.conf.int.coral = function(PLB.bMLE.b, PLB.minLL.b, input){
+  # Calculate confidence intervals. Code adopted from Edwards et al. (2017)
+  bvec = seq(PLB.bMLE.b - 0.5, PLB.bMLE.b + 0.5, 0.00001) 
+  PLB.LLvals = vector(length=length(bvec))  # negative log-likelihood for bvec
+  for(i in 1:length(bvec)){
+    PLB.LLvals[i] = negLL.PLB(bvec[i], x=input$Area, n=length(input$Area), xmin=input$min.Area,
+                              xmax=input$max.Area, sumlogx=input$sum.log.Area)   
+  }
+  critVal = PLB.minLL.b  + qchisq(0.95,1)/2 # 1 degree of freedom, Hilborn and Mangel (1997) p162.
+  bIn95 = bvec[ PLB.LLvals < critVal ]
+  return(c(min(bIn95), max(bIn95)))
+}
+
 # negLL.PLB - negative log-likelihood function (function by Edwards et al. 2017)
 negLL.PLB = function(b, x, n, xmin, xmax, sumlogx)
 {

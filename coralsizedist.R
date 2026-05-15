@@ -16,7 +16,9 @@ sites <- sites[match(row.names(axisscores), sites)] #re-ordering based on increa
 nsites <- length(sites)
 
 PLB.bMLE.site.b <- numeric(nsites)
+PLB.minLL.site.b <- numeric(nsites)
 MSPLB.bMLE.site.b <- numeric(nsites)
+MSPLB.minLL.site.b <- numeric(nsites)
 
 siteb_plot <- list()
 bplqq <- list()
@@ -26,6 +28,7 @@ AICdf <- data.frame(site = sites, Number = NA, llBPL = NA, llMSBPL = NA, lllogno
 
 sigmadf <- data.frame(site = sites, lognorm = NA, mslognorm = NA)
 gof <- data.frame(site = sites, MSlognormX2 = NA, MSlognormdf = NA, MSlognormP = NA, lognormX2 = NA, lognormdf = NA, lognormP = NA, MSBPLX2 = NA, MSBPLdf = NA, MSBPLP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
+confintervals <- data.frame(site = sites, site_b = NA, lwr_CI95 = NA, upr_CI95 = NA)
 
 w <- 3648/35
 v <- 2736/35
@@ -36,7 +39,8 @@ for(i in 1:nsites){
   sitedata <- oneyeardf %>% filter(Site == s)
   siteinput <- set.params(sitedata$Area)
   bML <- mle_b(Site == s, x = siteinput$Area, sum_log_x = siteinput$sum.log.Area, x_min = siteinput$min.Area, x_max = siteinput$max.Area)
-  PLB.bMLE.site.b[i] <- bML[[1]] 
+  PLB.bMLE.site.b[i] <- bML[[1]]
+  PLB.minLL.site.b[i] <- bML[[2]]
   msbplfit <- estimatebMSBPL(x = sitedata$Area, w = w, v = v)
   MSPLB.bMLE.site.b[i] <- msbplfit$minimum
   thetalnorm <- estimatelognormal(x = sitedata$Area)
@@ -78,26 +82,45 @@ for(i in 1:nsites){
   sitey.MSlnorm <- (1-sapply(sitex, FUN = FMSlnorm, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v))* length(sitedata$Area)
   sitey.lnorm <- plnorm(q = sitex, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog, lower.tail = FALSE, log.p = FALSE) * length(sitedata$Area)
  # 1 - sapply(sitex.MSlnorm, FUN = FMSlnorm, mu = mu, sigma = sigma, w = w, v = v
+  
+  
+  model_df <- data.frame(
+    sitex = sitex,
+    value = c(sitey.PLB, sitey.lnorm, sitey.MSBPL, sitey.MSlnorm),
+    model = rep(c("Bounded Power Law", "Log-normal", 
+                  "Minus-sampled Bounded Power Law", "Minus-sampled Log-normal"), each = length(sitex))
+  )
+  
   siteb_plot[[i]] <- ggplot() +
+    geom_line(
+      data = model_df,
+      aes(x = sitex, y = value, colour = model),
+      linewidth = 1
+    ) +
+    scale_colour_manual(
+      values = c("Bounded Power Law" = "black", "Log-normal" = "#1B9E77",
+                 "Minus-sampled Bounded Power Law" = "#D95F02", "Minus-sampled Log-normal" = "#7570B3"),
+      name = "Model"
+    ) +
     geom_point(aes_(x = (sort(sitedata$Area, decreasing=TRUE)), y = (1:length(sitedata$Area))),
-               color = "#666666", size = 2, alpha = 0.3) +
+               color = "#666666", size = 2, alpha = 0.2) +
     scale_y_continuous(trans = 'log10', breaks = c(1,10,100,500,3000),
                        limits = c(0.25, max(table(oneyeardf$Site)))) +
     scale_x_continuous(trans = 'log10', breaks = c(0,1,5,10,100,1000,10000),
                        limits = range(oneyeardf$Area))+
-    geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
-    geom_line(aes_(x = sitex, y = sitey.MSBPL), col = '#D95F02', lwd = 1) +
-    geom_line(aes_(x = sitex, y = sitey.MSlnorm), col = '#7570B3', lwd = 1) +
-    geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
+    # geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
+    # geom_line(aes_(x = sitex, y = sitey.MSBPL), col = '#D95F02', lwd = 1) +
+    # geom_line(aes_(x = sitex, y = sitey.MSlnorm), col = '#7570B3', lwd = 1) +
+    # geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
     labs(tag = LETTERS[i])+ #((i - 1) %% 4) + 1 ]) +
     annotate("text", x = 10, y = 10, label = s) +
    # annotate("text", x = 10, y = 13, label = bquote(paste(italic(sigma)[LN]==.(round(thetalnorm$sdlog[i],2))))) +
     #annotate("text", x = 10, y = 10, label = bquote(paste(italic(sigma)[MSLN]==.(round(thetaMSlnorm$par[2],2))))) +
-    annotate("text", x = 10, y = 4, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
+    annotate("text", x = 10, y = 4, label = paste("italic(b)[BPL]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
     annotate("text", x = 10, y = 2, label = paste("italic(b)[MSBPL]==",(round(MSPLB.bMLE.site.b[i],2))), parse = T) +
     annotate("text", x = 10, y = 1, label = paste("n =" ,(length(sitedata$Area)))) +
     theme_classic() +
-    theme(axis.title = element_blank())
+    theme(axis.title = element_blank(), legend.position = "none")
   AICdf$Number[i] <- length(sitedata$Area)
   AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
   AICdf$AIClognorm[i] <- lnormAIC(x)$AIClognorm
@@ -109,24 +132,69 @@ for(i in 1:nsites){
   AICdf$AICMSBPL[i] <- MSBPLAIC(msbplfit)$AICMSBPL
   sigmadf$lognorm[i] <- thetalnorm$sdlog
   sigmadf$mslognorm[i] <- thetaMSlnorm$par[2]
+  # bplcoeffs$bplb[i] <- PLB.bMLE.site.b[i]
+  # bplcoeffs$lnsigma[i] <- thetalnorm$sdlog
+  confintervals$site_b[i] <- round(PLB.bMLE.site.b[i],2)
+  confintervals$lwr_CI95[i] <- slope.conf.int.coral(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[1]
+  confintervals$upr_CI95[i] <- slope.conf.int.coral(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[2]
 }  
 
-leftlabel <- grid::textGrob(expression(paste("Number of colonies with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
-bottomlabel <- grid::textGrob(expression(paste("Colony area, ", italic("x"), ~(cm^2))))
+# leftlabel <- grid::textGrob(expression(paste("Number of colonies with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
+# bottomlabel <- grid::textGrob(expression(paste("Colony area, ", italic("x"), ~(cm^2))))
 
-ggsave(
-  filename = "coralsizespec.pdf", 
-  plot = marrangeGrob(grobs= siteb_plot, nrow=5, ncol=4,
-                      left = leftlabel,
-                      bottom = bottomlabel,
-                      layout_matrix = rbind(c(1,2,3,4), 
-                                            c(5,6,7,8),
-                                            c(9,10,11,12),
-                                            c(13,14,15,16),
-                                            c(17,18,19,20))), 
-  width = 15, height = 12
+
+# getting the legend from the first siteb_plot
+legend_plot <- get_legend(
+  siteb_plot[[1]] +
+    theme(legend.position = "top",
+          legend.direction = "horizontal",
+          legend.text = element_text(size = 14),
+          legend.title = element_text(size = 16))
 )
 
+# putting the plots into a 5x4 grid
+
+leftlabel <- grid::textGrob(expression(paste("Number of colonies with sizes", " ">=" ", italic("x"), "    ")), rot = 90,
+                            gp = grid::gpar(fontsize = 16))
+bottomlabel <- grid::textGrob(expression(paste("Coral area, ", italic("x"), ~(cm^2))), gp = grid::gpar(fontsize = 16))
+
+panel_grid <- arrangeGrob(
+  grobs = siteb_plot,
+  nrow  = 5,
+  ncol  = 4,
+  left  = leftlabel,
+  bottom = bottomlabel
+)
+
+final_plot <- plot_grid(
+  legend_plot,
+  panel_grid,
+  ncol = 1,
+  rel_heights = c(0.05, 1)
+)
+
+ggsave(
+  filename = "coralarea.pdf", 
+  final_plot, 
+  width = 15, height = 13
+)
+
+
+# 
+# 
+# ggsave(
+#   filename = "coralsizespec.pdf", 
+#   plot = marrangeGrob(grobs= siteb_plot, nrow=5, ncol=4,
+#                       left = leftlabel,
+#                       bottom = bottomlabel,
+#                       layout_matrix = rbind(c(1,2,3,4), 
+#                                             c(5,6,7,8),
+#                                             c(9,10,11,12),
+#                                             c(13,14,15,16),
+#                                             c(17,18,19,20))), 
+#   width = 15, height = 12
+# )
+# 
 
 write.csv(AICdf,'coralAIC.csv') 
 write.csv(gof,'coralgof.csv') 
