@@ -58,7 +58,7 @@ for(i in 1:nsites){
                color = "#666666", size = 2, alpha = 0.3) +
     scale_y_continuous(trans = 'log10', breaks = c(1,10,100,1000,10000),
                        limits = c(0.25, max(table(fish.df$region)))) +
-    scale_x_continuous( breaks = c(0.01,0.5,1,5),
+    scale_x_continuous(trans = 'log10', breaks = c(0.01,0.5,1,5),
                         limits = range(fish.df$biomass_kg))+
     geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
     geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
