@@ -769,3 +769,16 @@ MSBPLAIC <- function(msbplfit){
 Fisherapprox <- function(X2, df){
   sqrt(2 * X2) - sqrt(2 * df - 1)
 }
+
+#Density histogram of transformed chi-square goodness of fit statistics, with standard normal density curve overlaid
+#Arguments:
+#X2: vector of chi-square goodness of fit statistics
+#df: vector of degrees of freedom
+#Value: histogram of transformed chi-square goodness of fit statistics with standard normal density
+plotFisherapprox <- function(X2, df){
+  Fisher <- Fisherapprox(X2 = X2, df = df)
+  x <- seq(from = -4, to = 4, length.out = 1e3)
+  ynorm <- dnorm(x, mean = 0, sd = 1)
+  hist(Fisher, freq = FALSE, xlim = range(c(Fisher, x), na.rm = TRUE), ylim = c(0, max(ynorm)))
+  lines(x = x, y = ynorm, lty = "dashed")
+}
