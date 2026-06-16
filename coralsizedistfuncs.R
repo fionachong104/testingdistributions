@@ -759,3 +759,13 @@ MSBPLAIC <- function(msbplfit){
   AIC <- 2*2 - 2*(-msbplfit$objective)
   return(list(llMSBPL =-msbplfit$objective, AICMSBPL = AIC))
 }
+#Use Fisher's approximation to chi-square distribution to obtain something approximately standard normal
+#Arguments:
+#X2: chi-square statistic
+#df: degrees of freedom
+#Value:
+#transformed statistic, approximately N(0, 1)
+#source: Johnson et al, Continuous Univariate Distributions vol 1, 2nd ed, p. 426
+Fisherapprox <- function(X2, df){
+  sqrt(2 * X2) - sqrt(2 * df - 1)
+}
