@@ -493,11 +493,9 @@ lnormAIC <- function(x){
 #Arguments: vector x of positive observations
 #Value: list containing meanlog (ML estimate of mean of log x) and sdlog (ML estimate of sd of log x)
 estimatelognormal <- function(x){
-  n <- length(x)
-  logx <- log(x)
-  meanlog <- mean(logx)
-  sdlog <- sd(logx) * sqrt((n - 1) / n) #ML estimate
-  return(list(meanlog = meanlog, sdlog = sdlog))
+  meanest <- mean_est(x = log(x), alpha = 0.05)
+  sdest <- sd_est(x = log(x), alpha = 0.05)
+  return(list(meanlog = meanest$mean, sdlog = sdest$s))
 }
 
 #maximum likelihood estimate of mean for normal distribution with confidence interval
