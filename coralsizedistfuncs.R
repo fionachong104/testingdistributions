@@ -499,6 +499,46 @@ estimatelognormal <- function(x){
   sdlog <- sd(logx) * sqrt((n - 1) / n) #ML estimate
   return(list(meanlog = meanlog, sdlog = sdlog))
 }
+
+#maximum likelihood estimate of mean for normal distribution with confidence interval
+#arguments:
+#x: vector of observations
+#alpha: confidence level
+#value:
+#list containing estimated mean, lower and upper confidence limits for mean
+#Source:
+#Johnson, Kotz and Balakrishnan 1994 Continuous Univariate Distributions Volume 1, 2nd edition, p. 125
+mean_est <- function(x, alpha){
+  n <- length(x)
+  s <- sd(x) #sample standard deviation
+  xbar <- mean(x)
+  talpha <- qt(p = 1 - alpha / 2, df = n - 1)
+  lower <- xbar - talpha * s / sqrt(n)
+  upper <- xbar + talpha * s / sqrt(n)
+  list(mean = xbar, lower = lower, upper = upper)
+}
+
+#maximum likelihood estimate of sd for normal distribution with confidence interval
+#arguments:
+#x: vector of observations
+#alpha: confidence level
+#value:
+#list containing estimated sd, lower and upper confidence limits for sd
+#Source:
+#Johnson, Kotz and Balakrishnan 1994 Continuous Univariate Distributions Volume 1, 2nd edition, p. 132
+#but note that they have a typo: they say Talpha should be sqrt(n) * sqrt(chi^2_{alpha, n - 1}), but the sqrt(n) should not be there
+sd_est <- function(x, alpha){
+  n <- length(x)
+  s <- sd(x) * sqrt((n - 1) / n) #ML estimate
+  Talpha2 <- sqrt(qchisq(p = 1 - alpha / 2, df = n - 1))
+  Talpha1 <- sqrt(qchisq(p = alpha / 2, df = n - 1))
+  T <- s * sqrt(n)
+  lower <- T / Talpha2
+  upper <- T / Talpha1
+  list(s = s, lower = lower, upper = upper)
+}
+
+
 # log likelihood and AIC of a bounded power law distribution ---- , AIC is probably wrong because log likelihood not locally quadratic around xmin
 
 BPLAIC <- function(C, b, x){#making the argument be x instead of a may be easier to remember (same as for normal)
