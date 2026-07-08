@@ -143,7 +143,7 @@ for(i in 1:nsites){
   confintervalslognormal$meanlogupper95[i] <- thetalnorm$meanupper
   confintervalslognormal$sdlog[i] <- thetalnorm$sdlog
   confintervalslognormal$sdloglower95[i] <- thetalnorm$sdlower
-  confintervalslognormal$sdloglower95[i] <- thetalnorm$sdupper
+  confintervalslognormal$sdlogupper95[i] <- thetalnorm$sdupper
 }  
 
 # leftlabel <- grid::textGrob(expression(paste("Number of colonies with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
