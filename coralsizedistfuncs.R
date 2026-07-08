@@ -491,11 +491,11 @@ lnormAIC <- function(x){
 
 #maximum likelihood estimates of parameters of lognormal distribution
 #Arguments: vector x of positive observations
-#Value: list containing meanlog (ML estimate of mean of log x) and sdlog (ML estimate of sd of log x)
+#Value: list containing meanlog (ML estimate of mean of log x), meanlower and meanupper (95% confidence in terval for mean of log x), sdlog (ML estimate of sd of log x), sdlower and sdupper (95% confidence interval for sd of log x)
 estimatelognormal <- function(x){
   meanest <- mean_est(x = log(x), alpha = 0.05)
   sdest <- sd_est(x = log(x), alpha = 0.05)
-  return(list(meanlog = meanest$mean, sdlog = sdest$s))
+  return(list(meanlog = meanest$mean, meanlower = meanest$lower, meanupper = meanest$upper, sdlog = sdest$s, sdlower = sdest$lower, sdupper = sdest$upper))
 }
 
 #maximum likelihood estimate of mean for normal distribution with confidence interval
