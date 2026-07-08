@@ -29,7 +29,7 @@ AICdf <- data.frame(site = sites, Number = NA, llBPL = NA, llMSBPL = NA, lllogno
 sigmadf <- data.frame(site = sites, lognorm = NA, mslognorm = NA)
 gof <- data.frame(site = sites, MSlognormX2 = NA, MSlognormdf = NA, MSlognormP = NA, lognormX2 = NA, lognormdf = NA, lognormP = NA, MSBPLX2 = NA, MSBPLdf = NA, MSBPLP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
 confintervals <- data.frame(site = sites, site_b = NA, lwr_CI95 = NA, upr_CI95 = NA)
-confintervalslognormal <- data.frame(site = sites, meanlog = NA, meanlower95 = NA, meanupper95 = NA, sdlog = NA, sdlower95 = NA, sdupper95 = NA)
+confintervalslognormal <- data.frame(site = sites, meanlog = NA, meanloglower95 = NA, meanlogupper95 = NA, sdlog = NA, sdloglower95 = NA, sdlogupper95 = NA)
 
 w <- 3648/35
 v <- 2736/35
@@ -138,6 +138,12 @@ for(i in 1:nsites){
   confintervals$site_b[i] <- round(PLB.bMLE.site.b[i],2)
   confintervals$lwr_CI95[i] <- slope.conf.int.coral(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[1]
   confintervals$upr_CI95[i] <- slope.conf.int.coral(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[2]
+  confintervalslognormal$meanlog[i] <- thetalnorm$meanlog
+  confintervalslognormal$meanloglower95[i] <- thetalnorm$meanlower
+  confintervalslognormal$meanlogupper95[i] <- thetalnorm$meanupper
+  confintervalslognormal$sdlog[i] <- thetalnorm$sdlog
+  confintervalslognormal$sdloglower95[i] <- thetalnorm$sdlower
+  confintervalslognormal$sdloglower95[i] <- thetalnorm$sdupper
 }  
 
 # leftlabel <- grid::textGrob(expression(paste("Number of colonies with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
