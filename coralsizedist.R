@@ -29,6 +29,7 @@ AICdf <- data.frame(site = sites, Number = NA, llBPL = NA, llMSBPL = NA, lllogno
 sigmadf <- data.frame(site = sites, lognorm = NA, mslognorm = NA)
 gof <- data.frame(site = sites, MSlognormX2 = NA, MSlognormdf = NA, MSlognormP = NA, lognormX2 = NA, lognormdf = NA, lognormP = NA, MSBPLX2 = NA, MSBPLdf = NA, MSBPLP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
 confintervals <- data.frame(site = sites, site_b = NA, lwr_CI95 = NA, upr_CI95 = NA)
+confintervalslognormal <- data.frame(site = sites, meanlog = NA, meanlower95 = NA, meanupper95 = NA, sdlog = NA, sdlower95 = NA, sdupper95 = NA)
 
 w <- 3648/35
 v <- 2736/35
