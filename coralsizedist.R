@@ -42,7 +42,7 @@ for(i in 1:nsites){
   siteinput <- set.params(sitedata$Area)
   bML <- mle_b(Site == s, x = siteinput$Area, sum_log_x = siteinput$sum.log.Area, x_min = siteinput$min.Area, x_max = siteinput$max.Area)
   PLB.bMLE.site.b[i] <- bML[[1]]
-  PLB.minLL.site.b[i] <- bML[[2]]
+  PLB.minLL.site.b[i] <- bML[[2]]$minimum
   msbplfit <- estimatebMSBPL(x = sitedata$Area, w = w, v = v)
   MSPLB.bMLE.site.b[i] <- msbplfit$minimum
   thetalnorm <- estimatelognormal(x = sitedata$Area)
