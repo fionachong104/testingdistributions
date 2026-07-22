@@ -813,12 +813,13 @@ Fisherapprox <- function(X2, df){
 #X2: vector of chi-square goodness of fit statistics
 #df: vector of degrees of freedom
 #label (default blank): label for plot panel
+#obsperbin (default 20): approximate number of observations per bin
 #Value: histogram of transformed chi-square goodness of fit statistics with standard normal density
-plotFisherapprox <- function(X2, df, label = ""){
+plotFisherapprox <- function(X2, df, label = "", obsperbin = 20){
   Fisher <- Fisherapprox(X2 = X2, df = df)
   x <- seq(from = -4, to = 4, length.out = 1e3)
   ynorm <- dnorm(x, mean = 0, sd = 1)
-  nbins <- floor(sum(!is.na(X2)) / 5) + 1 #about 4 observations per bin
+  nbins <- floor(sum(!is.na(X2)) / (obsperbin + 1)) + 1
   breaks <- quantile(x = Fisher, probs = seq(from = 0, to = 1, length.out = nbins), na.rm = TRUE)
   hist(Fisher, breaks = breaks, freq = FALSE, xlim = range(c(Fisher, x), na.rm = TRUE), ylim = c(0, max(ynorm)), main = "", ylab = "density", xlab = expression(paste("Fisher-transformed"~chi^2)))
   lines(x = x, y = ynorm, lty = "dashed")
