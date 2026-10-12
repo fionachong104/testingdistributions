@@ -18,22 +18,28 @@ nsites <- length(sites)
 
 PLB.bMLE.site.b <- numeric(nsites)
 PLB.minLL.site.b <- numeric(nsites)
-MSPLB.bMLE.site.b <- numeric(nsites)
-MSPLB.minLL.site.b <- numeric(nsites)
+# MSPLB.bMLE.site.b <- numeric(nsites)
+# MSPLB.minLL.site.b <- numeric(nsites)
 
 siteb_plot <- list()
 bplqq <- list()
-msbplqq <-list()
+#msbplqq <-list()
 
-AICdf <- data.frame(site = sites, Number = NA, llBPL = NA, llMSBPL = NA, lllognorm = NA, llmslognorm = NA, AICBPL = NA, AICMSBPL = NA, AIClognorm = NA, AICmslognorm = NA)
+AICdf <- data.frame(site = sites, Number = NA, llBPL = NA, lllognorm = NA, AICBPL = NA,  AIClognorm = NA)
 
-sigmadf <- data.frame(site = sites, lognorm = NA, mslognorm = NA)
-gof <- data.frame(site = sites, MSlognormX2 = NA, MSlognormdf = NA, MSlognormP = NA, lognormX2 = NA, lognormdf = NA, lognormP = NA, MSBPLX2 = NA, MSBPLdf = NA, MSBPLP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
+sigmadf <- data.frame(site = sites, lognorm = NA)
+
+gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
+
+# AICdf <- data.frame(site = sites, Number = NA, llBPL = NA, llMSBPL = NA, lllognorm = NA, llmslognorm = NA, AICBPL = NA, AICMSBPL = NA, AIClognorm = NA, AICmslognorm = NA)
+#sigmadf <- data.frame(site = sites, lognorm = NA, mslognorm = NA)
+# gof <- data.frame(site = sites, MSlognormX2 = NA, MSlognormdf = NA, MSlognormP = NA, lognormX2 = NA, lognormdf = NA, lognormP = NA, MSBPLX2 = NA, MSBPLdf = NA, MSBPLP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
+
 confintervals <- data.frame(site = sites, site_b = NA, lwr_CI95 = NA, upr_CI95 = NA)
 confintervalslognormal <- data.frame(site = sites, meanlog = NA, meanloglower95 = NA, meanlogupper95 = NA, sdlog = NA, sdloglower95 = NA, sdlogupper95 = NA)
-
-w <- 3648/35
-v <- 2736/35
+# 
+# w <- 3648/35
+# v <- 2736/35
 
 for(i in 1:nsites){
   s <- sites[i]
@@ -43,16 +49,16 @@ for(i in 1:nsites){
   bML <- mle_b(Site == s, x = siteinput$Area, sum_log_x = siteinput$sum.log.Area, x_min = siteinput$min.Area, x_max = siteinput$max.Area)
   PLB.bMLE.site.b[i] <- bML[[1]]
   PLB.minLL.site.b[i] <- bML[[2]]$minimum
-  msbplfit <- estimatebMSBPL(x = sitedata$Area, w = w, v = v)
-  MSPLB.bMLE.site.b[i] <- msbplfit$minimum
-  thetalnorm <- estimatelognormal(x = sitedata$Area)
-  thetaMSlnorm <- estimateMSlnorm(x = sitedata$Area, w = w, v = v)
-  
-  #goodness-of-fit test for minus-sampled lognormal
-  mslnormgof <- MSlnormgof(x = sitedata$Area, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v)
-  gof$MSlognormX2[i] <- mslnormgof$X2
-  gof$MSlognormdf[i] <- mslnormgof$df
-  gof$MSlognormP[i] <- mslnormgof$P
+  # msbplfit <- estimatebMSBPL(x = sitedata$Area, w = w, v = v)
+  # MSPLB.bMLE.site.b[i] <- msbplfit$minimum
+   thetalnorm <- estimatelognormal(x = sitedata$Area)
+  # thetaMSlnorm <- estimateMSlnorm(x = sitedata$Area, w = w, v = v)
+  # 
+  # #goodness-of-fit test for minus-sampled lognormal
+  # mslnormgof <- MSlnormgof(x = sitedata$Area, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v)
+  # gof$MSlognormX2[i] <- mslnormgof$X2
+  # gof$MSlognormdf[i] <- mslnormgof$df
+  # gof$MSlognormP[i] <- mslnormgof$P
   
   #goodness-of-fit test for lognormal
   lngof <- lnormgof(x = sitedata$Area, mu = thetalnorm$meanlog, sigma = thetalnorm$sdlog)
@@ -60,11 +66,11 @@ for(i in 1:nsites){
   gof$lognormdf[i] <- lngof$df
   gof$lognormP[i] <- lngof$P
 
-  #goodness-of-fit test for minus-sampled bounded power law
-  msbplgof <- MSBPLgof(x = sitedata$Area, b = msbplfit$minimum, xmin = min(sitedata$Area), w = w, v = v)
-  gof$MSBPLX2[i] <- msbplgof$X2
-  gof$MSBPLdf[i] <- msbplgof$df
-  gof$MSBPLP[i] <- msbplgof$P
+  # #goodness-of-fit test for minus-sampled bounded power law
+  # msbplgof <- MSBPLgof(x = sitedata$Area, b = msbplfit$minimum, xmin = min(sitedata$Area), w = w, v = v)
+  # gof$MSBPLX2[i] <- msbplgof$X2
+  # gof$MSBPLdf[i] <- msbplgof$df
+  # gof$MSBPLP[i] <- msbplgof$P
   
   #goodness-of-fit test for bounded power law
   bplgof <- BPLgof(x = sitedata$Area, b = bML[[1]], xmin = min(sitedata$Area), xmax = max(sitedata$Area))
@@ -79,18 +85,23 @@ for(i in 1:nsites){
 #rank plot
   sitey.PLB <- (1 - pPLB(x = sitex, b = PLB.bMLE.site.b[i], xmin = min(sitex),
                        xmax = max(sitex))) * length(sitedata$Area)
-  sitey.MSBPL <-  (1 - FMSBPL(x = sitex, b = MSPLB.bMLE.site.b[i], xmin = min(sitex),
-                            w = w, v = v)) * length(sitedata$Area)
-  sitey.MSlnorm <- (1-sapply(sitex, FUN = FMSlnorm, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v))* length(sitedata$Area)
+  # sitey.MSBPL <-  (1 - FMSBPL(x = sitex, b = MSPLB.bMLE.site.b[i], xmin = min(sitex),
+  #                           w = w, v = v)) * length(sitedata$Area)
+  # sitey.MSlnorm <- (1-sapply(sitex, FUN = FMSlnorm, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v))* length(sitedata$Area)
   sitey.lnorm <- plnorm(q = sitex, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog, lower.tail = FALSE, log.p = FALSE) * length(sitedata$Area)
  # 1 - sapply(sitex.MSlnorm, FUN = FMSlnorm, mu = mu, sigma = sigma, w = w, v = v
   
-  
   model_df <- data.frame(
     sitex = sitex,
-    value = c(sitey.PLB, sitey.lnorm, sitey.MSBPL, sitey.MSlnorm),
-    model = rep(c("Bounded Power Law", "Log-normal", 
-                  "Minus-sampled Bounded Power Law", "Minus-sampled Log-normal"), each = length(sitex))
+    value = c(sitey.PLB, sitey.lnorm),
+    model = rep(c("Bounded Power Law", "Log-normal"), each = length(sitex)) 
+  
+  # model_df <- data.frame(
+  #   sitex = sitex,
+  #   value = c(sitey.PLB, sitey.lnorm, sitey.MSBPL, sitey.MSlnorm),
+  #   model = rep(c("Bounded Power Law", "Log-normal", 
+  #                 "Minus-sampled Bounded Power Law", "Minus-sampled Log-normal"), each = length(sitex))
+                
   )
   
   siteb_plot[[i]] <- ggplot() +
@@ -100,8 +111,8 @@ for(i in 1:nsites){
       linewidth = 1
     ) +
     scale_colour_manual(
-      values = c("Bounded Power Law" = "black", "Log-normal" = "#1B9E77",
-                 "Minus-sampled Bounded Power Law" = "#D95F02", "Minus-sampled Log-normal" = "#7570B3"),
+      values = c("Bounded Power Law" = "black", "Log-normal" = "#1B9E77"),
+                 #"Minus-sampled Bounded Power Law" = "#D95F02", "Minus-sampled Log-normal" = "#7570B3"),
       name = "Model"
     ) +
     geom_point(aes_(x = (sort(sitedata$Area, decreasing=TRUE)), y = (1:length(sitedata$Area))),
@@ -119,7 +130,7 @@ for(i in 1:nsites){
    # annotate("text", x = 10, y = 13, label = bquote(paste(italic(sigma)[LN]==.(round(thetalnorm$sdlog[i],2))))) +
     #annotate("text", x = 10, y = 10, label = bquote(paste(italic(sigma)[MSLN]==.(round(thetaMSlnorm$par[2],2))))) +
     annotate("text", x = 10, y = 4, label = paste("italic(b)[BPL]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
-    annotate("text", x = 10, y = 2, label = paste("italic(b)[MSBPL]==",(round(MSPLB.bMLE.site.b[i],2))), parse = T) +
+    # annotate("text", x = 10, y = 2, label = paste("italic(b)[MSBPL]==",(round(MSPLB.bMLE.site.b[i],2))), parse = T) +
     annotate("text", x = 10, y = 1, label = paste("n =" ,(length(sitedata$Area)))) +
     theme_classic() +
     theme(axis.title = element_blank(), legend.position = "none")
@@ -128,12 +139,12 @@ for(i in 1:nsites){
   AICdf$AIClognorm[i] <- lnormAIC(x)$AIClognorm
   AICdf$llBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$llBPL
   AICdf$AICBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$AICBPL
-  AICdf$llmslognorm[i] <- MSlnormAIC(thetaMSlnorm)$llmslognorm
-  AICdf$AICmslognorm[i] <- MSlnormAIC(thetaMSlnorm)$AICmslognorm
-  AICdf$llMSBPL[i] <- MSBPLAIC(msbplfit)$llMSBPL
-  AICdf$AICMSBPL[i] <- MSBPLAIC(msbplfit)$AICMSBPL
-  sigmadf$lognorm[i] <- thetalnorm$sdlog
-  sigmadf$mslognorm[i] <- thetaMSlnorm$par[2]
+  # AICdf$llmslognorm[i] <- MSlnormAIC(thetaMSlnorm)$llmslognorm
+  # AICdf$AICmslognorm[i] <- MSlnormAIC(thetaMSlnorm)$AICmslognorm
+  # AICdf$llMSBPL[i] <- MSBPLAIC(msbplfit)$llMSBPL
+  # AICdf$AICMSBPL[i] <- MSBPLAIC(msbplfit)$AICMSBPL
+  # sigmadf$lognorm[i] <- thetalnorm$sdlog
+  # sigmadf$mslognorm[i] <- thetaMSlnorm$par[2]
   # bplcoeffs$bplb[i] <- PLB.bMLE.site.b[i]
   # bplcoeffs$lnsigma[i] <- thetalnorm$sdlog
   confintervals$site_b[i] <- round(PLB.bMLE.site.b[i],2)
@@ -212,21 +223,21 @@ write.csv(gof,'coralgof.csv')
 # qqplots saved as pdf
 pdf("qqplots_corals.pdf", width = 12, height = 6)
 for(i in 1:nsites){
-  par(mfrow=c(2,2))
+  par(mfrow=c(1,2))
   bplqq[[i]] <- qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
                              xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Bounded power law"), pch = 16, col = adjustcolor("black", 0.25))
   #qqline(x, distribution = function(p){
   # FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
   # }, untf=T)
-  msbplqq[[i]] <- qqplot(FMSBPLinv(u = ppoints(siteinput$n), b = MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Minus-sampled bounded power law"), pch = 16, col = adjustcolor("black", 0.25))
+  # msbplqq[[i]] <- qqplot(FMSBPLinv(u = ppoints(siteinput$n), b = MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Minus-sampled bounded power law"), pch = 16, col = adjustcolor("black", 0.25))
   #qqline(x, distribution = function(p){
   #   FMSBPLinv(p, b =  MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
   # }, untf=T)
   #hist(log(sitedata$Area), main = paste("(C)", sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
   qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(C)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
   #qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
-  qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v), sitedata$Area, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(D)", sites[i], ": Minus-sampled log-normal"), pch = 16, col = adjustcolor("black", 0.25))
-  
+  # qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v), sitedata$Area, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(D)", sites[i], ": Minus-sampled log-normal"), pch = 16, col = adjustcolor("black", 0.25))
+  # 
   #qqline(sitedata$Area, distribution = function(p){
   #FMSlnorminv(p, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v)
   #}, untf=T)
