@@ -71,11 +71,18 @@ mslnpplot <- ggplot(gofall, aes(x = MSlognormP)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))+
   labs(tag = "D")
 
-gofplots <- c(bplpplot,lognormpplot,msbplpplot,mslnpplot)
+#gofplots <- c(bplpplot,lognormpplot,msbplpplot,mslnpplot)
+gofplots <- c(bplpplot,lognormpplot)
 
 ggsave(
-  filename = "gofplots.pdf", 
-  plot = marrangeGrob(grobs= gofplots, nrow=2, ncol=2, list(top=NULL),
-                      layout_matrix = rbind(c(1,2), c(3,4))), 
-  width = 17, height = 15
+  filename = "gofplots.png", 
+  plot = marrangeGrob(grobs= gofplots, nrow=1, ncol=2, list(top=NULL)), 
+  width = 17, height = 8
 )
+
+# ggsave(
+#   filename = "gofplots.pdf", 
+#   plot = marrangeGrob(grobs= gofplots, nrow=2, ncol=2, list(top=NULL),
+#                       layout_matrix = rbind(c(1,2), c(3,4))), 
+#   width = 17, height = 15
+# )

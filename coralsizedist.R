@@ -129,7 +129,7 @@ for(i in 1:nsites){
     annotate("text", x = 10, y = 10, label = s) +
    # annotate("text", x = 10, y = 13, label = bquote(paste(italic(sigma)[LN]==.(round(thetalnorm$sdlog[i],2))))) +
     #annotate("text", x = 10, y = 10, label = bquote(paste(italic(sigma)[MSLN]==.(round(thetaMSlnorm$par[2],2))))) +
-    annotate("text", x = 10, y = 4, label = paste("italic(b)[BPL]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
+    annotate("text", x = 10, y = 3, label = paste("italic(b)[BPL]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
     # annotate("text", x = 10, y = 2, label = paste("italic(b)[MSBPL]==",(round(MSPLB.bMLE.site.b[i],2))), parse = T) +
     annotate("text", x = 10, y = 1, label = paste("n =" ,(length(sitedata$Area)))) +
     theme_classic() +
@@ -234,7 +234,7 @@ for(i in 1:nsites){
   #   FMSBPLinv(p, b =  MSPLB.bMLE.site.b[i], xmin = siteinput$min.Area, w = w, v = v)
   # }, untf=T)
   #hist(log(sitedata$Area), main = paste("(C)", sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
-  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(C)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
+  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
   #qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
   # qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v), sitedata$Area, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(D)", sites[i], ": Minus-sampled log-normal"), pch = 16, col = adjustcolor("black", 0.25))
   # 
