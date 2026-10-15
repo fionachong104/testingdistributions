@@ -79,7 +79,7 @@ bottomlabel <- grid::textGrob(expression(paste("Fish biomass, ", italic("x"), ~(
 #bottomlabel <- grid::textGrob(expression(paste("Fish length, ", italic("x"), ~(cm))))
 
 ggsave(
-  filename = "carvalhobiomass.pdf", 
+  filename = "carvalhobiomass.png", 
   plot = marrangeGrob(grobs= siteb_plot, nrow=2, ncol=2,
                       left = leftlabel,
                       bottom = bottomlabel,
