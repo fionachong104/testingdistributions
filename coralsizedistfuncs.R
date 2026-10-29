@@ -821,7 +821,7 @@ plotFisherapprox <- function(X2, df, label = "", obsperbin = 20){
   ynorm <- dnorm(x, mean = 0, sd = 1)
   nbins <- floor(sum(!is.na(X2)) / (obsperbin + 1)) + 1
   breaks <- quantile(x = Fisher, probs = seq(from = 0, to = 1, length.out = nbins), na.rm = TRUE)
-  hist(Fisher, breaks = breaks, freq = FALSE, xlim = range(c(Fisher, x), na.rm = TRUE), ylim = c(0, max(ynorm)), main = "", ylab = "density", xlab = expression(paste("Fisher-transformed"~chi^2)))
+  hist(Fisher, breaks = breaks, freq = FALSE, xlim = range(c(Fisher, x), na.rm = TRUE), ylim = c(0, max(ynorm)), main = "", ylab = "Density", xlab = expression(paste("Fisher-transformed"~chi^2)))
   lines(x = x, y = ynorm, lty = "dashed")
   axlims <- par("usr")
   text(axlims[2] - 0.35 * (axlims[2] - axlims[1]), axlims[4] - 0.1 * (axlims[4] - axlims[3]), label)
