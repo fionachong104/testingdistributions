@@ -27,7 +27,7 @@ bplqq <- list()
 
 AICdf <- data.frame(site = sites, Number = NA, llBPL = NA, lllognorm = NA, AICBPL = NA,  AIClognorm = NA)
 
-sigmadf <- data.frame(site = sites, lognorm = NA)
+coeffdf <- data.frame(site = sites, lognorm = NA, bplb = NA)
 
 gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
 
@@ -35,7 +35,7 @@ gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, B
 #sigmadf <- data.frame(site = sites, lognorm = NA, mslognorm = NA)
 # gof <- data.frame(site = sites, MSlognormX2 = NA, MSlognormdf = NA, MSlognormP = NA, lognormX2 = NA, lognormdf = NA, lognormP = NA, MSBPLX2 = NA, MSBPLdf = NA, MSBPLP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
 
-confintervals <- data.frame(site = sites, site_b = NA, lwr_CI95 = NA, upr_CI95 = NA)
+confintervals <- data.frame(site = sites, site_b = NA, lwr_CI95 = NA, upr_CI95 = NA, x_min = NA, x_max = NA)
 confintervalslognormal <- data.frame(site = sites, meanlog = NA, meanloglower95 = NA, meanlogupper95 = NA, sdlog = NA, sdloglower95 = NA, sdlogupper95 = NA)
 # 
 # w <- 3648/35
@@ -129,9 +129,9 @@ for(i in 1:nsites){
     annotate("text", x = 10, y = 10, label = s) +
    # annotate("text", x = 10, y = 13, label = bquote(paste(italic(sigma)[LN]==.(round(thetalnorm$sdlog[i],2))))) +
     #annotate("text", x = 10, y = 10, label = bquote(paste(italic(sigma)[MSLN]==.(round(thetaMSlnorm$par[2],2))))) +
-    annotate("text", x = 10, y = 3, label = paste("italic(b)[BPL]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
+    # annotate("text", x = 10, y = 3, label = paste("italic(b)[BPL]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
     # annotate("text", x = 10, y = 2, label = paste("italic(b)[MSBPL]==",(round(MSPLB.bMLE.site.b[i],2))), parse = T) +
-    annotate("text", x = 10, y = 1, label = paste("n =" ,(length(sitedata$Area)))) +
+    annotate("text", x = 10, y = 5, label = paste("n =" ,(length(sitedata$Area)))) +
     theme_classic() +
     theme(axis.title = element_blank(), legend.position = "none")
   AICdf$Number[i] <- length(sitedata$Area)
@@ -143,19 +143,20 @@ for(i in 1:nsites){
   # AICdf$AICmslognorm[i] <- MSlnormAIC(thetaMSlnorm)$AICmslognorm
   # AICdf$llMSBPL[i] <- MSBPLAIC(msbplfit)$llMSBPL
   # AICdf$AICMSBPL[i] <- MSBPLAIC(msbplfit)$AICMSBPL
-  # sigmadf$lognorm[i] <- thetalnorm$sdlog
+  coeffdf$lognorm[i] <- thetalnorm$sdlog
   # sigmadf$mslognorm[i] <- thetaMSlnorm$par[2]
-  # bplcoeffs$bplb[i] <- PLB.bMLE.site.b[i]
-  # bplcoeffs$lnsigma[i] <- thetalnorm$sdlog
+  coeffdf$bplb[i] <- PLB.bMLE.site.b[i]
   confintervals$site_b[i] <- round(PLB.bMLE.site.b[i],2)
-  confintervals$lwr_CI95[i] <- slope.conf.int.coral(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[1]
-  confintervals$upr_CI95[i] <- slope.conf.int.coral(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[2]
-  confintervalslognormal$meanlog[i] <- thetalnorm$meanlog
-  confintervalslognormal$meanloglower95[i] <- thetalnorm$meanlower
-  confintervalslognormal$meanlogupper95[i] <- thetalnorm$meanupper
-  confintervalslognormal$sdlog[i] <- thetalnorm$sdlog
-  confintervalslognormal$sdloglower95[i] <- thetalnorm$sdlower
-  confintervalslognormal$sdlogupper95[i] <- thetalnorm$sdupper
+  confintervals$lwr_CI95[i] <- round(slope.conf.int.coral(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[1],3)
+  confintervals$upr_CI95[i] <- round(slope.conf.int.coral(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[2],3)
+  confintervals$x_min[i] <- round(siteinput$min.Area, 3)
+  confintervals$x_max[i] <- round(siteinput$max.Area, 3)
+  confintervalslognormal$meanlog[i] <- round(thetalnorm$meanlog, 3)
+  confintervalslognormal$meanloglower95[i] <- round(thetalnorm$meanlower, 3)
+  confintervalslognormal$meanlogupper95[i] <- round(thetalnorm$meanupper, 3)
+  confintervalslognormal$sdlog[i] <- round(thetalnorm$sdlog, 3)
+  confintervalslognormal$sdloglower95[i] <- round(thetalnorm$sdlower, 3)
+  confintervalslognormal$sdlogupper95[i] <- round(thetalnorm$sdupper, 3)
 }  
 
 # leftlabel <- grid::textGrob(expression(paste("Number of colonies with sizes", " ">=" ", italic("x"), "    ")), rot = 90)
