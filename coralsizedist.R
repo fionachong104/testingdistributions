@@ -62,9 +62,9 @@ for(i in 1:nsites){
   
   #goodness-of-fit test for lognormal
   lngof <- lnormgof(x = sitedata$Area, mu = thetalnorm$meanlog, sigma = thetalnorm$sdlog)
-  gof$lognormX2[i] <- lngof$X2
+  gof$lognormX2[i] <- round(lngof$X2,3)
   gof$lognormdf[i] <- lngof$df
-  gof$lognormP[i] <- lngof$P
+  gof$lognormP[i] <- signif(lngof$P,3)
 
   # #goodness-of-fit test for minus-sampled bounded power law
   # msbplgof <- MSBPLgof(x = sitedata$Area, b = msbplfit$minimum, xmin = min(sitedata$Area), w = w, v = v)
@@ -74,9 +74,9 @@ for(i in 1:nsites){
   
   #goodness-of-fit test for bounded power law
   bplgof <- BPLgof(x = sitedata$Area, b = bML[[1]], xmin = min(sitedata$Area), xmax = max(sitedata$Area))
-  gof$BPLX2[i] <- bplgof$X2
+  gof$BPLX2[i] <- signif(bplgof$X2,3)
   gof$BPLdf[i] <- bplgof$df
-  gof$BPLP[i] <- bplgof$P
+  gof$BPLP[i] <- signif(bplgof$P,3)
   
     
   x <- sitedata$Area
@@ -146,7 +146,7 @@ for(i in 1:nsites){
   coeffdf$lognorm[i] <- thetalnorm$sdlog
   # sigmadf$mslognorm[i] <- thetaMSlnorm$par[2]
   coeffdf$bplb[i] <- PLB.bMLE.site.b[i]
-  confintervals$site_b[i] <- round(PLB.bMLE.site.b[i],2)
+  confintervals$site_b[i] <- round(PLB.bMLE.site.b[i],3)
   confintervals$lwr_CI95[i] <- round(slope.conf.int.coral(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[1],3)
   confintervals$upr_CI95[i] <- round(slope.conf.int.coral(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[2],3)
   confintervals$x_min[i] <- round(siteinput$min.Area, 3)
@@ -216,9 +216,11 @@ ggsave(
 # )
 # 
 
+parameters <- merge(confintervals, confintervalslognormal)
+
 write.csv(AICdf,'coralAIC.csv') 
 write.csv(gof,'coralgof.csv') 
-
+write.csv(parameters, 'coralparam.csv')
 
 
 # qqplots saved as pdf
