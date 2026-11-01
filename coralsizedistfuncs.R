@@ -84,6 +84,9 @@ set.shark.params = function(Size..cm.){
 mle_b = function(region, x, sum_log_x, x_min, x_max){
   PL.bMLE = 1/( log(min(x)) - sum_log_x/length(x)) - 1
   PLB.minLL =  nlm(negLL.PLB, p = PL.bMLE, x = x, n = length(x), xmin = x_min, xmax = x_max, sumlogx = sum_log_x, hessian = TRUE, stepmax = max(10 * sqrt(sum((PL.bMLE)^2)), 10)) #default stepmax was causing problems in R versions later than 4.4.3
+  if(PLB.minLL$code > 2){#nlm() codes greater than 2 may suggest we didn't find a solution
+    warning("mle_b: check whether optimization was successful")
+  }
   PLB.bMLE = PLB.minLL$estimate
   PLB.return = list(PLB.bMLE, PLB.minLL)
   return(PLB.return)
