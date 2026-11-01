@@ -82,16 +82,10 @@ set.shark.params = function(Size..cm.){
 # as a starting point for nlm for MLE of b for PLB model. Code adapted from
 # Edwards et al. (2017).
 mle_b = function(region, x, sum_log_x, x_min, x_max){
-  
   PL.bMLE = 1/( log(min(x)) - sum_log_x/length(x)) - 1
-  
-  PLB.minLL =  nlm(negLL.PLB, p=PL.bMLE, x=x, n=length(x),
-                   xmin=x_min, xmax=x_max, sumlogx=sum_log_x, hessian = TRUE, stepmax = max(100 * sqrt(sum((PL.bMLE)^2)), 100)) #default stepmax was causing problems in R versions later than 4.4.3
-  
+  PLB.minLL =  nlm(negLL.PLB, p = PL.bMLE, x = x, n = length(x), xmin = x_min, xmax = x_max, sumlogx = sum_log_x, hessian = TRUE, stepmax = max(10 * sqrt(sum((PL.bMLE)^2)), 10)) #default stepmax was causing problems in R versions later than 4.4.3
   PLB.bMLE = PLB.minLL$estimate
-  
   PLB.return = list(PLB.bMLE, PLB.minLL)
-  
   return(PLB.return)
 }
 
