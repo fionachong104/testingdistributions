@@ -41,13 +41,13 @@ for(i in 1:nsites){
   lngof <- lnormgof(x = sitedata$biomass_kg, mu = thetalnorm$meanlog, sigma = thetalnorm$sdlog)
   gof$lognormX2[i] <- lngof$X2
   gof$lognormdf[i] <- lngof$df
-  gof$lognormP[i] <- lngof$P
+  gof$lognormP[i] <- signif(lngof$P,3)
   
   #goodness-of-fit test for bounded power law
   bplgof <- BPLgof(x = sitedata$biomass_kg, b = bML[[1]], xmin = min(sitedata$biomass_kg), xmax = max(sitedata$biomass_kg))
   gof$BPLX2[i] <- bplgof$X2
   gof$BPLdf[i] <- bplgof$df
-  gof$BPLP[i] <- bplgof$P
+  gof$BPLP[i] <- signif(bplgof$P,3)
   
   x <- sitedata$biomass_kg
   sitex = seq(min(sitedata$biomass_kg), max(sitedata$biomass_kg), length = 1000)
