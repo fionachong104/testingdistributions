@@ -63,11 +63,11 @@ nsites <- length(sites)
 # create empty lists to store things in 
 PLB.bMLE.site.b <- numeric(nsites)
 PLB.minLL.site.b <- numeric(nsites)
-bplcoeffs <- data.frame(site = sites, bplb = NA, lnsigma = NA)
 siteb_plot <- list()
 AICdf <- data.frame(site = sites, Number = NA, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
 gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
-confintervals <- data.frame(site = sites, site_b = NA, lwr_CI95 = NA, upr_CI95 = NA)
+confintervals <- data.frame(site = sites, site_b = NA, lwr_CI95 = NA, upr_CI95 = NA, x_min = NA, x_max = NA, meanlog = NA, meanloglower95 = NA, meanlogupper95 = NA, sdlog = NA, sdloglower95 = NA, sdlogupper95 = NA)
+
 
 for(i in 1:nsites){
   s <- sites[i]
@@ -80,14 +80,14 @@ for(i in 1:nsites){
   thetalnorm <- estimatelognormal(x = sitedata$individual_biomass_kg)
   #goodness-of-fit test for lognormal
   lngof <- lnormgof(x = sitedata$individual_biomass_kg, mu = thetalnorm$meanlog, sigma = thetalnorm$sdlog)
-  gof$lognormX2[i] <- lngof$X2
+  gof$lognormX2[i] <- round(lngof$X2,3)
   gof$lognormdf[i] <- lngof$df
-  gof$lognormP[i] <- lngof$P
+  gof$lognormP[i] <- signif(lngof$P,3)
   #goodness-of-fit test for bounded power law
   bplgof <- BPLgof(x = sitedata$individual_biomass_kg, b = bML[[1]], xmin = min(sitedata$individual_biomass_kg), xmax = max(sitedata$individual_biomass_kg))
-  gof$BPLX2[i] <- bplgof$X2
+  gof$BPLX2[i] <- round(bplgof$X2,3)
   gof$BPLdf[i] <- bplgof$df
-  gof$BPLP[i] <- bplgof$P
+  gof$BPLP[i] <- signif(bplgof$P,3)
   
   x <- sitedata$individual_biomass_kg
   sitex = seq(min(sitedata$individual_biomass_kg), max(sitedata$individual_biomass_kg), length = 10000)
@@ -123,8 +123,7 @@ for(i in 1:nsites){
     # geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
     labs(tag = LETTERS[i])+ #((i - 1) %% 4) + 1 ]) +
     annotate("text", x = 0.002, y = 10, label = s) +
-    annotate("text", x = 0.002, y = 4, label = paste("italic(b)[BPL]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
-    annotate("text", x = 0.002, y = 2, label = paste("n =" ,(length(sitedata$individual_biomass_kg)))) +
+    annotate("text", x = 0.002, y = 5, label = paste("n =" ,(length(sitedata$individual_biomass_kg)))) +
     theme_classic() + 
     theme(axis.title = element_blank(), legend.position = "none")
   AICdf$Number[i] <- length(sitedata$individual_biomass_kg)
@@ -132,15 +131,22 @@ for(i in 1:nsites){
   AICdf$AIClognorm[i] <- lnormAIC(x)$AIClognorm
   AICdf$llBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.biomass, xmax = siteinput$max.biomass, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$llBPL
   AICdf$AICBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.biomass, xmax = siteinput$max.biomass, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$AICBPL
-  bplcoeffs$bplb[i] <- PLB.bMLE.site.b[i]
-  bplcoeffs$lnsigma[i] <- thetalnorm$sdlog
-  confintervals$site_b[i] <- round(PLB.bMLE.site.b[i],2)
-  confintervals$lwr_CI95[i] <- slope.conf.int(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[1]
-  confintervals$upr_CI95[i] <- slope.conf.int(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[2]
+  confintervals$site_b[i] <- round(PLB.bMLE.site.b[i],3)
+  confintervals$lwr_CI95[i] <- round(slope.conf.int(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[1],3)
+  confintervals$upr_CI95[i] <- round(slope.conf.int(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[2],3)
+  confintervals$x_min[i] <- round(siteinput$min.biomass, 5)
+  confintervals$x_max[i] <- round(siteinput$max.biomass, 3)
+  confintervals$meanlog[i] <- round(thetalnorm$meanlog, 3)
+  confintervals$meanloglower95[i] <- round(thetalnorm$meanlower, 3)
+  confintervals$meanlogupper95[i] <- round(thetalnorm$meanupper, 3)
+  confintervals$sdlog[i] <- round(thetalnorm$sdlog, 3)
+  confintervals$sdloglower95[i] <- round(thetalnorm$sdlower, 3)
+  confintervals$sdlogupper95[i] <- round(thetalnorm$sdupper, 3)
   }
 
 write.csv(AICdf,'fish_AIC.csv')
 write.csv(gof, "fishgof.csv")
+write.csv(confintervals, "fishparam.csv")
 
 # getting the legend from the first siteb_plot
 legend_plot <- get_legend(

@@ -27,8 +27,6 @@ bplqq <- list()
 
 AICdf <- data.frame(site = sites, Number = NA, llBPL = NA, lllognorm = NA, AICBPL = NA,  AIClognorm = NA)
 
-coeffdf <- data.frame(site = sites, lognorm = NA, bplb = NA)
-
 gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
 
 # AICdf <- data.frame(site = sites, Number = NA, llBPL = NA, llMSBPL = NA, lllognorm = NA, llmslognorm = NA, AICBPL = NA, AICMSBPL = NA, AIClognorm = NA, AICmslognorm = NA)
@@ -135,17 +133,15 @@ for(i in 1:nsites){
     theme_classic() +
     theme(axis.title = element_blank(), legend.position = "none")
   AICdf$Number[i] <- length(sitedata$Area)
-  AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
-  AICdf$AIClognorm[i] <- lnormAIC(x)$AIClognorm
-  AICdf$llBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$llBPL
-  AICdf$AICBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$AICBPL
+  AICdf$lllognorm[i] <- round(lnormAIC(x)$lllognorm,3)
+  AICdf$AIClognorm[i] <- round(lnormAIC(x)$AIClognorm,3)
+  AICdf$llBPL[i] <- round(BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$llBPL,3)
+  AICdf$AICBPL[i] <- round(BPLAIC(C = getC(xmin = siteinput$min.Area, xmax = siteinput$max.Area, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$AICBPL,3)
   # AICdf$llmslognorm[i] <- MSlnormAIC(thetaMSlnorm)$llmslognorm
   # AICdf$AICmslognorm[i] <- MSlnormAIC(thetaMSlnorm)$AICmslognorm
   # AICdf$llMSBPL[i] <- MSBPLAIC(msbplfit)$llMSBPL
   # AICdf$AICMSBPL[i] <- MSBPLAIC(msbplfit)$AICMSBPL
-  coeffdf$lognorm[i] <- thetalnorm$sdlog
   # sigmadf$mslognorm[i] <- thetaMSlnorm$par[2]
-  coeffdf$bplb[i] <- PLB.bMLE.site.b[i]
   confintervals$site_b[i] <- round(PLB.bMLE.site.b[i],3)
   confintervals$lwr_CI95[i] <- round(slope.conf.int.coral(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[1],3)
   confintervals$upr_CI95[i] <- round(slope.conf.int.coral(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[2],3)
