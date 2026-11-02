@@ -81,9 +81,10 @@ set.shark.params = function(Size..cm.){
 # Use analytical value of MLE b for PL model (Box 1, Edwards et al. 2017)
 # as a starting point for nlm for MLE of b for PLB model. Code adapted from
 # Edwards et al. (2017).
-mle_b = function(region, x, sum_log_x, x_min, x_max){
+#optional argument stepmaxscale (default 10): the number used in calculating the stepmax setting for nlm(): default in nlm() is 1000, which may be too large
+mle_b = function(region, x, sum_log_x, x_min, x_max, stepmaxscale = 10){
   PL.bMLE = 1/( log(min(x)) - sum_log_x/length(x)) - 1
-  PLB.minLL =  nlm(negLL.PLB, p = PL.bMLE, x = x, n = length(x), xmin = x_min, xmax = x_max, sumlogx = sum_log_x, hessian = TRUE, stepmax = max(10 * sqrt(sum((PL.bMLE)^2)), 10)) #default stepmax was causing problems in R versions later than 4.4.3
+  PLB.minLL =  nlm(negLL.PLB, p = PL.bMLE, x = x, n = length(x), xmin = x_min, xmax = x_max, sumlogx = sum_log_x, hessian = TRUE, stepmax = max(stepmaxscale * sqrt(sum((PL.bMLE)^2)), stepmaxscale)) #default stepmax was causing problems in R versions later than 4.4.3
   if(PLB.minLL$code > 2){#nlm() codes greater than 2 may suggest we didn't find a solution
     warning("mle_b: check whether optimization was successful")
   }
