@@ -21,6 +21,8 @@ PLB.minLL.site.b <- numeric(nsites)
 # MSPLB.bMLE.site.b <- numeric(nsites)
 # MSPLB.minLL.site.b <- numeric(nsites)
 
+lnormparams <- data.frame(meanlog = numeric(nsites), sdlog = numeric(nsites))
+
 siteb_plot <- list()
 bplqq <- list()
 #msbplqq <-list()
@@ -50,6 +52,8 @@ for(i in 1:nsites){
   # msbplfit <- estimatebMSBPL(x = sitedata$Area, w = w, v = v)
   # MSPLB.bMLE.site.b[i] <- msbplfit$minimum
    thetalnorm <- estimatelognormal(x = sitedata$Area)
+   lnormparams$meanlog[i] <- thetalnorm$meanlog
+   lnormparams$sdlog[i] <- thetalnorm$sdlog
   # thetaMSlnorm <- estimateMSlnorm(x = sitedata$Area, w = w, v = v)
   # 
   # #goodness-of-fit test for minus-sampled lognormal
@@ -240,7 +244,7 @@ for(i in 1:nsites){
   # }, untf=T)
   #hist(log(sitedata$Area), main = paste("(C)", sites[i], ": Size-frequency distribution"), xlab = expression(paste("Log coral area"~(cm^2))))
   
-  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
+  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = lnormparams$meanlog[i], sdlog = lnormparams$sdlog[i]), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
   #qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
   # qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v), sitedata$Area, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(D)", sites[i], ": Minus-sampled log-normal"), pch = 16, col = adjustcolor("black", 0.25))
   # 
