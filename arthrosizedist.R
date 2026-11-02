@@ -35,7 +35,7 @@ for(i in 1:nsites){
   bML <- mle_b(Site == s, x = siteinput$biomass, sum_log_x = siteinput$sum.log.biomass,
                x_min = siteinput$min.biomass, x_max = siteinput$max.biomass)
   PLB.bMLE.site.b[i] <- bML[[1]]
-  PLB.minLL.site.b[i] <- bML[[2]]
+  PLB.minLL.site.b[i] <- bML[[2]]$minimum
   thetalnorm <- estimatelognormal(x = sitedata$bodylength_mm)
   
   #goodness-of-fit test for lognormal
@@ -131,7 +131,7 @@ pages <- lapply(plot_pages, function(x){
     left = leftlabel,
     bottom = bottomlabel
   )
-  
+
   plot_grid(
     legend_plot,
     panel_grid,
@@ -163,6 +163,11 @@ write.csv(confintervals, "arthroparam.csv")
 # qqplots saved as pdf
 pdf("qqplots_arthro.pdf", width = 15, height = 6)
 for(i in 1:nsites){
+  s <- sites[i]
+  sitedata <- arthro %>% filter(siteName == s)
+  siteinput <- set.arthro.params(sitedata$bodylength_mm)
+  x <- sitedata$bodylength_mm
+  sitex = seq(min(sitedata$bodylength_mm), max(sitedata$bodylength_mm), length = 10000)
   par(mfrow=c(1,2))
   qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
                              xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Bounded power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))

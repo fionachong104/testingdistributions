@@ -76,7 +76,7 @@ for(i in 1:nsites){
   bML <- mle_b(Site == s, x = siteinput$biomass, sum_log_x = siteinput$sum.log.biomass,
                x_min = siteinput$min.biomass, x_max = siteinput$max.biomass)
   PLB.bMLE.site.b[i] <- bML[[1]] 
-  PLB.minLL.site.b[i] <- bML[[2]]
+  PLB.minLL.site.b[i] <- bML[[2]]$minimum
   thetalnorm <- estimatelognormal(x = sitedata$individual_biomass_kg)
   #goodness-of-fit test for lognormal
   lngof <- lnormgof(x = sitedata$individual_biomass_kg, mu = thetalnorm$meanlog, sigma = thetalnorm$sdlog)
@@ -187,6 +187,11 @@ ggsave(
 # qqplots saved as pdf
 pdf("qqplots_fish.pdf", width = 12, height = 6)
 for(i in 1:nsites){
+  s <- sites[i]
+  sitedata <- allfish %>% filter(Site == s)
+  siteinput <- set.fish.params(sitedata$individual_biomass_kg)
+  x <- sitedata$individual_biomass_kg
+  sitex = seq(min(sitedata$individual_biomass_kg), max(sitedata$individual_biomass_kg), length = 10000)
   par(mfrow=c(1,2))
   qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
                              xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Bounded Power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))

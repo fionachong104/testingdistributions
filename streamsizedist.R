@@ -36,15 +36,15 @@ for(i in 1:nsites){
 
   #goodness-of-fit test for lognormal
   lngof <- lnormgof(x = sitedata$dw, mu = thetalnorm$meanlog, sigma = thetalnorm$sdlog)
-  gof$lognormX2[i] <- lngof$X2
+  gof$lognormX2[i] <- round(lngof$X2,3)
   gof$lognormdf[i] <- lngof$df
-  gof$lognormP[i] <- lngof$P
+  gof$lognormP[i] <- signif(lngof$P,3)
   
   #goodness-of-fit test for bounded power law
   bplgof <- BPLgof(x = sitedata$dw, b = bML[[1]], xmin = min(sitedata$dw), xmax = max(sitedata$dw))  #throwing error at "Portal"
-  gof$BPLX2[i] <- bplgof$X2
+  gof$BPLX2[i] <- round(bplgof$X2,3)
   gof$BPLdf[i] <- bplgof$df
-  gof$BPLP[i] <- bplgof$P
+  gof$BPLP[i] <- signif(bplgof$P,3)
   
   x <- sitedata$dw
   sitex = seq(min(sitedata$dw), max(sitedata$dw), length = 10000)
@@ -91,7 +91,7 @@ for(i in 1:nsites){
   confintervals$site_b[i] <- round(PLB.bMLE.site.b[i],3)
   confintervals$lwr_CI95[i] <- round(slope.conf.int(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[1],3)
   confintervals$upr_CI95[i] <- round(slope.conf.int(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[2],3)
-  confintervals$x_min[i] <- round(siteinput$min.biomass, 5)
+  confintervals$x_min[i] <- siteinput$min.biomass
   confintervals$x_max[i] <- round(siteinput$max.biomass, 3)
   confintervals$meanlog[i] <- round(thetalnorm$meanlog, 3)
   confintervals$meanloglower95[i] <- round(thetalnorm$meanlower, 3)
@@ -162,6 +162,11 @@ write.csv(confintervals, 'streamparam.csv')
 # qqplots saved as pdf
 pdf("qqplots_stream.pdf", width = 12, height = 6)
 for(i in 1:nsites){
+  s <- sites[i]
+  sitedata <- stream %>% filter(site == s)
+  siteinput <- set.stream.params(sitedata$dw)
+  x <- sitedata$dw
+  sitex = seq(min(sitedata$dw), max(sitedata$dw), length = 10000)
   par(mfrow=c(1,2))
   qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
                              xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Bounded power law"), pch = 16, col = adjustcolor("black", 0.25))

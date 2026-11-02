@@ -34,7 +34,7 @@ for(i in 1:nsites){
   bML <- mle_b(Site == s, x = siteinput$biomass, sum_log_x = siteinput$sum.log.biomass,
                x_min = siteinput$min.biomass, x_max = siteinput$max.biomass)
   PLB.bMLE.site.b[i] <- bML[[1]]
-  PLB.minLL.site.b[i] <- bML[[2]]
+  PLB.minLL.site.b[i] <- bML[[2]]$minimum
   thetalnorm <- estimatelognormal(x = sitedata$biomass_kg)
   
   #goodness-of-fit test for lognormal
@@ -146,6 +146,11 @@ write.csv(confintervals, "carvalhoparam.csv")
 # qqplots saved as pdf
 pdf("qqplots_carvalho.pdf", width = 12, height = 6)
 for(i in 1:nsites){
+  s <- sites[i]
+  sitedata <- fish.df %>% filter(region == s)
+  siteinput <- set.fish.params(sitedata$biomass_kg)
+  x <- sitedata$biomass_kg
+  sitex = seq(min(sitedata$biomass_kg), max(sitedata$biomass_kg), length = 1000)
   par(mfrow=c(1,2))
   qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
                xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Bounded power law"), pch = 16, col = adjustcolor("black", 0.25))

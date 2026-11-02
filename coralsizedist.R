@@ -222,6 +222,12 @@ write.csv(parameters, 'coralparam.csv')
 # qqplots saved as pdf
 pdf("qqplots_corals.pdf", width = 12, height = 6)
 for(i in 1:nsites){
+  s <- sites[i]
+  print(s)
+  sitedata <- oneyeardf %>% filter(Site == s)
+  siteinput <- set.params(sitedata$Area)
+  x <- sitedata$Area
+  sitex = seq(min(sitedata$Area), max(sitedata$Area), length = 10000)
   par(mfrow=c(1,2))
   bplqq[[i]] <- qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
                              xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Bounded power law"), pch = 16, col = adjustcolor("black", 0.25))
