@@ -93,7 +93,7 @@ for(i in 1:nsites){
   sitey.lnorm <- plnorm(q = sitex, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog, lower.tail = FALSE, log.p = FALSE) * length(sitedata$Area)
  # 1 - sapply(sitex.MSlnorm, FUN = FMSlnorm, mu = mu, sigma = sigma, w = w, v = v
   
-  model_df <- data.frame(
+   model_df <- data.frame(
     sitex = sitex,
     value = c(sitey.PLB, sitey.lnorm),
     model = rep(c("Bounded Power Law", "Log-normal"), each = length(sitex)) 
@@ -105,7 +105,7 @@ for(i in 1:nsites){
   #                 "Minus-sampled Bounded Power Law", "Minus-sampled Log-normal"), each = length(sitex))
                 
   )
-  
+
   siteb_plot[[i]] <- ggplot() +
     geom_line(
       data = model_df,
