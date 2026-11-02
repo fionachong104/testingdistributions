@@ -246,10 +246,10 @@ for(i in 1:nsites){
   
   qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = lnormparams$meanlog[i], sdlog = lnormparams$sdlog[i]), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
   #qqline(x, distribution = function(p){qlnorm(p, meanlog = lnormparams$meanlog[i], sdlog = lnormparams$sdlog[i])}, untf=T)
-  # qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v), sitedata$Area, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(D)", sites[i], ": Minus-sampled log-normal"), pch = 16, col = adjustcolor("black", 0.25))
+  # qqplot(FMSlnorminv(u = ppoints(siteinput$n), mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v), sitedata$Area, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(D)", sites[i], ": Minus-sampled log-normal"), pch = 16, col = adjustcolor("black", 0.25)) #INCORRECT: NEED TO STORE MSLOGNORMAL PARAMETERS
   # 
   #qqline(sitedata$Area, distribution = function(p){
-  #FMSlnorminv(p, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v)
+  #FMSlnorminv(p, mu = thetaMSlnorm$par[1], sigma = thetaMSlnorm$par[2], w = w, v = v) #INCORRECT: NEED TO STORE MSLOGNORMAL PARAMETERS
   #}, untf=T)
 }
 dev.off()
