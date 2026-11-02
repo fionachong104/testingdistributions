@@ -28,7 +28,6 @@ for(i in 1:nsites){
   print(s)
   sitedata <- stream %>% filter(site == s)
   siteinput <- set.stream.params(sitedata$dw)
-  print(summary(siteinput$biomass)) #WE CAN SEE THAT SAME DATA BEING USED EVERY TIME
   bML <- mle_b(Site == s, x = siteinput$biomass, sum_log_x = siteinput$sum.log.biomass, x_min = siteinput$min.biomass, x_max = siteinput$max.biomass)
   PLB.bMLE.site.b[i] <- bML[[1]]
   PLB.minLL.site.b[i] <- bML[[2]]$minimum
