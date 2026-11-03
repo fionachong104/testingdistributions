@@ -3,17 +3,14 @@ library(dplyr)
 library(ggplot2)
 library(gridExtra)
 library(tidyverse)
+library(cowplot)
 
 source("coralsizedistfuncs.R")
 
 #load data
 bird <- read.csv("Weights.csv")
-#tree <- tree %>% drop_na(aboveGroundLiveBiomass_kilograms)  # to remove dead trees
-# axisscores <- read.csv("axisscores.csv", row.names=1)
-# axisscores <- axisscores[order(axisscores$PC1), ]
 bird$siteName = paste(bird$location, bird$Year, sep = "_")
 sites <- unique(bird$siteName)
-#sites <- sites[match(row.names(axisscores), sites)] #re-ordering based on increasing PC1 scores
 nsites <- length(sites)
 
 # create empty lists to store things in 
