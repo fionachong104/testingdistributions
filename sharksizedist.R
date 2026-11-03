@@ -18,6 +18,7 @@ nsites <- length(sites)
 # create empty lists to store things in 
 PLB.bMLE.site.b_biomass <- numeric(nsites)
 PLB.minLL.site.b_biomass <- numeric(nsites)
+lnormparams <- data.frame(meanlog = numeric(nsites), sdlog = numeric(nsites))
 siteb_plot_biomass <- list()
 AICdf_biomass <- data.frame(site = sites, Number = NA, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
 gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
@@ -32,6 +33,8 @@ for(i in 1:nsites){
   PLB.bMLE.site.b_biomass[i] <- bML_biomass[[1]]
   PLB.minLL.site.b_biomass[i] <- bML_biomass[[2]]$minimum
   thetalnorm_biomass <- estimatelognormal(x = sitedata$biomass_kg)
+  lnormparams$meanlog[i] <- thetalnorm_biomass$meanlog
+  lnormparams$sdlog[i] <- thetalnorm_biomass$sdlog
   
   #goodness-of-fit test for lognormal
   lngof <- lnormgof(x = sitedata$biomass_kg, mu = thetalnorm_biomass$meanlog, sigma = thetalnorm_biomass$sdlog)
@@ -132,6 +135,11 @@ ggsave(
   width = 15, height = 13
 )
 
+
+write.csv(AICdf_biomass,'shark_biomass_AIC.csv')
+write.csv(gof,'sharkgof.csv')
+write.csv(confintervals, "sharkparam.csv")
+
 # qqplots saved as pdf
 pdf("qqplots_sharks.pdf", width = 12, height = 6)
 for(i in 1:nsites){
@@ -143,10 +151,8 @@ for(i in 1:nsites){
 par(mfrow=c(1,2))
 qqplot(FXinv(u = ppoints(siteinput_biomass$n), b = PLB.bMLE.site.b_biomass[i], xmin = min(sitex_biomass),
              xmax = max(sitex_biomass)), x_biomass , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Bounded power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
-qqplot(qlnorm(p = ppoints(siteinput_biomass$n), meanlog = thetalnorm_biomass$meanlog, sdlog = thetalnorm_biomass$sdlog), x_biomass, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
+qqplot(qlnorm(p = ppoints(siteinput_biomass$n), meanlog = lnormparams$meanlog[i], sdlog = lnormparams$sdlog[i]), x_biomass, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
 }
+
 dev.off()
 
-write.csv(AICdf_biomass,'shark_biomass_AIC.csv')
-write.csv(gof,'sharkgof.csv')
-write.csv(confintervals, "sharkparam.csv")
