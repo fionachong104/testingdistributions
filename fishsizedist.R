@@ -63,6 +63,7 @@ nsites <- length(sites)
 # create empty lists to store things in 
 PLB.bMLE.site.b <- numeric(nsites)
 PLB.minLL.site.b <- numeric(nsites)
+lnormparams <- data.frame(meanlog = numeric(nsites), sdlog = numeric(nsites))
 siteb_plot <- list()
 AICdf <- data.frame(site = sites, Number = NA, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
 gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
@@ -78,6 +79,8 @@ for(i in 1:nsites){
   PLB.bMLE.site.b[i] <- bML[[1]] 
   PLB.minLL.site.b[i] <- bML[[2]]$minimum
   thetalnorm <- estimatelognormal(x = sitedata$individual_biomass_kg)
+  lnormparams$meanlog[i] <- thetalnorm$meanlog
+  lnormparams$sdlog[i] <- thetalnorm$sdlog
   #goodness-of-fit test for lognormal
   lngof <- lnormgof(x = sitedata$individual_biomass_kg, mu = thetalnorm$meanlog, sigma = thetalnorm$sdlog)
   gof$lognormX2[i] <- round(lngof$X2,3)
@@ -198,7 +201,7 @@ for(i in 1:nsites){
   #qqline(x, distribution = function(p){
   #  FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
   #}, untf=T)
-  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
+  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = lnormparams$meanlog[i], sdlog = lnormparams$sdlog[i]), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
   #  qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
 }
 dev.off()
