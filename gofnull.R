@@ -12,6 +12,3 @@ plotFisherapprox(X2 = coral$BPLX2, df = coral$BPLdf, label = "B: Bounded power l
      
 plotFisherapprox(X2 = gof$lognormX2, df = gof$lognormdf, label = "A: Log-normal")
 plotFisherapprox(X2 = gof$BPLX2, df = gof$BPLdf, label = "B: Bounded power law")
-
-plotFisherapprox(X2 = fish$lognormX2, df = fish$lognormdf, label = "A: Log-normal", obsperbin = 5)
-plotFisherapprox(X2 = fish$BPLX2, df = fish$BPLdf, label = "B: Bounded power law", obsperbin = 5)
