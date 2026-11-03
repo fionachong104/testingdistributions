@@ -8,28 +8,15 @@ library(cowplot)
 
 source("coralsizedistfuncs.R")
 
-library(readxl)
-#fish_size_spectra_data <- read_excel("C:/Users/624225/OneDrive - hull.ac.uk/_BoxData/PhD/testingdistributions/Carvalho21_code/fish_size_spectra_data.xlsx")
-fishbiomass <- read.delim("C:/Users/tvkx991/OneDrive - University of Leeds/PhD/testingdistributions/testingdistributions/fishbiomass_oneyear.csv")
+fishbiomass <- read.delim("fishbiomass_oneyear.csv")
 axisscores <- read.csv("axisscores.csv", row.names=1)
 axisscores <- axisscores[order(axisscores$PC1), ]
-#siteorder <- read.csv("C:/Users/tvkx991/OneDrive - University of Leeds/ClimateREEFS/environmentaldata/Fiona_unique_sites.csv")
 
 #reformatting Maria's fish data
-#starting with BR2010
-# BR_2010 <- as_tibble(BR_2010)
-# TN <- BR_2010 %>%
-#   group_by(Fish) %>%
-#   summarise(total = sum(Number)) # this calculates how many fish there are, by species
 fishbiomass <- as_tibble(fishbiomass)
 Check_fishbiomass <- fishbiomass %>%
   group_by(Fish) %>%
   summarise(total = sum(Number))
-#create data frame with each individual fish taking a row.
-##make note of whether it is inividual biomass or not - each biomass value should be of a single fish not with them all grouped
-# BRdf <- BR_2010 %>% 
-#   uncount(Number) %>% 
-#   group_by(Fish, Size) 
 
 allfish <- fishbiomass %>%
   uncount(Number) %>%
@@ -37,7 +24,6 @@ allfish <- fishbiomass %>%
 
 allfish$individual_biomass_kg <- as.numeric(allfish$individual_biomass_kg)
 allfish %>% mutate(individual_biomass_kg = ifelse(is.na(individual_biomass_kg), 0, individual_biomass_kg))
-
 
 #extract summary statistics 
 all_fish <- allfish%>%
@@ -50,11 +36,8 @@ all_fish <- allfish%>%
     mean_log_biomass = round(mean(log(individual_biomass_kg)), digits = 3),
     median_log_biomass  = round(median(log(individual_biomass_kg)), digits = 3),
     sd = round(sd(log(individual_biomass_kg)), digits = 3), 
-    #CV = round((sd/mean_log_biomass)*100, digits = 3),  removing this as our emans a negative so quite misleading
     skewness = round(skewness(log(individual_biomass_kg)), digits = 3),
     kurtosis = round(kurtosis(log(individual_biomass_kg)), digits = 3))
-#all_fish<- all_fish[match(rownames(axisscores), all_fish$Site), ] # order by PC1 scores 
-#write.csv(all_fish,'fishsummarystats.csv') 
 
 sites <- unique(allfish$Site) #missing three sites in the siteorder spreasheet
 sites <- sites[match(row.names(axisscores), sites)]  #re-ordering based on order on hab het data
@@ -122,9 +105,7 @@ for(i in 1:nsites){
                        limits = c(0.25, max(table(allfish$Site)))) +
     scale_x_continuous(trans = 'log10', breaks = c(0.0001,0.01,1,100),
                         limits = range(allfish$individual_biomass_kg))+
-    # geom_line(aes_(x = sitex, y = sitey.PLB), col = 'black', lwd = 1) +
-    # geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
-    labs(tag = LETTERS[i])+ #((i - 1) %% 4) + 1 ]) +
+    labs(tag = LETTERS[i]) +
     annotate("text", x = 0.002, y = 10, label = s) +
     annotate("text", x = 0.002, y = 5, label = paste("n =" ,(length(sitedata$individual_biomass_kg)))) +
     theme_classic() + 
@@ -198,39 +179,6 @@ for(i in 1:nsites){
   par(mfrow=c(1,2))
   qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
                              xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Bounded Power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
-  #qqline(x, distribution = function(p){
-  #  FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
-  #}, untf=T)
   qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = lnormparams$meanlog[i], sdlog = lnormparams$sdlog[i]), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
-  #  qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
 }
 dev.off()
-
-
-# par(
-#   mfrow = c(5,4),
-#   mar = c(1,1.5,1,0),
-#   oma = c(4,4,2,2)
-# )
-# for(i in 1:nsites){
-#   s <- sites[i]
-#   sitedata <- allfish %>% filter(Site == s)
-#   custom_breaks <- c(-14:3)
-#   siteproportions <- hist(log(sitedata$individual_biomass_kg), plot = FALSE) #breaks = custom_breaks)
-#   plot(siteproportions, freq = FALSE, col = "darkgrey", main = "", xlab = "", ylab = "", axes = FALSE,  ylim = c(0,0.9), xlim = c(-15,3))
-#   title(paste("(",LETTERS[i],")"," ",sites[i], sep= ""), cex.main = 1.5, line = -1.5)
-#   lines(density(log(sitedata$individual_biomass_kg)), na.rm=TRUE, col = "blue", lty = "dashed", lwd = 2)
-#   abline(v=mean(log(sitedata$individual_biomass_kg)), col = "red", lwd = 2, lty = "dashed")
-#   legend("topright", inset = .05, bty = "n", cex = 1.5, legend = bquote(n == .(length(sitedata$individual_biomass_kg))))
-#   axis(side = 1, at=c(-14,-12,-10,-8, -6, -4,-2, 0, 2), labels = c(14,-12,-10,-8, -6, -4,-2, 0, 2), cex.axis = 1.5)
-#   axis(side = 2, at=c(0,0.45,0.9), labels = c(0,0.45,0.9), cex.axis = 1.5)}
-#   #xlab = expression(paste("Log coral area"~(cm^2))))
-# 
-# mtext(expression(paste("log(fish biomass (kg))")) , side=1,line=3,outer=TRUE,cex=1.3)
-# mtext("Density", side=2,line=2,outer=TRUE,cex=1.3,las=0)
-# 
-
-# # # saves the temp images from the plotting envrionment
-# plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)
-# plots.png.paths <- list.files(plots.dir.path, pattern = ".png", full.names = TRUE)
-# file.copy(from = plots.png.paths, to = "C:/Users/624225/OneDrive - hull.ac.uk/_BoxData/PhD/testingdistributions/qqplots/fish_logged")
