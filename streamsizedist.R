@@ -16,6 +16,7 @@ nsites <- length(sites)
 # create empty lists to store things in 
 PLB.bMLE.site.b <- numeric(nsites)
 PLB.minLL.site.b <- numeric(nsites)
+lnormparams <- data.frame(meanlog = numeric(nsites), sdlog = numeric(nsites))
 siteb_plot <- list()
 AICdf <- data.frame(site = sites, Number = NA, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
 gof <- data.frame(site = sites, lognormX2 = NA, lognormdf = NA, lognormP = NA, BPLX2 = NA, BPLdf = NA, BPLP = NA)
@@ -32,6 +33,8 @@ for(i in 1:nsites){
   PLB.bMLE.site.b[i] <- bML[[1]]
   PLB.minLL.site.b[i] <- bML[[2]]$minimum
   thetalnorm <- estimatelognormal(x = sitedata$dw)
+  lnormparams$meanlog[i] <- thetalnorm$meanlog
+  lnormparams$sdlog[i] <- thetalnorm$sdlog
 
   #goodness-of-fit test for lognormal
   lngof <- lnormgof(x = sitedata$dw, mu = thetalnorm$meanlog, sigma = thetalnorm$sdlog)
@@ -83,9 +86,9 @@ for(i in 1:nsites){
     theme_classic() +
     theme(axis.title = element_blank(), legend.position = "none")
   AICdf$Number[i] <- length(sitedata$dw)
-  AICdf$lllognorm[i] <- lnormAIC(x)$lllognorm
+  AICdf$lllognorm[i] <- round(lnormAIC(x)$lllognorm,3)
   AICdf$AIClognorm[i] <- lnormAIC(x)$AIClognorm
-  AICdf$llBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.biomass, xmax = siteinput$max.biomass, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$llBPL
+  AICdf$llBPL[i] <- round(BPLAIC(C = getC(xmin = siteinput$min.biomass, xmax = siteinput$max.biomass, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$llBPL,3)
   AICdf$AICBPL[i] <- BPLAIC(C = getC(xmin = siteinput$min.biomass, xmax = siteinput$max.biomass, b = PLB.bMLE.site.b[i]), b = PLB.bMLE.site.b[i], x = x)$AICBPL
   confintervals$site_b[i] <- round(PLB.bMLE.site.b[i],3)
   confintervals$lwr_CI95[i] <- round(slope.conf.int(PLB.bMLE.site.b[[i]], PLB.minLL.site.b[[i]], siteinput)[1],3)
@@ -170,9 +173,7 @@ for(i in 1:nsites){
   qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
                              xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Bounded power law"), pch = 16, col = adjustcolor("black", 0.25))
   
-  print(c(thetalnorm$meanlog, thetalnorm$sdlog))
-  
-  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
+  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = lnormparams$meanlog[i], sdlog = lnormparams$sdlog[i]), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
  
 }
 dev.off()
