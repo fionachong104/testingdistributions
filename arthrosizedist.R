@@ -8,19 +8,16 @@ source("coralsizedistfuncs.R")
 
 #load data
 arthro<- read.csv("Kollross_sizes.csv")
-#tree <- tree %>% drop_na(aboveGroundLiveBiomass_kilograms)  # to remove dead trees
-# axisscores <- read.csv("axisscores.csv", row.names=1)
-# axisscores <- axisscores[order(axisscores$PC1), ]
 arthro <- arthro[!is.na(arthro$bodylength_mm),]
 arthro$siteName = paste(arthro$treatment, arthro$species, arthro$year, sep = "_")
 sites <- unique(arthro$siteName)
-#sites <- sites[match(row.names(axisscores), sites)] #re-ordering based on increasing PC1 scores
 nsites <- length(sites)
 
 
 # create empty lists to store things in 
 PLB.bMLE.site.b <- numeric(nsites)
 PLB.minLL.site.b <- numeric(nsites)
+lnormparams <- data.frame(meanlog = numeric(nsites), sdlog = numeric(nsites))
 siteb_plot <- list()
 bplqq <- list()
 AICdf <- data.frame(Treatment = sites, Number = NA, llBPL = NA, lllognorm = NA, AICBPL = NA, AIClognorm = NA)
@@ -37,6 +34,8 @@ for(i in 1:nsites){
   PLB.bMLE.site.b[i] <- bML[[1]]
   PLB.minLL.site.b[i] <- bML[[2]]$minimum
   thetalnorm <- estimatelognormal(x = sitedata$bodylength_mm)
+  lnormparams$meanlog[i] <- thetalnorm$meanlog
+  lnormparams$sdlog[i] <- thetalnorm$sdlog
   
   #goodness-of-fit test for lognormal
   lngof <- lnormgof(x = sitedata$bodylength_mm, mu = thetalnorm$meanlog, sigma = thetalnorm$sdlog)
@@ -171,15 +170,6 @@ for(i in 1:nsites){
   par(mfrow=c(1,2))
   qqplot(FXinv(u = ppoints(siteinput$n), b = PLB.bMLE.site.b[i], xmin = min(sitex),
                              xmax = max(sitex)), x , xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(A)", sites[i], ": Bounded power law Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
-  #qqline(x, distribution = function(p){
-  #  FXinv(p, b = PLB.bMLE.site.b[i], xmin = min(sitex), xmax = max(sitex))
-  #}, untf=T)
-  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal Q-Q plot"), pch = 16, col = adjustcolor("black", 0.25))
-  #  qqline(x, distribution = function(p){qlnorm(p, meanlog = thetalnorm$meanlog, sdlog = thetalnorm$sdlog)}, untf=T)
+  qqplot(qlnorm(p = ppoints(siteinput$n), meanlog = lnormparams$meanlog[i], sdlog = lnormparams$sdlog[i]), x, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", log = "xy", main = paste("(B)", sites[i], ": Log-normal"), pch = 16, col = adjustcolor("black", 0.25))
 }
 dev.off()
-
-# # # saves the temp images from the plotting envrionment
-# plots.dir.path <- list.files(tempdir(), pattern = "rs-graphics", full.names = TRUE)
-# plots.png.paths <- list.files(plots.dir.path, pattern = ".png", full.names = TRUE)
-# file.copy(from = plots.png.paths, to = "C:/Users/624225/OneDrive - hull.ac.uk/_BoxData/PhD/testingdistributions/qqplots/fish_logged")
