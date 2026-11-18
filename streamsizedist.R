@@ -81,7 +81,6 @@ for(i in 1:nsites){
     geom_line(aes_(x = sitex, y = sitey.lnorm), col = '#1B9E77', lwd = 1) +
     labs(tag = LETTERS[ ((i - 1) %% 4) + 1 ]) +
     annotate("text", x = 1e-05, y = 10, label = s) +
-    annotate("text", x = 1e-05, y = 5, label = paste("italic(b)[PLB]==",(round(PLB.bMLE.site.b[i],2))), parse = T) +
        annotate("text", x = 1e-05, y = 2, label = paste("n =" ,(length(sitedata$dw)))) +
     theme_classic() +
     theme(axis.title = element_blank(), legend.position = "none")
