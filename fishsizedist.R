@@ -8,7 +8,7 @@ library(cowplot)
 
 source("coralsizedistfuncs.R")
 
-fishbiomass <- read.delim("fishbiomass_oneyear.csv")
+fishbiomass <- read.csv("fishbiomass_oneyear.csv")
 axisscores <- read.csv("axisscores.csv", row.names=1)
 axisscores <- axisscores[order(axisscores$PC1), ]
 
